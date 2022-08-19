@@ -1,0 +1,46 @@
+/* Copyright (c)2021 Quinn Michaels */
+#SNACK_TIME
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  width: 200px;
+  height: 200px;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background-color: $colors.light-green;
+  border-radius: 30px;
+  box-shadow: 0 9px 9px rgba(0,0,0,.5);
+
+#SNACK_TIME h1
+  transition: var(--transition-default);
+  text-align: center;
+  color: $colors.green;
+
+#SNACK_TIME h1:hover
+  text-align: center;
+  color: $colors.baby-blue;
+  cursor: pointer;
+
+#SNACK_TIME .SNACKS
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 0 9px 9px rgba(0,0,0,.3);
+
+
+.snack-time > :not(#SNACK_TIME)
+  display: none;
+
+.snack-time #SNACK_TIME
+  display: block;
+
+
+.snack-shack
+  position: relative;
+
+
+.snack-shack::before
+  position: absolute;
+  top: -1.5rem;
+  left: 20px;
+  content: '🧺 SNACKS';
+  font-size: 1.2rem;

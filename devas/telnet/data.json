@@ -1,0 +1,126 @@
+{
+  "name": "Telnet Deva Data File",
+  "describe": "The main Data file for Telnet Deva",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": "5743637646804",
+      "key": "telnet",
+      "name": "TELNET",
+      "describe": "Deva for Telnet Stuff",
+      "prompt": {
+        "emoji": "👾",
+        "text": "telnet",
+        "colors": {
+          "label": {
+            "R": 58,
+            "G": 177,
+            "B": 55
+          },
+          "text": {
+            "R": 91,
+            "G": 247,
+            "B": 49
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "emoji": "/public/devas/telnet/emoji.png",
+        "avatar": "/public/devas/telnet/avatar.png",
+        "background": "/assets/img/indra-background.jpg",
+        "describe": "Deva for Telnet Stuff",
+        "gender": "M"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!",
+        "connect": "🤝 CONNECT",
+        "timeout": "⏲ TIMEOUT",
+        "end": "🎬 END",
+        "close": "💩 CLOSED",
+        "destroy": "💩 DESTROYED",
+        "write": "🖋 SENDING",
+        "receiving": "📲 RECEIVING",
+        "pending": "💬 PENDING",
+        "noconnect": "❌ NOT CONNECTED",
+        "clear": "!!!clear!!!"
+      },
+      "clearevent": "clearshell",
+      "host": "127.0.0.1",
+      "port": 9999,
+      "timeout": 1800000,
+      "state": "IDLE",
+      "dataEvent": "socket:terminal",
+      "relayEvent": false,
+      "pending": false,
+      "connection": "telnet",
+      "states": {
+        "idle": "IDLE",
+        "conecting": "CONNECTING",
+        "connected": "CONNECTED",
+        "error": "ERROR",
+        "close": "CLOSED",
+        "pending": "PENDING",
+        "data": "DATA",
+        "write": "WRITE",
+        "done": "DONE"
+      },
+      "commands": {
+        "SE": 240,
+        "NOP": 241,
+        "DATA_MARK": 242,
+        "BREAK": 243,
+        "INTERRUPT_PROCESS": 244,
+        "ABORT_OUTPUT": 245,
+        "ARE_YOU_THERE": 246,
+        "ERASE_CHARACTER": 247,
+        "ERASE_LINE": 248,
+        "GO_AHEAD": 249,
+        "SB": 250,
+        "WILL": 251,
+        "WONT": 252,
+        "DO": 253,
+        "DONT": 254,
+        "IAC": 255,
+        "TERMINAL_SPEED": 32
+      },
+      "options": {
+        "OPT_BINARY": 0,
+        "OPT_ECHO": 1,
+        "OPT_SGA": 3,
+        "OPT_TT": 24,
+        "OPT_LINEMODE": 34,
+        "OPT_NEO": 39,
+        "OPT_EXOPL": 255
+      },
+      "mud_options": {
+        "MSSP": 70,
+        "MCCP": 85,
+        "MCCP2": 86,
+        "MSP": 90,
+        "MXP": 91
+      },
+      "mssp": {
+        "VAR": 1,
+        "VAL": 2
+      },
+      "control_codes": {},
+      "new_lines": {
+        "CR": 13,
+        "LF": 10,
+        "NULL": 0
+      }
+    }
+  }
+}

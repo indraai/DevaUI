@@ -1,0 +1,23 @@
+---
+# ERROR
+
+p:The ErrorDEVA handles the ERROR processing. When an error is triggered in the system ErrorDEVA goes to work making sure all the proper information is logged, and ready for the security, development, and support teams to handle system issues as they arrive.
+
+## Methods
+
+1. uid - The ability to generate a UID for the Agent/Client.
+`#error uid`
+
+2. status - Returs the current status of the ErrorDEVA
+`#error status`
+
+3. help - The command to view this help document.
+`#error help`
+
+## Functions
+
+1. report - Reports all system errors directly to Security.
+
+## Listeners
+
+1. error - The global error listener for when all system errors happen.

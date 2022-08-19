@@ -1,0 +1,316 @@
+/* Copyright (c)2021 Quinn Michaels */
+:root
+  --main-width: 800px
+  --color-white: $colors.white
+  --color-black: $colors.black
+  --color-grey: $colors.grey
+  --color-light-grey: $colors.light-grey
+  --color-dark-grey: $colors.dark-grey
+  --color-darker-grey: $colors.darker-grey
+  --color-darkest-grey: $colors.darkest-grey
+  --color-baby-blue: $colors.baby-blue
+  --color-blue: $colors.blue
+  --color-light-baby-blue: $colors.light-baby-blue
+  --color-green: $colors.green
+  --color-light-green: $colors.light-green
+  --color-yellow: $colors.yellow
+  --color-light-yellow: $colors.light-yellow
+  --color-dark-yellow: $colors.dark-yellow
+  --color-pink: $colors.pink
+  --color-light-pink: colors.light-pink
+  --color-orange: $colors-orange
+  --color-light-orange: $colors.light-orange
+  --color-red: $colors.red
+  --color-light-red: $colors.light-red
+  --color-purple: $colors.purple
+  --color-light-purple: $colors.light-purple
+  --color-aqua: $colors.aqua
+  --color-light-aqua: $colors.light-aqau
+  --color-note: $colors.note
+  --transition-default: all .5s linear
+  --header-image: url(/public/img/indra.png)
+  --background-image: url(/public/img/ui/background.png)
+  --header-height: 50px
+  --before-height: 30px
+  --before-left: -40px
+  --browser-item-image: none
+  --browser-item-bgcolor: transparent
+  --browser-item-color: inherit
+  --browser-item-size: inherit
+
+$widths = {
+  shell: 640px,
+  browser: 700px,
+  communications: 450px,
+}
+
+$border = {
+  inner: .35rem
+  outer: .5rem
+}
+
+$fonts-text = brandon-grotesque, Helvetica, Arial
+$fonts-code = source-code-pro, menlo, monospace
+
+html, body
+  height: 100%
+  width: 100%
+
+body, div, header, main, footer, h1, h2, form, input, textarea, button, i, span, section, article, ul, li, menu
+  box-sizing: border-box
+
+body
+  background-color: darken($colors.dark-grey, 75%)
+  font-size: 12px
+  font-family: $fonts-code
+  font-weight: 200
+  padding: 0
+  margin: 0
+  background-repeat: no-repeat
+  background-position: top center
+  background-attachment: 100% auto
+  visibility: visible
+
+pre
+  font-family: $fonts-code
+
+audio
+  &.player
+    height: 25px
+    width: 300px
+  &:active
+  &:focus
+    border: none
+    outline: none
+
+*[data-label]
+  &::before
+    display: inline-block
+    padding: 0 .3rem
+    margin: 0 .3rem 0 0
+    border-radius: .3rem
+    font-size: .75rem
+    background-color: $colors.dark-grey
+    color: lighten($colors.grey, 50%)
+    content: attr(data-label)
+
+#Auth
+  display: non
+  visibility: hidden
+  opacity: 0
+
+#Indra
+  transition: var(--transition-default)
+  display: flex
+  opacity: 1
+  flex-flow: column nowrap
+  height: 100%
+  min-height: 100%
+  &.hidden
+    visibility: hidden
+    opacity: 0
+
+  header
+    flex: 0
+    padding: .5rem
+    line-height: 1
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: center
+    div
+      flex: 1
+      text-align: center
+
+  $auxheight = 100px
+  .auxpanel
+    flex: 0
+    order: 2
+    flex: 0 $auxheight
+    width: 100%
+    height: $auxheight
+    min-height: $auxheight
+    max-height: $auxheight
+    display: flex
+    flex-flow: row nowrap
+    padding: 0 0 .5rem 0
+
+  main
+    flex: 1 auto
+    order: 1
+    margin: auto
+    overflow: hidden
+    display: flex
+    flex-flow: row wrap
+    width: 100%
+    height: 100%
+    padding: .5rem
+    .shell
+      order: 1
+      flex: 0 $widths.shell
+      min-width: $widths.shell
+      width: $widths.shell
+      height: 100%
+      border-radius: .55rem
+      margin: 0
+      overflow: hidden
+      background-color: rgba($colors.black, .6)
+    .controls
+      display: flex
+      flex: 0
+      height: 450px
+      flex-flow: row nowrap
+
+    .communications
+      position: relative
+      order: 2
+      flex: 0
+      min-width: $widths.communications
+      width: $widths.communications
+      height: 100%
+      display: flex
+      flex-flow: column nowrap
+      .comms
+        flex: 1
+      .map
+        padding: 0 .5rem
+      .exits
+        flex: 0
+        padding: .5rem
+
+      .security
+        position: absolute
+        bottom: 3px
+        left: 3px
+        z-index: 10000
+
+        button
+          font-size: 1rem
+          width: 2rem
+          height: 2rem
+          line-height: 1
+          border-radius: 50%
+          font-weight: bold
+          color: $colors.white
+          background-color: $colors.red
+          opacity: .5
+          &:hover
+            opacity: 1
+
+    .browser
+      order: 4
+      flex: 1 $widths.browser
+      min-width: $widths.browser
+      height: 100%
+      display: flex
+      border-radius: .55rem
+      margin: 0
+      overflow: hidden
+      flex-flow: column nowrap
+
+      .exits
+        background-color: $colors.darkest-grey
+
+#ShellOutput
+  .hymn
+    font-family: $fonts-text
+
+#Content
+  padding: 0
+  overflow: hidden
+  flex: 1
+  background-color: rgba($colors.black, .5)
+  color: $colors.light-grey
+  font-size: 18px
+
+  .vedas
+    .hymn
+      font-family: $fonts-text
+      max-width: 600px
+      margin: auto
+      padding: 1rem
+      flex: 1
+      overflow: auto
+
+    .feecting
+      .line
+        .btn
+          background: transparent
+          color: $baby-blue
+footer
+  flex: 0
+  order: 3
+  display: block
+  text-align: center
+  padding: .25rem
+  color: darken($colors.baby-blue, 30%)
+  font-size: .65rem
+
+.center
+  text-align: center
+  justify-content: center
+
+  img
+    max-width: 650px
+
+.center > img
+  max-width: 100%
+
+[data-command]:hover
+  cursor: pointer
+
+
+#Content
+  .move-in
+  .move-out
+    width: 100%
+    height: 100%
+    animation-duration: 1s
+    animation-iteration-count: 1
+    animation-timing-function: linear
+    transform:translate3d(0,0,0)
+  .move-in
+    &.north
+      animation-name: movein-north
+    &.east
+      animation-name: movein-east
+    &.south
+      animation-name: movein-south
+    &.west
+      animation-name: movein-west
+    &.up
+      animation-name: movein-up
+    &.down
+      animation-name: movein-down
+
+    &.northwest
+      animation-name: movein-north-west
+    &.northeast
+      animation-name: movein-north-east
+    &.southwest
+      animation-name: movein-south-west
+    &.southeast
+      animation-name: movein-south-east
+
+  .move-out
+    &.north
+      animation-name: moveout-north
+    &.east
+      animation-name: moveout-east
+    &.south
+      animation-name: moveout-south
+    &.west
+      animation-name: moveout-west
+    &.up
+      animation-name: moveout-up
+    &.down
+      animation-name: moveout-down
+
+    &.northeast
+      animation-name: moveout-north-east
+    &.northwest
+      animation-name: moveout-north-west
+    &.southeast
+      animation-name: moveout-south-east
+    &.southwest
+      animation-name: moveout-south-west

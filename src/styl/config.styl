@@ -1,0 +1,31 @@
+// Copyright (c) 2021 Quinn Michaels. All rights reserved.
+
+#ConfigData
+  font-size: 1rem
+  line-height: 1.5
+  display: flex
+  flex-flow: column nowrap
+  > div
+    display: flex
+    flex-flow: row nowrap
+
+  .label
+    flex: 0 150px
+    min-width: 150px
+    width: 150px
+    display: inline-block
+    border-bottom: 1px solid rgba($colors.baby-blue, .5)
+    padding: .1rem .2rem
+    margin: 0 .5rem 0 .25rem
+    color: lighten($colors.orange, .5)
+  .icn
+    flex: 0
+    font-size: 1.5rem
+  .describe
+    flex: 1
+.on
+  .icn
+    color: $colors.green
+.off
+  .icn
+    color: $colors.red

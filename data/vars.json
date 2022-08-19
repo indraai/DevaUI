@@ -1,0 +1,34 @@
+{
+  "name": "VARS",
+  "describe": "VARIABLES",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "parent": "/data/index.json",
+  "DATA": {
+    "messages": {
+      "boot": "🥾 BOOT DEVA UI",
+      "exit": "🚪 EXIT DEVA UI",
+      "enter": "✅ ENTER DEVA UI",
+      "clearshell": "CLEAR SHELL CODE"
+    },
+    "ports": {
+      "api": 9302
+    },
+    "hash": "0x",
+    "shortcut": false,
+    "displayItems": [
+      "agent",
+      "config",
+      "vars",
+      "listeners",
+      "func",
+      "methods",
+      "onStart",
+      "onStop",
+      "onEnter",
+      "onExit",
+      "onDone",
+      "onError",
+      "onInit"
+    ]
+  }
+}

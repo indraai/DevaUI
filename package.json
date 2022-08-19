@@ -4,6 +4,9 @@
   "description": "The Deva World User Interface",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "style": "stylus -w src/styl/main.styl -o public/css/main.css -c",
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,11 +19,24 @@
   ],
   "author": "Quinn Michaels",
   "license": "MIT",
+  "copyright": "2022",
   "bugs": {
     "url": "https://github.com/indraai/DevaUI/issues"
   },
   "homepage": "https://github.com/indraai/DevaUI#readme",
   "devDependencies": {
+    "@fastify/static": "^6.5.0",
+    "axios": "^0.21.4",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.10",
+    "commander": "^7.0.0",
+    "fastify": "^4.5.2",
+    "he": "^1.2.0",
+    "socket.io": "^3.1.1",
+    "socket.io-client": "^3.1.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^5.0.0",
+    "telnet-stream": "^1.0.5",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }

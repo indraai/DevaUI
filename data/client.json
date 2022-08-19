@@ -1,0 +1,45 @@
+{
+  "name": "CLIENT",
+  "describe": "CLIENT FILE",
+  "copyright": "Copyright ©2022 Quinn Michaels. All rights reserved.",
+  "DATA": {
+    "id": 1539551216543,
+    "key": "USER",
+    "name": "Basic User",
+    "describe": "Basic Deva User",
+    "prompt": {
+      "emoji": "⛄️",
+      "text": "user",
+      "colors": {
+        "label": {
+          "R": 255,
+          "G": 163,
+          "B": 41
+        },
+        "text": {
+          "R": 255,
+          "G": 173,
+          "B": 67
+        }
+      }
+    },
+    "profile": {
+      "emoji": "emoji-image-url",
+      "avatar": "avatar-image-url",
+      "background": "background-image-url",
+      "name": "User",
+      "describe": "Basic User",
+      "gender": "Unknown",
+      "lang": "en"
+    },
+    "services": {
+      "mud": {
+        "key": "player",
+        "player": {
+          "login": "player",
+          "password": "password"
+        }
+      }
+    }
+  }
+}

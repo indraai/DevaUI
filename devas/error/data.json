@@ -1,0 +1,51 @@
+{
+  "name": "ERROR Data File",
+  "describe": "The main Data file for ERROR",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": "3065237668822",
+      "key": "error",
+      "name": "ERROR",
+      "describe": "Error Deva",
+      "prompt": {
+        "emoji": "💣",
+        "text": "error",
+        "colors": {
+          "label": {
+            "R": 213,
+            "G": 3,
+            "B": 3
+          },
+          "text": {
+            "R": 247,
+            "G": 49,
+            "B": 49
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "emoji": "/public/devas/error/emoji.png",
+        "avatar": "/public/devas/error/avatar.png",
+        "background": "",
+        "describe": "Error Deva",
+        "gender": "M"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!"
+      }
+    }
+  }
+}

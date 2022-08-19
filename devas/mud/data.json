@@ -1,0 +1,235 @@
+{
+  "name": "MUD Data File",
+  "describe": "The main Data file for MUD",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": "6484220856089",
+      "key": "mud",
+      "name": "MUD",
+      "describe": "MUD Deva",
+      "prompt": {
+        "emoji": "🕹",
+        "text": "mud",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 255,
+            "B": 0
+          },
+          "text": {
+            "R": 195,
+            "G": 195,
+            "B": 195
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "emoji": "/public/devas/mud/emoji.png",
+        "avatar": "/public/devas/mud/avatar.png",
+        "background": "/public/devas/mud/background.jpg",
+        "describe": "MUD Deva",
+        "gender": "M"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!",
+        "idle": "💤 The System is IDLE",
+        "open": "🏰 Opening :name:",
+        "connect": "🔌 Connecting :name:",
+        "connected": "📡 Connected :name:",
+        "login": "👤 Login :login:",
+        "password": "🔑 Sending Password",
+        "failpass": "🔐 Incorrect Password",
+        "adventure": "👑 Adventure :name:",
+        "no_service": "🚚 PLEASE SEE SERVICES."
+      },
+      "cmd": false,
+      "relay": "mud:relay",
+      "state": {
+        "key": "idle",
+        "value": "IDLE"
+      },
+      "state_prev": false,
+      "loggedin": false,
+      "adventure": {
+        "key": "thegame",
+        "name": "Deva World",
+        "host": "143.198.52.33",
+        "port": 9003,
+        "patterns": [
+          {
+            "name": "hit",
+            "reg": "\\n(hit):\\s?(\\d+)\\|(\\d+)"
+          },
+          {
+            "name": "mana",
+            "reg": "\\n(mana):\\s?(\\d+)\\|(\\d+)"
+          },
+          {
+            "name": "move",
+            "reg": "\\n(move):\\s?(\\d+)\\|(\\d+)"
+          },
+          {
+            "name": "hunger",
+            "reg": "\\n(hunger):\\s?(\\d+)\\|(\\d+)"
+          },
+          {
+            "name": "thirst",
+            "reg": "\\n(thirst):\\s?(\\d+)\\|(\\d+)"
+          },
+          {
+            "name": "inform",
+            "reg": "\\n(inform):\\s?(.+)"
+          },
+          {
+            "name": "player",
+            "reg": "\\n(player):\\s?(.+)"
+          },
+          {
+            "name": "agent",
+            "reg": "\\n(agent):\\s?(.+)"
+          },
+          {
+            "name": "equipment",
+            "reg": "\\n(equipment):\\s?(.+)"
+          },
+          {
+            "name": "inventory",
+            "reg": "\\n(inventory):\\s?(.+)"
+          },
+          {
+            "name": "alert",
+            "reg": "\\n(alert):\\s?(.+)"
+          },
+          {
+            "name": "arrive",
+            "reg": "\\n(arrive):\\s?(.+)"
+          },
+          {
+            "name": "depart",
+            "reg": "\\n(depart):\\s?(.+)"
+          },
+          {
+            "name": "coordinates",
+            "reg": "\\n?(coordinates):\\s?(.+)"
+          },
+          {
+            "name": "room",
+            "reg": "\\n(room):\\s?(.+)\\r?"
+          },
+          {
+            "name": "door",
+            "reg": "\\n(door):\\s?(.+)\\r?"
+          },
+          {
+            "name": "say",
+            "reg": "\\n(say|Say):\\s?(.+)"
+          },
+          {
+            "name": "security",
+            "reg": "\\n(security):\\s?(.+)"
+          },
+          {
+            "name": "weather",
+            "reg": "\\n(weather):\\s?(.+)"
+          },
+          {
+            "name": "fight",
+            "reg": "\\n(fight):\\s?(.+)"
+          },
+          {
+            "name": "pos",
+            "reg": "\\n(pos):\\s?(.+)"
+          },
+          {
+            "name": "save",
+            "reg": "\\n(save):\\s?(.+)"
+          },
+          {
+            "name": "exp",
+            "reg": "\\n(exp):\\s?(.+)"
+          },
+          {
+            "name": "gold",
+            "reg": "\\n(gold):\\s?(.+)"
+          },
+          {
+            "name": "key",
+            "reg": "\\n(key):\\s?(.+)"
+          },
+          {
+            "name": "drink",
+            "reg": "\\n(drink):\\s?(.+)"
+          },
+          {
+            "name": "eat",
+            "reg": "\\n(eat):\\s?(.+)"
+          },
+          {
+            "name": "get",
+            "reg": "\\n(get):\\s?(.+)"
+          },
+          {
+            "name": "put",
+            "reg": "\\n(put):\\s?(.+)"
+          },
+          {
+            "name": "emote",
+            "reg": "\\n(emote):\\s?(.+)"
+          },
+          {
+            "name": "current",
+            "reg": "\\n(current):\\s?(.+)"
+          },
+          {
+            "name": "trigger",
+            "reg": "\\n(trigger):\\s?(.+)"
+          },
+          {
+            "name": "time",
+            "reg": "\\n(time):\\s?(.+)"
+          },
+          {
+            "name": "date",
+            "reg": "\\n(date):\\s?(.+)"
+          },
+          {
+            "name": "gui",
+            "reg": "\\n(gui):\\s?(.+)"
+          },
+          {
+            "name": "info",
+            "reg": "\\n(info):\\s?(.+)"
+          },
+          {
+            "name": "error",
+            "reg": "\\n(error):\\s?(.+)"
+          }
+        ]
+      },
+      "states": {
+        "idle": "IDLE",
+        "connecting": "CONNECTING",
+        "connected": "CONNECTED",
+        "login": "LOGIN",
+        "password": "PASSWORD",
+        "failpass": "FAIL PASSWORD",
+        "play": "PLAYING",
+        "error": "ERROR",
+        "open": "OPEN"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+---
+# FEECTING HELP
+
+Feecting is the META language that operates Indra Mind. With it you can write scripts that can interact with the AI on various levels.
+
+The Feecting language is a key/value pair programming language with logic structures and meta values. Which may sound like a mouth full, but let's go of an example.
+
+```
+p:This is how you define a paragraph.
+
+link[Label Text]:https:www.link.com
+```
+
+You can see in the example below that there are various ways to tag data in ways that make it easier to format and communicate with the AI.  As the Feecting language was designed to be a complimentary interface between machine and man.

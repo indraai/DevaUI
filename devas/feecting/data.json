@@ -1,0 +1,54 @@
+{
+  "name": "Feecting Deva Data File",
+  "describe": "The main Data file for Feecting Deva",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": "5461868899003",
+      "key": "feecting",
+      "name": "FEECTING",
+      "describe": "Feecting Deva for scripts",
+      "prompt": {
+        "emoji": "🐵",
+        "text": "feecting",
+        "colors": {
+          "label": {
+            "R": 255,
+            "G": 240,
+            "B": 0
+          },
+          "text": {
+            "R": 255,
+            "G": 246,
+            "B": 106
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "emoji": "/public/devas/feecting/emoji.png",
+        "avatar": "/public/devas/feecting/avatar.png",
+        "background": "",
+        "describe": "Feecting Deva",
+        "gender": "M"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!",
+        "text": "NEED TEXT"
+      },
+      "talking": false,
+      "jobs": {}
+    }
+  }
+}

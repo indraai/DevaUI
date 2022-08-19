@@ -1,0 +1,39 @@
+{
+  "name": "AGENT",
+  "describe": "AGENT FILE",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "parent": "/data/config/index.json",
+  "DATA": {
+    "uid": "5380514963421",
+    "key": "DEVAUI",
+    "name": "Deva UI",
+    "describe": "The Deva UI.",
+    "prompt": {
+      "emoji": "☰",
+      "text": "deva",
+      "colors": {
+        "label": {
+          "R": 0,
+          "G": 150,
+          "B": 255
+        },
+        "text": {
+          "R": 101,
+          "G": 192,
+          "B": 255
+        }
+      }
+    },
+    "voice": {
+      "speech": "Alex",
+      "speed": 1
+    },
+    "profile": {
+      "emoji": "",
+      "avatar": "",
+      "background": "",
+      "describe": "The Deva Project",
+      "gender": "M"
+    }
+  }
+}

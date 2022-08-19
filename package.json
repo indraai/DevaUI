@@ -1,0 +1,23 @@
+{
+  "name": "devaui",
+  "version": "0.0.1",
+  "description": "The Deva World User Interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indraai/DevaUI.git"
+  },
+  "keywords": [
+    "deva",
+    "ui"
+  ],
+  "author": "Quinn Michaels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indraai/DevaUI/issues"
+  },
+  "homepage": "https://github.com/indraai/DevaUI#readme"
+}

@@ -9,7 +9,7 @@
     "name": "Deva UI",
     "describe": "The Deva UI.",
     "prompt": {
-      "emoji": "☰",
+      "emoji": "🍏",
       "text": "deva",
       "colors": {
         "label": {
@@ -29,8 +29,8 @@
       "speed": 1
     },
     "profile": {
-      "emoji": "",
-      "avatar": "",
+      "emoji": "/public/icon.png",
+      "avatar": "/public/icon.png",
       "background": "",
       "describe": "The Deva Project",
       "gender": "M"

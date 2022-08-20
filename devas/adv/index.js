@@ -39,7 +39,7 @@ const ADVENTURE = new Deva({
       room = room.length == 2 ? `00${room}` : room;
       room = room.length == 3 ? `0${room}` : room;
 
-      const doc = sec[0] ? sec[0].toUpperCase() : 'main';
+      const doc = sec[0] ? sec[0].toLowerCase() : 'main';
       const section = sec[1] ? sec[1].toUpperCase() : 'MAIN';
 
       return new Promise((resolve, reject) => {
@@ -52,17 +52,17 @@ const ADVENTURE = new Deva({
         default:
           dir1 = room.substr(0, room.length - 3) + 'xxx';
           dir2 = room.substr(0, room.length - 2) + 'xx';
-          advPath = `${this.vars.local}/${adv}/${thing}/${dir1}/${dir2}/${room}/${doc}.feecting`;
-          this.prompt(`ADV: ${advPath}`);
+          advPath = `${this.vars.url}/${adv}/${thing}/${dir1}/${dir2}/${room}/${doc}.feecting`;
 
-          this.prompt(advPath)
-          try {
-            const _file = fs.readFileSync(advPath)
-            const _result = _file.toString('utf8').split(`::BEGIN:${section}`)[1].split(`::END:${section}`)[0];
-            return resolve(_result)
-          } catch (e) {
-            return resolve(`${this.vars.messages.advfile} (${advPath})`);
-          }
+          this.question(`#web get ${advPath}`).then(result => {
+            const text = result.a.text.toString('utf8').split(`::BEGIN:${section}`)[1].split(`::END:${section}`)[0];
+
+            resolve({
+              text: text,
+              html: text,
+              data: {advPath},
+            })
+          }).catch(reject)
         }
       });
     },
@@ -70,7 +70,7 @@ const ADVENTURE = new Deva({
     view(data) {
       return new Promise((resolve, reject) => {
         this.func.getAdvFile(data.q).then(advFile => {
-          return this.question(`#feecting parse:${data.q.meta.params[0]}:${data.q.meta.params[1]} ${advFile}`);
+          return this.question(`#feecting parse:${data.q.meta.params[0]}:${data.q.meta.params[1]} ${advFile.text}`);
         }).then(parsed => {
           return resolve({
             text: parsed.a.text,

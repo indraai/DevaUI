@@ -7,6 +7,7 @@ const {version} = require('./package.json');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
+const axios = require('axios');
 
 // load agent configuration file
 const {vars,agent,client} = require('./data');
@@ -65,6 +66,17 @@ const staticRoutes = [
       names: ['index', 'index.json', '/', '']
     },
   },
+  {
+    root: path.join(__dirname, 'data'),
+    prefix: '/data/',
+    list: {
+      format: 'json',
+    },
+    send: {
+      index:'index.json'
+    },
+    decorateReply: false,
+  },
 ]
 
 // register static routes with the fast server.
@@ -81,6 +93,52 @@ const routes = [
       return reply.sendFile('index.html', path.join(__dirname, 'src', 'ui'));
     },
   },
+  {
+    method: 'POST',
+    url: '/question',
+    handler: (req, reply) => {
+      // send the question to the shell before askign.
+      shellPrompt({
+        prompt: client.prompt,
+        text: req.body.question,
+      });
+      DevaUI.question(req.body.question).then(answer => {
+        shellPrompt({
+          prompt: answer.a.agent.prompt,
+          text: answer.a.text,
+        });
+        console.log('QUESTION ANSWER', answer);
+
+        DevaUI.talk('socket:terminal', answer);
+        return reply.send('✅👍🤝');
+      }).catch(err => {
+        return reply.send(err);
+      });
+    }
+  },
+  // for mapping the adventure realm images to a public url
+  {
+    method: 'GET',
+    url: '/asset/:adv/:type/:vnum/:asset',
+    handler: (req,reply) => {
+      const {adv, type, vnum, asset} = req.params;
+
+      const _rpath = vars.paths.assets;
+      let assetPath
+
+      const dir1 = vnum.substr(0, vnum.toString().length - 3) + 'xxx';
+      const dir2 = vnum.substr(0, vnum.toString().length - 2) + 'xx';
+      if (type === 'map') assetPath = `${_rpath}/${adv}/maps/${vnum}/${asset}.png`;
+      else assetPath = `${_rpath}/${adv}/${type}/${dir1}/${dir2}/${vnum}/${asset}.png`;
+
+      axios.get(assetPath,{responseType: "arraybuffer"}).then(asset => {
+        return reply.type('image/png').send(Buffer.from(asset.data));
+      }).catch(err => {
+        return reply.send(err)
+      })
+      // so we need to get images and maps here
+    },
+  },
 ]
 
 // register the routes for the server.
@@ -95,7 +153,7 @@ function shellPrompt(opts) {
 
   shell.setPrompt(chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${prompt.emoji} ${prompt.text.trim()}:`));
   shell.prompt();
-  if (text) console.log(chalk.rgb(colors.text.R, colors.text.G, colors.text.B)(text.trim()));
+  if (text) console.log(chalk.rgb(colors.text.R, colors.text.G, colors.text.B)(text));
   shell.prompt();
 }
 

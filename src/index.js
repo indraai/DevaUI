@@ -45,20 +45,25 @@ const DevaUI = new Deva({
       });
     },
     devas(packet) {
-      for (let deva in this.devas) {
-        console.log('this deva we are looping', deva);
-      }
-      return Promise.resolve('devas')
+      return new Promise((resolve, reject) => {
+        const devas = [];
+        try {
+          for (let deva in this.devas) {
+            devas.push(`#${deva}`);
+          }
+        } catch (e) {
+          return this.error(e, packet, reject);
+        } finally {
+          console.log('DEVAS RETURN');
+          return resolve({text:devas.join('\n'),html:devas.join('<br/>')});
+        }
+      });
     },
     hash(packet) {
       return this.hash(packet);
     }
   },
   methods: {
-    shortcut(packet) {
-      console.log('SHORTCUT', packet.q.text);
-      this.vars.shortcut = packet.q.text
-    },
     hash(packet) {
       return this.func.hash(packet);
     },
@@ -76,15 +81,22 @@ const DevaUI = new Deva({
     },
     // return a new uid
     uid() {
-      return Promise.resolve({text:this.uid()});
+      const uid = this.uid();
+      return Promise.resolve({text:uid,html:uid});
     },
     status() {
       return this.status();
     },
     help(packet) {
       return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(text => {
-          return resolve({text})
+        this.lib.help(packet.q.text, __dirname).then(help => {
+          return this.question(`#feecting parse ${help}`);
+        }).then(parsed => {
+          return resolve({
+            text: parsed.a.text,
+            html: parsed.a.html,
+            data: parsed.a.data,
+          });
         }).catch(reject);
       });
     }

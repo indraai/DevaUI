@@ -1,5 +1,11 @@
-# socket
+## socket
 
-This is the main help file for SOCKET.
+p:This is the main help file for SOCKET Deva which handles socket.io communications between the terminal and the user interface.
 
-Socket Deva
+### Methods
+
+> #socket status
+p:This will return the status of the Socket Deva with time and date since online.
+
+> #socket help
+p:Get help workign with the Socket Deva.

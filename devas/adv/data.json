@@ -47,14 +47,7 @@
         "error": "💣 ERROR!",
         "advfile": "📁 Adventure File Unknown!"
       },
-      "local": "/Users/quinn/Dev/Deva/repo/adv",
-      "adventures": [
-        {
-          "key": "thegame",
-          "name": "The Game93",
-          "data": "./data/thegame/index.json"
-        }
-      ]
+      "url": "https://raw.githubusercontent.com/indraai/adv/main/"
     }
   }
 }

@@ -93,7 +93,7 @@ const SOCKET = new Deva({
     emit(packet) {
       const say = packet.q.meta.params[1] || false;
       const message = packet.q.text || false;
-      return this.func.emit({say,message})
+      return this.func.emit({say,message:packet})
     },
     status(packet) {
       return this.status();

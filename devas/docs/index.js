@@ -45,8 +45,8 @@ const DOCS = new Deva({
               data: parsed.a.data,
             });
           });
-        } catch (e) {
-          reject(e);
+        } catch (err) {
+          return this.error(err, opts, reject);
         }
       });
     },

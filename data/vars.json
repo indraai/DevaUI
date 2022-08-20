@@ -11,7 +11,11 @@
       "clearshell": "CLEAR SHELL CODE"
     },
     "ports": {
-      "api": 9302
+      "api": 9302,
+      "socket":9303
+    },
+    "paths": {
+      "assets":"https://raw.githubusercontent.com/indraai/adv/main/"
     },
     "hash": "0x",
     "shortcut": false,

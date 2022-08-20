@@ -40,7 +40,7 @@ const emojis = {
   sound: '🔊'
 };
 
-class IndraInterface {
+class DevaInterface {
   constructor() {
     this.client = false;
     this.content = false;
@@ -139,7 +139,7 @@ class IndraInterface {
     });
   }
 
-  Client(_path='/data/config/client.json') {
+  Client(_path='/data/client.json') {
     return new Promise((resolve, reject) => {
       this.GetKeyPair({
         path: _path,
@@ -443,7 +443,7 @@ class IndraInterface {
     utils.logHTML({
       key:data.meta.key,
       format: data.meta.format,
-      text:data.html ? this.editorCheck(data.html) : data.text,
+      text:data.html ? data.html : data.text,
       agent: data.agent || this.client,
     });
   }
@@ -657,17 +657,6 @@ class IndraInterface {
   }
 
 
-  editorCheck(prop) {
-    const editorStart = prop.split('<article class="feecting-box editor">');
-    if (editorStart[1]) {
-      const editorEnd = editorStart[1].split('</article>');
-      const editorStr = editorEnd[0];
-      $('#ShellOutput').html('')
-      return `${editorStart[0]}<article class="feecting-box editor"><textarea>${editorStr}</textarea></article>${editorEnd[1]}`
-    }
-    return prop;
-  }
-
   processor(data) {
     if (!data.a.text) return;
     const metaKey = data.a.meta.key;
@@ -682,7 +671,7 @@ class IndraInterface {
       format: data.a.meta.method,
       agent:data.a.agent,
       meta: data.a.meta,
-      text: data.a.html ? this.editorCheck(data.a.html) : data.a.text,
+      text: data.a.html ? data.a.html : data.a.text,
     });
 
     // if (!data.a.text && !data.a.html) return;
@@ -869,9 +858,6 @@ class IndraInterface {
           });
           return this.processor(data);
         })
-        .on('socket:chat', data => {
-          return this.chat(data);
-        })
         .on('mud:pattern', data => {
           return this.patterns(data);
         })
@@ -890,9 +876,9 @@ class IndraInterface {
   }
 }
 
-const socket = io('http://localhost:9301');
-const Indra = new IndraInterface();
-Indra.Init(socket);
+const socket = io('http://localhost:9303');
+const Deva = new DevaInterface();
+Deva.Init(socket);
 
 
 

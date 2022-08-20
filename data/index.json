@@ -1,0 +1,11 @@
+{
+  "key": "data",
+  "name": "DATA",
+  "describe": "LISTING OF DATA IN THE SYSTEM.",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
+  "DATA": {
+    "agent": "/data/agent.json",
+    "client": "/data/client.json",
+    "vars": "/data/vars.json"
+  }
+}

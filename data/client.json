@@ -5,10 +5,10 @@
   "DATA": {
     "id": 1539551216543,
     "key": "USER",
-    "name": "Basic User",
-    "describe": "Basic Deva User",
+    "name": "Nitro User",
+    "describe": "Nitro Deva User",
     "prompt": {
-      "emoji": "⛄️",
+      "emoji": "😎",
       "text": "user",
       "colors": {
         "label": {
@@ -24,12 +24,12 @@
       }
     },
     "profile": {
-      "emoji": "emoji-image-url",
-      "avatar": "avatar-image-url",
+      "emoji": "/public/img/user/emoji.png",
+      "avatar": "/public/img/user/avatar.png",
       "background": "background-image-url",
-      "name": "User",
-      "describe": "Basic User",
-      "gender": "Unknown",
+      "name": "Nitro User",
+      "describe": "Nitro User",
+      "gender": "Greatness",
       "lang": "en"
     },
     "services": {

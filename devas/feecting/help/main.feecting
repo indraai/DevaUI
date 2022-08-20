@@ -1,14 +1,26 @@
----
-# FEECTING HELP
+## Feecting Help
 
-Feecting is the META language that operates Indra Mind. With it you can write scripts that can interact with the AI on various levels.
+p:Feecting is the META language that operates things. With it you can write scripts that can interact with the system on various levels.
 
-The Feecting language is a key/value pair programming language with logic structures and meta values. Which may sound like a mouth full, but let's go of an example.
+### Methods
 
-```
-p:This is how you define a paragraph.
+> #feecting hash
+p:Generate and return 0x hash codes from the core Deva module.
 
-link[Label Text]:https:www.link.com
-```
+> #feecting read
+p:Read a feecting file and return it to the user.
 
-You can see in the example below that there are various ways to tag data in ways that make it easier to format and communicate with the AI.  As the Feecting language was designed to be a complimentary interface between machine and man.
+> #feecting parse *text string to parse*
+p:Parse a feecting file for output to the user.
+
+> #feecting get *url*
+p:Get a feecting template from a remote url.
+
+> #feecting uid
+p:Get a uid from the feecting Deva
+
+> #feecting status
+p:Get the status of the feecting deva
+
+> #feecting help
+p:See the feecting help file

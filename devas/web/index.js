@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels
+// Copyright (c)2022 Quinn Michaels
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');

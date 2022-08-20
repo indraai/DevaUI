@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels
+// Copyright (c)2022 Quinn Michaels
 "use strict";
 import utils from '../lib/utils';
 import {io} from 'socket.io-client';

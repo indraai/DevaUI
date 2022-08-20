@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels. All rights reserved.
+// Copyright (c)2022 Quinn Michaels. All rights reserved.
 module.exports = {
   'mud:relay'(packet) {
     const {patterns, terminal} = this.func;

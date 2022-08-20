@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels. All Rights Reserved.
+// Copyright (c)2022 Quinn Michaels. All Rights Reserved.
 module.exports = {
   'play'(packet) {
     return this.func.play(packet);

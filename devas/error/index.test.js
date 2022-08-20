@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels
+// Copyright (c)2022 Quinn Michaels
 // ERROR test file
 
 const {expect} = require('chai')

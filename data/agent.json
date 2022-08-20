@@ -1,7 +1,7 @@
 {
   "name": "AGENT",
   "describe": "AGENT FILE",
-  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
   "parent": "/data/config/index.json",
   "DATA": {
     "uid": "5380514963421",

@@ -1,7 +1,7 @@
 {
   "name": "Adventure Deva Agent File",
   "describe": "The main Agent file for Adventure Deva Deva.",
-  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
   "data": {
     "agent": {
       "uid": "2839324349429",

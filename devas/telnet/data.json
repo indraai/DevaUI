@@ -1,7 +1,7 @@
 {
   "name": "Telnet Deva Data File",
   "describe": "The main Data file for Telnet Deva",
-  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
   "data": {
     "agent": {
       "uid": "5743637646804",

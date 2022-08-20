@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// COPYRIGHT (C)2021 QUINN MICHAELS. ALL RIGHTS RESERVED.
+// COPYRIGHT (c)2022 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Main controller for the Deva user interface. This loads the main source module
 //  and the associated Deva with the fast web server static routes.
 

@@ -49,13 +49,20 @@ const DevaUI = new Deva({
         const devas = [];
         try {
           for (let deva in this.devas) {
-            devas.push(`#${deva}`);
+            devas.push(`cmd:#${deva} help`);
           }
         } catch (e) {
           return this.error(e, packet, reject);
         } finally {
-          console.log('DEVAS RETURN');
-          return resolve({text:devas.join('\n'),html:devas.join('<br/>')});
+          this.question(`#feecting parse ${devas.join('\n')}`).then(parsed => {
+            return resolve({
+              text:parsed.a.text,
+              html:parse.a.html,
+              data:parsed.a.data,
+            })
+          }).catch(err => {
+            return this.error(err, packet, reject);
+          })
         }
       });
     },

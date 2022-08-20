@@ -1,7 +1,10 @@
-# chuck
+## Chuck Deva
 
-This is the main help file for Chuck Norris.
+p:This is the main help file for Chuck Norris.
 
-This is the Chuck Norris Deva
+p:To get a chuck joke.
 
-undefined
+cmd:#chuck joke
+
+#color = var(--color-yellow)
+#bgcolor = var(--color-black)

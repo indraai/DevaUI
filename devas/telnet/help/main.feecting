@@ -61,3 +61,6 @@ This command will return the Telnet Deva status.
 This will show you this file obviously.
 
 `#tel help`
+
+#color = var(--color-green)
+#bgcolor = var(--color-black)

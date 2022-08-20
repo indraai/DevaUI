@@ -1,4 +1,4 @@
-## Feecting Help
+## Feecting Deva
 
 p:Feecting is the META language that operates things. With it you can write scripts that can interact with the system on various levels.
 
@@ -24,3 +24,6 @@ p:Get the status of the feecting deva
 
 > #feecting help
 p:See the feecting help file
+
+#color = var(--color-orange)
+#bgcolor = var(--color-black)

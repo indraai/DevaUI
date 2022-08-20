@@ -1,7 +1,37 @@
-# adventure
+## Adventure Deva
 
-This is the main help file for Adventure Deva.
+p:The Adventure Deva handles calling the adventure fules from the remote servers.
 
-The Adventure Deva
+### Methods
 
-undefined
+cmd:#adv hash
+p:Build a hash while going along the adventure. Integrates wit the core Deva Hash feature.
+
+#### world
+cmd:#adv world:thegame 0251/main:look
+p:Call a world template from an adventure server.
+
+format:#adv world:*adventure* *id*/*template*:*part*
+
+#### object
+cmd:#adv object:thegame 0092/main:look
+p:Call an object template from an adventure server.
+
+format:#adv object:*adventure* *id*/*template*:*part*
+
+#### agent
+cmd:#adv agent:thegame 0005/main:look
+p:Call an agent template from an adventure server.
+
+format:#adv agent:*adventure* *id*/*template*:*part*
+
+#### uid
+p:Generate a uid from the Adventure Deva.
+cmd:#adv uid
+
+#### status
+p:View the status of the Adventure Deva since coming online.
+cmd:#adv status
+
+#color = var(--color-orange)
+#bgcolor = var(--color-black)

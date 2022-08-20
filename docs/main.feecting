@@ -1,4 +1,47 @@
 ::BEGIN:MAIN
-## Deva Docs
-p:Here are the Deva Docs
+## Docs
+p:Here are the Deva Docs where you will find necessary information regarding the Deva Agents. Instructions, Corpus, and Protocols are all located here to make locating, viewing, and studying a breeze.
+
+cmd[Deva Instructions]:#docs view main:instructions
+cmd[Deva Corpus]:#docs view main:corpus
+cmd[Deva Protocols]:#docs view main:cypher
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
 ::END:MAIN
+
+::BEGIN:INSTRUCTIONS
+cmd[Back to Main]:#docs view main:main
+
+::begin:PROTOCOLS
+talk:#feecting get https://raw.githubusercontent.com/indraai/language-feecting/master/agents/deva.feecting
+::end:PROTOCOLS
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+
+::END:INSTRUCTIONS
+====
+::BEGIN:CORPUS
+cmd[Back to Main]:#docs view main:main
+
+::begin:training
+talk:#feecting get https://raw.githubusercontent.com/indraai/language-feecting/master/corpus/main.feecting
+::end:training
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+
+::END:CORPUS
+====
+::BEGIN:CYPHER
+cmd[Back to Main]:#docs view main:main
+
+::begin:PROTOCOLS
+talk:#feecting get https://raw.githubusercontent.com/indraai/language-feecting/master/protocols/cypher.feecting
+::end:PROTOCOLS
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:CYPHER
+====

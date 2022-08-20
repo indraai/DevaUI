@@ -1,7 +1,20 @@
-# web
+## Web Deva
 
-This is the main help file for WebDEVA.
+p:The Web Deva helps all the other Devas with their calling websites to get information. With the Web Deva you can give a url and the Agent will return the data response from your request. Be Careful this could be DANGEROUS!
 
-Web Deva for calling website http/https resources.
+### Mehtods
 
-undefined
+cmd:#web get *url*
+p:This method will return the data from a specific url resource.
+
+cmd:#web uid
+p:Get a unique id from the Web Deva Agent.
+
+cmd:#web status
+p:Get the online status of the Web Deva Agent.
+
+cmd:#web help
+p:Get help working with the Web Deva.
+
+#color = var(--color-pink)
+#bgcolor = var(--color-black)

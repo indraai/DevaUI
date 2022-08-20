@@ -107,8 +107,6 @@ const routes = [
           prompt: answer.a.agent.prompt,
           text: answer.a.text,
         });
-        console.log('QUESTION ANSWER', answer);
-
         DevaUI.talk('socket:terminal', answer);
         return reply.send('✅👍🤝');
       }).catch(err => {

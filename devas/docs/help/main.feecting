@@ -1,4 +1,4 @@
-# DocsDEVA
+## DocsDEVA
 
 p:Hello there... I am #DocsDEVA, and I manage documents for you. Everything is written in the .feecting format. So make sure to visit the #FeectingDEVA for information on how to write/speak in the #FEECTING language.
 
@@ -22,3 +22,6 @@ p:So if you wanted to view the main #DOCS that would be.
 p:Doing that will get you started into the #DOCS of the system. So if you haven't done that already now is a good time to. Here is a nifty shortcut button for you.
 
 cmd:#docs view main
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)

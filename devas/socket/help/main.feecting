@@ -1,11 +1,14 @@
-## socket
+## Socket Deva
 
 p:This is the main help file for SOCKET Deva which handles socket.io communications between the terminal and the user interface.
 
 ### Methods
 
-> #socket status
+cmd:#socket status
 p:This will return the status of the Socket Deva with time and date since online.
 
-> #socket help
+cmd:#socket help
 p:Get help workign with the Socket Deva.
+
+#color = var(--color-baby-blue)
+#bgcolor = var(--color-black)

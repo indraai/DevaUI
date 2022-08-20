@@ -666,7 +666,8 @@ class DevaInterface {
 
 
     // editor
-    utils.logHTML({
+    if (data.a.meta.method === 'help') utils.logBROWSER(data.a);
+    else utils.logHTML({
       type: data.a.meta.key,
       format: data.a.meta.method,
       agent:data.a.agent,

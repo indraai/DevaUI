@@ -1,14 +1,17 @@
-## ERROR
+## Error Deva
 
 p:The ErrorDEVA handles the ERROR processing.
 
 ## Methods
 
-1. uid - The ability to generate a UID for the Agent/Client.
-`#error uid`
+cmd:#error uid
+p:The ability to generate a UID for the Agent/Client.
 
-2. status - Returs the current status of the ErrorDEVA
-`#error status`
+cmd:#error status
+p:The current status of the ErrorDEVA
 
-3. help - The command to view this help document.
-`#error help`
+cmd:#error help
+p:The command to view this help document.
+
+#color = var(--color-red)
+#bgcolor = var(--color-black)

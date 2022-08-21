@@ -1,8 +1,0 @@
-[back](/docs "back")
-:splash:
-
-key: **telnet**  
-name: **Telnet Deva**  
-api: `/deva/telnet/*method*`  
-
-undefined

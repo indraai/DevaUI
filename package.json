@@ -27,7 +27,8 @@
   "devDependencies": {
     "@fastify/static": "^6.5.0",
     "@indra.ai/deva": "^1.0.26",
-    "@indra.ai/errordeva": "^0.0.1",
+    "@indra.ai/errordeva": "^0.0.2",
+    "@indra.ai/feectingdeva": "^0.0.4",
     "axios": "^0.21.4",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.10",

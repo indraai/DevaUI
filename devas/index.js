@@ -2,7 +2,7 @@
 //  Main Devas include file wheere all the necessary Devas are included.
 const DEVA = {
   error: require('@indra.ai/errordeva'),
-  feecting: require('./feecting'),
+  feecting: require('@indra.ai/feectingdeva'),
   socket: require('./socket'),
   docs: require('./docs'),
   telnet: require('./telnet'),

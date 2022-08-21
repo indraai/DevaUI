@@ -129,11 +129,12 @@ class DevaInterface {
     return Promise.resolve(this._formatLog());
   }
 
+  // load key value pair objects into the this scope and output to a data container
   GetKeyPair(opts) {
     return new Promise((resolve, reject) => {
       axios.get(opts.path).then(result => {
         this[opts.var] = result.data.DATA;
-        this.content =`<div class="DataContainer" id="${opts.id}">${this._keyValue(result.data)}</div>`;
+        this.content =`<div class="DataContainer" id="${opts.id}"><h1>${opts.var.toUpperCase()}</h1>${this._keyValue(result.data)}</div>`;
         return resolve();
       }).catch(reject);
     });
@@ -141,13 +142,14 @@ class DevaInterface {
 
   Client(_path='/data/client.json') {
     return new Promise((resolve, reject) => {
+      // get the client data and load it into the key value pair this scope.
       this.GetKeyPair({
         path: _path,
         id: 'Client',
         var: 'client'
       }).then(result => {
-        this.Show('client');
         // setup the form display for the agent
+        this.Show('client');
         const shell = document.getElementById('q');
         const label = document.getElementById('ShellInputLabel');
         const {prompt} = this.client;
@@ -845,6 +847,7 @@ class DevaInterface {
         $('#q').val('');
       });
 
+      // setup client then trap the system events
       this.Client().then(() => {
         socket.emit('client:data', this.client);
         socket.on('socket:terminal', data => {

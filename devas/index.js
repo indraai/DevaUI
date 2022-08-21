@@ -1,7 +1,7 @@
 // Copyright (c)2022 Quinn Michaels
 //  Main Devas include file wheere all the necessary Devas are included.
 const DEVA = {
-  error: require('./error'),
+  error: require('@indra.ai/errordeva'),
   feecting: require('./feecting'),
   socket: require('./socket'),
   docs: require('./docs'),

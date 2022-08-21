@@ -25,8 +25,10 @@ const DevaUI = new Deva({
   },
   client,
   config: {
+    dir: false,
     ports: {
       api: vars.ports.api,
+      socket: vars.ports.socket,
     }
   },
   lib: require('./lib'),

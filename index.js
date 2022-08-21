@@ -27,6 +27,9 @@ const shell = readline.createInterface({
 // set DevaCore objects
 const {DevaUI} = require('./src');
 
+// set the base directory in config
+DevaUI.config.dir = __dirname;
+
 // get network interfaces
 const ipv4 = [];
 const networks = os.networkInterfaces();
@@ -174,6 +177,7 @@ fast.listen({port:vars.ports.api}).then(() => {
   DevaUI.listen('clearshell', () => {
     console.log(vars.messages.clearshell);
   });
+
 
   // initialize the DevaUI
   DevaUI.init();

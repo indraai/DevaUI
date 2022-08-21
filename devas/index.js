@@ -6,7 +6,7 @@ const DEVA = {
   socket: require('@indra.ai/socketdeva'),
   docs: require('@indra.ai/docsdeva'),
   telnet: require('@indra.ai/telnetdeva'),
-  mud: require('./mud'),
+  mud: require('@indra.ai/muddeva'),
   adv: require('./adv'),
   web: require('./web'),
   chuck: require('./chuck'),

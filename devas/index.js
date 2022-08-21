@@ -9,6 +9,6 @@ const DEVA = {
   mud: require('@indra.ai/muddeva'),
   adv: require('@indra.ai/advdeva'),
   web: require('@indra.ai/webdeva'),
-  chuck: require('./chuck'),
+  chuck: require('@indra.ai/chuckdeva'),
 };
 module.exports = DEVA;

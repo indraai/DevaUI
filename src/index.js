@@ -57,7 +57,7 @@ const DevaUI = new Deva({
           this.question(`#feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
               text:parsed.a.text,
-              html:parse.a.html,
+              html:parsed.a.html,
               data:parsed.a.data,
             })
           }).catch(err => {

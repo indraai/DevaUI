@@ -7,8 +7,8 @@ const DEVA = {
   docs: require('@indra.ai/docsdeva'),
   telnet: require('@indra.ai/telnetdeva'),
   mud: require('@indra.ai/muddeva'),
-  adv: require('./adv'),
-  web: require('./web'),
+  adv: require('@indra.ai/advdeva'),
+  web: require('@indra.ai/webdeva'),
   chuck: require('./chuck'),
 };
 module.exports = DEVA;

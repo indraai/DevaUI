@@ -4,7 +4,7 @@ const DEVA = {
   error: require('@indra.ai/errordeva'),
   feecting: require('@indra.ai/feectingdeva'),
   socket: require('@indra.ai/socketdeva'),
-  docs: require('./docs'),
+  docs: require('@indra.ai/docsdeva'),
   telnet: require('./telnet'),
   mud: require('./mud'),
   adv: require('./adv'),

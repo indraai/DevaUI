@@ -40,12 +40,23 @@ const DevaUI = new Deva({
   },
   devas,
   func: {
+    /**************
+    func: question
+    params: packet
+    describe: Ask the base deva a question.
+    ***************/
     question(packet) {
       return new Promise((resolve, reject) => {
         if (!packet) return reject('NO PACKET');
         return resolve({text:'default response for now'})
       });
     },
+
+    /**************
+    func: devas
+    params: packet
+    describe: Build a list of devas currently loaded into the system.
+    ***************/
     devas(packet) {
       return new Promise((resolve, reject) => {
         const devas = [];
@@ -68,34 +79,77 @@ const DevaUI = new Deva({
         }
       });
     },
-    hash(packet) {
-      return this.hash(packet);
-    }
   },
   methods: {
+    /**************
+    method: hash
+    params: packet
+    describe: Access core hash features to build has trail.
+    ***************/
     hash(packet) {
-      return this.func.hash(packet);
+      return this.hash(packet);
     },
+
+    /**************
+    method: question
+    params: packet
+    describe: Method to relaty to question function with packet information.
+    ***************/
     question(packet) {
       return this.func.question(packet);
     },
+
+    /**************
+    method: devas
+    params: packet
+    describe: Call devas function and return list of system devas.
+    ***************/
     devas(packet) {
       return this.func.devas(packet);
     },
+
+    /**************
+    method: client
+    params: packet
+    describe: Return the current client information loaded.
+    ***************/
     client(packet) {
       return Promise.resolve({text: this.client.name, data:this.client});
     },
+
+    /**************
+    method: agent
+    params: packet
+    describe: Return the current agent information loaded.
+    ***************/
     agent(packet) {
       return Promise.resolve({text: this.agent.name, data: this.agent});
     },
-    // return a new uid
-    uid() {
+
+    /**************
+    method: uid
+    params: packet
+    describe: Return system uid for the based deva.
+    ***************/
+    uid(packet) {
       const uid = this.uid();
       return Promise.resolve({text:uid,html:uid});
     },
-    status() {
+
+    /**************
+    method: status
+    params: packet
+    describe: Return the current status for the system deva.
+    ***************/
+    status(packet) {
       return this.status();
     },
+
+    /**************
+    method: help
+    params: packet
+    describe: Return the help files for the main system deva.
+    ***************/
     help(packet) {
       return new Promise((resolve, reject) => {
         this.lib.help(packet.q.text, __dirname).then(help => {
@@ -110,21 +164,45 @@ const DevaUI = new Deva({
       });
     }
   },
+
+  /**************
+  func: onStart
+  params: none
+  describe: The custom onStart state handler that calls this.enter();
+  ***************/
   onStart() {
     return this.enter();
   },
+
+  /**************
+  func: onStop
+  params: none
+  describe: The custom onStop state handler to stop all the devas correctly.
+  ***************/
   onStop() {
     return this.stopDevas().then(devasStopped => {
       this.prompt(devasStopped);
       return this.exit()
     }).catch(this.error);
   },
+
+  /**************
+  func: onEnter
+  params: none
+  describe: The custom onEnter state handler to initialize the Devas correctly.
+  ***************/
   onEnter() {
     return this.initDevas().then(devasInit => {
       this.prompt(devasInit);
       return this.done(this.vars.messages.enter);
     });
   },
+
+  /**************
+  method: onExit
+  params: none
+  describe: The custom onExist state handler to exist the system properly.
+  ***************/
   onExit() {
     return this.done(this.vars.messages.exit);
   },

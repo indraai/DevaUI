@@ -102,12 +102,14 @@ class DevaInterface {
 
   Question(q, log=true) {
     this._insertLog({type:'question', text:q, agent:this.client});
+
     if (log) utils.logHTML({
       type: 'question',
       format: 'terminal',
       text: q,
       agent: this.client,
     });
+
     return new Promise((resolve, reject) => {
       this.Clear(q);
       axios.post('/question', {
@@ -468,20 +470,6 @@ class DevaInterface {
     utils.logBROWSER(opts.a);
   }
 
-  // vedas(opts) {
-  //   utils.logBROWSER(opts.a);
-  // }
-  //
-  // pastebin(opts) {
-  //   console.log('pastebin OPTS', opts);
-  //   utils.logBROWSER(opts.a);
-  // }
-
-  // ezine(opts) {
-  //   console.log('ezine OPTS', opts);
-  //   utils.logBROWSER(opts.a);
-  // }
-
   slab(opts) {
     console.log(opts);
     const {meta, html, text, agent} = opts.a;
@@ -501,7 +489,6 @@ class DevaInterface {
   }
 
   mud(opts) {
-
     const self = this;
     const {method} = opts.a.meta;
     const mudder = {
@@ -636,7 +623,6 @@ class DevaInterface {
       return mudder[strKey](opts.a);
     }
 
-
     const logger = mudder[method] && typeof mudder[method] === 'function';
     // if the method is a function then return that.
     if (logger) return mudder[method](opts.a);
@@ -654,10 +640,6 @@ class DevaInterface {
   adventure(opts) {
     utils.logBROWSER(opts.a);
   }
-  chat(data) {
-    if (!data) return;
-  }
-
 
   processor(data) {
     if (!data.a.text) return;

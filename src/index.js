@@ -1,7 +1,7 @@
 
 // COPYRIGHT (C)2022 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Load DEVA CORE Mind into Deva
-const Deva = require('@indra.ai/deva');
+const Deva = require('@feecting/deva');
 
 const fs = require('fs');
 const path = require('path');

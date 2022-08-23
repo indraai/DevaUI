@@ -1,17 +1,17 @@
 // Copyright (c)2022 Quinn Michaels
 //  Main Devas include file wheere all the necessary Devas are included.
 const DEVA = {
-  error: require('@indra.ai/errordeva'),
-  feecting: require('@indra.ai/feectingdeva'),
-  socket: require('@indra.ai/socketdeva'),
-  docs: require('@indra.ai/docsdeva'),
-  telnet: require('@indra.ai/telnetdeva'),
-  mud: require('@indra.ai/muddeva'),
-  adv: require('@indra.ai/advdeva'),
-  web: require('@indra.ai/webdeva'),
-  chuck: require('@indra.ai/chuckdeva'),
-  wiki: require('@indra.ai/wikideva'),
-  arc: require('@indra.ai/arcdeva'),
-  veda: require('@indra.ai/vedadeva'),
+  error: require('@feecting/errordeva'),
+  feecting: require('@feecting/feectingdeva'),
+  socket: require('@feecting/socketdeva'),
+  docs: require('@feecting/docsdeva'),
+  telnet: require('@feecting/telnetdeva'),
+  mud: require('@feecting/muddeva'),
+  adv: require('@feecting/advdeva'),
+  web: require('@feecting/webdeva'),
+  chuck: require('@feecting/chuckdeva'),
+  wiki: require('@feecting/wikideva'),
+  arc: require('@feecting/arcdeva'),
+  veda: require('@feecting/vedadeva'),
 };
 module.exports = DEVA;

@@ -36,8 +36,8 @@
       "mud": {
         "key": "player",
         "player": {
-          "login": "",
-          "password": ""
+          "login": "player",
+          "password": "password"
         }
       }
     }

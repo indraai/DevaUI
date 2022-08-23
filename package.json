@@ -27,6 +27,7 @@
   "devDependencies": {
     "@fastify/static": "^6.5.0",
     "@indra.ai/advdeva": "^0.0.1",
+    "@indra.ai/arcdeva": "^0.0.2",
     "@indra.ai/deva": "^1.0.26",
     "@indra.ai/docsdeva": "^0.0.2",
     "@indra.ai/errordeva": "^0.0.2",
@@ -34,6 +35,7 @@
     "@indra.ai/muddeva": "^0.0.1",
     "@indra.ai/socketdeva": "^0.0.2",
     "@indra.ai/telnetdeva": "^0.0.2",
+    "@indra.ai/vedadeva": "^0.0.1",
     "@indra.ai/webdeva": "^0.0.1",
     "@indra.ai/wikideva": "^0.0.5",
     "axios": "^0.21.4",

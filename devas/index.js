@@ -11,5 +11,7 @@ const DEVA = {
   web: require('@indra.ai/webdeva'),
   chuck: require('@indra.ai/chuckdeva'),
   wiki: require('@indra.ai/wikideva'),
+  arc: require('@indra.ai/arcdeva'),
+  veda: require('@indra.ai/vedadeva'),
 };
 module.exports = DEVA;

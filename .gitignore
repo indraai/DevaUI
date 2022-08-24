@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # ignore the client file json
-./data/client.json
+data/client.json

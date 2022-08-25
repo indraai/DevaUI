@@ -37,11 +37,15 @@
         "key": "player",
         "indra": {
           "login": "indra",
-          "password": ""
+          "password": "6495597470104"
         },
         "player": {
           "login": "player",
-          "password": "password"
+          "password": "5988492745014"
+        },
+        "quinn": {
+          "login": "quinn",
+          "password": "5988492745014"
         }
       }
     }

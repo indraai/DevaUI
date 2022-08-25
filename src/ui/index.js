@@ -753,7 +753,7 @@ class DevaInterface {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-cmd]').data('cmd');
-        this.Command(cmd, false);
+        this.Command(cmd, true);
 
       // insert tty string into q intpu
       }).on('click', '[data-tty]', e => {

@@ -1,4 +1,3 @@
-
 // COPYRIGHT (C)2022 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Load DEVA CORE Mind into Deva
 const Deva = require('@feecting/deva');

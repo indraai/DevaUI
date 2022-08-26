@@ -1,0 +1,181 @@
+{
+  "name": ":name: Data File",
+  "describe": "The main Data file for :name:",
+  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": "00000000000",
+      "key": "buddy",
+      "name": "Deva Buddy",
+      "describe": "Deva Buddy creator.",
+      "prompt": {
+        "emoji": "⊙",
+        "text": "buddy",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 150,
+            "B": 255
+          },
+          "text": {
+            "R": 101,
+            "G": 192,
+            "B": 255
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "avatar": "",
+        "background": "",
+        "describe": "",
+        "gender": "N"
+      }
+    },
+    "vars": {
+      "options": false,
+      "cmd": false,
+      "comp": {},
+      "template": "deva",
+      "paths": {
+        "copy_index": "",
+        "copy_from": "",
+        "copy_to": "",
+        "copy_to_base": ""
+      },
+      "messages": {
+        "heading": "👽 DEVA",
+        "que_heading": "📁 QUE FILES",
+        "success": "Holla!!! A NEW DEVA WAS CREATED",
+        "que_complete": "✅ QUE FILES COMPLETE",
+        "index_updated": "✅ INDEX UPDATED:",
+        "folder": "📁",
+        "file": "📝",
+        "deva_created": "✅ DEVA CREATED:"
+      },
+      "create": {
+        "files": [],
+        "directories": []
+      },
+      "items": [],
+      "answers": false,
+      "questions": [
+        {
+          "type": "input",
+          "name": "copyright",
+          "message": "COPYRIGHT",
+          "default": "Quinn Michaels"
+        },
+        {
+          "type": "input",
+          "name": "key",
+          "message": "KEY",
+          "default": "buddy"
+        },
+        {
+          "type": "input",
+          "name": "name",
+          "message": "NAME",
+          "default": "Deva Buddy"
+        },
+        {
+          "type": "input",
+          "name": "describe",
+          "message": "DESCRIPTION",
+          "default": "The coolest new #DevaBuddy"
+        },
+        {
+          "type": "input",
+          "name": "emoji",
+          "message": "EMOJI",
+          "default": "/public/user/emoji.png"
+        },
+        {
+          "type": "input",
+          "name": "avatar",
+          "message": "AVATAR",
+          "default": "/public/user/avatar.png"
+        },
+        {
+          "type": "input",
+          "name": "background",
+          "message": "BACKGROUND",
+          "default": ""
+        },
+        {
+          "type": "list",
+          "name": "gender",
+          "message": "GENDER",
+          "choices": [
+            {
+              "name": "(M) Male",
+              "value": "M"
+            },
+            {
+              "name": "(F) Female",
+              "value": "F"
+            },
+            {
+              "name": "(N) Neutral",
+              "value": "N"
+            },
+            {
+              "name": "(O) Other",
+              "value": "O"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "name": "voice",
+          "message": "VOICE",
+          "choices": [
+            {
+              "name": "Alex (American Male)",
+              "value": "Alex"
+            },
+            {
+              "name": "Daniel (English Male)",
+              "value": "Daniel"
+            },
+            {
+              "name": "Fred (Robot)",
+              "value": "Fred"
+            },
+            {
+              "name": "Fiona (Scottish Female)",
+              "value": "Fiona"
+            },
+            {
+              "name": "Karen (Australian Female)",
+              "value": "Karen"
+            },
+            {
+              "name": "Moira (Irish Female)",
+              "value": "Moira"
+            },
+            {
+              "name": "Samantha (American Female)",
+              "value": "Samantha"
+            },
+            {
+              "name": "Tessa (South African Female)",
+              "value": "Tessa"
+            },
+            {
+              "name": "Veena (Indian Female)",
+              "value": "Veena"
+            },
+            {
+              "name": "Victoria (American Female)",
+              "value": "Victoria"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

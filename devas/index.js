@@ -13,5 +13,6 @@ const DEVA = {
   wiki: require('@feecting/wikideva'),
   arc: require('@feecting/arcdeva'),
   veda: require('@feecting/vedadeva'),
+  qr: require('@feecting/qrdeva'),
 };
 module.exports = DEVA;

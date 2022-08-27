@@ -85,7 +85,7 @@
           "type": "input",
           "name": "describe",
           "message": "DESCRIPTION",
-          "default": "The coolest new #DevaBuddy"
+          "default": ""
         },
         {
           "type": "input",

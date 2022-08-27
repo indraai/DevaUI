@@ -71,11 +71,12 @@ const BUDDY = new Deva({
 
           if (filestat.isDirectory()) this.func.queFiles(copy_from_file, copy_to_file);
           else {
+            const theyear = new Date().getFullYear();
             const content = fs.readFileSync(copy_from_file, 'utf8')
                             .replace(/:uid:/g, this.uid())
                             .replace(/:copyright:/g, answers.copyright)
                             .replace(/:key:/g, answers.key)
-                            .replace(/:year:/g, Date.now().getFullYear())
+                            .replace(/:year:/g, theyear)
                             .replace(/:key-upper:/g, answers.key.toUpperCase())
                             .replace(/:name:/g, answers.name)
                             .replace(/:describe:/g, answers.describe)

@@ -1,5 +1,5 @@
 // Copyright (c):year: :copyright:
-// :key:
+// :name:
 
 const fs = require('fs');
 const path = require('path');

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Copyright (c)2021 Quinn Michaels
+// Copyright (c)2022 Quinn Michaels
 const Deva = require('@indra.ai/deva');
 const path = require('path');
 const fs = require('fs');

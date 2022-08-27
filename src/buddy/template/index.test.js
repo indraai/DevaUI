@@ -1,4 +1,4 @@
-// Copyright (c)2021 Quinn Michaels
+// Copyright (c):year: :copyright:
 // :name: test file
 
 const {expect} = require('chai')

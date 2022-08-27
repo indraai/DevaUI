@@ -1,7 +1,7 @@
 {
   "name": ":name: Data File",
   "describe": "The main Data file for :name:",
-  "copyright": "Copyright (c)2021 Quinn Michaels. All rights reserved.",
+  "copyright": "Copyright (c):year: :copyright:. All rights reserved.",
   "data": {
     "agent": {
       "uid": ":uid:",
@@ -45,7 +45,7 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!"
-      }      
+      }
     }
   }
 }

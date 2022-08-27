@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// Copyright (c)2020 Quinn Michaels
+// Copyright (c)2022 Quinn Michaels
 // Distributed under the MIT software license, see the accompanying
 // file LICENSE.md or http://www.opensource.org/licenses/mit-license.php.
 

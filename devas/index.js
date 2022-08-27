@@ -14,5 +14,6 @@ const DEVA = {
   arc: require('@feecting/arcdeva'),
   veda: require('@feecting/vedadeva'),
   qr: require('@feecting/qrdeva'),
+  pastebin: require('@feecting/pastebindeva'),
 };
 module.exports = DEVA;

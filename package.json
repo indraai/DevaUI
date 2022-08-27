@@ -35,6 +35,7 @@
     "@feecting/errordeva": "^0.0.5",
     "@feecting/feectingdeva": "^0.0.7",
     "@feecting/muddeva": "^0.0.5",
+    "@feecting/pastebindeva": "^0.0.5",
     "@feecting/qrdeva": "^0.0.1",
     "@feecting/telnetdeva": "^0.0.10",
     "@feecting/vedadeva": "^0.0.8",

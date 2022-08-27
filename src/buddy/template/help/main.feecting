@@ -1,3 +1,20 @@
-## :key:
+## :name:
+p:Copyright (c):year: :copyright:
 
-p:This is the main help file for :name:. :describe: :description:
+p:This is the main help file for :name:. :describe:
+
+uid: :uid:
+key: :key:
+name: :name:
+describe: :describe:
+
+### Methods
+
+cmd:#:key: uid
+p:Generate a unique id from the :name:.
+
+cmd:#:key: status
+p:Return the status for the :name:.
+
+cmd:#:key: help
+p:Get help using the :name:

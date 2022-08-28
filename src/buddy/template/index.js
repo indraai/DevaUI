@@ -33,23 +33,25 @@ const :key-upper: = new Deva({
     /**************
     method: uid
     params: packet
-    describe: Return a system id to the user.
+    describe: Return a system id to the user from the :name:.
     ***************/
     uid(packet) {
       return Promise.resolve({text:this.uid()});
     },
+
     /**************
     method: status
     params: packet
-    describe: Return the current status of the Deva.
+    describe: Return the current status of the :name:.
     ***************/
     status(packet) {
       return this.status();
     },
+
     /**************
     method: help
     params: packet
-    describe: The Help method returns the information on how to use the Deva.
+    describe: The Help method returns the information on how to use the :name:.
     ***************/
     help(packet) {
       return new Promise((resolve, reject) => {

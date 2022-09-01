@@ -37,7 +37,8 @@ const emojis = {
   info: '💁',
   error: '❌',
   fight: '🥊',
-  sound: '🔊'
+  sound: '🔊',
+  pour: '🚰',
 };
 
 class DevaInterface {
@@ -386,6 +387,10 @@ class DevaInterface {
         const {matched} = data.pattern;
         return self._console(matched[1],matched[2]);
       },
+      pour(data) {
+        const {matched} = data.pattern;
+        return self._console(matched[1],matched[2]);
+      },
       trigger(data) {
         const {matched} = data.pattern;
         return self._console(matched[1],matched[2]);
@@ -471,7 +476,6 @@ class DevaInterface {
   }
 
   slab(opts) {
-    console.log(opts);
     const {meta, html, text, agent} = opts.a;
 
     if (meta.method === 'tts') {
@@ -493,8 +497,7 @@ class DevaInterface {
     const {method} = opts.a.meta;
     const mudder = {
       help(opts) {
-        const theHTML = `<div class="browser-item help">${opts.html}</div>`;
-        $('#Content').html(theHTML);
+        utils.logBROWSER(opts);
       },
 
       terminal(opts) {
@@ -601,7 +604,6 @@ class DevaInterface {
       },
 
       say(opts) {
-        console.log('SAY OPTS', opts);
         const split_for_emoji = opts.text.split(':');
         const the_emoji = split_for_emoji.shift().toLowerCase().trim();
         const _emoji = emojis[the_emoji];
@@ -646,11 +648,12 @@ class DevaInterface {
     const metaKey = data.a.meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
     const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
-    if (metaChk) return this[data.a.meta.key](data);
+    const helpChk = data.a.meta.method === 'help';
 
+    if (helpChk) return utils.logBROWSER(data.a);
 
+    else if (metaChk) return this[data.a.meta.key](data);
     // editor
-    if (data.a.meta.method === 'help') utils.logBROWSER(data.a);
     else utils.logHTML({
       type: data.a.meta.key,
       format: data.a.meta.method,
@@ -810,15 +813,6 @@ class DevaInterface {
         e.stopPropagation()
         e.preventDefault();
         this.Command(`#mud > ${e.target.dataset.select}`, false);
-
-      }).on('click', '#Editor .menu[title="quit"]', e=> {
-        e.stopPropagation()
-        e.preventDefault();
-        this._setState('mud');
-        this.Question('#mud look', false)
-
-      }).on('blur', '.editor textarea', e=> {
-        console.log('YOU BLURRED THE TEXT EDITOR', e);
       });
 
       $('#Shell').on('submit', e => {
@@ -848,7 +842,6 @@ class DevaInterface {
           return this.patterns(data);
         })
         .on('mud:exits', data => {
-          console.log('exits', data);
           return this.exits(data);
         })
         .on('mud:time', data => {

@@ -610,6 +610,13 @@ class DevaInterface {
         if (_emoji) opts.text = `${_emoji} ${split_for_emoji.join(':')}`;
         $('#MudAlerts').prepend(`<div class="item alert">${opts.html || opts.text}</div>`);
       },
+
+      eq(opts) {
+        $('#MudEquipment').html('')
+      },
+      in(opts) {
+        $('#MudInventory').html('')
+      },
     };
     // check for auth variable to play mudder
     if (this.state === 'auth') return mudder.play(opts.a);

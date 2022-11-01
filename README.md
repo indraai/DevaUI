@@ -88,3 +88,9 @@ Once you have edited your `./data/client.json` file then start the application w
 From here in the terminal you can interact in the shell or load a web browser with the address provided at launch.
 
 Once you are in the system issue the `!help` command for more information on what todo next.
+
+---
+
+[Github Repo](https://github.com/indraai/deva.world)  
+[Back to indra.ai](https://indra.ai)  
+&copy;2022 Quinn Michaels; All Rights Reserved.

@@ -15,6 +15,6 @@ const DEVA = {
   veda: require('@feecting/vedadeva'),
   qr: require('@feecting/qrdeva'),
   pastebin: require('@feecting/pastebindeva'),
-  pastebin: require('@feecting/youtubedeva'),
+  youtube: require('@feecting/youtubedeva'),
 };
 module.exports = DEVA;

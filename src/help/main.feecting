@@ -1,0 +1,32 @@
+## DevaUI Help
+
+p:The main help file for the DevaUI. Here you will find basic information on using the main Deva Module and accessing the other features and Devas of the program.
+
+### Methods
+
+p:There are several exposed methods which you can access in the main Deva. These main methods are accessed with the "!method" command.
+
+cmd:!help
+p:The `!help` command is what you are looking at now. Good job figuring out how to get here. Someone should give you some point or something. 😎👍
+
+cmd:!status
+p:The `!status` command will give you the status and time/date that the agent has been online since. A pretty nifty method for seeing how long your Deva interface has been alive.
+
+cmd:!devas
+p:The `!devas` command will list the available Devas that are loaded in the system which you can interact with. Find the desired Deva and ask them for help to learn how to interact.
+
+cmd:!uid
+p:Sometimes you need a unique id for stuff, and this is where the `!uid` command comes in. Issue this command to get yourself a unique id to use for any of your needs. Total uniqueness is not guaranteed.
+
+cmd:!question
+p:The `!question` asks a question to the local Deva. This is a round about command and is not generally used except by the system when the concept mind component is connected.
+
+cmd:!client
+p:The `!client` command will give you the name of the current client using the system.
+
+cmd:!agent
+p:The `!agent` command will give you the name of the current agent of the system.
+
+-
+#color = var(--color-green)
+#bgcolor = var(--color-black)

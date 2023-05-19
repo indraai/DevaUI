@@ -1,0 +1,50 @@
+{
+  "name": ":name: Data File",
+  "describe": "The main Data file for :name:",
+  "copyright": "Copyright (c):year: :copyright:. All rights reserved.",
+  "data": {
+    "agent": {
+      "uid": ":uid:",
+      "key": ":key:",
+      "prompt": {
+        "emoji": "⊙",
+        "text": ":key:",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 150,
+            "B": 255
+          },
+          "text": {
+            "R": 101,
+            "G": 192,
+            "B": 255
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "name": ":name:",
+        "describe": ":describe:",
+        "emoji": ":emoji:",
+        "avatar": ":avatar:",
+        "background": ":background:",
+        "gender": ":gender:"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!"
+      }
+    }
+  }
+}

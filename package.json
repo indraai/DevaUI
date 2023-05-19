@@ -1,0 +1,72 @@
+{
+  "name": "devaui",
+  "version": "0.0.2",
+  "description": "The Deva World User Interface",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "buddy": "node ./src/buddy/index.js",
+    "style": "stylus -w src/styl/main.styl -o public/css/main.css -c",
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/indraai/DevaUI.git"
+  },
+  "keywords": [
+    "deva",
+    "ui"
+  ],
+  "author": "Quinn Michaels",
+  "license": "MIT",
+  "copyright": "2023",
+  "bugs": {
+    "url": "https://github.com/indraai/DevaUI/issues"
+  },
+  "homepage": "https://github.com/indraai/DevaUI#readme",
+  "devDependencies": {
+    "@fastify/static": "^6.5.0",
+    "@indra.ai/arcdeva": "^0.0.6",
+    "@indra.ai/chuckdeva": "^0.0.7",
+    "@indra.ai/deva": "^1.1.35",
+    "@indra.ai/discorddeva": "^0.0.18",
+    "@indra.ai/docsdeva": "^0.0.9",
+    "@indra.ai/errordeva": "^0.1.18",
+    "@indra.ai/feectingdeva": "^0.1.10",
+    "@indra.ai/gopherdeva": "^0.0.2",
+    "@indra.ai/muddeva": "^0.0.14",
+    "@indra.ai/pastebindeva": "^0.0.6",
+    "@indra.ai/qrdeva": "^0.0.2",
+    "@indra.ai/socketdeva": "^0.0.8",
+    "@indra.ai/spacedeva": "^0.0.21",
+    "@indra.ai/telnetdeva": "^0.0.11",
+    "@indra.ai/twitter": "^0.2.5",
+    "@indra.ai/twitterdeva": "^0.0.17",
+    "@indra.ai/vedadeva": "^0.0.12",
+    "@indra.ai/webdeva": "^0.0.12",
+    "@indra.ai/wikideva": "^0.0.11",
+    "@indra.ai/youtubedeva": "^0.0.19",
+    "axios": "^0.21.4",
+    "canvas": "^2.11.2",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.10",
+    "commander": "^7.0.0",
+    "emoji-regex": "^10.2.1",
+    "fastify": "^4.11.0",
+    "he": "^1.2.0",
+    "ibm-watson": "^8.0.0",
+    "inquirer": "^8.2.4",
+    "needle": "^3.2.0",
+    "openai": "^3.2.1",
+    "parseuri": "^0.0.6",
+    "puppeteer": "^20.1.2",
+    "qrcode": "^1.5.1",
+    "socket.io": "^3.1.1",
+    "socket.io-client": "^3.1.2",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^5.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

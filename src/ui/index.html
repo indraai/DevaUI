@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- copyright 2021 Quinn Michaels -->
+<html>
+<head>
+  <title>deva.world</title>
+  <link rel="icon" href="/public/icon.png" />
+  <meta name="description" content="deva.world" />
+  <meta name="keywords" content="DEVA, User Interface, AGI, AiMind, artificial intelligence" />
+
+  <link rel="stylesheet" href="/public/css/main.css" />
+</head>
+
+<body>
+<a name="top"></a>
+<div id="Indra">
+  <main>
+    <section class="shell">
+      <div class="stats" id="MudStats">
+        <div id="MudStatsMove"><div class="bar"></div></div>
+        <div id="MudStatsMana"><div class="bar"></div></div>
+        <div id="MudStatsHit"><div class="bar"></div></div>
+        <div id="MudStatsHunger"><div class="bar"></div></div>
+        <div id="MudStatsThirst"><div class="bar"></div></div>
+      </div>
+      <div id="ShellOutput" class="output"></div>
+      <div id="ShellInput" class="input">
+          <div id="ShellInputLabel" class="label"></div>
+          <div class="input">
+            <form id="Shell" name="qf">
+              <input type="text" name="q" id="q" autocomplete="off">
+            </form>
+          </div>
+      </div>
+    </section>
+    <section class="communications">
+      <div class="alerts" id="MudAlerts">&nbsp;</div>
+      <div class="score" id="MudScore">&nbsp;</div>
+      <div class="watch" id="MudWatch">
+        <div class="watch-hour" id="WatchHour">&nbsp;</div>
+        <div class="watch-day" id="WatchDay">&nbsp;</div>
+        <div class="watch-date" id="WatchDate">&nbsp;</div>
+        <div class="watch-room" id="WatchRoom">&nbsp;</div>
+      </div>
+      <div class="controls">
+        <div id="MudNavigate">
+          <div id="MudMap">
+            <div class="grid">
+              <button class="center-dot" data-mud="look"></button>
+              <button class="dots north-dot" data-navigate="north"></button>
+              <button class="dots east-dot" data-navigate="east"></button>
+              <button class="dots south-dot" data-navigate="south"></button>
+              <button class="dots west-dot" data-navigate="west"></button>
+              <button class="dots northeast-dot" data-navigate="northeast"></button>
+              <button class="dots northwest-dot" data-navigate="northwest"></button>
+              <button class="dots southwest-dot" data-navigate="southwest"></button>
+              <button class="dots southeast-dot" data-navigate="southeast"></button>
+            </div>
+          </div>
+        </div>
+        <div id="MudController">
+          <div id="MudExits">
+            <button class="btn direction exit north" title="Exit North" data-navigate="north"><i class="icn icn-exit-north"></i><span></span></button>
+            <button class="btn direction exit northwest" title="Exit North West" data-navigate="northwest"><i class="icn icn-exit-north-west"></i><span></span></button>
+            <button class="btn direction exit northeast" title="Exit North East" data-navigate="northeast"><i class="icn icn-exit-north-east"></i><span></span></button>
+            <button class="btn direction exit south" title="Exit South" data-navigate="south"><i class="icn icn-exit-south"></i><span></span></button>
+            <button class="btn direction exit southwest" title="Exit South West" data-navigate="southwest"><i class="icn icn-exit-south-west"></i><span></span></button>
+            <button class="btn direction exit southeast" title="Exit South East" data-navigate="southeast"><i class="icn icn-exit-south-east"></i><span></span></button>
+            <button class="btn direction exit east" title="Exit East" data-navigate="east"><i class="icn icn-exit-east"></i><span></span></button>
+            <button class="btn direction exit west" title="Exit West" data-navigate="west"><i class="icn icn-exit-west"></i><span></span></button>
+            <button class="btn direction exit up" title="Exit West" data-navigate="up"><i class="icn icn-exit-up"></i><span></span></button>
+            <button class="btn direction exit down" title="Exit West" data-navigate="down"><i class="icn icn-exit-down"></i><span></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="browser">
+      <div id="Content">
+      </div>
+    </section>
+  </main>
+  <section class="auxpanel">
+    <div id="MudConsole" class="mud-panels"></div>
+    <div id="MudSystem" class="mud-panels"><div class="systembox"></div></div>
+    <div id="MudEquipment" class="mud-panels"></div>
+    <div id="MudInventory" class="mud-panels"></div>
+  </section>
+  <!-- <footer>
+    <div>Copyright &copy;2022 Quinn Michaels. All rights reserved. | Privacy | Terms | License | Offering</div>
+  </footer> -->
+</div>
+
+<script type="text/javascript" src="/public/js/cash.min.js"></script>
+<script type="text/javascript" src="/public/js/axios/axios.min.js"></script>
+
+<script type="text/javascript" src="/public/js/main.js"></script>
+<script>
+
+  // creates html for log output
+  setTimeout(() => {
+    document.getElementById('q').focus();
+  }, 100);
+
+</script>
+
+</body>
+</html>

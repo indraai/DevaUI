@@ -1,0 +1,205 @@
+/* Copyright (c)2022 Quinn Michaels */
+$maxw = 640px
+
+#Content
+  display: flex
+  flex-flow: column nowrap
+  position: relative
+
+  .cover
+    background-image: var(--browser-item-image)
+    background-color: var(--browser-item-bgcolor)
+    color: var(--browser-item-color)
+    font-size: var(--browser-item-size)
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 100% auto
+    min-width: 100%
+    padding: 0 2rem
+    overflow: auto
+    flex: 1
+
+  > .browser-item
+    display: flex
+    flex-flow: column nowrap
+    height: 100%
+    > h1
+      flex: 0
+      margin: 0
+      padding: .5rem 1rem
+      border-bottom: none
+      background-color: $colors.darkest-grey
+      color: $colors.dark-grey
+      text-align: center
+      font-size: 1.2rem
+      min-height: 2.4rem
+    > p
+      margin: .5rem 0 .75rem 0
+
+    &.docs
+      padding: 0
+      > h1
+        text-align: left
+        font-size: 2rem
+        font-weight: bold
+        color: inherit
+        background-color: transparent
+        padding: 1.5rem 0 .5rem 0
+    > .box
+      position: relative
+      &.object
+        overflow: auto
+        pre
+          padding: 1rem
+          font-size: .9rem
+
+      &.world
+        flex: 1 auto
+        max-height: 100%
+        overflow: auto
+      &.room
+        flex: 1 auto
+        max-height: 100%
+        overflow: auto
+      &.agents
+      &.objects
+        padding: .2rem
+        flex: 0 auto
+        background-color: $colors.darkest-grey
+
+      .cmd
+      .tty
+        .label
+          display: none
+
+  > .browser-item
+  > .agent
+    flex: 1
+    background-size: 100% auto
+    background-position: top center
+    background-repeat: no-repeat
+    overflow: auto
+    > .feecting
+      flex: 1
+      margin: auto
+      padding: 0
+
+    &.canvas
+      &.card
+        text-align: center
+        img
+          margin: 5rem auto
+          border-radius: .25rem
+    &.status
+      > .feecting
+        margin: auto
+        max-width: $maxw
+
+    &.twitter
+      max-width: $maxw
+      margin: auto
+      .tweet
+        padding: .5rem 0
+        display: flex
+        border-bottom: 1px solid
+        &-image
+          padding-right: 1rem
+          img
+            border-radius: 50%
+
+        &-text
+          font-size: 1rem
+    &.help
+      > .feecting
+        .item
+          .label
+            width: 500px
+    &.reddit
+      background-color: lighten(#ff702d, 75%)
+      padding: 1rem
+      &::before
+        display: block
+        content: "Reddit"
+        font-size: 2rem
+        font-weight: bold
+        background-image: url(/public/devas/reddit/emoji.png);
+        background-repeat: no-repeat;
+        background-size: 45px 45px
+        background-position: 0 0
+        height: 45px
+        padding-left: 50px
+        color: #ff702d
+
+      .reddit-content
+        max-width: $maxw
+        margin: auto
+        h3
+          font-weight: bold
+          border-bottom: 1px solid
+          padding: 2rem 0 .5rem 0
+        a
+        h3
+          color: #fb703b
+          text-decoration: none
+        .subreddit
+        .author
+          &::before
+            display: inline-block
+            padding-right: .5rem
+            min-width: 60px
+        .subreddit
+          &::before
+            content: "subredit"
+        .author
+          &::before
+            content: "author"
+
+.DataContainer
+  position: relative
+  height: 100%
+  max-width: $maxw
+  min-width: 500px
+  margin: auto
+  // padding: 1rem
+  &::before
+    font-family: icons, $fonts-text
+    font-size: 2rem
+    width: 100%
+    display: block
+    margin: 0
+    padding: .5rem 1rem .5rem 1rem
+
+  .data-container
+    font-family: $fonts-text
+    font-size: 1.1rem
+    &-row
+      padding: .5rem 1rem .5rem 0
+      color: $colors.light-grey
+      border-top: 1px dotted $colors.dark-grey
+//
+//
+#ClientData::before
+  content: "\e71c  Client"
+#Data::before
+  content: "\e65d  Data"
+#DevasData::before
+  content: "\e70b  Devas"
+
+
+#wikiData
+  background-color: lighten($colors.light-grey, 60%)
+  padding: 1rem
+  color: $colors.darker-grey
+
+  [data-label]::before
+    min-width: 100px
+
+  &::before
+    content: "Wiki"
+    background-image: url(/public/devas/wiki/emoji.png);
+    background-repeat: no-repeat;
+    background-size: 45px 45px
+    background-position: 0 0
+    width: 45px
+    height: 45px
+    padding-left: 50px

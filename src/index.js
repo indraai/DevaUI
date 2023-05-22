@@ -62,6 +62,9 @@ const DEVA = new Deva({
     'clirelay'(packet) {
       this.func.cliprompt(packet);
     },
+    'devacore:prompt'(packet) {
+      this.func.cliprompt(packet);
+    },
     'devacore:state'(packet) {
       this.func.cliprompt(packet);
     },

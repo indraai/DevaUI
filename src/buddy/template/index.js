@@ -1,14 +1,28 @@
-// Copyright (c):year: :copyright:
-// :name:
+// Copyright (c)::year:: ::copyright::
+// ::name::
 
 const fs = require('fs');
 const path = require('path');
+
+const package = require('../../package.json');
+const info = {
+  name: package.name,
+  version: package.version,
+  author: package.author,
+  describe: package.describe,
+  url: package.homepage,
+  git: package.repository.url,
+  bugs: package.bugs.url,
+  license: package.license,
+  copyright: package.copyright
+};
 
 const data_path = path.join(__dirname, 'data.json');
 const {agent,vars} = require(data_path).data;
 
 const Deva = require('@indra.ai/deva');
-const :key-upper: = new Deva({
+const ::key-upper:: = new Deva({
+  info,
   agent: {
     id: agent.id,
     describe: agent.describe,
@@ -66,4 +80,4 @@ const :key-upper: = new Deva({
     }
   },
 });
-module.exports = :key-upper:
+module.exports = ::key-upper::

@@ -3,7 +3,7 @@
 // Main Deva Agent for deva.world
 
 // setup main variables
-const {version, repository} = require('./package.json');
+const package = require('./package.json');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
@@ -24,15 +24,26 @@ const shell = readline.createInterface({
   output: process.stdout,
 });
 
-const clientPrompt = `${client.prompt.emoji} ${client.key}:`;
-shell.setPrompt(clientPrompt);
-shell.prompt(true);
+function setPrompt(pr) {
+  // console.log('PROMPT', pr);
+  if (!pr) return;
+  else if (!pr.prompt) return;
+  else {
+    const {colors} = pr.prompt;
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.key}: `);
+
+    // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
+    shell.setPrompt(setPrompt);
+    shell.prompt();
+  }
+}
+setPrompt(client);
 
 // set DevaCore objects
-const {DevaUI} = require('./src');
+const {DEVA} = require('./src');
 
 // set the base directory in config
-DevaUI.config.dir = __dirname;
+DEVA.config.dir = __dirname;
 
 // get network interfaces
 const ipv4 = [];
@@ -56,21 +67,50 @@ ${line_break}
 ░░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝░░
 ${line_break}
 
-👤 CLIENT: ${opts.client.profile.name} (${opts.client.id})
-👤 AGENT: ${opts.agent.profile.name} (${opts.agent.id})
+👤 CLIENT:    ${opts.client.profile.name} (${opts.client.id})
+👤 AGENT:     ${opts.agent.profile.name} (${opts.agent.id})
 
-👨‍💻 REPO: ${repository.url}
-❤️ VERSION: ${version}
+📛 name:      ${package.name},
+💚 ver:       ${package.version},
+✍️ author:     ${package.author},
+📝 describe:  ${package.description},
+🔗 url:       ${package.homepage},
+👨‍💻 git:       ${package.repository.url}
+🪪 license:    ${package.license}
 
 ${line_break}
-
-💹 avail mem: ${os.freemem()}
-✅ total mem: ${os.totalmem()}
 
 ${line_break}
 
 ${opts.ip}
-`;
+
+💹 avail mem:   ${os.freemem()}
+✅ total mem:   ${os.totalmem()}
+
+${line_break}
+
+Greetings ${opts.client.profile.name},
+
+Welcome to deva.world, where imagination,
+creativity, code, and artificial intelligence
+meet to collaborate and brainstorm the amazing
+future that is made possible through
+Human and AI collaboration.
+
+In deva.world remember that the Security,
+Support, and other @BUSINESS tools are built-in
+to help you get your job done while hopefully
+having a little fun.
+
+Thank you for your offerings,
+${opts.agent.profile.name} (@${opts.agent.key})
+
+${line_break}
+
+🎉 LET'S GET THE PARTY STARTED!
+
+Copyright ©${package.copyright} indra.ai
+${line_break}`;
 
 // create the static routes for the local server.
 // public is used to deliver local assets
@@ -116,7 +156,7 @@ const routes = [
     url: '/question',
     handler: (req, reply) => {
       if (!req.query.q || !req.query.q.length) return reply.send('💩');
-      DevaUI.question(req.query.q).then(answer => {
+      DEVA.question(req.query.q).then(answer => {
         // shellPrompt({
         //   prompt: answer.a.agent.prompt,
         //   text: answer.a.text,
@@ -141,7 +181,7 @@ const routes = [
         type: 'q',
       });
       this.prompt('------ASK DEVA A QUESTION');
-      DevaUI.question(req.body.question).then(answer => {
+      DEVA.question(req.body.question).then(answer => {
         answer.a.agent = answer.a.data.agent || answer.a.agent;
         this.prompt('SET THE SHELL PROMPT');
         shellPrompt({
@@ -196,10 +236,12 @@ fast.listen({port:vars.ports.api}).then(() => {
   })));
 
 }).then(_init => {
-  // initialize the DevaUI
-  DevaUI.init(client);
-  DevaUI.listen('cliprompt', text => {
-    shell.prompt();
+  // initialize the DEVA
+  DEVA.init(client);
+
+  DEVA.listen('cliprompt', ag => {
+    // console.log('CLIPROMPT', ag);
+    setPrompt(ag);
   });
 
   let cmd = false;
@@ -207,14 +249,15 @@ fast.listen({port:vars.ports.api}).then(() => {
   // run operation when new line item in shell.
   shell.on('line', question => {
     // the event that fires when a new command is sent through the shell.
-    if (question === '!exit') return shell.close();
+    if (question.toLowerCase() === '/exit') return shell.close();
 
     // ask a question to the deva ui and wait for an answer.
-    DevaUI.question(question).then(answer => {
+    DEVA.question(question).then(answer => {
       // sen the necessary returned values to the shell prompt.
-      console.log(answer.a.text);
+      setPrompt(answer.a.agent);
+      console.log(chalk.rgb(answer.a.client.prompt.colors.label.R, answer.a.client.prompt.colors.label.G, answer.a.client.prompt.colors.label.B)(answer.a.text));
+      setPrompt(answer.a.client);
       // if (answer.a.data) console.log(answer.a.data);
-      shell.prompt()
     }).catch(e => {
       console.error(e);
     });
@@ -225,7 +268,7 @@ fast.listen({port:vars.ports.api}).then(() => {
 
   }).on('close', () => {
     // begin close procedure to clear the system and close other devas properly.
-    DevaUI.stop().then(stop => {
+    DEVA.stop().then(stop => {
       stop.client = client;
       console.log(stop.text);
       shell.prompt();

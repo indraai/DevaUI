@@ -4,7 +4,6 @@
 
 const path = require('path');
 const fs = require('fs');
-const He = require('he');
 // local function to handle recursive copying
 function copy(obj) {
   let v, key;
@@ -49,10 +48,6 @@ module.exports = {
 
   copyCode(obj) {
     return copyCode(obj)
-  },
-
-  decode(content) {
-    return He.decode(content);
   },
 
   formatDate(d, format='long', time=false, locale='en-US') {

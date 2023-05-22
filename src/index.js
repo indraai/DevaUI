@@ -1,15 +1,32 @@
 // COPYRIGHT (C)2022 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Load DEVA CORE Mind into Deva
-const Deva = require('@indra.ai/deva');
+const package = require('../package.json');
+const info = {
+  name: package.name,
+  version: package.version,
+  author: package.author,
+  describe: package.description,
+  url: package.homepage,
+  git: package.repository.url,
+  bugs: package.bugs.url,
+  license: package.license,
+  copyright: package.copyright
+};
 
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 
+// include deva core
+const Deva = require('@indra.ai/deva');
+
+// load data
 const {vars, agent} = require('../data');
 const devas = require('../devas');
 
-const DevaUI = new Deva({
+const DEVA = new Deva({
+  info,
   agent: {
     id: 3848019052036,
     key: agent.key,
@@ -33,24 +50,35 @@ const DevaUI = new Deva({
   },
   lib: require('./lib'),
   vars,
+  devas: {
+    log: require('@indra.ai/logdeva'),
+  },
   listeners: {
-    'state'(packet) {
+    /**************
+    func: cli
+    params: packet
+    describe: this is a forwarding event to the cli interface for other agents.
+    ***************/
+    'devacore:prompt'(packet) {
       this.func.cliprompt(packet);
     },
-    'zone'(packet) {
+    'devacore:state'(packet) {
       this.func.cliprompt(packet);
     },
-    'feature'(packet) {
+    'devacore:zone'(packet) {
       this.func.cliprompt(packet);
     },
-    'mode'(packet) {
+    'devacore:feature'(packet) {
       this.func.cliprompt(packet);
     },
-    'action'(packet) {
+    'devacore:mode'(packet) {
+      this.func.cliprompt(packet);
+    },
+    'devacore:action'(packet) {
       this.func.cliprompt(packet);
     },
 
-    'clearshell'(packet) {
+    'devacore:clearshell'(packet) {
       this.func.cliprompt(packet);
     },
   },
@@ -58,14 +86,15 @@ const DevaUI = new Deva({
     mind: false,
     psy: [],
   },
-  devas,
   func: {
     cliprompt(packet) {
-      let text = `#${packet.agent.key}:${packet.key} ${packet.text} - ${this.formatDate(packet.creted, 'numeric', true)}`;
-      if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}:${text}`
-      this.talk('cliprompt', text); // clears cli line
-      console.log(text);
-      this.talk('cliprompt', text); // clears cli line
+      let text = packet.text;
+      if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}: ${packet.text}`;
+      text = `${text} | ${this.formatDate(packet.creted, 'numeric', true)}`;
+
+      this.talk('cliprompt', packet.agent); // clears cli line
+      console.log(chalk.rgb(packet.agent.prompt.colors.label.R, packet.agent.prompt.colors.label.G, packet.agent.prompt.colors.label.B)(text));
+      this.talk('cliprompt', this._client); // clears cli line
     },
     /**************
     func: question
@@ -216,9 +245,9 @@ const DevaUI = new Deva({
     },
 
     /**************
-    method: mem
+    method: memory
     params: packet
-    describe: Return the current mem for the system deva.
+    describe: Return the current memory for the system deva.
     ***************/
     memory(packet) {
       const free = os.freemem();
@@ -248,6 +277,29 @@ const DevaUI = new Deva({
     },
 
     /**************
+    method: info
+    params: packet
+    describe: Return the current info for the deva.
+    ***************/
+    info(packet) {
+      const info = [
+        '::::::::::::::::::',
+        `name: ${this.info.name}`,
+        `version: ${this.info.version}`,
+        `license: ${this.info.license}`,
+        '---',
+        `describe: ${this.info.describe}`,
+        `author: ${this.info.author}`,
+        `url: ${this.info.url}`,
+        `git: ${this.info.git}`,
+        `bugs: ${this.info.bugs}`,
+        `Copyright (c) ${this.info.copyright} ${this.info.author}`,
+        ':::::::::::::::::::::::::::',
+      ].join('\n')
+      return Promise.resolve(info);
+    },
+
+    /**************
     method: help
     params: packet
     describe: Return the help files for the main system deva.
@@ -255,7 +307,6 @@ const DevaUI = new Deva({
     help(packet) {
       return new Promise((resolve, reject) => {
         this.lib.help(packet.q.text, __dirname).then(help => {
-
           console.log(help);
           return this.question(`#feecting parse ${help}`);
         }).then(parsed => {
@@ -267,7 +318,12 @@ const DevaUI = new Deva({
         }).catch(reject);
       });
     }
+  },
+  onDone(data) {
+    for (let x in this.devas) {
+      this.devas[x].init(data.client)
+    }
   }
 });
 
-module.exports = {DevaUI};
+module.exports = {DEVA};

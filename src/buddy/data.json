@@ -84,8 +84,8 @@
         {
           "type": "input",
           "name": "describe",
-          "message": "DESCRIPTION",
-          "default": ""
+          "message": "DESCRIBE",
+          "default": "The Deva Buddy"
         },
         {
           "type": "input",
@@ -112,19 +112,19 @@
           "choices": [
             {
               "name": "(M) Male",
-              "value": "M"
+              "value": "male"
             },
             {
               "name": "(F) Female",
-              "value": "F"
+              "value": "female"
             },
             {
               "name": "(N) Neutral",
-              "value": "N"
+              "value": "neutral"
             },
             {
               "name": "(O) Other",
-              "value": "O"
+              "value": "other"
             }
           ]
         },
@@ -134,44 +134,68 @@
           "message": "VOICE",
           "choices": [
             {
-              "name": "Alex (American Male)",
-              "value": "Alex"
+              "name": "Brian (British Male)",
+              "value": "Brian"
             },
             {
-              "name": "Daniel (English Male)",
-              "value": "Daniel"
+              "name": "Amy (British Female)",
+              "value": "Amy"
             },
             {
-              "name": "Fred (Robot)",
-              "value": "Fred"
+              "name": "Emma (British Female)",
+              "value": "Emma"
             },
             {
-              "name": "Fiona (Scottish Female)",
-              "value": "Fiona"
+              "name": "Matthew (American Male)",
+              "value": "Matthew"
             },
             {
-              "name": "Karen (Australian Female)",
-              "value": "Karen"
+              "name": "Joey (American Male)",
+              "value": "Joey"
             },
             {
-              "name": "Moira (Irish Female)",
-              "value": "Moira"
+              "name": "Justin (American Male Youth)",
+              "value": "Justin"
             },
             {
-              "name": "Samantha (American Female)",
-              "value": "Samantha"
+              "name": "Joanna (American Female)",
+              "value": "Joanna"
             },
             {
-              "name": "Tessa (South African Female)",
-              "value": "Tessa"
+              "name": "Kendra (American Female)",
+              "value": "Kendra"
             },
             {
-              "name": "Veena (Indian Female)",
-              "value": "Veena"
+              "name": "Kimberly (American Female)",
+              "value": "Kimberly"
             },
             {
-              "name": "Victoria (American Female)",
-              "value": "Victoria"
+              "name": "Salli (American Female)",
+              "value": "Salli"
+            },
+            {
+              "name": "Ivy (American Female)",
+              "value": "Ivy"
+            },
+            {
+              "name": "Russell (Australian Male)",
+              "value": "Russell"
+            },
+            {
+              "name": "Nicole (Australian Female)",
+              "value": "Nicole"
+            },
+            {
+              "name": "Geraint (Welch Male Youth)",
+              "value": "Geraint"
+            },
+            {
+              "name": "Aditi (Indian Female)",
+              "value": "Aditi"
+            },
+            {
+              "name": "Hala (Welch Male Youth)",
+              "value": "Hala"
             }
           ]
         }

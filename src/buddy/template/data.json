@@ -4,11 +4,11 @@
   "copyright": "Copyright (c):year: :copyright:. All rights reserved.",
   "data": {
     "agent": {
-      "uid": ":uid:",
-      "key": ":key:",
+      "uid": "::uid::",
+      "key": "::key::",
       "prompt": {
         "emoji": "⊙",
-        "text": ":key:",
+        "text": "::key::",
         "colors": {
           "label": {
             "R": 0,
@@ -23,16 +23,16 @@
         }
       },
       "voice": {
-        "speech": "Alex",
+        "speech": "::speech::",
         "speed": 1
       },
       "profile": {
-        "name": ":name:",
-        "describe": ":describe:",
-        "emoji": ":emoji:",
-        "avatar": ":avatar:",
-        "background": ":background:",
-        "gender": ":gender:"
+        "name": "::name::",
+        "describe": "::describe::",
+        "emoji": "::emoji::",
+        "avatar": "::avatar::",
+        "background": "::background::",
+        "gender": "::gender::"
       }
     },
     "vars": {

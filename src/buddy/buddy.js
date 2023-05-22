@@ -72,19 +72,18 @@ const BUDDY = new Deva({
           else {
             const theyear = new Date().getFullYear();
             const content = fs.readFileSync(copy_from_file, 'utf8')
-                            .replace(/:id:/g, this.uid())
-                            .replace(/:copyright:/g, answers.copyright)
-                            .replace(/:key:/g, answers.key)
-                            .replace(/:year:/g, theyear)
-                            .replace(/:key-upper:/g, answers.key.toUpperCase())
-                            .replace(/:name:/g, answers.name)
-                            .replace(/:describe:/g, answers.describe)
-                            .replace(/:description:/g, answers.description)
-                            .replace(/:emoji:/g, answers.emoji)
-                            .replace(/:avatar:/g, answers.avatar)
-                            .replace(/:background:/g, answers.background)
-                            .replace(/:voice:/g, answers.voice)
-                            .replace(/:gender:/g, answers.gender);
+                            .replace(/::id::/g, this.uid())
+                            .replace(/::copyright::/g, answers.copyright)
+                            .replace(/::key::/g, answers.key)
+                            .replace(/::year::/g, theyear)
+                            .replace(/::key:-upper:/g, answers.key.toUpperCase())
+                            .replace(/::name::/g, answers.name)
+                            .replace(/::describe::/g, answers.describe)
+                            .replace(/::emoji::/g, answers.emoji)
+                            .replace(/::avatar::/g, answers.avatar)
+                            .replace(/::background::/g, answers.background)
+                            .replace(/::voice::/g, answers.voice)
+                            .replace(/::gender::/g, answers.gender);
 
             // PUSH THE NEWLY CREATED FILE TO THE CREATE FILES ARRAY VARIABLE
             this.vars.create.files.push({copy_to_file, content});

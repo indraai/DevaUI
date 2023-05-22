@@ -59,7 +59,7 @@ const DEVA = new Deva({
     params: packet
     describe: this is a forwarding event to the cli interface for other agents.
     ***************/
-    'devacore:prompt'(packet) {
+    'clirelay'(packet) {
       this.func.cliprompt(packet);
     },
     'devacore:state'(packet) {

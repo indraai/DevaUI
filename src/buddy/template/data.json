@@ -1,10 +1,10 @@
 {
-  "name": ":name: Data File",
-  "describe": "The main Data file for :name:",
-  "copyright": "Copyright (c):year: :copyright:. All rights reserved.",
+  "name": "::name:: Data File",
+  "describe": "The main Data file for ::name::",
+  "copyright": "Copyright (c)::year:: ::copyright::. All rights reserved.",
   "data": {
     "agent": {
-      "uid": "::uid::",
+      "id": "::id::",
       "key": "::key::",
       "prompt": {
         "emoji": "⊙",

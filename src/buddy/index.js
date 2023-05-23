@@ -11,6 +11,8 @@ const path = require('path');
 const chalk = require('chalk');
 
 const {version} = require('../../package.json');
+const client = require('../../data/client.json').DATA;
+
 
 const buddy = require('./buddy');
 
@@ -29,4 +31,4 @@ ${chalk.blueBright('version:')} ${chalk.yellowBright(version)}
 ::::::::::::::::::::::::::::::::::
 `));
 
-buddy.init();
+buddy.init(client);

@@ -5,8 +5,6 @@ const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 
-const client = require('../../data/client.json').data;
-
 const {agent,vars} = require(path.join(__dirname, 'data.json')).data;
 
 
@@ -25,7 +23,6 @@ const BUDDY = new Deva({
     }
   },
   vars,
-  client,
   devas: {},
   listeners: {},
   modules: {
@@ -76,7 +73,7 @@ const BUDDY = new Deva({
                             .replace(/::copyright::/g, answers.copyright)
                             .replace(/::key::/g, answers.key)
                             .replace(/::year::/g, theyear)
-                            .replace(/::key:-upper:/g, answers.key.toUpperCase())
+                            .replace(/::key-upper::/g, answers.key.toUpperCase())
                             .replace(/::name::/g, answers.name)
                             .replace(/::describe::/g, answers.describe)
                             .replace(/::emoji::/g, answers.emoji)

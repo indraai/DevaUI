@@ -30,7 +30,7 @@ function setPrompt(pr) {
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.key}: `);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}: `);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);

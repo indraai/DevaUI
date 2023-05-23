@@ -23,7 +23,6 @@ const Deva = require('@indra.ai/deva');
 
 // load data
 const {vars, agent} = require('../data');
-const devas = require('../devas');
 
 const DEVA = new Deva({
   info,
@@ -52,6 +51,18 @@ const DEVA = new Deva({
   vars,
   devas: {
     log: require('@indra.ai/logdeva'),
+    error: require('@indra.ai/errordeva'),
+    feecting: require('@indra.ai/feectingdeva'),
+    security: require('@indra.ai/securitydeva'),
+    support: require('@indra.ai/supportdeva'),
+    services: require('@indra.ai/servicesdeva'),
+    solutions: require('@indra.ai/solutionsdeva'),
+    systems: require('@indra.ai/systemsdeva'),
+    development: require('@indra.ai/developmentdeva'),
+    business: require('@indra.ai/businessdeva'),
+    legal: require('@indra.ai/legaldeva'),
+    assistant: require('@indra.ai/assistantdeva'),
+    story: require('@indra.ai/storydeva'),
   },
   listeners: {
     /**************

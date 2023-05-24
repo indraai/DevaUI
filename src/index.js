@@ -94,6 +94,7 @@ const DEVA = new Deva({
     question(packet) {
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return reject(this._messages.notext);
+
         this.question(`#open chat ${packet.q.text}`).then(answer => {
           // here is where we apply the deva translate function to remove any open ai specific chat content
 

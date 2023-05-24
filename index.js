@@ -26,18 +26,18 @@ const shell = readline.createInterface({
 
 function setPrompt(pr) {
   // console.log('PROMPT', pr);
+  shell.prompt();
   if (!pr) return;
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}: `);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}:`);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);
     shell.prompt();
   }
 }
-setPrompt(client);
 
 // set DevaCore objects
 const {DEVA} = require('./src');
@@ -237,14 +237,21 @@ fast.listen({port:vars.ports.api}).then(() => {
 
 }).then(_init => {
   // initialize the DEVA
-  DEVA.init(client);
-
-  DEVA.listen('cliprompt', ag => {
-    // console.log('CLIPROMPT', ag);
-    setPrompt(ag);
+  setPrompt(client);
+  DEVA.init(client).then(done => {
+    console.log('ALL DONE');
+    console.log('ALL DONE');
+    console.log('ALL DONE');
+    console.log('ALL DONE');
+    console.log('ALL DONE');
+    console.log('ALL DONE');
+    console.log('ALL DONE');
   });
 
-  let cmd = false;
+  // cli prompt listener for relaying from the deva to the prompt.
+  DEVA.listen('cliprompt', ag => {
+    setPrompt(ag);
+  });
 
   // run operation when new line item in shell.
   shell.on('line', question => {
@@ -255,7 +262,7 @@ fast.listen({port:vars.ports.api}).then(() => {
     DEVA.question(question).then(answer => {
       // sen the necessary returned values to the shell prompt.
       setPrompt(answer.a.agent);
-      console.log(chalk.rgb(answer.a.client.prompt.colors.label.R, answer.a.client.prompt.colors.label.G, answer.a.client.prompt.colors.label.B)(answer.a.text));
+      console.log(chalk.rgb(answer.a.agent.prompt.colors.label.R, answer.a.agent.prompt.colors.label.G, answer.a.agent.prompt.colors.label.B)(answer.a.text));
       setPrompt(answer.a.client);
       // if (answer.a.data) console.log(answer.a.data);
     }).catch(e => {

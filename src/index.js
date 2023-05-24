@@ -33,7 +33,13 @@ const DEVA = new Deva({
     voice: agent.voice,
     profile: agent.profile,
     translate(input) {
-      return input.trim();
+      return input.trim().replace(/As an AI language model.+?(\.|\?|\!)\s/gi, '')
+                  .replace(/However, I.+?\.\s/gi, '')
+                  .replace(/However, I.+?\.\s/gi, '')
+                  .replace(/I apologize.+?\.\s/gi, '')
+                  .replace(/However,.+?(note)/gi, '$1:')
+                  .replace(/p:\s(.+:)?/gi, '$1')
+                  .replace(/(\b)OpenAi(\b)/gi, '$1@indra.ai$2');;
     },
     parse(input) {
       return input.trim();
@@ -63,39 +69,9 @@ const DEVA = new Deva({
     legal: require('@indra.ai/legaldeva'),
     assistant: require('@indra.ai/assistantdeva'),
     story: require('@indra.ai/storydeva'),
+    open: require('@indra.ai/opendeva'),
   },
-  listeners: {
-    /**************
-    func: cli
-    params: packet
-    describe: this is a forwarding event to the cli interface for other agents.
-    ***************/
-    'clirelay'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:prompt'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:state'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:zone'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:feature'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:mode'(packet) {
-      this.func.cliprompt(packet);
-    },
-    'devacore:action'(packet) {
-      this.func.cliprompt(packet);
-    },
-
-    'devacore:clearshell'(packet) {
-      this.func.cliprompt(packet);
-    },
-  },
+  listeners: {},
   modules: {
     mind: false,
     psy: [],
@@ -103,12 +79,12 @@ const DEVA = new Deva({
   func: {
     cliprompt(packet) {
       let text = packet.text;
-      if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}: ${packet.text}`;
+      // if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}:${packet.text}`;
       text = `${text} | ${this.formatDate(packet.creted, 'numeric', true)}`;
 
       this.talk('cliprompt', packet.agent); // clears cli line
       console.log(chalk.rgb(packet.agent.prompt.colors.label.R, packet.agent.prompt.colors.label.G, packet.agent.prompt.colors.label.B)(text));
-      this.talk('cliprompt', this._client); // clears cli line
+      this.talk('cliprompt', this.client()); // clears cli line
     },
     /**************
     func: question
@@ -118,7 +94,21 @@ const DEVA = new Deva({
     question(packet) {
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return reject(this._messages.notext);
-        return resolve(this._state);
+        this.question(`#open chat ${packet.q.text}`).then(answer => {
+          // here is where we apply the deva translate function to remove any open ai specific chat content
+
+          const hashed = this.hash(answer.a.text);
+          const translate = this._agent.translate(answer.a.text);
+          return this.question(`#feecting parse ${translate}`);
+        }).then(parsed => {
+          return resolve({
+            text: parsed.a.text,
+            html: parsed.a.html,
+            data: parsed.a.data,
+          });
+        }).catch(err => {
+          console.log('ERRRRRRR', err);
+        });
       });
     },
 
@@ -128,12 +118,19 @@ const DEVA = new Deva({
     describe: Build a list of devas currently loaded into the system.
     ***************/
     devas(packet) {
+      const agent = this.agent();
+      const devas = [
+        '::BEGIN:DEVAS',
+        `## ${agent.profile.name}`,
+        `total: ${Object.keys(this.devas).length} Devas`,
+      ];
       return new Promise((resolve, reject) => {
-        const devas = [];
         try {
           for (let deva in this.devas) {
-            devas.push(`cmd:#${deva} help`);
+            const {profile} = this.devas[deva].agent();
+            devas.push(`- #${deva}: ${profile.name}`);
           }
+          devas.push(`::END:DEVAS:${this.formatDate(Date.now(), 'long', true)}`)
         } catch (e) {
           return this.error(e, packet, reject);
         } finally {
@@ -205,8 +202,7 @@ const DEVA = new Deva({
     describe: Return system uid for the based deva.
     ***************/
     uid(packet) {
-      const newId = `uid: ${this.uid()}`;
-      return Promise.resolve(newId);
+      return Promise.resolve(this.uid());
     },
 
     /**************
@@ -215,8 +211,7 @@ const DEVA = new Deva({
     describe: Return system uid for the based deva.
     ***************/
     guid(packet) {
-      const newId = `guid: ${this.uid(true)}`;
-      return Promise.resolve(newId);
+      return Promise.resolve(this.uid(true));
     },
 
     /**************
@@ -225,7 +220,7 @@ const DEVA = new Deva({
     describe: Return system md5 hash for the based deva.
     ***************/
     md5(packet) {
-      const hash = `md5: ${this.hash(packet.q.text, 'md5')}`;
+      const hash = this.hash(packet.q.text, 'md5');
       return Promise.resolve(hash);
     },
     /**************
@@ -234,7 +229,7 @@ const DEVA = new Deva({
     describe: Return system md5 hash for the based deva.
     ***************/
     sha256(packet) {
-      const hash = `sha256: ${this.hash(packet.q.text, 'sha256')}`;
+      const hash = this.hash(packet.q.text, 'sha256');
       return Promise.resolve(hash);
     },
     /**************
@@ -243,7 +238,7 @@ const DEVA = new Deva({
     describe: Return system md5 hash for the based deva.
     ***************/
     sha512(packet) {
-      const hash = `sha512: ${this.hash(packet.q.text, 'sha512')}`;
+      const hash = this.hash(packet.q.text, 'sha512');
       return Promise.resolve(hash);
     },
 
@@ -321,21 +316,47 @@ const DEVA = new Deva({
     help(packet) {
       return new Promise((resolve, reject) => {
         this.lib.help(packet.q.text, __dirname).then(help => {
-          console.log(help);
-          return this.question(`#feecting parse ${help}`);
-        }).then(parsed => {
-          return resolve({
-            text: parsed.a.text,
-            html: parsed.a.html,
-            data: parsed.a.data,
-          });
-        }).catch(reject);
+          return resolve(help)
+        }).catch(err => {
+          console.log(err);
+        });
       });
     }
   },
   onDone(data) {
+    /**************
+    func: cli
+    params: packet
+    describe: this is a forwarding event to the cli interface for other agents.
+    ***************/
+    this.listen('clirelay', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:prompt', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:state', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:zone', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:feature', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:mode', packet => {
+      this.func.cliprompt(packet);
+    })
+    this.listen('devacore:action', packet => {
+      this.func.cliprompt(packet);
+    })
+
+    this.listen('devacore:clearshell', packet => {
+      this.func.cliprompt(packet);
+    })
+
     for (let x in this.devas) {
-      this.devas[x].init(data.client)
+      this.load(x, data.client)
     }
   }
 });

@@ -39,7 +39,7 @@ const ::key-upper:: = new Deva({
   vars,
   listeners: {},
   modules: {},
-  deva: {},
+  devas: {},
   func: {},
   methods: {
     /**************

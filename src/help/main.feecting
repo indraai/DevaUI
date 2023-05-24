@@ -1,8 +1,7 @@
 ::BEGIN:MAIN
-=
-## Deva Agent Help
+## Deva Help
 
-p:The main help file for the DevaUI. Here you will find basic information on using the main Deva Module and accessing the other features and Devas of the program.
+p:The main help file for deva.world. Here you will find basic information on using the main Deva Module and accessing the other features and Devas of the program.
 
 ## Commands
 
@@ -21,6 +20,15 @@ example: /uid
 
 ### /guid
 p:The `/guid` command will give you a new guid for unique identification.
+
+### /md5
+p:The `/md5 [string]` command will give you a new md5 for a string.
+
+### /sha256
+p:The `/sha256 [string]` command will give you a new sha256 for a string.
+
+### /sha512
+p:The `/sha512 [string]` command will give you a new sha512 for a string.
 
 example: /guid
 

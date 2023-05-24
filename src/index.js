@@ -86,6 +86,13 @@ const DEVA = new Deva({
       console.log(chalk.rgb(packet.agent.prompt.colors.label.R, packet.agent.prompt.colors.label.G, packet.agent.prompt.colors.label.B)(text));
       this.talk('cliprompt', this.client()); // clears cli line
     },
+
+    addHistory(item) {
+      this.vars.history.items.push(item)
+      if (this.vars.history.items.length > this.vars.history.max_items) {
+        const removed = this.vars.history.items.shift();
+      }
+    },
     /**************
     func: question
     params: packet
@@ -94,9 +101,9 @@ const DEVA = new Deva({
     question(packet) {
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return reject(this._messages.notext);
-
         this.question(`#open chat ${packet.q.text}`).then(answer => {
           // here is where we apply the deva translate function to remove any open ai specific chat content
+          this.func.addHistory(answer);
 
           const hashed = this.hash(answer.a.text);
           const translate = this._agent.translate(answer.a.text);

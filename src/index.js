@@ -203,7 +203,7 @@ const DEVA = new Deva({
     describe: Return system uid for the based deva.
     ***************/
     uid(packet) {
-      return Promise.resolve(this.uid());
+      return Promise.resolve(`${this.uid()}`);
     },
 
     /**************

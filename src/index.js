@@ -33,13 +33,7 @@ const DEVA = new Deva({
     voice: agent.voice,
     profile: agent.profile,
     translate(input) {
-      return input.trim().replace(/As an AI language model.+?(\.|\?|\!)\s/gi, '')
-                  .replace(/However, I.+?\.\s/gi, '')
-                  .replace(/However, I.+?\.\s/gi, '')
-                  .replace(/I apologize.+?\.\s/gi, '')
-                  .replace(/However,.+?(note)/gi, '$1:')
-                  .replace(/p:\s(.+:)?/gi, '$1')
-                  .replace(/(\b)OpenAi(\b)/gi, '$1@indra.ai$2');;
+      return input.trim();
     },
     parse(input) {
       return input.trim();
@@ -101,10 +95,10 @@ const DEVA = new Deva({
     question(packet) {
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return reject(this._messages.notext);
+
         this.question(`#open chat ${packet.q.text}`).then(answer => {
           // here is where we apply the deva translate function to remove any open ai specific chat content
-          this.func.addHistory(answer);
-
+          // this.func.addHistory(answer);
           const hashed = this.hash(answer.a.text);
           const translate = this._agent.translate(answer.a.text);
           return this.question(`#feecting parse ${translate}`);

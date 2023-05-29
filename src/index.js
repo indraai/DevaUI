@@ -33,7 +33,9 @@ const DEVA = new Deva({
     voice: agent.voice,
     profile: agent.profile,
     translate(input) {
-      return input.trim();
+      return input.trim().replace(/ Is there anything else you need assistance with\?/g, '')
+                        .replace(/As an AI language model, my .+?./g, '\.')
+                        .replace(/\, I understand\./g, '\.');
     },
     parse(input) {
       return input.trim();
@@ -45,7 +47,21 @@ const DEVA = new Deva({
     ports: {
       api: vars.ports.api,
       socket: vars.ports.socket,
-    }
+    },
+    routes: {
+      api: {
+        name: '#Tyler',
+        call: '#open chat',
+        puppet: '#puppet chat',
+        puppet_key: 'ui',
+      },
+      ui: {
+        name: '#Tyler',
+        call: '#puppet chat',
+        puppet: false,
+        puppet_key: false,
+      },
+    },
   },
   lib: require('./lib'),
   vars,
@@ -53,17 +69,21 @@ const DEVA = new Deva({
     log: require('@indra.ai/logdeva'),
     error: require('@indra.ai/errordeva'),
     feecting: require('@indra.ai/feectingdeva'),
+    docs: require('@indra.ai/docsdeva'),
     security: require('@indra.ai/securitydeva'),
     support: require('@indra.ai/supportdeva'),
     services: require('@indra.ai/servicesdeva'),
     solutions: require('@indra.ai/solutionsdeva'),
     systems: require('@indra.ai/systemsdeva'),
+    research: require('@indra.ai/researchdeva'),
     development: require('@indra.ai/developmentdeva'),
     business: require('@indra.ai/businessdeva'),
     legal: require('@indra.ai/legaldeva'),
     assistant: require('@indra.ai/assistantdeva'),
     story: require('@indra.ai/storydeva'),
+    veda: require('@indra.ai/vedadeva'),
     open: require('@indra.ai/opendeva'),
+    puppet: require('../devas/puppet'),
   },
   listeners: {},
   modules: {
@@ -92,16 +112,82 @@ const DEVA = new Deva({
     params: packet
     describe: Ask the base deva a question.
     ***************/
-    question(packet) {
+    async question(packet) {
+      const header = await this.question('#docs view chat/deva:header');
+      const config = await this.question('#docs view chat/deva:config');
+      const meta = await this.question('#docs view chat/deva:meta');
+      const outline = await this.question('#docs view chat/deva:outline');
+      const notes = await this.question('#docs view chat/deva:notes');
+      const footer = await this.question('#docs view chat/deva:footer');
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return reject(this._messages.notext);
+        const question = [
+          `::BEGIN:HEADER:${header.id}`,
+          header.a.text,
+          `::END:HEADER:${this.hash(header.a.text)}`,
+          '',
+          `::BEGIN:CONFIG:${config.id}`,
+          config.a.text,
+          `::END:CONFIG:${this.hash(config.a.text)}`,
+          '',
+          `::BEGIN:META:${meta.id}`,
+          meta.a.text,
+          `::END:META:${this.hash(meta.a.text)}`,
+          '',
+          `::BEGIN:OUTLINE:${outline.id}`,
+          notes.a.text,
+          `::END:OUTLINE:${this.hash(notes.a.text)}`,
+          '',
+          `::BEGIN:NOTES:${notes.id}`,
+          notes.a.text,
+          `::END:NOTES:${this.hash(notes.a.text)}`,
+          '',
+          `::BEGIN:STORY:GURU:${packet.id}`,
+          packet.q.text,
+          `::END:STORY:GURU:${this.hash(packet.q.text)}`,
+          '',
+          `::BEGIN:FOOTER:${footer.id}`,
+          footer.a.text,
+          `::END:FOOTER:${this.hash(footer.a.text)}`,
+        ].join('\n');
+        this.question(`#open chat ${question}`).then(answer => {
 
-        this.question(`#open chat ${packet.q.text}`).then(answer => {
-          // here is where we apply the deva translate function to remove any open ai specific chat content
-          // this.func.addHistory(answer);
-          const hashed = this.hash(answer.a.text);
-          const translate = this._agent.translate(answer.a.text);
-          return this.question(`#feecting parse ${translate}`);
+          const relay = [
+            `::BEGIN:HEADER:${header.id}`,
+            header.a.text,
+            `::END:HEADER:${this.hash(header.a.text)}`,
+            '',
+            `::BEGIN:CONFIG:${config.id}`,
+            config.a.text,
+            `::END:CONFIG:${this.hash(config.a.text)}`,
+            '',
+            `::BEGIN:META:${meta.id}`,
+            meta.a.text,
+            `::END:META:${this.hash(meta.a.text)}`,
+            '',
+            `::BEGIN:OUTLINE:${outline.id}`,
+            notes.a.text,
+            `::END:OUTLINE:${this.hash(notes.a.text)}`,
+            '',
+            `::BEGIN:NOTES:${notes.id}`,
+            notes.a.text,
+            `::END:NOTES:${this.hash(notes.a.text)}`,
+            '',
+            `::BEGIN:STORY:GURU:${packet.id}`,
+            packet.q.text,
+            `::END:STORY:GURU:${this.hash(packet.q.text)}`,
+            '',
+            `::BEGIN:STORY:TELLER:${answer.id}`,
+            answer.a.text,
+            `::END:STORY:TELLER:${this.hash(answer.a.text)}`,
+            '',
+            `::BEGIN:FOOTER:${footer.id}`,
+            footer.a.text,
+            `::END:FOOTER:${this.hash(footer.a.text)}`,
+          ].join('\n');
+
+          this.question(`#puppet chat ${relay}`);
+          return this.question(`#feecting parse ${answer.a.text}`);
         }).then(parsed => {
           return resolve({
             text: parsed.a.text,
@@ -326,31 +412,23 @@ const DEVA = new Deva({
     }
   },
   onDone(data) {
-    /**************
-    func: cli
-    params: packet
-    describe: this is a forwarding event to the cli interface for other agents.
-    ***************/
-    this.listen('clirelay', packet => {
-      this.func.cliprompt(packet);
-    })
     this.listen('devacore:prompt', packet => {
       this.func.cliprompt(packet);
     })
     this.listen('devacore:state', packet => {
-      this.func.cliprompt(packet);
+      // this.func.cliprompt(packet);
     })
     this.listen('devacore:zone', packet => {
-      this.func.cliprompt(packet);
+      // this.func.cliprompt(packet);
     })
     this.listen('devacore:feature', packet => {
-      this.func.cliprompt(packet);
+      // this.func.cliprompt(packet);
     })
     this.listen('devacore:mode', packet => {
-      this.func.cliprompt(packet);
+      // this.func.cliprompt(packet);
     })
     this.listen('devacore:action', packet => {
-      this.func.cliprompt(packet);
+      // this.func.cliprompt(packet);
     })
 
     this.listen('devacore:clearshell', packet => {

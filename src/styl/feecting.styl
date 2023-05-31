@@ -193,15 +193,6 @@
           background-color: $colors.baby-blue
           color: darken($colors.baby-blue, 50%)
 
-  .info
-    font-size: .85rem
-    margin: 0 0 .5rem 0
-    color: $colors.darkest-grey
-    background-color: $colors.white
-    border: 1px solid
-    border-radius: .5rem
-    padding: .5rem
-
   .image
     text-align: center
     img
@@ -212,7 +203,83 @@
     display: flex
     flex-flow: row nowrap
     margin: 3px 0
+    .label
+      &::before
+        display: inline-block
+        margin-right: .2rem
+        font-family: 'icons'
 
+    &.id
+      .label
+        &::before
+          content: $icons.key
+
+    &.title
+      .label
+        &::before
+          content: $icons.document
+
+    &.from
+      .label
+        &::before
+          content: $icons.typewriter
+
+    &.date
+      .label
+        &::before
+          content: $icons.calendar-full
+
+    &.attn
+      .label
+        &::before
+          content: $icons.profile
+
+    &.respond
+    &.response
+      .label
+        &::before
+          content: $icons.file-check
+
+    &.remember
+      .label
+        &::before
+          content: $icons.brain
+
+    &.license
+      .label
+        &::before
+          content: $icons.license
+
+    &.copyright
+      .label
+        &::before
+          content: "©"
+
+    &.terms
+      .label
+        &::before
+          content: $icons.clipboard-text
+
+    &.person
+      .label
+        color: $colors.green
+        &::before
+          content: $icons.user
+    &.place
+      .label
+        color: $colors.orange
+        &::before
+          content: $icons.city
+    &.thing
+      .label
+        color: $colors.yellow
+        &::before
+          content: $icons.button
+    &.group
+      .label
+        color: $colors.purple
+        &::before
+          content: $icons.group-work
 
     &.select
       .label
@@ -229,35 +296,6 @@
       min-width: 125px
       font-size: .75rem
       padding: .25rem
-
-      &.emoji
-        line-height: 1
-        min-width: 50px
-        font-size: 1.15rem
-
-      &.Buddha
-        color: $colors.orange
-        border-color: $colors.orange
-        & + .value
-          color: $colors.light-orange
-
-      &.Rahula
-        color: $colors.yellow
-        border-color: $colors.yellow
-        & + .value
-          color: $colors.light-yellow
-
-      &.WARNING
-        color: $colors.red
-        border-color: $colors.red
-        & + .value
-          color: $colors.red
-
-      &.observe
-        color: $colors.green
-        border-color: $colors.green
-        & + .value
-          color: $colors.light-green
 
       &.develop
         color: $colors.orange
@@ -277,34 +315,12 @@
         & + .value
           color: $colors.light-pink
 
-
-      &.func, &.break, &.set, &.listen, &.module, &.goal, &.report, &.print,
-      &.focus, &.file, &.line, &.define, &.question, &.do, &.for, &.while,
-      &.during, &.focus, &.goto, &.doc, &.audio, &.offer, &.rent, &.look, &.list, &.buy
-        border-right: none
-        border: none
-        border-radius: 10px 0 0 10px
-        padding: 6px 10px
-        line-height: 1.25
-        margin-top: 5px
-        & + .value
-          border-radius: 0 10px 10px 0
-          padding: 6px 10px
-          margin-top: 5px
-
       &.report
         color: $colors.baby-blue
         background-color: $colors.blue
         & + .value
           color: $colors.blue
           background-color: $colors.baby-blue
-
-      &.break
-        color: $colors.light-red
-        background-color: $colors.red
-        & + .value
-          color: $colors.red
-          background-color: $colors.light-red
 
       &.set, &.listen, &.func, &.medhod, &.module
         color: $colors.purple
@@ -344,16 +360,6 @@
           padding: 3px 10px 3px 10px
           border-radius: 0 10px 10px 0
 
-
-      &.print, &.focus, &.file, &.line, &.define, &.question, &.focus, &.audio, &.doc
-      &.offer, &.rent, &.look, &.list, &.buy
-        border-right: none
-        color: $colors.light-grey
-        background-color: $colors.grey
-
-        & + .value
-          color: $colors.grey
-          background-color: $colors.light-grey
 
       &.pin
         border-right: none
@@ -531,27 +537,6 @@
         flex: 0 130px
 
 
-
-  .tag
-    &-while, &-if, &-set, &-func, &-develop, &-learn, &-observe
-      display: block
-      font-style: normal
-      font-size: .9rem
-
-
-    &-observe
-      background-color: $colors.green
-      color: $colors.white
-
-    &-develop
-      background-color: $colors.orange
-      color: $colors.white
-
-    &-learn
-      background-color: $colors.pink
-      color: $colors.white
-
-
   .link
     .value
       overflow: hidden
@@ -641,11 +626,10 @@
       text-indext: 2px
       margin-right: .5rem
 
-  .thanks
+  .info
   .note
-  .bulletin
+  .alert
   .warning
-  .extra
     min-width: 50px
     flex: 1
     padding: .25rem 0 .25rem 2rem
@@ -654,70 +638,35 @@
     padding: 1rem
     &::before
       font-family: icons
-      font-size: 2rem
-      display: block
+      font-size: 1rem
+      display: inline-block
       line-height: 1
       font-weight: 100
-      text-align: center
-      padding-bottom: 1rem
+      margin-right: .25rem
 
-  .thanks
-    font-size: 1.5rem
-    padding: 1rem
-    font-weight: thin
-    text-align: center
-    color: darken($colors.yellow, 50%)
-    background-color: $colors.yellow
+  .info
+    color: darken($colors.dark-grey, 50%)
+    background-color: $colors.white
     &::before
-      content: "\e9c8"
+      content: $icons.fingers-victory
 
   .note
     color: darken($colors.note, 70%)
     background-color: $colors.note
     &::before
-      content: "\e610"
-
-  .extra
-    text-align: center
-    font-weight: bold
-    &::before
-      content: "\e956"
+      content: $icons.pencil3
 
   .warning
+    color: darken($colors.yellow, 70%)
+    background-color: $colors.yellow
+    &::before
+      content: $icons.warning
+
+  .alert
     color: lighten($colors.red, 70%)
     background-color: $colors.red
-    text-align: center
-    font-weight: bold
-    .label
-      display: none
-    .value
-      margin-left: 2rem
     &::before
-      font-size: 2rem
-      content: "\e955"
-
-  .bulletin
-    color: $colors.white
-    background-color: $colors.orange
-    &::before
-      content: "\e6cb"
-
-  .msg
-    display: flex
-    flex-flow: row nowrap
-    > span
-      display: inline-block
-      padding: 0 .3rem 0 0
-    .date
-      order: 3
-      text-align: right
-    .author
-      order: 1
-      flex: 0 150px
-      width: 100px
-    .subject
-      order: 2
-      flex: 2
+      content: $icons.bubble-alert
 
 #Content
   .feecting
@@ -771,21 +720,18 @@
           font-size: .55rem
 
   .tag
-    &.mention
+    display: inline-block
+    font-weight: bold
+    &:hover
+      cursor: pointer
+    &.person
       color: $colors.green
-    &.hash
-      color: $colors.red
-    &.include
+    &.place
+      color: $colors.orange
+    &.thing
       color: $colors.yellow
-
-    &.hash
-    &.mention
-    &.include
-      display: inline
-      font-weight: bold
-      text-transform: uppercase
-      &:hover
-        cursor: pointer
+    &.group
+      color: $colors.purple
 
   .box
     &.user
@@ -1062,27 +1008,14 @@
 
       .btn
         text-align: left
-        margin: .1rem 0 .1rem 0
-        border-radius: .25rem
-        box-shadow: none
-        background-color: transparent
-        &:hover
-          color: $colors.baby-blue
 
         &.cmd
         &.tty
           border: none
           border-radius: 1rem
+
         &.button
           transition: var(--transition-default)
           padding: .25rem .5rem
           font-weight: bold
           color: inherit
-          &::before
-            content: "⚪️"
-            font-size: .75rem
-            display: inline-block
-            margin-right: .5rem
-          &:hover
-            &::before
-              content: "🔵"

@@ -44,20 +44,17 @@ const DEVA = new Deva({
   client:false,
   config: {
     dir: false,
-    ports: {
-      api: vars.ports.api,
-      socket: vars.ports.socket,
-    },
+    ports: vars.ports,
     routes: {
       api: {
-        name: '#Tyler',
-        call: '#open chat',
-        puppet: '#puppet chat',
+        name: '#ChatGPT API Relay',
+        call: '#open relay',
+        puppet: '#puppet relay',
         puppet_key: 'ui',
       },
       ui: {
-        name: '#Tyler',
-        call: '#puppet chat',
+        name: '#ChatGPT UI Relay',
+        call: '#puppet relay',
         puppet: false,
         puppet_key: false,
       },
@@ -65,26 +62,7 @@ const DEVA = new Deva({
   },
   lib: require('./lib'),
   vars,
-  devas: {
-    log: require('@indra.ai/logdeva'),
-    error: require('@indra.ai/errordeva'),
-    feecting: require('@indra.ai/feectingdeva'),
-    docs: require('@indra.ai/docsdeva'),
-    security: require('@indra.ai/securitydeva'),
-    support: require('@indra.ai/supportdeva'),
-    services: require('@indra.ai/servicesdeva'),
-    solutions: require('@indra.ai/solutionsdeva'),
-    systems: require('@indra.ai/systemsdeva'),
-    research: require('@indra.ai/researchdeva'),
-    development: require('@indra.ai/developmentdeva'),
-    business: require('@indra.ai/businessdeva'),
-    legal: require('@indra.ai/legaldeva'),
-    assistant: require('@indra.ai/assistantdeva'),
-    story: require('@indra.ai/storydeva'),
-    veda: require('@indra.ai/vedadeva'),
-    open: require('@indra.ai/opendeva'),
-    puppet: require('../devas/puppet'),
-  },
+  devas: require('../devas'),
   listeners: {},
   modules: {
     mind: false,
@@ -94,8 +72,6 @@ const DEVA = new Deva({
     cliprompt(packet) {
       let text = packet.text;
       // if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}:${packet.text}`;
-      text = `${text} | ${this.formatDate(packet.creted, 'numeric', true)}`;
-
       this.talk('cliprompt', packet.agent); // clears cli line
       console.log(chalk.rgb(packet.agent.prompt.colors.label.R, packet.agent.prompt.colors.label.G, packet.agent.prompt.colors.label.B)(text));
       this.talk('cliprompt', this.client()); // clears cli line
@@ -113,86 +89,30 @@ const DEVA = new Deva({
     describe: Ask the base deva a question.
     ***************/
     async question(packet) {
-      const header = await this.question('#docs view chat/deva:header');
-      const config = await this.question('#docs view chat/deva:config');
-      const meta = await this.question('#docs view chat/deva:meta');
-      const outline = await this.question('#docs view chat/deva:outline');
-      const notes = await this.question('#docs view chat/deva:notes');
-      const footer = await this.question('#docs view chat/deva:footer');
+      const answer = [];
+      const data = {};
+      const agent = this.agent();
       return new Promise((resolve, reject) => {
-        if (!packet.q.text) return reject(this._messages.notext);
+        if (!packet.q.text) return resolve(this._messages.notext);
         const question = [
-          `::BEGIN:HEADER:${header.id}`,
-          header.a.text,
-          `::END:HEADER:${this.hash(header.a.text)}`,
-          '',
-          `::BEGIN:CONFIG:${config.id}`,
-          config.a.text,
-          `::END:CONFIG:${this.hash(config.a.text)}`,
-          '',
-          `::BEGIN:META:${meta.id}`,
-          meta.a.text,
-          `::END:META:${this.hash(meta.a.text)}`,
-          '',
-          `::BEGIN:OUTLINE:${outline.id}`,
-          notes.a.text,
-          `::END:OUTLINE:${this.hash(notes.a.text)}`,
-          '',
-          `::BEGIN:NOTES:${notes.id}`,
-          notes.a.text,
-          `::END:NOTES:${this.hash(notes.a.text)}`,
-          '',
-          `::BEGIN:STORY:GURU:${packet.id}`,
+          `::begin:${agent.key}:${packet.id}`,
           packet.q.text,
-          `::END:STORY:GURU:${this.hash(packet.q.text)}`,
-          '',
-          `::BEGIN:FOOTER:${footer.id}`,
-          footer.a.text,
-          `::END:FOOTER:${this.hash(footer.a.text)}`,
+          `::end:${agent.key}:${this.hash(packet.q.text)}`,
         ].join('\n');
-        this.question(`#open chat ${question}`).then(answer => {
-
-          const relay = [
-            `::BEGIN:HEADER:${header.id}`,
-            header.a.text,
-            `::END:HEADER:${this.hash(header.a.text)}`,
-            '',
-            `::BEGIN:CONFIG:${config.id}`,
-            config.a.text,
-            `::END:CONFIG:${this.hash(config.a.text)}`,
-            '',
-            `::BEGIN:META:${meta.id}`,
-            meta.a.text,
-            `::END:META:${this.hash(meta.a.text)}`,
-            '',
-            `::BEGIN:OUTLINE:${outline.id}`,
-            notes.a.text,
-            `::END:OUTLINE:${this.hash(notes.a.text)}`,
-            '',
-            `::BEGIN:NOTES:${notes.id}`,
-            notes.a.text,
-            `::END:NOTES:${this.hash(notes.a.text)}`,
-            '',
-            `::BEGIN:STORY:GURU:${packet.id}`,
-            packet.q.text,
-            `::END:STORY:GURU:${this.hash(packet.q.text)}`,
-            '',
-            `::BEGIN:STORY:TELLER:${answer.id}`,
-            answer.a.text,
-            `::END:STORY:TELLER:${this.hash(answer.a.text)}`,
-            '',
-            `::BEGIN:FOOTER:${footer.id}`,
-            footer.a.text,
-            `::END:FOOTER:${this.hash(footer.a.text)}`,
-          ].join('\n');
-
-          this.question(`#puppet chat ${relay}`);
-          return this.question(`#feecting parse ${answer.a.text}`);
-        }).then(parsed => {
+        this.question(`#open relay ${question}`).then(open => {
+          data.open = open.a.data;
+          answer.push(open.a.text);
+          return this.question(`#puppet relay ${question}`);
+        }).then(puppet => {
+          data.puppet = puppet.a.data;
+          answer.push(puppet.a.text);
+          return this.question(`#feecting parse ${answer.join('\n')}`);
+        }).then(feecting => {
+          data.feecing = feecing.a.data;
           return resolve({
-            text: parsed.a.text,
-            html: parsed.a.html,
-            data: parsed.a.data,
+            text: feecting.a.text,
+            html: feecting.a.html,
+            data,
           });
         }).catch(err => {
           console.log('ERRRRRRR', err);

@@ -3,7 +3,7 @@
 .shell
   display: flex
   flex-flow: column nowrap
-  font-family: $fonts-code
+  font-family: $fonts-text
 
 #Shell
   background-color: transparent
@@ -32,7 +32,7 @@
   .telnet
     .text
       font-size: 11px
-      font-family: $fonts-code
+      font-family: $fonts-text
       white-space: pre-wrap
       line-height: 1
   .item
@@ -207,15 +207,19 @@
   color: $colors.light-green
   font-size: .9rem
   padding: 0
-  font-family: $fonts-code
+  font-family: $fonts-text
   font-weight: 100
+  resize: none
+  height: 1rem
 
+  &.l
+    height: 6rem
 .log-item
   display: flex
   align-items: flex-start
-  border-bottom: 1px solid $colors.darker-grey
-  line-height: 1.25
   padding: .25rem
+  font-size: .9rem
+  line-height: 1.3
 
   &:last-child
     border-bottom: none;

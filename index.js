@@ -24,6 +24,12 @@ const shell = readline.createInterface({
   output: process.stdout,
 });
 
+// set DevaCore objects
+const {DEVA} = require('./src');
+
+// set the base directory in config
+DEVA.config.dir = __dirname;
+
 function setPrompt(pr) {
   // console.log('PROMPT', pr);
   shell.prompt();
@@ -39,11 +45,21 @@ function setPrompt(pr) {
   }
 }
 
-// set DevaCore objects
-const {DEVA} = require('./src');
-
-// set the base directory in config
-DEVA.config.dir = __dirname;
+function devaQuestion(q) {
+  return new Promise((resolve, reject) => {
+    // ask a question to the deva ui and wait for an answer.
+    DEVA.question(q).then(answer => {
+      // sen the necessary returned values to the shell prompt.
+      setPrompt(answer.a.agent);
+      console.log(chalk.rgb(answer.a.agent.prompt.colors.label.R, answer.a.agent.prompt.colors.label.G, answer.a.agent.prompt.colors.label.B)(answer.a.text));
+      setPrompt(answer.a.client);
+      // if (answer.a.data) console.log(answer.a.data);
+      resolve(answer);
+    }).catch(e => {
+      reject(e);
+    });
+  });
+}
 
 // get network interfaces
 const ipv4 = [];
@@ -124,17 +140,6 @@ const staticRoutes = [
       names: ['index', 'index.json', '/', '']
     },
   },
-  {
-    root: path.join(__dirname, 'data'),
-    prefix: '/data/',
-    list: {
-      format: 'json',
-    },
-    send: {
-      index:'index.json'
-    },
-    decorateReply: false,
-  },
 ]
 
 // register static routes with the fast server.
@@ -152,47 +157,13 @@ const routes = [
     },
   },
   {
-    method: 'GET',
-    url: '/question',
-    handler: (req, reply) => {
-      if (!req.query.q || !req.query.q.length) return reply.send('💩');
-      DEVA.question(req.query.q).then(answer => {
-        // shellPrompt({
-        //   prompt: answer.a.agent.prompt,
-        //   text: answer.a.text,
-        // });
-        answer.a.client = answer.a.client.id;
-        answer.a.agent = answer.a.agent.id;
-        return reply.send(answer.a);
-      }).catch(err => {
-        console.error('question error', err);
-        return reply.send(err);
-      });
-    }
-  },
-  {
     method: 'POST',
     url: '/question',
     handler: (req, reply) => {
-      // send the question to the shell before askign.
-      shellPrompt({
-        prompt: client.prompt,
-        text: req.body.question,
-        type: 'q',
-      });
-      this.prompt('------ASK DEVA A QUESTION');
       DEVA.question(req.body.question).then(answer => {
-        answer.a.agent = answer.a.data.agent || answer.a.agent;
-        this.prompt('SET THE SHELL PROMPT');
-        shellPrompt({
-          prompt: answer.a.agent.prompt,
-          text: answer.a.text,
-        });
-        this.prompt('QUESTION THE SOCKET TEMRINAL');
-        return reply.send(answer);
-      }).catch(err => {
-        console.error('question error', err);
-        return reply.send(err);
+        return reply.type('json').send(answer);
+      }).catch(e => {
+        return reply.send('THERE WAS AN ERROR')
       });
     }
   },
@@ -238,15 +209,7 @@ fast.listen({port:vars.ports.api}).then(() => {
 }).then(_init => {
   // initialize the DEVA
   setPrompt(client);
-  DEVA.init(client).then(done => {
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-    console.log('ALL DONE');
-  });
+  DEVA.init(client).then();
 
   // cli prompt listener for relaying from the deva to the prompt.
   DEVA.listen('cliprompt', ag => {
@@ -257,18 +220,7 @@ fast.listen({port:vars.ports.api}).then(() => {
   shell.on('line', question => {
     // the event that fires when a new command is sent through the shell.
     if (question.toLowerCase() === '/exit') return shell.close();
-
-    // ask a question to the deva ui and wait for an answer.
-    DEVA.question(question).then(answer => {
-      // sen the necessary returned values to the shell prompt.
-      setPrompt(answer.a.agent);
-      console.log(chalk.rgb(answer.a.agent.prompt.colors.label.R, answer.a.agent.prompt.colors.label.G, answer.a.agent.prompt.colors.label.B)(answer.a.text));
-      setPrompt(answer.a.client);
-      // if (answer.a.data) console.log(answer.a.data);
-    }).catch(e => {
-      console.error(e);
-    });
-
+    devaQuestion(question);
   }).on('pause', () => {
 
   }).on('resume', () => {

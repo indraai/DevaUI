@@ -57,7 +57,9 @@ class DevaInterface {
     this.adventure = false;
     this.room = false;        // set the current room mud game.
     this.map = false;
-    this.console = [];        // used for keeping track of items in the console.
+    this._shell = [];        // used for keeping track of items in the console.
+    this._alerts = [];        // used for keeping track of items in the console.
+    this._console = [];        // used for keeping track of items in the console.
   }
 
   set content(txt) {
@@ -78,16 +80,23 @@ class DevaInterface {
   }
 
   _logConsole(key,value) {
-    if (this.console.length > 20) {
-      this.console = [];
+    if (this._console.length > 25) {
+      this._console = [];
       $('#Console').html('');
     }
-    this.console.push({key,value});
+    this._console.push({key,value});
     $('#Console').prepend(`<div class="item ${key.toLowerCase()}">${key}: ${value}</div>`)
   }
 
   _logShell(opts) {
-  if (!opts.text) return;
+    if (!opts.text) return;
+
+    if (this._shell.length > 25) {
+      this._shell = [];
+      $('#ShellOutput').html('');
+    }
+    this._shell.push(opts);
+
     const {type, format, agent, text, data} = opts;
     const {prompt, profile, key} = agent;
     const {colors} = prompt;
@@ -126,6 +135,12 @@ class DevaInterface {
   }
 
   _logAlert(data) {
+    if (this._alerts.length > 25) {
+      this._alerts = [];
+      $('#ShellOutput').html('');
+    }
+    this._alerts.push(data);
+
     const _html = [
       `<div class="item alert" data-id="${data.id}">`,
       data.text,
@@ -315,8 +330,17 @@ class DevaInterface {
             text: data.text,
           });
         }
+        else if (data.key === 'prompt') {
+          this._logShell({
+            type: data.value,
+            format: data.key,
+            agent:data.agent,
+            meta: false,
+            text: data.text,
+          });
+        }
         else {
-          this._logConsole(`#${data.agent.key}:${data.key}`, data.text)
+          this._logConsole(`${data.agent.prompt.emoji} #${data.agent.key}`, data.text)
         }
       });
 

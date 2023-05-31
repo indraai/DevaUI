@@ -46,6 +46,9 @@ function setPrompt(pr) {
 }
 
 function devaQuestion(q) {
+  // the event that fires when a new command is sent through the shell.
+  if (q.toLowerCase() === '/exit') return shell.close();
+
   return new Promise((resolve, reject) => {
     // ask a question to the deva ui and wait for an answer.
     DEVA.question(q).then(answer => {
@@ -160,7 +163,7 @@ const routes = [
     method: 'POST',
     url: '/question',
     handler: (req, reply) => {
-      DEVA.question(req.body.question).then(answer => {
+      devaQuestion(req.body.question).then(answer => {
         return reply.type('json').send(answer);
       }).catch(e => {
         return reply.send('THERE WAS AN ERROR')
@@ -218,8 +221,6 @@ fast.listen({port:vars.ports.api}).then(() => {
 
   // run operation when new line item in shell.
   shell.on('line', question => {
-    // the event that fires when a new command is sent through the shell.
-    if (question.toLowerCase() === '/exit') return shell.close();
     devaQuestion(question);
   }).on('pause', () => {
 

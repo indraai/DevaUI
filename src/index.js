@@ -108,7 +108,7 @@ const DEVA = new Deva({
           answer.push(puppet.a.text);
           return this.question(`#feecting parse ${answer.join('\n')}`);
         }).then(feecting => {
-          data.feecing = feecing.a.data;
+          data.feecting = feecting.a.data;
           return resolve({
             text: feecting.a.text,
             html: feecting.a.html,
@@ -336,6 +336,9 @@ const DEVA = new Deva({
       this.func.cliprompt(packet);
     })
     this.listen('devacore:state', packet => {
+      // this.func.cliprompt(packet);
+    })
+    this.listen('devacore:context', packet => {
       // this.func.cliprompt(packet);
     })
     this.listen('devacore:zone', packet => {

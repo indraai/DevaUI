@@ -2,6 +2,7 @@
 // Load DEVA CORE Mind into Deva
 const package = require('../package.json');
 const info = {
+  id: package.id,
   name: package.name,
   version: package.version,
   author: package.author,
@@ -10,7 +11,7 @@ const info = {
   git: package.repository.url,
   bugs: package.bugs.url,
   license: package.license,
-  copyright: package.copyright
+  copyright: package.copyright,
 };
 
 const os = require('os');
@@ -73,7 +74,7 @@ const DEVA = new Deva({
       let text = packet.text;
       // if (this.vars.labels[packet.value]) text = `${this.vars.labels[packet.value]}:${packet.text}`;
       this.talk('cliprompt', packet.agent); // clears cli line
-      console.log(chalk.rgb(packet.agent.prompt.colors.label.R, packet.agent.prompt.colors.label.G, packet.agent.prompt.colors.label.B)(text));
+      console.log(chalk.rgb(packet.agent.prompt.colors.text.R, packet.agent.prompt.colors.text.G, packet.agent.prompt.colors.text.B)(text));
       this.talk('cliprompt', this.client()); // clears cli line
     },
 
@@ -127,21 +128,21 @@ const DEVA = new Deva({
     ***************/
     devas(packet) {
       const agent = this.agent();
-      const devas = [
-        '::BEGIN:DEVAS',
-        `## ${agent.profile.name}`,
-        `total: ${Object.keys(this.devas).length} Devas`,
-      ];
       return new Promise((resolve, reject) => {
         try {
+          const devas = [
+            '::begin:devas',
+            `## ${agent.profile.name}`,
+            `total: ${Object.keys(this.devas).length} Devas`,
+            '',
+            '::begin:menu',
+          ];
           for (let deva in this.devas) {
-            const {profile} = this.devas[deva].agent();
-            devas.push(`- #${deva}: ${profile.name}`);
+            const {profile,prompt,key} = this.devas[deva].agent();
+            devas.push(`button[${prompt.emoji} _#${key}: ${profile.name}]:#${deva} help`);
           }
-          devas.push(`::END:DEVAS:${this.formatDate(Date.now(), 'long', true)}`)
-        } catch (e) {
-          return this.error(e, packet, reject);
-        } finally {
+          devas.push(`::end:menu`)
+          devas.push(`::end:devas:${this.hash(devas)}`)
           this.question(`#feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
               text:parsed.a.text,
@@ -149,6 +150,8 @@ const DEVA = new Deva({
               data:parsed.a.data,
             })
           }).catch(reject)
+        } catch (e) {
+          return this.error(e, packet, reject);
         }
       });
     },
@@ -359,7 +362,9 @@ const DEVA = new Deva({
     })
 
     for (let x in this.devas) {
-      this.load(x, data.client)
+      this.load(x, data.client).then(loaded => {
+        console.log('LOADED');
+      });
     }
   }
 });

@@ -1,20 +1,33 @@
-## :name:
-p:Copyright (c):year: :copyright:
+image: ::agent_avatar::
 
-p:This is the main help file for :name:. :describe:
+# ::name::
 
-uid: :uid:
-key: :key:
-name: :name:
-describe: :describe:
+p:This is the main help file for ::name::.
 
-### Methods
+id: ::agent_id::
+key: ::agent_key::
+name: ::agent_name::
+emoji: ::agent_emoji::
+describe: ::agent_describe::
 
-cmd:#:key: uid
-p:Generate a unique id from the :name:.
+## Methods
 
-cmd:#:key: status
-p:Return the status for the :name:.
+### 1. uid
+p:Generate a unique id from the ::name::.
+cmd:#::key:: uid
 
-cmd:#:key: help
-p:Get help using the :name:
+### 2. status
+p:Return the status for the ::name::.
+cmd:#::key:: status
+
+### 3. help
+p:Get help using the ::name::
+cmd:#::key:: help
+
+---
+
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+
+p:Copyright (c)::year:: ::copyright::

@@ -475,6 +475,10 @@ reddit(opts) {
   this._logBROWSER(opts.a);
 }
 
+docs(opts) {
+  this._logBROWSER(opts.a);
+}
+
 voice(opts) {
   const {meta, html, text, agent} = opts.a;
 
@@ -545,11 +549,6 @@ data.data
   const view = $(e.target).closest('[data-view]').data('view')
   this.View(view);
 
-}).on('click', '[data-cmd]', e => {
-  e.stopPropagation()
-  e.preventDefault();
-  const cmd = $(e.target).closest('[data-cmd]').data('cmd');
-  this.Command(cmd, true);
 
 // insert tty string into q intpu
 }).on('click', '[data-tty]', e => {
@@ -571,11 +570,6 @@ data.data
   const cmd = $(e.target).closest('[data-bmud]').data('bmud')
   this.Command(`#mud > ${cmd}`, false);
 
-}).on('click', '[data-button]', e => {
-  e.stopPropagation()
-  e.preventDefault();
-  const cmd = $(e.target).closest('[data-button]').data('button')
-  this.Command(cmd, true);
 
 }).on('click', '[data-data]', e => {
   e.stopPropagation()

@@ -2,7 +2,7 @@
   "name": "::name:: Data File",
   "describe": "The main Data file for ::name::",
   "copyright": "Copyright (c)::year:: ::copyright::. All rights reserved.",
-  "data": {
+  "DATA": {
     "agent": {
       "id": "::id::",
       "key": "::key::",
@@ -22,17 +22,16 @@
           }
         }
       },
-      "voice": {
-        "speech": "::speech::",
-        "speed": 1
-      },
       "profile": {
         "name": "::name::",
         "describe": "::describe::",
         "emoji": "::emoji::",
         "avatar": "::avatar::",
         "background": "::background::",
-        "gender": "::gender::"
+        "color": "#333333",
+        "bgcolor": "#ffffff",
+        "gender": "::gender::",
+        "voice": "::voice::"
       }
     },
     "vars": {
@@ -44,6 +43,11 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!"
+      },
+      "context": {
+        "uid": "::name:: is creating a uid",
+        "status": "::name:: is viewing the status",
+        "help": "::name:: is viewing the help"
       }
     }
   }

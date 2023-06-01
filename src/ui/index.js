@@ -81,8 +81,8 @@ class DevaInterface {
 
   _logConsole(key,value) {
     if (this._console.length > 25) {
-      this._console = [];
-      $('#Console').html('');
+      this._console.shift();
+      $('#Console .item').last().remove();
     }
     this._console.push({key,value});
     $('#Console').prepend(`<div class="item ${key.toLowerCase()}">${key}: ${value}</div>`)
@@ -92,9 +92,10 @@ class DevaInterface {
     if (!opts.text) return;
 
     if (this._shell.length > 25) {
-      this._shell = [];
-      $('#ShellOutput').html('');
+      this._shell.shift();
+      $('#ShellOutput .log-item').first().remove();
     }
+
     this._shell.push(opts);
 
     const {type, format, agent, text, data} = opts;
@@ -137,16 +138,22 @@ class DevaInterface {
   _logAlert(data) {
     if (this._alerts.length > 25) {
       this._alerts = [];
-      $('#ShellOutput').html('');
+      $('#Alerts .item').last().remove();
     }
-    this._alerts.push(data);
+    this._alerts.unshift(data);
 
+    const { label, text } = data.agent.prompt.colors;
     const _html = [
       `<div class="item alert" data-id="${data.id}">`,
-      data.text,
+      `<span class="label" style="color:rgb(${label.R},${label.G},${label.B})">`,
+      `${data.agent.prompt.emoji} #${data.agent.key}:`,
+      '</span>',
+      `<span class="value" style="color: rgb(${text.R}, ${text.G}, ${text.B})">`,
+      `${data.text}`,
+      '</span>',
       '</div>'
-    ].join('\n')
-    $('#Alerts').prepend(`<div class="item alert">${data.text}</div>`);
+    ].join('');
+    $('#Alerts').prepend(_html);
   }
 
   _scrollTop(elem) {
@@ -215,6 +222,8 @@ class DevaInterface {
   }
 
   Client(data) {
+    if (this.client) return;
+
     this.client = data;
     console.log('SETTING THIS CLIENT', this.client);
 
@@ -249,7 +258,16 @@ class DevaInterface {
   }
 
   docs(data) {
-    this._logBROWSER(data);
+    console.log('DOCS DATA', data);
+    if (data.meta.method === 'view') this._logBROWSER(data);
+    this._logShell({
+      type: data.meta.key,
+      method: data.meta.method,
+      agent: data.agent,
+      maeta: data.meta,
+      text: data.html ? data.html : data.text,
+    });
+
   }
 
   processor(data) {
@@ -316,7 +334,6 @@ class DevaInterface {
 
       // emit the socket event for the client data
       socket.on('socket:clientdata', data => {
-        console.log('CLIENT DATA', data);
         this.Client(data);
       })
       socket.on('socket:devacore', data => {
@@ -340,7 +357,7 @@ class DevaInterface {
           });
         }
         else {
-          this._logConsole(`${data.agent.prompt.emoji} #${data.agent.key}`, data.text)
+          this._logConsole(data.agent.key, data.text)
         }
       });
 

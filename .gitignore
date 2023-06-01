@@ -3,8 +3,6 @@ logs/*
 data/*
 devas/*
 private/*
-public/*
-docs/*
 
 *.log
 npm-debug.log*

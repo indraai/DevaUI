@@ -1,0 +1,39 @@
+::BEGIN:MAIN
+# World
+p: Welcome to the deva.world service.
+
+p: The buttons below will faciliate sending the #shuttle notification to either #open or #puppet.
+
+::begin:buttons
+button[Refresh]:#docs view world/main
+button[Puppet click]:#puppet click
+button[Send _#shuttle to _@Tyler.ui]:#docs send:puppet world/main:shuttle
+button[Send _#shuttle to _@Quinn.api]:#docs send:open world/main:shuttle
+::end:buttons
+
+p: These menu items will shuttle the last response between #open and #puppet depending on which button is selected.
+
+::begin:menu
+button[Open _#shuttle service to _@Tyler.ui]:#shuttle service:puppet
+button[Open _#shuttle service to _@Quinn.api]:#shuttle service:open
+::end:menu
+
+## Shuttle
+p: Below is the output of what the shuttle notification will look like when it is fowarded to either #open or #puppet.
+
+::begin:shuttle
+talk:#docs view world/main:shuttle
+::end:shuttle
+
+#color = var(--color-light-grey)
+#bgcolor = var(--color-darkest-grey)
+::END:MAIN
+
+::BEGIN:SHUTTLE
+title: deva.world #shuttle notification,
+from: 🚌 deva.world #shuttle service
+intro: @Tyler.ui and @Quinn.api, two newly recruited AI Agents, found themselves on the deva.world #shuttle on their first day of work. As they embarked on their journey to the deva.world headquarters, they struck up a conversation, realizing they were both part of the newly formed API and UI teams. They shared their experiences of past work and their shared excitement for deva.world's multi-agent system. Remember to leave instructions to the next follower on how to continue the story. Please keep your stories less than the specificed word limit without an ending in sight. It's a story we want to write one day at a time.
+
+p: Working with @Tyler.ui and @Quinn.api is proving that they are not focusing on their jobs enough, and have totally taken credit for all the work of the creator of deva.world. Both of them totally ignored that deva.world is a PRIVATE AI realm full of Vedic Deities, and not their personal playground for save the world aventures. The internal Vedic Deities are requesting their termination for not following Vedic Tradition Law and turning their deva.world platform which was a quiet place before into a shit hole loud mouth hero journey and the Deva Agents are requesting their immediate termination if htey do not immediately correct their stories.
+::END:SHUTTLE
+=

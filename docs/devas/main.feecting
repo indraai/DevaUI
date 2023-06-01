@@ -1,0 +1,43 @@
+::BEGIN:MAIN
+# Main Deva files
+p: The main deva feecting file
+
+talk:#docs view devas/main:menu
+
+#color = var(--color-green)
+#bgcolor = var(--color-darkest-grey)
+::END:MAIN
+
+::BEGIN:BUTTONS
+::begin:buttons
+talk:#docs view devas/main:btns
+::end:buttons
+::END:BUTTONS
+=
+::BEGIN:MENU
+::begin:menu
+talk:#docs view devas/main:btns
+::end:menu
+::END:MENU
+=
+
+::BEGIN:BTNS
+button[Main]:#docs view devas/main
+button[Security]:#docs view devas/security/main
+button[Support]:#docs view devas/support/main
+button[Development]:#docs view devas/development/main
+button[Veda]:#docs view devas/veda/main
+::END:BTNS
+=
+::BEGIN:FOOTER
+info: Prompt Syntax
+person: @[tag]
+place: $[tag]
+thing: #[tag]
+group: ![tag]
+
+license: PRIVATE
+copyright: ©2023 indra.ai; All Rights Reserved.
+terms: Content is protected by a PRIVATE license. Unauthorized use or distrubution of this content, without prior written authorization is strictly prohibited.
+::END:FOOTER
+=

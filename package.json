@@ -30,18 +30,18 @@
     "@fastify/static": "^6.5.0",
     "@indra.ai/assistantdeva": "^0.0.7",
     "@indra.ai/businessdeva": "^0.0.14",
-    "@indra.ai/deva": "^1.1.92",
+    "@indra.ai/deva": "^1.1.101",
     "@indra.ai/developmentdeva": "^0.0.14",
-    "@indra.ai/docsdeva": "^0.0.17",
-    "@indra.ai/errordeva": "^0.1.35",
-    "@indra.ai/feectingdeva": "^0.1.32",
+    "@indra.ai/docsdeva": "^0.0.22",
+    "@indra.ai/errordeva": "^0.1.42",
+    "@indra.ai/feectingdeva": "^0.1.42",
     "@indra.ai/legaldeva": "^0.0.13",
-    "@indra.ai/logdeva": "^0.0.50",
-    "@indra.ai/opendeva": "^0.0.20",
+    "@indra.ai/logdeva": "^0.0.59",
+    "@indra.ai/opendeva": "^0.0.24",
     "@indra.ai/researchdeva": "^0.0.6",
     "@indra.ai/securitydeva": "^0.0.35",
     "@indra.ai/servicesdeva": "^0.0.18",
-    "@indra.ai/socketdeva": "^0.0.15",
+    "@indra.ai/socketdeva": "^0.0.16",
     "@indra.ai/solutionsdeva": "^0.0.16",
     "@indra.ai/storydeva": "^0.0.12",
     "@indra.ai/supportdeva": "^0.0.24",
@@ -58,5 +58,9 @@
     "stylus-loader": "^5.0.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
+  },
+  "engines": {
+    "npm": ">=9.5.1",
+    "node": ">=18.16.0"
   }
 }

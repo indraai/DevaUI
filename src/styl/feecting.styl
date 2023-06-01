@@ -31,45 +31,6 @@
     margin: .25rem 0
     border-radius: .5rem
 
-  .btn
-    &.menu
-      transition: all .5s linear
-      background-color: transparent
-      font-weight: bold
-      border-radius: .5rem
-      padding: .15rem 0
-      margin: 2px 0
-      color: $colors.baby-blue
-      text-align: left
-      &[data-menu]
-        &::before
-          content: attr(data-menu)
-          background-color: rgba($colors.baby-blue, .25)
-          border-radius: 5rem
-          display: inline-block
-          min-width: 1.5rem
-          text-align: center
-          display: inline-block
-          line-height: 1.5
-
-      &::before
-        transition: var(--transition-default)
-        content: "\e8d0"
-        margin-right: .5rem
-      &:hover
-        text-shadow: 0 0 9px rgba($colors.green, 50%)
-        color: $colors.green
-        background-color: transparent
-    &.bmud
-      font-size: .9rem
-      margin: .2rem
-      padding: .25rem .5rem
-      background-color: rgba($colors.green, .25)
-      color: $colors.green
-      &:hover
-        background-color: rgba($colors.green, .75)
-        color: darken($colors.green, 75%)
-
   .back-button
     color: $colors.light-grey
     position: absolute
@@ -88,19 +49,17 @@
     font-size: 2.5rem
     padding: 25px 0 10px 0
     margin: 5px 0 5px 0
-    border-bottom: 5px solid
+    border-bottom: 1px solid
 
   h2
     font-size: 2.1rem
     padding: 20px 0 5px 0
     margin: 5px 0 5px 0
-    border-bottom: 3px solid
 
   h3
     font-size: 1.7rem
     padding: 15px 0 5px 0
     margin: 5px 0 5px 0
-    border-bottom: 2px solid
 
   h4
     font-size: 1.3rem
@@ -213,8 +172,27 @@
       .label
         &::before
           content: $icons.key
+    &.key
+      .label
+        &::before
+          content: $icons.key-hole
+
+    &.emoji
+      .label
+        &::before
+          content: $icons.smile
 
     &.title
+      .label
+        &::before
+          content: $icons.news
+
+    &.name
+      .label
+        &::before
+          content: $icons.profile
+
+    &.describe
       .label
         &::before
           content: $icons.document
@@ -1017,5 +995,8 @@
         &.button
           transition: var(--transition-default)
           padding: .25rem .5rem
-          font-weight: bold
+          font-weight: normal
           color: inherit
+          box-shadow: none
+          margin: .15rem 0 0 0
+          padding: .25rem

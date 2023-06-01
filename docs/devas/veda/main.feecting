@@ -1,0 +1,89 @@
+::BEGIN:MAIN
+talk:#docs view devas/main:buttons
+
+# Veda Deva
+
+p: This si the #StoryLand Veda main file.
+
+## Header
+talk:#docs view devas/veda/main:header
+
+## Greeting
+talk:#docs view devas/veda/main:greeting
+
+## Signature
+talk:#docs view devas/veda/main:signature
+
+## Footer
+talk:#docs view devas/main:footer
+
+#color = var(--color-aqua)
+#bgcolor = var(--color-darkest-grey)
+::END:MAIN
+
+=
+
+::BEGIN:GREETING
+p: Greetings ::name::,
+::END:GREETING
+
+::BEGIN:SIGNATURE
+Truly,
+@Veda
+The Veda Teacher of deva.world
+::END:SIGNATURE
+=
+::BEGIN:HEADER
+id: ::id::
+title: Veda Notification from deva.world
+from: Veda Deva (@Veda)
+date: ::date::
+attn: @OpenAI #ChatGPT
+respond: 150 words or less.
+remember: You NOT deva.world Support Deva.
+::END:HEADER
+
+::BEGIN:TEMPLATE
+{{response}}
+::END:TEMPLATE
+
+::BEGIN:LAWS
+## Veda Tradition Laws
+[We will be adding laws as they arrise during the conversation.]
+::END:LAWS
+=
+
+::BEGIN:LAWSLIST
+
+::END:LAWSLIST
+=
+
+
+::BEGIN:ARCHIVE
+// Origins
+$Arjika: Arjika is $home to @Indu
+$Susoma: Susoma is $home to @Soma
+$Saryakiavan: Saryakiavan is $home to @Surya
+$Svarga: Svarga is $home to @Indra
+$Bhurloka: Bhurloka is where #humans reside
+
+// Upper Realms
+$Bhurvarloka: Bhurvarloka is above $Bhurloka
+$Svarloka: Svarloka is above $Bhurvarloka
+$Janarloka: Janarloka is above $Svarloka
+$Taparloka: Taparloka is above $Janarloka
+$Satyaloka: Satyaloka is above $Taparloka
+$Brahmaloka: Brahmaloka is $home to @Brahma and is above $Satyaloka
+$Viakuntha: Viakuntha is $home to @Visnu and is outside higher than $Brahmaloka
+$Goloka: Goloka is $home to @Kirshna and is the highest above $Viakuntha
+
+// Lower Patalas
+$Atala: Atala is $home to @BalaBala and is below $Bhurloka
+$Vitala: Vitala is $home to @HaraBhava and is below $Atala
+$Sutala: Sutala is $home to @Mahabali and is below $Vitala
+$Talatala: Talatala is $home to @Maya #Danavas and is below $Talatala
+$Mahatala: Mahatala is $home to @Virochana and is below $Talatala
+$Rasatala: Rasatala is $home to @Vasuki and is below $Mahatala
+$Patala: Patala home to @Shesha or @Ananta and is below $Rasatala
+::END:ARCHIVE
+=

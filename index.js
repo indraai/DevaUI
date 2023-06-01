@@ -37,7 +37,7 @@ function setPrompt(pr) {
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}:`);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}: `);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);
@@ -54,7 +54,7 @@ function devaQuestion(q) {
     DEVA.question(q).then(answer => {
       // sen the necessary returned values to the shell prompt.
       setPrompt(answer.a.agent);
-      console.log(chalk.rgb(answer.a.agent.prompt.colors.label.R, answer.a.agent.prompt.colors.label.G, answer.a.agent.prompt.colors.label.B)(answer.a.text));
+      console.log(chalk.rgb(answer.a.agent.prompt.colors.text.R, answer.a.agent.prompt.colors.text.G, answer.a.agent.prompt.colors.text.B)(answer.a.text));
       setPrompt(answer.a.client);
       // if (answer.a.data) console.log(answer.a.data);
       resolve(answer);

@@ -3,13 +3,15 @@
 
 const fs = require('fs');
 const path = require('path');
+const Deva = require('@indra.ai/deva');
 
 const package = require('../../package.json');
 const info = {
+  id: package.id,
   name: package.name,
   version: package.version,
   author: package.author,
-  describe: package.describe,
+  describe: package.description,
   url: package.homepage,
   git: package.repository.url,
   bugs: package.bugs.url,
@@ -18,14 +20,13 @@ const info = {
 };
 
 const data_path = path.join(__dirname, 'data.json');
-const {agent,vars} = require(data_path).data;
+const {agent,vars} = require(data_path).DATA;
 
-const Deva = require('@indra.ai/deva');
 const ::key-upper:: = new Deva({
   info,
   agent: {
     id: agent.id,
-    describe: agent.describe,
+    key: agent.key,
     prompt: agent.prompt,
     voice: agent.voice,
     profile: agent.profile,
@@ -34,7 +35,10 @@ const ::key-upper:: = new Deva({
     },
     parse(input) {
       return input.trim();
-    }
+    },
+    process(input) {
+      return input.trim();
+    },
   },
   vars,
   listeners: {},
@@ -48,7 +52,9 @@ const ::key-upper:: = new Deva({
     describe: Return a system id to the user from the :name:.
     ***************/
     uid(packet) {
-      return Promise.resolve({text:this.uid()});
+      this.context('uid');
+      const guid = packet.q.meta.params[1] ? true : false
+      return Promise.resolve(this.uid(guid));
     },
 
     /**************
@@ -57,17 +63,19 @@ const ::key-upper:: = new Deva({
     describe: Return the current status of the :name:.
     ***************/
     status(packet) {
-      return this.status();
+      this.context('status');
+      return Promise.resolve(this.status());
     },
 
     /**************
     method: help
     params: packet
-    describe: The Help method returns the information on how to use the :name:.
+    describe: Return the help files for the main system deva.
     ***************/
     help(packet) {
+      this.context('help');
       return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(help => {
+        this.help(packet.q.text, __dirname).then(help => {
           return this.question(`#feecting parse ${help}`);
         }).then(parsed => {
           return resolve({

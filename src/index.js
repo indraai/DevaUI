@@ -139,7 +139,7 @@ const DEVA = new Deva({
           ];
           for (let deva in this.devas) {
             const {profile,prompt,key} = this.devas[deva].agent();
-            devas.push(`button[${prompt.emoji} _#${key}: ${profile.name}]:#${deva} help`);
+            devas.push(`button[${prompt.emoji} ${profile.name}]:#${key} help`);
           }
           devas.push(`::end:menu`)
           devas.push(`::end:devas:${this.hash(devas)}`)

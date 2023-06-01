@@ -21,23 +21,34 @@ example: /uid
 ### /guid
 p:The `/guid` command will give you a new guid for unique identification.
 
+example: /guid
+
 ### /md5
 p:The `/md5 [string]` command will give you a new md5 for a string.
+
+example: /md5 [string]
 
 ### /sha256
 p:The `/sha256 [string]` command will give you a new sha256 for a string.
 
+example: /sha256 [stsring]
+
 ### /sha512
 p:The `/sha512 [string]` command will give you a new sha512 for a string.
 
-example: /guid
 
 ### /question
 
 p:The `/question` asks a question to the Deva Agent, and if no command is detected the question command is the default one that will run..
 
-cmd:!devas
+example: /question [string]
+
+### /devas
+
 p:The `/devas` command will list the other Devas Agents that this Deva Agent is managing. When you find the Deva Agent you are looking for you can then call them and ask for their help menu to find out how they work.
+
+example: /devas
+
 
 cmd:/client
 p:The `/client` command will give your current client information that you have loaded into the Deva Agent.

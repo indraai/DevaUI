@@ -665,15 +665,14 @@ $grid-cols = 15
           width: 300px
           height: 20px
 
-.mud-panels
+.event-panel
   font-family: $fonts-text
   color: $colors.grey
   flex: 1
   overflow: auto
   display: flex
-  flex-flow: row wrap
-  align-content: flex-start
-  margin: 0 0 0 .5rem
+  flex-flow: column
+  margin: 0 0 .25rem .25rem
   background-color: rgba($colors.black, .5)
   padding: .25rem
   border-radius: $border.outer
@@ -682,109 +681,59 @@ $grid-cols = 15
   &::before
     font-family: icons
     display: block
-    flex: 0 100%
 
+  .label
+    &::after
+      content: ":"
+      margin-right: .25rem
+        
   .item
     transition: all .5s ease
     font-size: .75rem
     border-radius: $border.outer 0 0 $border.outer
-    flex: 0 33%
     padding: 2px
-
-
-#Console
-  order: 1
-  flex: 0 640px
-  min-width: 640px
-  display: flex
-  flex-flow: column nowrap
-
-  .item
-    flex: 0 auto;
-
-    &.audio
-      display: inline-block
-      .label
-        display: none
-        visibility: hidden
-      .value
-        audio
-          height: 12px
-
-  .agent-avatar
-    width: 35px
-    height: 35px
-    border-radius: $border.outer
-    margin: 1px
-
-#Inventory
-  color: $colors.grey
-  margin: 0 .5rem 0 .5rem
-  order: 3
-  &::before
-    content: "\e83a  Inventory"
-
-#Equipment
-  color: $colors.grey
-  order: 3
-  &::before
-    content: "\e676  Equipment"
-
-#Score
-  flex: 0
-  display: flex
-  margin: 1px
-  border-radius: $border.outer
-  display: flex
-  flex-flow: row wrap
-  background-color: rgba(0,0,0,.5)
-
-  .item
-    font-family: $fonts-text
-    flex: 1 1
     display: flex
-    flex-flow: column
-    align-items: center
-    padding: .5rem
-    border-radius: $border.outer
-    font-size: .75rem
+    flex-flow: row nowrap
+    .emoji
+      img
+        width: 14px
+        height: 14px
+        margin-right: .15rem
 
-    &.name
-      flex: 0 150px
+#ContextPanel
+  order: 1
+  margin-left: .25rem
+  &::before
+    content: "\e83a  Context"
 
-    .label
-      flex: 1
-      order: 1
-      text-align: center
-      border-right: none
-      padding: 0
-      margin: 0 0 .25rem 0
-      color: rgba($colors.grey, .5)
-      line-height: 1
-      min-width: 50px
-    .value
-      color: rgba($colors.green, .75)
-      margin: 0
-      padding: 0
-      flex: 1
-      order: 2
-      background-color: transparent
-      text-align: center
-      line-height: 1
-
-#Navigate
-  flex: 1
-
-#System
-  flex: 0 calc(450px - 1rem)
+#ActionPanel
   order: 2
-  flex-flow: column nowrap
+  &::before
+    content: "\e83a  Action"
+
+#StatePanel
+  order: 3
+  &::before
+    content: "\e676  State"
+
+#FeaturePanel
+  order: 4
+  &::before
+    content: "\e676  Feature"
+
+#ZonePanel
+  order: 5
+  &::before
+    content: "\e676  Zone"
+
+#DataPanel
+  order: 6
+  flex-flow: column
+  margin-right: .25rem
   &::before
     content: "\e708  Data"
-    flex: 0
-    margin-bottom: .2rem
 
-  .systembox
+  .databox
     overflow: auto
     flex: 1
     > h2
@@ -859,6 +808,51 @@ $grid-cols = 15
           .value
             color: $colors.yellow
 
+
+#Score
+  flex: 0
+  display: flex
+  margin: 1px
+  border-radius: $border.outer
+  display: flex
+  flex-flow: row wrap
+  background-color: rgba(0,0,0,.5)
+
+  .item
+    font-family: $fonts-text
+    flex: 1 1
+    display: flex
+    flex-flow: column
+    align-items: center
+    padding: .5rem
+    border-radius: $border.outer
+    font-size: .75rem
+
+    &.name
+      flex: 0 150px
+
+    .label
+      flex: 1
+      order: 1
+      text-align: center
+      border-right: none
+      padding: 0
+      margin: 0 0 .25rem 0
+      color: rgba($colors.grey, .5)
+      line-height: 1
+      min-width: 50px
+    .value
+      color: rgba($colors.green, .75)
+      margin: 0
+      padding: 0
+      flex: 1
+      order: 2
+      background-color: transparent
+      text-align: center
+      line-height: 1
+
+#Navigate
+  flex: 1
 
 #Stats
   display: flex
@@ -940,43 +934,3 @@ $grid-cols = 15
   .avatar-area
     background-color: $colors.blue
     flex: 1 35%
-
-hoverit(clr)
-  color: lighten(clr, 50%)
-  background-color: clr
-  &:hover
-    color: darken(clr, 50%)
-    background-color: lighten(clr, 25%)
-  &:active
-    color: lighten(clr, 25%)
-    background-color: darken(clr, 25%)
-
-.mud-cmd
-  padding: .25rem
-  button
-    border-radius: $border.inner
-    min-width: 50%
-    text-align: left
-    padding: .5rem
-    box-shadow: none
-
-
-
-    &:active
-      box-shadow: 0 0 1px rgba(0,0,0,.15)
-
-.btn
-  &.mud
-    background-color: rgba($colors.green, .25)
-    &:hover
-      background-color:rgba($colors.green, .5)
-  &.look-inline
-    padding: .25rem
-    border-radius: $border.inner
-    &::before
-      display inline-block
-      padding-right: .25rem
-      font-size: .9rem
-      font-family: icons
-      content: 'binoculars2'
-// end of file

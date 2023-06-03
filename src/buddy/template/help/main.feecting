@@ -1,8 +1,8 @@
 image: ::agent_avatar::
 
-# ::name::
+# ::agent_name::
 
-p:This is the main help file for ::name::.
+p:This is the main help file for ::agent_name::.
 
 id: ::agent_id::
 key: ::agent_key::
@@ -10,19 +10,38 @@ name: ::agent_name::
 emoji: ::agent_emoji::
 describe: ::agent_describe::
 
+## Features
+
+### security
+p: The local #security feature available to ::agent_name::.
+cmd:#::agent_key:: security
+
+### support
+p: The local #support feature available to ::agent_name::.
+cmd:#::agent_key:: support
+
+### services
+p: The local #services feature available to ::agent_name::.
+cmd:#::agent_key:: services
+
+
 ## Methods
 
-### 1. uid
-p:Generate a unique id from the ::name::.
-cmd:#::key:: uid
+### uid
+p:Generate a unique id from the ::agent_name::.
+cmd:#::agent_key:: uid
 
-### 2. status
-p:Return the status for the ::name::.
-cmd:#::key:: status
+### status
+p:Return the status for the ::agent_name::.
+cmd:#::agent_key:: status
 
-### 3. help
-p:Get help using the ::name::
-cmd:#::key:: help
+### issue
+p: Create an issue associated with ::agent_name:: source code repository.
+tty:#::agent_key:: issue [title of issue]
+
+### help
+p:Get help using the ::agent_name::
+cmd:#::agent_key:: help
 
 ---
 
@@ -30,4 +49,4 @@ cmd:#::key:: help
 #bgcolor = ::agent_bgcolor::
 #bg = ::agent_background::
 
-p:Copyright (c)::year:: ::copyright::
+copyright: (c)::year:: ::copyright::

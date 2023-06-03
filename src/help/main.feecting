@@ -1,4 +1,5 @@
-::BEGIN:MAIN
+image: ::agent_avatar::
+
 ## Deva Help
 
 p:The main help file for deva.world. Here you will find basic information on using the main Deva Module and accessing the other features and Devas of the program.
@@ -56,6 +57,10 @@ p:The `/client` command will give your current client information that you have 
 cmd:/agent
 p:The `/agent` command will show you the profile of yoru Deva Agent.
 
-#color = var(--color-green)
-#bgcolor = var(--color-black)
-::END:MAIN
+---
+
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+
+copyright: (c)2023 Quinn Michaels

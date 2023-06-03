@@ -7,6 +7,7 @@ const info = {
   version: package.version,
   author: package.author,
   describe: package.description,
+  dir: __dirname,
   url: package.homepage,
   git: package.repository.url,
   bugs: package.bugs.url,
@@ -14,6 +15,7 @@ const info = {
   copyright: package.copyright,
 };
 
+console.log('DIR', info.dir);
 const os = require('os');
 const fs = require('fs');
 const path = require('path');
@@ -27,42 +29,18 @@ const {vars, agent} = require('../data');
 
 const DEVA = new Deva({
   info,
-  agent: {
-    id: 3848019052036,
-    key: agent.key,
-    prompt: agent.prompt,
-    voice: agent.voice,
-    profile: agent.profile,
-    translate(input) {
-      return input.trim().replace(/ Is there anything else you need assistance with\?/g, '')
-                        .replace(/As an AI language model, my .+?./g, '\.')
-                        .replace(/\, I understand\./g, '\.');
-    },
-    parse(input) {
-      return input.trim();
-    }
-  },
-  client:false,
+  agent,
+  vars,
   config: {
     dir: false,
     ports: vars.ports,
-    routes: {
-      api: {
-        name: '#ChatGPT API Relay',
-        call: '#open relay',
-        puppet: '#puppet relay',
-        puppet_key: 'ui',
-      },
-      ui: {
-        name: '#ChatGPT UI Relay',
-        call: '#puppet relay',
-        puppet: false,
-        puppet_key: false,
-      },
-    },
   },
   lib: require('./lib'),
-  vars,
+  utils: {
+    translate(input) {return input.trim();},
+    parse(input) {return input.trim();},
+    process(input) {return input.trim();}
+  },
   devas: require('../devas'),
   listeners: {},
   modules: {
@@ -95,28 +73,32 @@ const DEVA = new Deva({
       const agent = this.agent();
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return resolve(this._messages.notext);
-        const question = [
-          `::begin:${agent.key}:${packet.id}`,
-          packet.q.text,
-          `::end:${agent.key}:${this.hash(packet.q.text)}`,
-        ].join('\n');
-        this.question(`#open relay ${question}`).then(open => {
+        this.context('open_relay');
+        this.question(`#open relay ${packet.q.text}`).then(open => {
           data.open = open.a.data;
+          answer.push(`::begin:${open.a.agent.key}:${open.id}`);
           answer.push(open.a.text);
-          return this.question(`#puppet relay ${question}`);
+          answer.push(`::end:${open.a.agent.key}:${open.hash}`);
+          this.context('puppet_relay');
+          return this.question(`#puppet relay ${packet.q.text}`);
         }).then(puppet => {
           data.puppet = puppet.a.data;
+          answer.push('');
+          answer.push(`::begin:${puppet.a.agent.key}:${puppet.id}`);
           answer.push(puppet.a.text);
+          answer.push(`::end:${puppet.a.agent.key}:${puppet.hash}`);
+          this.context('feecting_parse');
           return this.question(`#feecting parse ${answer.join('\n')}`);
         }).then(feecting => {
           data.feecting = feecting.a.data;
+          this.context('done');
           return resolve({
             text: feecting.a.text,
             html: feecting.a.html,
             data,
           });
         }).catch(err => {
-          console.log('ERRRRRRR', err);
+          return this.error(err, packet, reject);
         });
       });
     },
@@ -155,6 +137,33 @@ const DEVA = new Deva({
         }
       });
     },
+    lists(item) {
+      return new Promise((resolve, reject) => {
+        const states = this[item]();
+        const _states = [
+          `::begin:${item}`,
+          `# ${item}`,
+        ];
+        for (let x in states.value) {
+          _states.push(`${x}: ${states.value[x]} - ${states.messages[x]}`);
+        }
+        _states.push(`::end:${item}`);
+        this.question(`#feecting parse ${_states.join('\n')}`).then(feecting => {
+          return resolve({
+            text: feecting.a.text,
+            html: feecting.a.html,
+            data: {
+              states,
+              feecting: feecting.a.data,
+            }
+          })
+        }).catch(err => {
+          return this.error(err, packet, reject);
+        })
+        return _states.join('\n');
+      });
+
+    }
   },
   methods: {
     /**************
@@ -178,23 +187,13 @@ const DEVA = new Deva({
     },
 
     /**************
-    method: hash
-    params: packet
-    describe: Access core hash features to build has trail.
-    ***************/
-    hash(packet) {
-      const text = packet.q.text;
-      let guid = false
-      if (packet.meta.params[1]) guid = true;
-      return this.hash(guid, text);
-    },
-
-    /**************
     method: question
     params: packet
     describe: Method to relaty to question function with packet information.
     ***************/
     question(packet) {
+      this.zone('deva');
+      this.context('question');
       return this.func.question(packet);
     },
 
@@ -208,13 +207,50 @@ const DEVA = new Deva({
     },
 
     /**************
-    method: uid
+    method: states
     params: packet
-    describe: Return system uid for the based deva.
+    describe: Call states function and return list of system states.
     ***************/
-    uid(packet) {
-      return Promise.resolve(`${this.uid()}`);
+    states(packet) {
+      return this.func.lists('states');
     },
+
+    /**************
+    method: actions
+    params: packet
+    describe: Call actions function and return list of system actions.
+    ***************/
+    actions(packet) {
+      return this.func.lists('actions');
+    },
+
+    /**************
+    method: features
+    params: packet
+    describe: Call features function and return list of system features.
+    ***************/
+    features(packet) {
+      return this.func.lists('features');
+    },
+
+    /**************
+    method: zones
+    params: packet
+    describe: Call zones function and return list of system zones.
+    ***************/
+    zones(packet) {
+      return this.func.lists('zones');
+    },
+
+    /**************
+    method: contexts
+    params: packet
+    describe: Call contexts function and return list of system contexts.
+    ***************/
+    contexts(packet) {
+      return this.func.lists('contexts');
+    },
+
 
     /**************
     method: guid
@@ -286,53 +322,6 @@ const DEVA = new Deva({
       }
       return Promise.resolve(ret);
     },
-
-    /**************
-    method: status
-    params: packet
-    describe: Return the current status for the system deva.
-    ***************/
-    status(packet) {
-      return this.status();
-    },
-
-    /**************
-    method: info
-    params: packet
-    describe: Return the current info for the deva.
-    ***************/
-    info(packet) {
-      const info = [
-        '::::::::::::::::::',
-        `name: ${this.info.name}`,
-        `version: ${this.info.version}`,
-        `license: ${this.info.license}`,
-        '---',
-        `describe: ${this.info.describe}`,
-        `author: ${this.info.author}`,
-        `url: ${this.info.url}`,
-        `git: ${this.info.git}`,
-        `bugs: ${this.info.bugs}`,
-        `Copyright (c) ${this.info.copyright} ${this.info.author}`,
-        ':::::::::::::::::::::::::::',
-      ].join('\n')
-      return Promise.resolve(info);
-    },
-
-    /**************
-    method: help
-    params: packet
-    describe: Return the help files for the main system deva.
-    ***************/
-    help(packet) {
-      return new Promise((resolve, reject) => {
-        this.lib.help(packet.q.text, __dirname).then(help => {
-          return resolve(help)
-        }).catch(err => {
-          console.log(err);
-        });
-      });
-    }
   },
   onDone(data) {
     this.listen('devacore:prompt', packet => {
@@ -362,11 +351,9 @@ const DEVA = new Deva({
     })
 
     for (let x in this.devas) {
-      this.load(x, data.client).then(loaded => {
-        console.log('LOADED');
-      });
+      this.load(x, data.client);
     }
   }
 });
 
-module.exports = {DEVA};
+module.exports = DEVA;

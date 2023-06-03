@@ -24,11 +24,8 @@ const shell = readline.createInterface({
   output: process.stdout,
 });
 
-// set DevaCore objects
-const {DEVA} = require('./src');
-
-// set the base directory in config
-DEVA.config.dir = __dirname;
+const DEVA = require('./src'); // set the deva object
+DEVA.config.dir = __dirname; // set the base config directory
 
 function setPrompt(pr) {
   // console.log('PROMPT', pr);
@@ -37,7 +34,7 @@ function setPrompt(pr) {
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}: `);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} #${pr.prompt.text}:`);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);

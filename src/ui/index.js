@@ -46,20 +46,16 @@ class DevaInterface {
   constructor() {
     this.client = false;
     this._content = false;
-    this.data = false;
-    this.log = [];
     this.socket = false;
-    this.editing = false;
-    this.viewing = false;
-    this.viewed = false;
-    this.state = 'terminal';
-    this.state_prev = false;
-    this.adventure = false;
-    this.room = false;        // set the current room mud game.
-    this.map = false;
     this._shell = [];        // used for keeping track of items in the console.
-    this._alerts = [];        // used for keeping track of items in the console.
-    this._console = [];        // used for keeping track of items in the console.
+    this._console = {
+      context: [],
+      state: [],
+      action: [],
+      feature: [],
+      zone: [],
+    }
+    this.history_count = 50;
   }
 
   set content(txt) {
@@ -69,29 +65,34 @@ class DevaInterface {
     return this._content;
   }
 
-  _insertLog(log) {
-    this.log.push(log);
-  }
+  _logConsole(data) {
+    if (!this._console[data.key]) return console.log('LOG CONSOLE', data);
 
-  _setState(state) {
-    $('body').removeClass(this.state).addClass(state);
-    this.state_prev = this.state;
-    this.state = state;
-  }
 
-  _logConsole(key,value) {
-    if (this._console.length > 25) {
-      this._console.shift();
-      $('#Console .item').last().remove();
+    const selector = `.event-panel.${data.key}`;
+
+    console.log('LOG CONSOLE', selector);
+    const {colors} = data.agent.prompt;
+    const html = [
+      `<div class="item ${data.key} ${data.value}" data-id="${data.id}" data-hash="${data.hash}">`,
+      `<span class="emoji"><img src="${data.agent.profile.emoji}"></span>`,
+      `<span class="label" style="color:rgb(${colors.label.R},${colors.label.G},${colors.label.B});">#${data.agent.key}</span>`,
+      `<span class="text" style="color:rgb(${colors.text.R},${colors.text.G},${colors.text.B});">${data.text}<span>`,
+      '</div>',
+    ].join('\n');
+
+    if (this._console[data.key].length > this.history_count) {
+      this._console[data.key].shift();
+      $(`${selector} .item`).last().remove();
     }
-    this._console.push({key,value});
-    $('#Console').prepend(`<div class="item ${key.toLowerCase()}">${key}: ${value}</div>`)
+    this._console[data.key].push(data);
+    $(selector).prepend(html)
   }
 
   _logShell(opts) {
     if (!opts.text) return;
 
-    if (this._shell.length > 25) {
+    if (this._shell.length > this.history_count) {
       this._shell.shift();
       $('#ShellOutput .log-item').first().remove();
     }
@@ -132,11 +133,11 @@ class DevaInterface {
       this._keyValue(data),
       `</div>`,
     ].join('\n');
-    $('#System .systembox').html(_html);
+    $('#DataPanel .databox').html(_html);
   }
 
   _logAlert(data) {
-    if (this._alerts.length > 25) {
+    if (this._alerts.length > this.history_count) {
       this._alerts = [];
       $('#Alerts .item').last().remove();
     }
@@ -270,16 +271,24 @@ class DevaInterface {
 
   }
 
+  feature(data) {
+    console.log('FEATURE CHECK', data);
+    this._logBROWSER(data);
+  }
+
+  services(data) {}
   processor(data) {
-    console.log('PROCESSING', data);
     if (!data.text) return;
     const { meta } = data;
     const metaKey = meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
     const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
     const helpChk = meta.method === 'help';
+    const featureChk = ['security','support','services'].includes(meta.method);
 
+    console.log('FEATURE', meta.method, featureChk);
     if (helpChk) return this._logBROWSER(data);
+    else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor
     else return this._logShell({
@@ -336,29 +345,18 @@ class DevaInterface {
       socket.on('socket:clientdata', data => {
         this.Client(data);
       })
+      socket.on('socket:global', data => {
+        this._logBROWSER(data.a);
+      })
       socket.on('socket:devacore', data => {
-        console.log('DEVA CORE SOCKET', data);
-        if (data.key === 'context') {
-          this._logAlert({
-            type: data.value,
-            format: data.key,
-            agent:data.agent,
-            meta: false,
-            text: data.text,
-          });
-        }
-        else if (data.key === 'prompt') {
-          this._logShell({
-            type: data.value,
-            format: data.key,
-            agent:data.agent,
-            meta: false,
-            text: data.text,
-          });
-        }
-        else {
-          this._logConsole(data.agent.key, data.text)
-        }
+        // if (data.key === 'prompt')  return this._logShell({
+        //   type: data.value,
+        //   format: data.key,
+        //   agent:data.agent,
+        //   meta: false,
+        //   text: data.text,
+        // });
+        this._logConsole(data)
       });
 
       return resolve();

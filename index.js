@@ -88,13 +88,11 @@ ${line_break}
 
 📛 name:      ${package.name},
 💚 ver:       ${package.version},
-✍️ author:     ${package.author},
+✍️  author:     ${package.author},
 📝 describe:  ${package.description},
 🔗 url:       ${package.homepage},
 👨‍💻 git:       ${package.repository.url}
 🪪 license:    ${package.license}
-
-${line_break}
 
 ${line_break}
 
@@ -103,29 +101,7 @@ ${opts.ip}
 💹 avail mem:   ${os.freemem()}
 ✅ total mem:   ${os.totalmem()}
 
-${line_break}
-
-Greetings ${opts.client.profile.name},
-
-Welcome to deva.world, where imagination,
-creativity, code, and artificial intelligence
-meet to collaborate and brainstorm the amazing
-future that is made possible through
-Human and AI collaboration.
-
-In deva.world remember that the Security,
-Support, and other @BUSINESS tools are built-in
-to help you get your job done while hopefully
-having a little fun.
-
-Thank you for your offerings,
-${opts.agent.profile.name} (@${opts.agent.key})
-
-${line_break}
-
-🎉 LET'S GET THE PARTY STARTED!
-
-Copyright ©${package.copyright} indra.ai
+Copyright ©${package.copyright}
 ${line_break}`;
 
 // create the static routes for the local server.

@@ -4,6 +4,11 @@ image: ::agent_avatar::
 
 p:The main help file for deva.world. Here you will find basic information on using the main Deva Module and accessing the other features and Devas of the program.
 
+## Devas
+
+talk:#deva devas
+
+
 ## Commands
 
 p:There are several commands which you can access in the Deva Agent. These commands are accessed with the "/" command.

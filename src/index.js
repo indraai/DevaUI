@@ -113,18 +113,13 @@ const DEVA = new Deva({
       return new Promise((resolve, reject) => {
         try {
           const devas = [
-            '::begin:devas',
-            `## ${agent.profile.name}`,
-            `total: ${Object.keys(this.devas).length} Devas`,
-            '',
             '::begin:menu',
           ];
           for (let deva in this.devas) {
             const {profile,prompt,key} = this.devas[deva].agent();
             devas.push(`button[${prompt.emoji} ${profile.name}]:#${key} help`);
           }
-          devas.push(`::end:menu`)
-          devas.push(`::end:devas:${this.hash(devas)}`)
+          devas.push(`::end:menu:${this.hash(devas)}`);
           this.question(`#feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
               text:parsed.a.text,
@@ -249,55 +244,6 @@ const DEVA = new Deva({
     ***************/
     contexts(packet) {
       return this.func.lists('contexts');
-    },
-
-
-    /**************
-    method: guid
-    params: packet
-    describe: Return system uid for the based deva.
-    ***************/
-    guid(packet) {
-      return Promise.resolve(this.uid(true));
-    },
-
-    /**************
-    method: md5 hash
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    md5(packet) {
-      const hash = this.hash(packet.q.text, 'md5');
-      return Promise.resolve(hash);
-    },
-    /**************
-    method: md5 hash
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    sha256(packet) {
-      const hash = this.hash(packet.q.text, 'sha256');
-      return Promise.resolve(hash);
-    },
-    /**************
-    method: md5 hash
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    sha512(packet) {
-      const hash = this.hash(packet.q.text, 'sha512');
-      return Promise.resolve(hash);
-    },
-
-    /**************
-    method: md5 cipher
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    cipher(packet) {
-      const data = this.cipher(packet.q.text);
-      const cipher = `cipher: ${data.encrypted}`;
-      return Promise.resolve(cipher);
     },
 
     /**************

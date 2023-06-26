@@ -9,6 +9,9 @@ button
   outline: 0
   padding: .5rem .25rem
   margin: 0
+  &.disabled
+    visibility: hidden
+
   &:hover
     cursor: pointer
     box-shadow: 0 2px 3px rgba($colors.black, .25)
@@ -113,7 +116,7 @@ button
         color: lighten($colors.yellow, 50%)
         background-color: rgba($colors.yellow, 1)
 
-  &.confirm
+  &.cloudconf
     margin: 0 1px
     padding: .3rem 1rem
     font-size: 1rem

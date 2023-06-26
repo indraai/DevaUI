@@ -162,6 +162,14 @@
     display: flex
     flex-flow: row nowrap
     margin: 3px 0
+
+    &.indent1
+      padding-left: 20px
+    &.indent2
+      padding-left: 40px
+    &.indent3
+      padding-left: 60px
+
     .label
       &::before
         display: inline-block
@@ -271,8 +279,10 @@
       font-size: 1rem
 
     .label
-      min-width: 125px
-      font-size: .75rem
+      border-radius: .5rem
+      background-color: $colors.darkest-grey
+      color: $colors.green
+      font-size: .8rem
       padding: .25rem
 
       &.develop
@@ -957,7 +967,8 @@
       padding: .1rem
       .item
         margin: 0
-      .bmud
+
+      .cloudbtn
         border-radius: .5
         line-height: 1.25
 
@@ -980,20 +991,37 @@
       margin: 5px 0
       .item
         margin: 0
-      .bmud
-        border-radius: .5
-        line-height: 1.25
 
       .btn
         text-align: left
+        transition: var(--transition-default)
 
         &.cmd
         &.tty
           border: none
           border-radius: 1rem
 
+        &.cloudcmd
+          color: inherit
+          border-radius: .5
+          line-height: 1.25
+          margin: .15rem 0 0 0
+          padding: .25rem
+          &::before
+            content: attr(data-cloudcmd)
+            font-size: .8rem
+
+        &.cloudbtn
+          color: inherit
+          border-radius: .5
+          line-height: 1.25
+          margin: .15rem 0 0 0
+          padding: .25rem
+          &::before
+            content: attr(data-cloudbtn)
+            font-size: .8rem
+
         &.button
-          transition: var(--transition-default)
           padding: .25rem .5rem
           font-weight: normal
           color: inherit

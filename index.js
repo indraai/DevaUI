@@ -92,7 +92,7 @@ ${line_break}
 📝 describe:  ${package.description},
 🔗 url:       ${package.homepage},
 👨‍💻 git:       ${package.repository.url}
-🪪 license:    ${package.license}
+🪪  license:    ${package.license}
 
 ${line_break}
 
@@ -143,26 +143,36 @@ const routes = [
       });
     }
   },
-  // for mapping the adventure realm images to a public url
+  // for mapping the space realm images to a public url
   {
     method: 'GET',
-    url: '/asset/:adv/:type/:vnum/:asset',
+    url: '/asset/:space/:type/:vnum/:asset',
     handler: (req,reply) => {
-      const {adv, type, vnum, asset} = req.params;
+      const {space, type, vnum, asset} = req.params;
 
-      const _rpath = client.services.space;
+      const _rpath = client.features.services.global.urls.space;
       let assetPath
 
       const dir1 = vnum.substr(0, vnum.toString().length - 3) + 'xxx';
       const dir2 = vnum.substr(0, vnum.toString().length - 2) + 'xx';
-      if (type === 'map') assetPath = `${_rpath}/${adv}/maps/${vnum}/${asset}.png`;
-      else assetPath = `${_rpath}/${adv}/${type}/${dir1}/${dir2}/${vnum}/${asset}.png`;
+      if (type === 'map') assetPath = `/${space}/maps/${vnum}/${asset}.png`;
+      else assetPath = `/${space}/${type}/${dir1}/${dir2}/${vnum}/${asset}.png`;
 
-      needle.get(assetPath,{responseType: "arraybuffer"}).then(asset => {
-        return reply.type('image/png').send(Buffer.from(asset.data));
-      }).catch(err => {
-        return reply.send(err)
-      })
+      if (client.features.services.global.paths.space) {
+        try {
+          const spaceFile = fs.readFileSync(path.join(client.features.services.global.paths.space, assetPath));
+          reply.type('image/png').send(Buffer.from(spaceFile));
+        } catch (e) {
+          return reply.send(e);
+        }
+      }
+      else {
+        needle('get', `${_rpath}/${assetPath}`).then(result => {
+          return reply.type('image/png').send(Buffer.from(asset.body));
+        }).catch(err => {
+          return reply.send(err)
+        })
+      }
       // so we need to get images and maps here
     },
   },

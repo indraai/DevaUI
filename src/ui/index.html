@@ -33,10 +33,38 @@
       </div>
     </section>
     <section class="communications">
-      <div class="alerts" id="Alerts">&nbsp;</div>
-      <div class="score" id="Score">&nbsp;</div>
+      <div class="event-panel alerts" id="Alerts">&nbsp;</div>
+      <div class="event-panel inventory" id="Inventory">&nbsp;</div>
+      <div class="event-panel equipment" id="Equipment">&nbsp;</div>
+      <div class="score" id="Score">
+        <div id="player_name">&nbsp</div>
+        <div id="player_age">&nbsp</div>
+        <div id="player_gender">&nbsp</div>
+        <div id="player_race">&nbsp</div>
+        <div id="player_class">&nbsp</div>
+        <div id="player_rank">&nbsp</div>
+        <div id="player_level">&nbsp</div>
+        <div id="player_exp">&nbsp</div>
+        <div id="player_align">&nbsp</div>
+        <div id="player_gold">&nbsp</div>
+        <div id="player_levelup">&nbsp</div>
+        <div id="player_armor">&nbsp</div>
+        <div id="player_quest">&nbsp</div>
+        <div id="player_quests">&nbsp</div>
+        <div id="player_since">&nbsp</div>
+        <div id="player_pos">&nbsp</div>
+        <div id="player_cond">&nbsp</div>
+        <div id="player_aff">&nbsp</div>
+        <div id="player_prf">&nbsp</div>
+      </div>
       <div class="watch" id="Watch">
-        <div class="watch-hour" id="WatchHour">&nbsp;</div>
+        <div class="watch-comm" id="WatchComm">
+          <span class="motd"></span>
+          <span class="news"></span>
+        </div>
+        <div class="watch-pos" id="WatchPos">&nbsp;</div>
+        <div class="watch-weather" id="WatchWeather">&nbsp;</div>
+        <div class="watch-time" id="WatchTime">&nbsp;</div>
         <div class="watch-day" id="WatchDay">&nbsp;</div>
         <div class="watch-date" id="WatchDate">&nbsp;</div>
         <div class="watch-room" id="WatchRoom">&nbsp;</div>
@@ -45,30 +73,30 @@
         <div id="Navigate">
           <div id="Map">
             <div class="grid">
-              <button class="center-dot" data-mud="look"></button>
-              <button class="dots north-dot" data-cmd="#mud north"></button>
-              <button class="dots east-dot" data-cmd="#mud east"></button>
-              <button class="dots south-dot" data-cmd="#mud south"></button>
-              <button class="dots west-dot" data-cmd="#mud west"></button>
-              <button class="dots northeast-dot" data-cmd="#mud northeast"></button>
-              <button class="dots northwest-dot" data-cmd="#mud northwest"></button>
-              <button class="dots southwest-dot" data-cmd="#mud southwest"></button>
-              <button class="dots southeast-dot" data-cmd="#mud southeast"></button>
+              <button class="center-dot" data-button="#cloud look"></button>
+              <button class="dots north-dot" data-button="#cloud north"></button>
+              <button class="dots east-dot" data-button="#cloud east"></button>
+              <button class="dots south-dot" data-button="#cloud south"></button>
+              <button class="dots west-dot" data-button="#cloud west"></button>
+              <button class="dots northeast-dot" data-button="#cloud northeast"></button>
+              <button class="dots northwest-dot" data-button="#cloud northwest"></button>
+              <button class="dots southwest-dot" data-button="#cloud southwest"></button>
+              <button class="dots southeast-dot" data-button="#cloud southeast"></button>
             </div>
           </div>
         </div>
         <div id="Controller">
           <div id="Exits">
-            <button class="btn direction exit north" title="Exit North" data-cmd="#mud north"><i class="icn icn-exit-north"></i><span></span></button>
-            <button class="btn direction exit northwest" title="Exit North West" data-cmd="#mud northwest"><i class="icn icn-exit-north-west"></i><span></span></button>
-            <button class="btn direction exit northeast" title="Exit North East" data-cmd="#mud northeast"><i class="icn icn-exit-north-east"></i><span></span></button>
-            <button class="btn direction exit south" title="Exit South" data-cmd="#mud south"><i class="icn icn-exit-south"></i><span></span></button>
-            <button class="btn direction exit southwest" title="Exit South West" data-cmd="#mud southwest"><i class="icn icn-exit-south-west"></i><span></span></button>
-            <button class="btn direction exit southeast" title="Exit South East" data-cmd="#mud southeast"><i class="icn icn-exit-south-east"></i><span></span></button>
-            <button class="btn direction exit east" title="Exit East" data-cmd="#mud east"><i class="icn icn-exit-east"></i><span></span></button>
-            <button class="btn direction exit west" title="Exit West" data-cmd="#mud west"><i class="icn icn-exit-west"></i><span></span></button>
-            <button class="btn direction exit up" title="Exit West" data-cmd="#mud up"><i class="icn icn-exit-up"></i><span></span></button>
-            <button class="btn direction exit down" title="Exit West" data-cmd="#mud down"><i class="icn icn-exit-down"></i><span></span></button>
+            <button class="btn direction exit north" title="Exit North" data-button="#cloud north"><i class="icn icn-exit-north"></i><span></span></button>
+            <button class="btn direction exit northwest" title="Exit North West" data-button="#cloud northwest"><i class="icn icn-exit-north-west"></i><span></span></button>
+            <button class="btn direction exit northeast" title="Exit North East" data-button="#cloud northeast"><i class="icn icn-exit-north-east"></i><span></span></button>
+            <button class="btn direction exit south" title="Exit South" data-button="#cloud south"><i class="icn icn-exit-south"></i><span></span></button>
+            <button class="btn direction exit southwest" title="Exit South West" data-button="#cloud southwest"><i class="icn icn-exit-south-west"></i><span></span></button>
+            <button class="btn direction exit southeast" title="Exit South East" data-button="#cloud southeast"><i class="icn icn-exit-south-east"></i><span></span></button>
+            <button class="btn direction exit east" title="Exit East" data-button="#cloud east"><i class="icn icn-exit-east"></i><span></span></button>
+            <button class="btn direction exit west" title="Exit West" data-button="#cloud west"><i class="icn icn-exit-west"></i><span></span></button>
+            <button class="btn direction exit up" title="Exit Up" data-button="#cloud up"><i class="icn icn-exit-up"></i><span></span></button>
+            <button class="btn direction exit down" title="Exit Down" data-button="#cloud down"><i class="icn icn-exit-down"></i><span></span></button>
           </div>
         </div>
       </div>

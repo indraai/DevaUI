@@ -59,7 +59,7 @@
     &.select
       .label
         opacity: .5
-        flex: 0 125px
+        flex: 0
         font-size: .75rem
         padding: .25rem
         border-right: 1px solid
@@ -93,68 +93,58 @@
 
   .box
     &.buttons
-      .bmud
+      .cloud
         border-radius: $border.outer
         line-height: 1.25
 
-  .btn
     &.menu
-      transition: all .5s linear
-      background-color: transparent
-      font-weight: bold
-      border-radius: $border.outer
-      padding: .15rem 0
-      margin: 2px 0
-      color: rgba($colors.green, .5)
-      text-align: left
-      &[data-menu]
-        &[title="done"]
-          background-color: rgba($colors.orange, .25)
-          color: $colors.orange
-          margin: .2rem
-          padding: .25rem .75rem .25rem .25rem
-
-          &::before
-            background-color: rgba(darken($colors.orange, 50%), .5)
-
-          &:hover
-            background-color: rgba($colors.orange, .5)
+      .cloud
+        transition: all .5s linear
+        background-color: transparent
+        font-weight: bold
+        border-radius: $border.outer
+        padding: .15rem 0
+        margin: 2px 0
+        color: rgba($colors.green, .5)
+        text-align: left
+        &[data-cloud]
+          &[title="done"]
+            background-color: rgba($colors.orange, .25)
             color: $colors.orange
+            margin: .2rem
+            padding: .25rem .75rem .25rem .25rem
 
-        &[title="quit"]
-          background-color: rgba($colors.red, .25)
-          color: $colors.red
-          margin: .2rem
-          padding: .25rem .75rem .25rem .25rem
+            &::before
+              background-color: rgba(darken($colors.orange, 50%), .5)
+
+            &:hover
+              background-color: rgba($colors.orange, .5)
+              color: $colors.orange
 
           &::before
-            background-color: rgba(darken($colors.red, 50%), .5)
-
-          &:hover
-            background-color: rgba($colors.red, .5)
-            color: $colors.red
+            content: attr(data-cloud)
+            background-color: rgba($colors.green, .25)
+            border-radius: $border.inner
+            display: inline-block
+            min-width: 1.5rem
+            text-align: center
+            display: inline-block
+            line-height: 1.5
 
         &::before
-          content: attr(data-menu)
-          background-color: rgba($colors.green, .25)
-          border-radius: $border.inner
-          display: inline-block
-          min-width: 1.5rem
-          text-align: center
-          display: inline-block
-          line-height: 1.5
+          transition: var(--transition-default)
+          content: "\e8d0"
+          margin-right: .5rem
 
-      &::before
-        transition: var(--transition-default)
-        content: "\e8d0"
-        margin-right: .5rem
+        &:hover
+          text-shadow: 0 0 9px rgba($colors.green, 50%)
+          color: $colors.green
+          background-color: transparent
 
-      &:hover
-        text-shadow: 0 0 9px rgba($colors.green, 50%)
-        color: $colors.green
-        background-color: transparent
+  .btn
+    box-shadow: none
 
-    &.bmud
+    &.cloud
       font-size: .9rem
       margin: .2rem
       padding: .25rem .75rem .25rem .25rem
@@ -162,9 +152,10 @@
       color: $colors.green
       display: flex
       flex-flow: row nowrap
+      border-radius: $border.outer
 
       &::before
-        content: attr(data-bmud)
+        content: attr(data-cloud)
         font-size: .65rem
         margin-right: 5px
         background-color: rgba($colors.darkest-grey, .35)
@@ -176,6 +167,19 @@
       &:hover
         background-color: rgba($colors.green, .75)
         color: darken($colors.green, 75%)
+
+      &[title="quit"]
+        background-color: rgba($colors.red, .25)
+        color: $colors.red
+        margin: .2rem
+        padding: .25rem .75rem .25rem .25rem
+
+        &::before
+          background-color: rgba(darken($colors.red, 50%), .5)
+
+        &:hover
+          background-color: rgba($colors.red, .5)
+          color: $colors.red
 
 #ShellInput
   display: flex

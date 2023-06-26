@@ -15,7 +15,6 @@ const info = {
   copyright: package.copyright,
 };
 
-console.log('DIR', info.dir);
 const os = require('os');
 const fs = require('fs');
 const path = require('path');

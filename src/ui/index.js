@@ -40,6 +40,24 @@ const emojis = {
   fight: '🥊',
   sound: '🔊',
   pour: '🚰',
+  news: '<i class="icn icn-news" data-cmd="#cloud news" title="Read News"></i>',
+  motd: '<i class="icn icn-voicemail" data-cmd="#coud motd" title="Read Motd"></i>',
+  'The clouds disappear.': '<i class="icn icn-cloud-sun" title="The clouds disappear."></i>️️',
+  'The sky is cloudy.': '️<i class="icn icn-cloud" title="The sky is cloudy."></i>',
+  'It starts to rain.': '<i class="icn icn-cloud-rain" title="It starts to rain."></i>',
+  'The rain stops.': '️<i class="icn icn-umbrella" title="The rain stops."></i>',
+  'The sky is cloudy and you feel a cool breeze.': '️<i class="icn icn-cloud-windy" title="The sky is cloudy and you feel a breeze."></i>',
+  'The sky is rainy and you feel a cool breeze.': '️<i class="icn icn-umbrella2" title="The sky is rainy and you feel a breeze."></i>',
+  'Lightning starts in the sky.': '️<i class="icn icn-cloud-lightning" title="Lightning starts in the sky."></i>',
+  'The lightning stops.': '️<i class="icn icn-cloud-crossed" title="The lightning stops."></i>',
+  'The night begins.': '️<i class="icn icn-moon" title="The night begins."></i>',
+  'This inside weather is amazing!': '️<i class="icn icn-home2" title="This inside weather is amazing!"></i>',
+  'You go to sleep.': '️<i class="icn icn-bed" title="You go to sleep."></i>',
+  'You are already sound asleep.': '️<i class="icn icn-bed" title="You are already sound asleep."></i>',
+  'You awaken, and sit up.': '️<i class="icn icn-chair" title="You awaken, and sit up."></i>',
+  'You sit down.': '️<i class="icn icn-chair" title="You sit down."></i>',
+  'You\'re sitting already.': '️<i class="icn icn-chair" title="You\'re sitting already."></i>',
+  'You stand up.': '️<i class="icn icn-hand-waving" title="You stand up."></i>',
 };
 
 class DevaInterface {
@@ -54,6 +72,7 @@ class DevaInterface {
       action: [],
       feature: [],
       zone: [],
+      alerts: [],
     }
     this.history_count = 50;
   }
@@ -66,12 +85,8 @@ class DevaInterface {
   }
 
   _logConsole(data) {
-    if (!this._console[data.key]) return console.log('LOG CONSOLE', data);
-
-
+    if (!this._console[data.key]) return;
     const selector = `.event-panel.${data.key}`;
-
-    console.log('LOG CONSOLE', selector);
     const {colors} = data.agent.prompt;
     const html = [
       `<div class="item ${data.key} ${data.value}" data-id="${data.id}" data-hash="${data.hash}">`,
@@ -117,14 +132,20 @@ class DevaInterface {
     },250);
   }
 
-  _logBROWSER(opts) {
+  _logViewer(opts) {
     const styled = this.content.match(/style=".+;"/);
-    if (styled && styled[0]) opts.html = opts.html.replace(styled[0])
-    this.content = `<div ${styled && styled[0] ? styled[0] : ''} class="browser-item move-in ${opts.meta.method} ${opts.agent.key}">${opts.html}</div>`;
-
-    return setTimeout(() => {
+    if (styled && styled[0]) opts.html = opts.html.replace(styled[0]);
+    // this is where we move out the previous item in the .browser-item
+    ['north','south','easat','west','northwest','southwest','northeast','southeast'].forEach(cl => {
+      $('#Content .browser-item').removeClass(cl);
+    });
+    $('#Content .browser-item').removeClass('move-in').addClass('move-out').addClass(opts.meta.method);
+    // now that the old item is moved off screen let's move a new item into view.
+    setTimeout(() => {
+      this.content = `<div ${styled && styled[0] ? styled[0] : ''} class="browser-item move-in ${opts.meta.method} ${opts.agent.key}">${opts.html}</div>`;
       this.Show();
-    }, 500);
+    }, 1000);
+    return Promise.resolve();
   }
 
   _logData(data) {
@@ -251,16 +272,14 @@ class DevaInterface {
 
   Show() {
     $('#Content').html(this.content);
-    setTimeout(() => {
-      const so = document.getElementById('Content');
-      so.scrollTop = 0;
-    }, 250)
+    const so = document.getElementById('Content');
+    so.scrollTop = 0;
     return Promise.resolve(true);
   }
 
   docs(data) {
     console.log('DOCS DATA', data);
-    if (data.meta.method === 'view') this._logBROWSER(data);
+    if (data.meta.method === 'view') return this._logViewer(data);
     this._logShell({
       type: data.meta.key,
       method: data.meta.method,
@@ -273,10 +292,213 @@ class DevaInterface {
 
   feature(data) {
     console.log('FEATURE CHECK', data);
-    this._logBROWSER(data);
+    this._logViewer(data);
   }
 
   services(data) {}
+
+  cloudEvent(data) {
+    const self = this;
+    // console.log('CLOUD EVENT', data);
+    const actions = {
+      room(data) {
+        $('#WatchRoom').html(`room: ${data.value}`);
+        return;
+      },
+      bars(opts) {
+        const {id, bclass, value} = opts;
+        const valmax = value.split('|');
+        let bar = Math.floor((valmax[0] / valmax[1]) * 100);
+        if (bar > 100) bar = 100
+
+        if (bar < 30) bclass += ' warning';
+        if (bar < 15) bclass += ' alert';
+        $(`#${id} .bar`).removeClass('warning').removeClass('alert').addClass(bclass).attr('style', `--bar-width: ${bar}%;`);
+      },
+      alerts(data) {
+        return self._logConsole({
+          id: data.id,
+          agent: data.agent,
+          key: 'alerts',
+          value: data.key,
+          text: data.value,
+          created: data.created,
+          hash: data.hash,
+        });
+      },
+      time(data) {
+        const time = data.value.split(':');
+        const hour = time[0] < 10 ? `0${time[0].trim()}` : time[0].trim();
+        const minute = time[1] < 10 ? `0${time[1]}` : time[1];
+        $('#WatchTime').html(`${hour}:${minute}`);
+      },
+      date(data) {
+        const nDate = data.value.split('-');
+        $('#WatchDay').html(nDate[0].trim());
+        $('#WatchDate').html(nDate[1].trim());
+      },
+
+      weather(data) {
+        const text = emojis[data.value] ? emojis[data.value] : data.value;
+        $('#WatchWeather').html(text);
+      },
+
+      comm(data) {
+        // console.log('COMM DATA', data);
+        const value = data.value.toLowerCase().trim();
+        const text = emojis[value] ? emojis[value] : value;
+        $(`#WatchComm .${value}`).html(emojis[value]);
+      },
+
+      hit(data) {
+        this.bars({
+          id: 'StatsHit',
+          bclass: 'hit',
+          value: data.value,
+        });
+      },
+
+      mana(data) {
+        this.bars({
+          id: 'StatsMana',
+          bclass: 'mana',
+          value: data.value,
+        });
+      },
+
+      move(data) {
+        this.bars({
+          id: 'StatsMove',
+          bclass: 'mana',
+          value: data.value,
+        });
+      },
+      hunger(data) {
+        this.bars({
+          id: 'StatsHunger',
+          class: 'hunger',
+          value: data.value,
+        });
+      },
+
+      thirst(data) {
+        this.bars({
+          id: 'StatsThirst',
+          class: 'thirst',
+          value: data.value,
+        });
+      },
+      save(data) {
+        $('.log-item.cloud .text button').addClass('disabled');
+        return this.alerts(data);
+      },
+      current(data) {
+        $('#q').val(`#cloud > ${data.value}`);
+        document.getElementById('q').focus();
+      },
+      drink(data) {
+        return this.alerts(data);
+      },
+      info(data) {
+        return this.alerts(data);
+      },
+      alert(data) {
+        return this.alerts(data);
+      },
+      pos(data) {
+        // console.log('COMM DATA', data);
+        console.log('POS VALUE', data.value);
+        const text = emojis[data.value] ? emojis[data.value] : data.value;
+        $(`#WatchPos`).html(text);
+      },
+      equipment(data) {
+        const item = data.value.split(':');
+        $('#Equipment').append(`<div class="item ${item[0].trim().toLowerCase()}">${emojis[item[0].trim().toLowerCase()]} ${item[1].trim()}</div>`);
+      },
+
+      inventory(data) {
+        $('#Inventory').append(`<div class="item">${data.value}</div>`);
+      },
+    }
+    if (actions[data.key]) {
+      return actions[data.key](data);
+    }
+    const thehtml = [
+      `<span class="label">${data.key}</span>`,
+      `<span class="value">${data.value}</span>`,
+    ];
+    console.log('CLOUD DATA EVENT', data);
+    $(`#${data.key}`).html(thehtml.join(''));
+  }
+
+  // parses coordinates from a string
+  coordinates(txt, space) {
+    const coord = /coordinates:(.+)\[(.+)\|(.+)\]/g;
+    const coordinates = coord.exec(txt);
+    if (!coordinates) return;
+    const nameS = coordinates[1].split('-');
+    const name = nameS && nameS[1] ? nameS[1] : 'main';
+    const _map = `/asset/${space}/map/${nameS[0]}/${name}`;
+    if (_map !== this.map) {
+      this.map = _map;
+      $('.controls').css({'background-image': `url(${this.map})`});
+    }
+    $('.controls').css({'background-position': `${coordinates[2]}px ${coordinates[3]}px`});
+    return;
+  }
+
+  cloud(data) {
+    console.log('CLOUD', data);
+
+    const processor = {
+      exits(text) {
+        $(`#Map .dots`).removeClass('active');
+        $(`#Exits .btn`).removeClass('active');
+        const exits = text.split('\n');
+        exits.forEach(ex => {
+          const bt = ex.match(/exit\[(.+)\]:(.+)/);
+          console.log('match', bt);
+          if (!bt) return;
+          $(`#Map .grid .${bt[1]}-dot`).addClass('active');
+          $(`#Exits .btn.exit.${bt[1]}`).addClass('active');
+          $(`#Exits .btn.exit.${bt[1]} span`).text(bt[2]);
+        });
+        return;
+      },
+    }
+    // check the text for coordinate string to move map
+    this.coordinates(data.text, data.meta.space);
+
+    switch (data.meta.method) {
+      case 'look':
+      case 'goto':
+      case 'north':
+      case 'south':
+      case 'east':
+      case 'west':
+      case 'northwest':
+      case 'southwest':
+      case 'southeast':
+      case 'northeast':
+      case 'up':
+      case 'down':
+        this._logViewer(data).then(() => {
+          this.Question('#cloud exits', false);
+        });
+        break;
+      case 'exits':
+        return processor.exits(data.text);
+      default:
+        return this._logShell({
+          type: data.meta.key,
+          format: data.meta.method,
+          agent:data.agent,
+          meta: data.meta,
+          text: data.html ? data.html : data.text,
+        });
+
+    }
+  }
   processor(data) {
     if (!data.text) return;
     const { meta } = data;
@@ -286,8 +508,7 @@ class DevaInterface {
     const helpChk = meta.method === 'help';
     const featureChk = ['security','support','services'].includes(meta.method);
 
-    console.log('FEATURE', meta.method, featureChk);
-    if (helpChk) return this._logBROWSER(data);
+    if (helpChk) return this._logViewer(data);
     else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor
@@ -325,11 +546,27 @@ class DevaInterface {
         e.preventDefault();
         const cmd = $(e.target).closest('[data-cmd]').data('cmd');
         this.Question(cmd);
+      }).on('click', '[data-tty]', e => {
+        e.stopPropagation()
+        e.preventDefault();
+        const cmd = $(e.target).closest('[data-tty]').data('tty');
+        $('#q').val(cmd);
+        document.getElementById('q').focus();
       }).on('click', '[data-button]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-button]').data('button')
         this.Question(cmd, false);
+      }).on('click', '[data-cloudbtn]', e => {
+        e.stopPropagation()
+        e.preventDefault();
+        const cmd = $(e.target).closest('[data-cloudbtn]').data('cloudbtn')
+        this.Question(`#cloud > ${cmd}`, false);
+      }).on('click', '[data-cloudcmd]', e => {
+        e.stopPropagation()
+        e.preventDefault();
+        const cmd = $(e.target).closest('[data-cloudcmd]').data('cloudcmd')
+        this.Question(`#cloud ${cmd}`, false);
       });
 
       $('#Shell').on('submit', e => {
@@ -346,8 +583,11 @@ class DevaInterface {
         this.Client(data);
       })
       socket.on('socket:global', data => {
-        this._logBROWSER(data.a);
-      })
+        return this.processor(data.a);
+      });
+      socket.on('cloud:event', data => {
+        return this.cloudEvent(data);
+      });
       socket.on('socket:devacore', data => {
         // if (data.key === 'prompt')  return this._logShell({
         //   type: data.value,

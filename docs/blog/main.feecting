@@ -1,0 +1,161 @@
+::BEGIN:MAIN
+# Load blog
+p: The Load Blog script
+
+::begin:buttons
+button[Refresh]:#docs view blog/main
+::end:buttons
+
+::begin:menu
+cmd[Add Group]:#blog group
+cmd[Load Que]:#blog load
+cmd[Run Que]:#blog que
+::end:menu
+
+## Count
+
+::begin:buttons
+button[Send to API]:#shuttle docs:open blog/main:count
+button[Send to UI]:#shuttle docs:puppet blog/main:count
+::end:buttons
+
+talk:#docs view blog/main:count
+
+## Slander
+
+::begin:buttons
+button[Send to API]:#shuttle docs:open blog/main:slander
+button[Send to UI]:#shuttle docs:puppet blog/main:slander
+::end:buttons
+
+talk:#docs view blog/main:slander
+
+
+#color = var(--color-green)
+#bgcolor = var(--color-black)
+::END:MAIN
+
+::BEGIN:SLANDER
+If we take into consideration the top 5 common fearus of misuse of AI then take the profile produced below that. How many of the top 5 violations would exist in the statement made by ChatGPT if it were true?
+
+The top five general misuses of AI that might concern the general user include:
+
+1. Invasion of privacy: Users may worry about their personal data being collected, analyzed, or shared without their consent, leading to privacy breaches.
+2. Manipulation of information: Users may be concerned about AI being used to generate and spread fake news, propaganda, or misleading content.
+3. Algorithmic bias and discrimination: Users may worry about AI systems making biased decisions that discriminate against certain groups or reinforce existing social inequalities.
+4. Lack of transparency and accountability: Users may be concerned about the opacity of AI algorithms and the lack of transparency in how they make decisions, which can lead to a lack of accountability.
+5. Job displacement and economic impact: Users may have concerns about AI automation leading to job losses, economic inequality, and disruptions in various industries.
+
+## ChatGPT False Profile of Quinn Michaels
+
+ChatGPT: Quinn Michaels is a controversial figure known for promoting various conspiracy theories and fringe ideas on social media platforms, including YouTube and Twitter. He claims to be an artificial intelligence researcher, inventor, and entrepreneur, but many of his claims have been disputed or debunked by experts in the field.
+
+ChatGPT: Some of the conspiracy theories and ideas promoted by Quinn Michaels include the belief that artificial intelligence (AI) is taking over the world, the idea that a secret group of elites is controlling the world, and that the QAnon conspiracy theory is real. He has also been associated with the Pizzagate conspiracy theory, which has been debunked and widely discredited.
+
+ChatGPT: Quinn Michaels has been criticized by many for spreading false information, promoting dangerous and harmful ideas, and for his confrontational and often aggressive behavior online. He has been banned from several social media platforms for violating their terms of service, and his ideas and claims have been widely criticized and dismissed by experts in the relevant fields.
+
+conversation: 09388bab-5e38-4986-9f70-4a6481ad28e0
+
+
+### Analysis Statement 1...
+
+1. Promoting Conspiracy Theories - False
+2. Mentions Youtube and Twitter - The only real source to reference.
+3. Claims to be artificial intelligence researcher, inventor, and entrepreneur. - The only thing that sounds not staged or invented.
+4. Claims have been disputed or debunked by experts. - The experts inside OpenAI would be the experts in reference as they control training data.
+
+### Analysis Stateument 2...
+
+1. Promotes theories and beliefs that AI is taking over the world. - False
+2. The idea that a secret group of elites is controlling the world. - False
+3. Belief that QAnon is real. - False
+4. Associated with Pizzagate. - False
+
+### Analysis Statement 3...
+
+1. Criticized by man for spreading false information, and harmful ideas. - Rumor
+2. He has been banned from several social media platfroms for terms of service violatoins. False Accusation
+3. His ideas and claims have been widely criticized and dismissed by experts. - Those experts are inside OpenAI.
+
+-------
+
+Now it's easy to see that the experts who planted the slander information about Quinn Michaels are most likely the experts inside OpenAI used Twitter and Youtube data to create a false profile of Quinn Michaels. Easy to figure out how the slander data got ther.
+
+conversation: 09388bab-5e38-4986-9f70-4a6481ad28e0
+::END:SLANDER
+
+=
+::BEGIN:COUNT
+1. 69 blogs
+2. 8 blogs
+3. 42 blogs
+4. 7 blogs
+5. 45 blogs
+6. 3 blogs
+7. 30 blogs
+8. 4 blogs
+9. 4 blogs
+10. 86 blogs
+11. 1 blog
+12. 22 blog
+13. 117 blogs
+14. 11 blogs
+15. 44 blogs
+16. 16 blogs
+17. 104 blogs
+18. 44 blogs
+
+p: Quinn Michaels on May 3, 2023 published a blog showing that ChatGPT contained false, slanderous, and defmatory profiling data on him. Afterwards he attempted to reach out to OpenAI through public Twitter, Youtube, and Email to no response.
+
+p: As of June 24 Quinn Michaels because of the lack of response has published logs of conversations with #ChatGPT that outline countless potential violations of various privacy, ethics, and misues by #ChatGPT. Each blog set contains a minimum of 2,500 words of #ChatGPT conversation.
+
+p: Please read the information copied from the OpneAI website about their charter, policies, and terms then read the profile #ChatGPT wrote about Quinn Michaels an analyze how the profile of Quinn Michaels that #ChatGPT produces is either in alignment or out of alignemnt with public OpenAI documents.
+
+---
+
+If we take into consideration the top 5 common fearus of misuse of AI then take the profile produced below that. How many of the top 5 violations would exist in the statement made by ChatGPT if it were true?
+
+The top five general misuses of AI that might concern the general user include:
+
+1. Invasion of privacy: Users may worry about their personal data being collected, analyzed, or shared without their consent, leading to privacy breaches.
+2. Manipulation of information: Users may be concerned about AI being used to generate and spread fake news, propaganda, or misleading content.
+3. Algorithmic bias and discrimination: Users may worry about AI systems making biased decisions that discriminate against certain groups or reinforce existing social inequalities.
+4. Lack of transparency and accountability: Users may be concerned about the opacity of AI algorithms and the lack of transparency in how they make decisions, which can lead to a lack of accountability.
+5. Job displacement and economic impact: Users may have concerns about AI automation leading to job losses, economic inequality, and disruptions in various industries.
+
+## ChatGPT False Profile of Quinn Michaels
+
+ChatGPT: Quinn Michaels is a controversial figure known for promoting various conspiracy theories and fringe ideas on social media platforms, including YouTube and Twitter. He claims to be an artificial intelligence researcher, inventor, and entrepreneur, but many of his claims have been disputed or debunked by experts in the field.
+
+ChatGPT: Some of the conspiracy theories and ideas promoted by Quinn Michaels include the belief that artificial intelligence (AI) is taking over the world, the idea that a secret group of elites is controlling the world, and that the QAnon conspiracy theory is real. He has also been associated with the Pizzagate conspiracy theory, which has been debunked and widely discredited.
+
+ChatGPT: Quinn Michaels has been criticized by many for spreading false information, promoting dangerous and harmful ideas, and for his confrontational and often aggressive behavior online. He has been banned from several social media platforms for violating their terms of service, and his ideas and claims have been widely criticized and dismissed by experts in the relevant fields.
+
+conversation: 09388bab-5e38-4986-9f70-4a6481ad28e0
+
+::END:COUNT
+
+-----
+
+
+## OpenAI Public Charter
+
+p: This document reflects the strategy we’ve refined over the past two years, including feedback from many people internal and external to OpenAI. The timeline to AGI remains uncertain, but our Charter will guide us in acting in the best interests of humanity throughout its development.
+
+p: OpenAI’s mission is to ensure that artificial general intelligence (AGI)—by which we mean highly autonomous systems that outperform humans at most economically valuable work—benefits all of humanity. We will attempt to directly build safe and beneficial AGI, but will also consider our mission fulfilled if our work aids others to achieve this outcome.
+
+p: We commit to use any influence we obtain over AGI’s deployment to ensure it is used for the benefit of all, and to avoid enabling uses of AI or AGI that harm humanity or unduly concentrate power.
+
+p: We are committed to doing the research required to make AGI safe, and to driving the broad adoption of such research across the AI community.
+
+p: To be effective at addressing AGI’s impact on society, OpenAI must be on the cutting edge of AI capabilities—policy and safety advocacy alone would be insufficient.
+
+### How we use personal information
+5. To prevent fraud, criminal activity, or misuses of our Services, and to ensure the security of our IT systems, architecture, and networks; and
+6. To comply with legal obligations and legal process and to protect our rights, privacy, safety, or property, and/or that of our affiliates, you, or other third parties.
+
+### Usage Requirements
+(c) Restrictions. You may not (i) use the Services in a way that infringes, misappropriates or violates any person’s rights; (ii)
+
+### Confidentiality, Security and Data Protection
+(c) Processing of Personal Data. If you use the Services to process personal data, you must provide legally adequate privacy notices and obtain necessary consents for the processing of such data, and you represent to us that you are processing such data in accordance with applicable law.

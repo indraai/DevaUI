@@ -22,7 +22,7 @@ $dir = {
     border-radius: $border.outer
     .icn
       display: block
-      font-size: 1.25rem
+      font-size: 1rem
 
   hr
     width: 100%
@@ -32,7 +32,7 @@ $dir = {
     padding: 0
 
 #Content
-  .mud
+  .cloud
 
     .text
       pre
@@ -597,26 +597,31 @@ $grid-cols = 15
   background-color: rgba(0,0,0,.5)
   display: flex
   flex-flow: row nowrap
+  align-items: center
+
+  .icn
+    font-size: .9rem
 
   .watch
     &-day
-    &-hour
+    &-time
     &-date
     &-room
+    &-comm
+    &-weather
+    &-pos
       margin: 0
       padding: 0
       line-height: 1
       font-size: .75rem
       padding: .2rem
 
-      > span
-        font-family: $fonts-code
-        display: inline-block
-        margin: auto
-        color: rgba($colors.green, .75)
-        text-transform: uppercase
-        text-shadow: 0 1px 3px $colors.black
-        white-space: nowrap
+      font-family: $fonts-code
+      display: inline-block
+      color: rgba($colors.green, .75)
+      text-shadow: 0 1px 3px $colors.black
+      white-space: nowrap
+
 
     &-day
       flex: 0
@@ -631,6 +636,13 @@ $grid-cols = 15
     &-room
       flex: 1
       text-align: right
+    &-comm
+    &-weather
+      font-size: 1rem
+      .news
+        color: $colors.orange
+      .motd
+        color: $colors.yellow
 
 #Talk
   display: flex
@@ -642,6 +654,7 @@ $grid-cols = 15
   overflow: auto
   min-height: 200px
   font-family: $fonts-text
+
   > .item
     font-size: .75rem
     color: $colors.light-grey
@@ -666,17 +679,35 @@ $grid-cols = 15
           height: 20px
 
 .event-panel
-  font-family: $fonts-text
-  color: $colors.grey
-  flex: 1
-  overflow: auto
-  display: flex
-  flex-flow: column
-  margin: 0 0 .25rem .25rem
-  background-color: rgba($colors.black, .5)
-  padding: .25rem
-  border-radius: $border.outer
-  font-size: .8rem
+  &.equipment
+  &.inventory
+    font-family: $fonts-text
+    display: flex
+    flex-flow: row wrap
+    gap: 3px
+    .item
+      font-size: .75rem
+      color: $colors.orange
+      background-color: rgba($colors.black, .5)
+      padding: .1rem .25rem
+        
+  &.context
+  &.action
+  &.state
+  &.feature
+  &.zone
+  &.data
+    font-family: $fonts-text
+    color: $colors.grey
+    flex: 1
+    overflow: auto
+    display: flex
+    flex-flow: column
+    margin: 0 0 .25rem .25rem
+    background-color: rgba($colors.black, .5)
+    padding: .25rem
+    border-radius: $border.outer
+    font-size: .8rem
 
   &::before
     font-family: icons
@@ -686,7 +717,7 @@ $grid-cols = 15
     &::after
       content: ":"
       margin-right: .25rem
-        
+
   .item
     transition: all .5s ease
     font-size: .75rem
@@ -818,38 +849,35 @@ $grid-cols = 15
   flex-flow: row wrap
   background-color: rgba(0,0,0,.5)
 
-  .item
-    font-family: $fonts-text
-    flex: 1 1
-    display: flex
-    flex-flow: column
-    align-items: center
-    padding: .5rem
-    border-radius: $border.outer
-    font-size: .75rem
+  > div
+    padding: .2rem
+    span
+      font-family: $fonts-text
+      flex: 1 1
+      display: flex
+      flex-flow: column
+      align-items: center
+      padding: .5rem
+      border-radius: $border.outer
+      font-size: .75rem
 
-    &.name
-      flex: 0 150px
-
-    .label
-      flex: 1
-      order: 1
-      text-align: center
-      border-right: none
-      padding: 0
-      margin: 0 0 .25rem 0
-      color: rgba($colors.grey, .5)
-      line-height: 1
-      min-width: 50px
-    .value
-      color: rgba($colors.green, .75)
-      margin: 0
-      padding: 0
-      flex: 1
-      order: 2
-      background-color: transparent
-      text-align: center
-      line-height: 1
+      &.label
+        flex: 1
+        text-align: center
+        border-right: none
+        padding: 0
+        margin: 0 0 .25rem 0
+        color: rgba($colors.grey, .5)
+        line-height: 1
+        min-width: 50px
+      &.value
+        color: rgba($colors.green, .75)
+        margin: 0
+        padding: 0
+        flex: 1
+        background-color: transparent
+        text-align: center
+        line-height: 1
 
 #Navigate
   flex: 1

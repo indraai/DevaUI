@@ -577,15 +577,15 @@ class DevaInterface {
         $('#q').val('');
       });
 
-
       // emit the socket event for the client data
       socket.on('socket:clientdata', data => {
         this.Client(data);
-      })
+      });
       socket.on('socket:global', data => {
         return this.processor(data.a);
       });
       socket.on('cloud:event', data => {
+        console.log('CLOUD EVENT', data);
         return this.cloudEvent(data);
       });
       socket.on('socket:devacore', data => {

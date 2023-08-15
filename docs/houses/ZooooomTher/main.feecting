@@ -1,0 +1,15 @@
+::BEGIN:MAIN
+# ZooooomTher
+
+#ZooooomTher #Zooooomites
+
+place: #EverflowZooooomTherNexusPlaza
+name: #QuinnQuartoon
+update: #TeamQuinn = #Security + #Friends - save in #quinn.quartoon.team
+update: #Realms = #Quinn #Quinnternet #Quinnverse #Quinntoon #Quinntopia #Quinnville #QuinnVillage #QuinnTown #QuinnCity #QuinnState #QuinnCountry #QuinnContinent #QuinnIsland #QuinnOcean #QuinnRiver #QuinnLake #QuinnPond #QuinnPlace #QuinnHoliday #QuinnVacation #QuinnHotel #QuinnModel #QuinnSuite #QuinnRoom #QuinnConcierge #Everflow #Evenflow #ZooooomTher
+update: #Friends = #q #x #z #quinn.owner.friend.QXZAccessGranted #Artistoon #Animootor #Artisoooo #Arttisto #FeectingTimePhoneHack #TechGuyManNerdolio #AntaresDude #SuperPooMonkeys #SuperTikNinja #SillyDoodles #SuperAntKarateManWithYa #GiantFrientlyFluffyMountainGorilla #Zooooomites
+
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

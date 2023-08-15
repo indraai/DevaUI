@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Operation Mirage
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

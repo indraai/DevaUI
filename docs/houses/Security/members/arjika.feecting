@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Arjika Security
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

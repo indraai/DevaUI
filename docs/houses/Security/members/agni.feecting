@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Agni Security
+p:
+#color = var(--color-red)
+#bgcolor = var(--color-dark-grey)
+::END:MAIN

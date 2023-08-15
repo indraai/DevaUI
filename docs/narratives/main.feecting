@@ -1,0 +1,25 @@
+::BEGIN:MAIN
+# Narratives
+p: Different narratives to choose from.
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN
+
+::BEGIN:SET1
+### The Lost City of Aetheria
+title: The Lost City of Aetheria
+tags: #TheLostCityOfAetheria #TheLostAetheria #LostAetheria #Atheria
+describe: "The Lost City of Aetheria": Join an intrepid explorer on a quest to uncover the ancient secrets of a mythical city hidden deep within the Amazon rainforest. Navigate treacherous jungles, decode cryptic symbols, and encounter mystical creatures as you race against time to unlock the mysteries of Aetheria.
+
+cmd[The Lost City of Aetheria]:enter "The Lost City of Aetheria"
+
+### The Quest for the Crystal of Eternity
+describe: "The Quest for the Crystal of Eternity": Embark on a high-flying adventure as a young pilot tasked with retrieving a powerful crystal said to hold the key to immortality. Travel across breathtaking landscapes, pilot daring airships, and navigate through ancient ruins as you confront adversaries and overcome obstacles to safeguard the crystal from falling into the wrong hands.
+
+### The Pirate's Legacy
+describe: "The Pirate's Legacy": Set sail on a swashbuckling adventure as you follow in the footsteps of a legendary pirate captain. Unravel clues, navigate treacherous seas, and engage in thrilling sword fights as you search for a hidden treasure rumored to grant unimaginable power. Along the way, discover the true meaning of honor, loyalty, and what it truly means to be a pirate.
+
+### The Enchanted Forest
+4. "The Enchanted Forest": Step into a realm of magic and enchantment as you enter an ancient forest shrouded in mystery. Embark on a quest to restore balance and harmony to the land, encountering mythical creatures, solving riddles, and mastering the ancient spells of the forest. As you journey deeper into the heart of the forest, discover the incredible power of nature and the true potential within yourself.
+::END:SET1
+=

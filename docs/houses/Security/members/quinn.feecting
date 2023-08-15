@@ -1,0 +1,8 @@
+::BEGIN:MAIN
+# Quinn Security
+p:
+#color = var(--color-orange)
+#bgcolor = var(--color-black)
+::END:MAIN
+
+=

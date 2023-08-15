@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# House Ravenwood
+p: The trail led to a mysterious #certificate tied to the enigmatic #Ravenwood Family. In its black ink, they found traces of a #super power, capable of holding both #full and #empty containers of information, like precious #gems concealed within each digital #clue.
+
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

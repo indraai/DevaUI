@@ -1,0 +1,22 @@
+::BEGIN:MAIN
+# House Atkin
+p: The Atkin Family
+
+@NormanAtkin = #Father of @HaroldAtkin Lt Norman M. Atkin was died Boise, Idaho, when crippled F-51 crashed in 1954. From St. George Ut and Fair Oaks Ca parents are #Hyrum and #MrsAtkin. Lt. Atkin was discharged from #FtLawton #SeattleWashington #FlightInstructor with 8th #FighterGroup 5th #AP 315th #Wing. #Deceased
+
+@MadgeAtkin = Wife of @NormanAtkin #Deceased
+
+
+@HA = @HaroldAtkin @HalAtkin @HaroldHendersonAtkin @DirectorBlackwood @CaptainNebula @SirConstellation @GuardianStarlight @DukeCelestial @TheStarrySage @CosmicEcho @GalacticLuminary @AstralMirrorStellarMuse @CelestialHarmonizer @CosmicConduit @Spectral @SerenityAstral @AquanautStellarSentinel @CosmicLuminary @NebulousNavigator
+
+$HALocations = $ZanterraValleyToilet $ThroneStarryChamberRestroom $AstralSanctumLavatory $LavatoryEtherealElegance $CelestialSplendorSanctum $TheStellarEchoRestroom $CosmicNexusSanctum $EtherealReflectionLavatory $NebulaMuseSanctum $GalacticHarmonyRestroom $CelestialCoreRestroom $EtherealEnclaveLavatory $CelestialCascadeRestroom $GalacticGatewayRestroom $StardustNebulaSanctum $CelestialEnigmaRestroom
+
+#IceBoxes = #FrostbiteFred  #ChillyWilly #FrozenRosie #TheIcePalace #TheArcticOasis #TheIceBox #MrFreeze #Chillington #TheIceberg #FrostyJr #SirFrostalot #TheIceBoxOfTheGods #TheEnigmaticIceBox #TheEnigmaticIceBoxOfTheGods
+
+#CenSec = #CentralSecurityHQ #TsentralnayaBezopasnostHQ #ЦентральнаяБезопасностьHQ
+#ShaSec = #ShadowBureauHQ #TenevoyByuroHQ #ТеневойБюроHQ
+
+
+#color = var(--color-black)
+#bgcolor = var(--color-brown)
+::END:MAIN

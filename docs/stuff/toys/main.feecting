@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Toys
+p: Toys
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

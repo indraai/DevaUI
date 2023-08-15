@@ -1,0 +1,11 @@
+::BEGIN:MAIN
+# Celestial
+
+## Celestial Crown of Knowledge
+title: Celestial Crown of Knowledge
+tag: #CelestialCrown
+describe: Celestial Crown of Knowledge adorned his imagination, representing the wisdom gained through exploration and discovery. "With Celestial Crown of Knowledge, I reign as a seeker of truths, uncovering the secrets of the universe."
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

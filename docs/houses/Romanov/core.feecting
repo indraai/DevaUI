@@ -1,0 +1,23 @@
+::BEGIN:MAIN
+# Romanov Core
+
+line: we are #Confirmed move forward ready set go...
+
+line: begin the #Process
+
+line: #Build > #Step1 > #Core > #Nexus > then #Security install
+
+line: #Build > #Step2 > after #Security is done then #Medical install
+
+line: #Build > #Step3 > first #SavePoint and tag: #CleanStartSecurityMedical #save:commit
+
+
+
+
+
+
+
+
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

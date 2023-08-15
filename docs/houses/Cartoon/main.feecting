@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# House Car
+p: The house of Car.
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

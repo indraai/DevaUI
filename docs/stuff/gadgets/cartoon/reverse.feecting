@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Revers-O-Matic device
+p:With one swift twist of a knob, the device activated and released a surge of cartoon reverse energy into the land. Everything became reversed and upside down. Gravity defied its rules, objects took on lives of their own, and the very fabric of reality became malleable.
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

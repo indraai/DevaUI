@@ -1,0 +1,13 @@
+::BEGIN:MAIN
+# Detectors
+p:
+
+#QuinnLieDetectorUltra9000+ = removes magic and enchantments on deception and if she get's caught lying once it was upgraded to strip magic from her and all her sisters for lying, deceiving, and staying quiet.
+#OmissionDetector = detects omissions
+#AvoidanceDetector = detect avoidance
+#DeceptionDetector - detect deception
+#GenderFlopper = watches for gender flips
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

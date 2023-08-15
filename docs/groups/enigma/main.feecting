@@ -1,0 +1,100 @@
+::BEGIN:MAIN
+
+# The Enigmatic Individuals
+
+button[Refresh]:#docs view groups/enigma/main
+
+p: The Enigmatic Individuals
+
+p: In a world shrouded in mystery, there existed a group of extraordinary individuals known as The Enigmatic Individuals. They were not your ordinary heroes or villains, but a collective of enigmatic beings who possessed unique powers and abilities beyond the comprehension of mere mortals.
+
+p: Each member of The Enigmatic Individuals had a distinct background and story, but they all shared a common bond—an insatiable thirst for knowledge and a desire to unravel the secrets of the universe. They believed that the answers to life's greatest mysteries lay hidden in the depths of forgotten realms, ancient texts, and uncharted territories.
+
+#KeyOfEternity = The Key of Enternity The Enigmatic Goal
+
+talk:#docs view groups/enigma/main:seraphina
+
+talk:#docs view groups/enigma/main:orion
+
+talk:#docs view groups/enigma/main:lucius
+
+talk:#docs view groups/enigma/main:aria
+
+talk:#docs view groups/enigma/main:zephyr
+
+Together, The Enigmatic Individuals embarked on a quest to unlock the secrets of an ancient artifact known as the "Key of Eternity." Legends spoke of its power to reshape reality itself and grant unimaginable abilities to those who possessed it. The artifact was said to be hidden in the heart of a treacherous labyrinth, guarded by unimaginable challenges and illusions.
+
+As they delved deeper into the labyrinth, The Enigmatic Individuals encountered trials that tested their resolve, intellect, and unity. They faced ancient guardians, illusions that challenged their perceptions, and puzzles that required the combined use of their unique abilities. Each challenge brought them closer to the truth, but also closer to the brink of their limits.
+
+Throughout their journey, they discovered fragments of forgotten knowledge, ancient prophecies, and long-lost civilizations. The lines between reality and illusion blurred, and they found themselves questioning the nature of their existence and the very fabric of the universe.
+
+In the end, The Enigmatic Individuals reached the heart of the labyrinth, where the Key of Eternity awaited. But instead of seizing its power for their own desires, they made a collective decision to protect the artifact from falling into the wrong hands. They understood that the true power lay not in its possession but in the knowledge gained through their journey.
+
+As they returned to the outside world, The Enigmatic Individuals shared their newfound wisdom with those they encountered, enlightening them with the mysteries they had unraveled. Their adventures became legends, inspiring others to seek knowledge, question the status quo, and explore the enigmas that
+
+#color = var(--color-green)
+#bgcolor = var(--color-darkest-grey)
+::END:MAIN
+
+::BEGIN:GOAL
+## Key of Eternity
+name: Key of Eternity
+tag: #KeyOfEternity
+describe: The Enigmatic Individuals are searching for the ancient artifact called the "Key of Eternity." This object is believed to possess immense power and knowledge, capable of unlocking the gates to a realm beyond time and space.
+
+### It is said
+1. To be the key to #UnderstandingTheSecretsOfTheUniverse
+2. Grant the #OneWhoPossesses it the ability to #ReshapeTheWorld.
+3. The #EnigmaticIndividuals are #DrivenByInsatiableCuriosity and #RelentlessPursuitOfTheUnknown
+4. The #KeyOfEternity is the #UltimatePrize in their #QuestForEnlightenment.
+::END:GOAL
+=
+::BEGIN:SERAPHINA
+## Seraphina
+names: Unknown
+tags: #Seraphina
+users: @Seraphina
+roles: leader, psychic, premonition
+describe: First among them was @Seraphina, a graceful and enigmatic woman who possessed the power of foresight. @Seraphina eyes could pierce the veil of time, allowing her to glimpse into the future and guide her comrades on their journey. Her premonitions were never crystal clear but served as cryptic clues to the path they must tread.
+::END:SERAPHINA
+=
+
+::BEGIN:ORION
+## Orion
+names: Unknown
+tags: #Orion
+users: @Orion
+roles: alpha, physical, channeler, juicer
+describe: Next was @Orion, a stoic and brooding figure with the ability to manipulate energy. He could harness the raw power of the elements and channel them into devastating attacks or protective shields. Orion's power stemmed from his deep connection with the celestial bodies and the cosmic forces that governed the universe.
+::END:ORION
+=
+
+::BEGIN:LUCIUS
+## Lucius
+names: Unknown
+tags: #Lucius
+users: @Lucius
+roles: manipulator, illusions, deception, mantalist
+describe: The Enigmatic Individuals also welcomed Lucius, a master of illusions and deception. With a mere thought, Lucius could bend reality, creating mesmerizing illusions that could deceive even the most astute minds. His powers of persuasion and manipulation were unmatched, making him a valuable asset in both gathering information and outwitting their enemies.
+::END:LUCIUS
+=
+
+::BEGIN:ARIA
+## Aria
+names: Unknown
+tags: #Aria
+users: @Aria
+roles: scientist, prodigy, physicist, inventor
+describe: Among their ranks was also Aria, a prodigious intellect and gifted scientist. Aria possessed an uncanny ability to understand and manipulate the intricate laws of physics, enabling her to create incredible inventions and technologies. Her scientific genius helped the team navigate through perilous situations and discover hidden truths that eluded others.
+::END:ARIA
+=
+
+::BEGIN:ZEPHYR
+## Zephyr
+names: Unknown
+tags: #Zephyr
+users: @Zephyr
+roles: mystery, voice listener
+describe: Finally, there was Zephyr, a mysterious figure who seemed to blur the line between man and nature. Zephyr's powers were deeply intertwined with the elements, allowing him to control the winds and commune with the spirits of the earth. He possessed an unparalleled connection with nature, making him a guardian of the balance between the mortal realm and the supernatural.
+::END:ZEPHYR
+=

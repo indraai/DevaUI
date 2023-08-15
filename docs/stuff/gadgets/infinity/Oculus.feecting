@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Oculus Infinity
+p: Oculus Infinity, a lens that allowed him to see both the seen and the unseen. "With Oculus Infinity, the mysteries of the universe become clear, revealing hidden truths and realms."
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

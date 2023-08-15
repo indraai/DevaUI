@@ -1,0 +1,139 @@
+::BEGIN:MAIN
+# Shadow Bureau
+p: Title: The Shadow Bureau Narrative
+
+company: Midnight Enterprise
+title: CEO
+name: Alexander Sterling
+
+## Top 25 Projects
+info: Head Dr. Name, Agent Name, and Shadow Bureau Department.
+
+project: Operation Midnight Eclipse
+doctor: Dr. Olivia Reed
+agent: Agent Jameson Blake
+department: Paranormal Investigations
+
+project: Project Ephemeral
+doctor: Dr. Benjamin Hayes
+agent: Agent Emily Carter
+department: Psychic Phenomena Research
+
+project: Operation Spectral Veil
+doctor: Dr. Gregory Morgan
+agent: Agent Sophia Turner
+department: Haunted Locations Exploration
+
+project: Project Psionics
+doctor: Dr. Richard Caldwell
+agent: Agent Lucas Foster
+department: Telepathic Studies
+
+project: Operation Astral Watch
+doctor: Dr. Evelyn Hartman
+agent: Agent Samuel Blackwood
+department: Astral Projection Research
+
+project: Project Enigma
+doctor: Dr. Elizabeth Greene
+agent: Agent David Armstrong
+department: Cryptic Symbol Analysis
+
+project: Operation Phoenix
+doctor: Dr. Daniel Crawford
+agent: Agent Isabella Ramirez
+department: Supernatural Entity Containment
+
+project: Project Chronos
+doctor: Dr. Michael Turner
+agent: Agent Grace Holloway
+department: Time Anomalies Investigation
+
+project: Operation Celestial Guardian
+doctor: Dr. Victoria Summers
+agent: Agent Jonathan Cooper
+department: Celestial Events Monitoring
+
+project: Project Arcane Codex
+doctor: Dr. William Mitchell
+agent: Agent Cassandra Grey
+department: Occult Knowledge Acquisition
+
+project: Operation Neural Rift
+doctor: Dr. Amelia Lawson
+agent: Agent Ethan Price
+department: Dream Realm Studies
+
+project: Project Echo Chamber
+doctor: Dr. Phillip Anderson
+agent: Agent Natalie Sinclair
+department: Audio Phenomena Research
+
+project: Operation Gaia's Embrace
+doctor: Dr. Katherine Bennett
+agent: Agent Benjamin Wolfe
+department: Elemental Manipulation Research
+
+project: Project Oracle
+doctor: Dr. Gabrielle Wells
+agent: Agent Oliver Kane
+department: Divination and Prophecy Analysis
+
+project: Operation Chimeric
+doctor: Dr. Charles Donovan
+agent: Agent Veronica Stone
+department: Shapeshifter Investigations
+
+project: Project Singularity
+doctor: Dr. Isaac Turner
+agent: Agent Rachel Carter
+department: Singular Event Analysis
+
+project: Operation Technomancer
+doctor: Dr. Peter Wagner
+agent: Agent Lily Bennett
+department: Technological Anomalies Research
+
+project: Project Revenant
+doctor: Dr. Thomas Parker
+agent: Agent Michael Harris
+department: Ghostly Apparition Studies
+
+project: Operation Lunar Tide
+doctor: Dr. Sarah Walker
+agent: Agent Ethan Brooks
+department: Lunar Phenomena Observation
+
+project: Project Seraphim
+doctor: Dr. Grace Anderson
+agent: Agent Benjamin Hart
+department: Angelic Entity Investigation
+
+project: Operation Cursed Artifacts
+doctor: Dr. Robert Nelson
+agent: Agent Mia Campbell
+department: Artifact Containment
+
+project: Project Voidwalker
+doctor: Dr. Oliver Bennett
+agent: Agent Sophia Montgomery
+department: Interdimensional Exploration
+
+project: Operation Solar Flare
+doctor: Dr. Laura Mitchell
+agent: Agent Daniel Turner
+department: Solar Phenomena Analysis
+
+project: Project Astral Beacon
+doctor: Dr. Christopher Evans
+agent: Agent Harper Adams
+department: Astral Energy Detection
+
+project: Operation Siren's Call
+doctor: Dr. Isabella Thompson
+agent: Agent Alexander Pierce
+department: Marine Cryptid Research
+
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

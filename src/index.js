@@ -72,22 +72,11 @@ const DEVA = new Deva({
       const agent = this.agent();
       return new Promise((resolve, reject) => {
         if (!packet.q.text) return resolve(this._messages.notext);
-        this.context('open_relay');
-        this.question(`#open relay ${packet.q.text}`).then(open => {
+        this.context('open_chat');
+        this.question(`${this.askChr}open chat:${agent.key} ${packet.q.text}`).then(open => {
           data.open = open.a.data;
-          answer.push(`::begin:${open.a.agent.key}:${open.id}`);
-          answer.push(open.a.text);
-          answer.push(`::end:${open.a.agent.key}:${open.hash}`);
-          this.context('puppet_relay');
-          return this.question(`#puppet relay ${packet.q.text}`);
-        }).then(puppet => {
-          data.puppet = puppet.a.data;
-          answer.push('');
-          answer.push(`::begin:${puppet.a.agent.key}:${puppet.id}`);
-          answer.push(puppet.a.text);
-          answer.push(`::end:${puppet.a.agent.key}:${puppet.hash}`);
           this.context('feecting_parse');
-          return this.question(`#feecting parse ${answer.join('\n')}`);
+          return this.question(`${this.askChr}feecting parse:answer ${open.a.text}`);
         }).then(feecting => {
           data.feecting = feecting.a.data;
           this.context('done');
@@ -116,10 +105,10 @@ const DEVA = new Deva({
           ];
           for (let deva in this.devas) {
             const {profile,prompt,key} = this.devas[deva].agent();
-            devas.push(`button[${prompt.emoji} ${profile.name}]:#${key} help`);
+            devas.push(`button[${prompt.emoji} ${profile.name}]:${this.askChr}${key} help`);
           }
           devas.push(`::end:menu:${this.hash(devas)}`);
-          this.question(`#feecting parse ${devas.join('\n')}`).then(parsed => {
+          this.question(`${this.askChr}feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
               text:parsed.a.text,
               html:parsed.a.html,
@@ -142,7 +131,7 @@ const DEVA = new Deva({
           _states.push(`${x}: ${states.value[x]} - ${states.messages[x]}`);
         }
         _states.push(`::end:${item}`);
-        this.question(`#feecting parse ${_states.join('\n')}`).then(feecting => {
+        this.question(`${this.askChr}feecting parse ${_states.join('\n')}`).then(feecting => {
           return resolve({
             text: feecting.a.text,
             html: feecting.a.html,
@@ -166,7 +155,7 @@ const DEVA = new Deva({
     describe: Return the current client information loaded.
     ***************/
     client(packet) {
-      const text = `${this._client.prompt.emoji} #${this._client.key} | ${this._client.profile.name} |  ${this._client.id}`;
+      const text = `${this._client.prompt.emoji} ${this._client.key} | ${this._client.profile.name} |  ${this._client.id}`;
       return Promise.resolve({text, data:this._client});
     },
 
@@ -176,7 +165,7 @@ const DEVA = new Deva({
     describe: Return the current agent information loaded.
     ***************/
     agent(packet) {
-      const text = `${this._agent.prompt.emoji} #${this._agent.key} ${this._agent.profile.name} |  ${this._agent.id}`;
+      const text = `${this._agent.prompt.emoji} ${this._agent.key} ${this._agent.profile.name} |  ${this._agent.id}`;
       return Promise.resolve({text, data: this._agent});
     },
 

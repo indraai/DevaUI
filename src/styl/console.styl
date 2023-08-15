@@ -1,0 +1,83 @@
+// Copyright 2023. Quinn Michaels, All right reserved.
+#Console
+  > .box
+    display: flex
+
+    &.items
+      flex: 1
+      overflow: scroll
+      height: 100%
+
+      > .list
+        flex: 1
+        overflow: scroll
+        padding: 0 .5rem 0 .5rem
+
+        > .item
+          flex: 0
+          display: flex
+          align-items: start
+          padding: .5rem 0
+
+          .person
+            flex: 0 6rem
+            min-width: 6rem
+            display: flex
+            align-items: center
+            .avatar
+              line-height: 1
+              img
+                width: 27px
+                height: 27px
+                border-radius: 50%
+
+          .emoji
+            flex: 0
+            margin-right: 3px
+            font-size: .7rem
+
+          .label
+            flex: 0
+
+          .text
+            align-items: center
+
+    // display for main prompt input
+    &.prompt
+      flex: 0
+      padding: .15rem
+      border-radius: .5rem
+      box-shadow: 0 3px 9px rgba(0,0,0,.1)
+      background-color: lighten($colors.darkest-grey, 10%)
+      border: 3px solid $colors.darkest-grey
+      flex-flow: row nowrap
+      display: flex
+      .label
+        padding-right: .25rem
+      form
+        display: flex
+        flex: 1
+
+
+#Prompt
+  background-color: transparent
+  flex: 1
+  min-width: 100%
+  border-radius: .5rem
+  margin: 0
+  border: none
+  outline: none
+  width: 100%
+  padding: .25rem
+  color: $colors.light-green
+  font-family: $fonts-text
+  font-weight: 100
+  resize: none
+  height: auto
+  font-size: 1rem
+
+//
+//
+// #ShellOutput
+//   overflow: scroll
+//   flex: 1

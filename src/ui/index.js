@@ -2,64 +2,6 @@
 "use strict";
 import {io} from 'socket.io-client';
 
-const emojis = {
-  weather:'🌦',
-  get:'⏬',
-  put: '⏫',
-  key: '🔑',
-  eat: '🥗',
-  drink:'🥛',
-  pos: '🚹',
-  exp: '🪖',
-  gift: '🎁',
-  gold: '💰',
-  points: '💯',
-  depart: '🚶',
-  arrive: '🚶',
-  player: '🧑',
-  alert: '🚨',
-  trigger: '🔫',
-  save: '💾',
-  light: '🔦',
-  wield: '🔪',
-  head: '🧢',
-  legs: '🦿',
-  feet: '🥾',
-  hands: '✋',
-  waist: '🥋',
-  rwrist: '👉',
-  lwrist: '👈',
-  body: '👕',
-  arms: '🦾',
-  shield: '🛡',
-  about: '🎒',
-  say: '💬',
-  door: '🚪',
-  info: '💁',
-  error: '❌',
-  fight: '🥊',
-  sound: '🔊',
-  pour: '🚰',
-  news: '<i class="icn icn-news" data-cmd="#cloud news" title="Read News"></i>',
-  motd: '<i class="icn icn-voicemail" data-cmd="#coud motd" title="Read Motd"></i>',
-  'The clouds disappear.': '<i class="icn icn-cloud-sun" title="The clouds disappear."></i>️️',
-  'The sky is cloudy.': '️<i class="icn icn-cloud" title="The sky is cloudy."></i>',
-  'It starts to rain.': '<i class="icn icn-cloud-rain" title="It starts to rain."></i>',
-  'The rain stops.': '️<i class="icn icn-umbrella" title="The rain stops."></i>',
-  'The sky is cloudy and you feel a cool breeze.': '️<i class="icn icn-cloud-windy" title="The sky is cloudy and you feel a breeze."></i>',
-  'The sky is rainy and you feel a cool breeze.': '️<i class="icn icn-umbrella2" title="The sky is rainy and you feel a breeze."></i>',
-  'Lightning starts in the sky.': '️<i class="icn icn-cloud-lightning" title="Lightning starts in the sky."></i>',
-  'The lightning stops.': '️<i class="icn icn-cloud-crossed" title="The lightning stops."></i>',
-  'The night begins.': '️<i class="icn icn-moon" title="The night begins."></i>',
-  'This inside weather is amazing!': '️<i class="icn icn-home2" title="This inside weather is amazing!"></i>',
-  'You go to sleep.': '️<i class="icn icn-bed" title="You go to sleep."></i>',
-  'You are already sound asleep.': '️<i class="icn icn-bed" title="You are already sound asleep."></i>',
-  'You awaken, and sit up.': '️<i class="icn icn-chair" title="You awaken, and sit up."></i>',
-  'You sit down.': '️<i class="icn icn-chair" title="You sit down."></i>',
-  'You\'re sitting already.': '️<i class="icn icn-chair" title="You\'re sitting already."></i>',
-  'You stand up.': '️<i class="icn icn-hand-waving" title="You stand up."></i>',
-};
-
 class DevaInterface {
   constructor() {
     this.client = false;
@@ -74,6 +16,18 @@ class DevaInterface {
       zone: [],
       alerts: [],
     }
+    this._features = [
+      'security',
+      'support',
+      'services',
+      'systems',
+      'solutions',
+      'development',
+      'research',
+      'business',
+      'legal',
+      'assistant',
+    ];
     this.history_count = 50;
   }
 
@@ -104,12 +58,13 @@ class DevaInterface {
     $(selector).prepend(html)
   }
 
-  _logShell(opts) {
+  _logOutput(opts) {
+    console.log('LOG OUTPUT');
     if (!opts.text) return;
 
     if (this._shell.length > this.history_count) {
       this._shell.shift();
-      $('#ShellOutput .log-item').first().remove();
+      $('#ConsoleItems .item').first().remove();
     }
 
     this._shell.push(opts);
@@ -120,32 +75,16 @@ class DevaInterface {
     const prompt_color = `rgb(${colors.label.R}, ${colors.label.G}, ${colors.label.B})`;
     const text_color = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;
     let theHtml = `
-    <div class="log-item ${type} ${format}">
-      <div class="prompt" style="color: ${prompt_color}"><span class="avatar"><img src="${profile.emoji}"/></span><span class="label">${prompt.text}</span></div>
+    <div class="item ${type} ${format}">
+      <div class="person" style="color: ${prompt_color}"><span class="avatar"><img src="${profile.emoji}"/></span><span class="label">${prompt.text}</span></div>
       <div class="text" style="color: ${text_color}">${text}</div>
     </div>`;
 
-    $('#ShellOutput').append(theHtml);
+    $('#ConsoleItems').append(theHtml);
     return setTimeout(() => {
-      const so = document.getElementById('ShellOutput');
+      const so = document.getElementById('ConsoleItems');
       if (so) so.scrollTop = so.scrollHeight;
-    },250);
-  }
-
-  _logViewer(opts) {
-    const styled = this.content.match(/style=".+;"/);
-    if (styled && styled[0]) opts.html = opts.html.replace(styled[0]);
-    // this is where we move out the previous item in the .browser-item
-    ['north','south','easat','west','northwest','southwest','northeast','southeast'].forEach(cl => {
-      $('#Content .browser-item').removeClass(cl);
-    });
-    $('#Content .browser-item').removeClass('move-in').addClass('move-out').addClass(opts.meta.method);
-    // now that the old item is moved off screen let's move a new item into view.
-    setTimeout(() => {
-      this.content = `<div ${styled && styled[0] ? styled[0] : ''} class="browser-item move-in ${opts.meta.method} ${opts.agent.key}">${opts.html}</div>`;
-      this.Show();
-    }, 1000);
-    return Promise.resolve();
+    }, 250);
   }
 
   _logData(data) {
@@ -187,9 +126,9 @@ class DevaInterface {
 
   Question(q, log=true) {
 
-    if (log) this._logShell({
+    if (log) this._logOutput({
       type: 'question',
-      format: 'terminal',
+      format: 'user',
       text: q,
       agent: this.client,
     });
@@ -240,7 +179,8 @@ class DevaInterface {
   // load key value pair objects into the this scope and output to a data container
   GetKeyPair(opts) {
     this[opts.var] = opts.data;
-    this.content =`<div class="DataContainer" id="${opts.id}"><h1>${opts.var}</h1>${this._keyValue(opts.data)}</div>`;
+    const content =`<div class="DataContainer" id="${opts.id}"><h1>${opts.var}</h1>${this._keyValue(opts.data)}</div>`;
+    this.Show(content)
   }
 
   Client(data) {
@@ -253,11 +193,10 @@ class DevaInterface {
       data,
       id: 'Client',
       var: 'client'
-    })
-    this.Show();
+    });
 
-    const shell = document.getElementById('q');
-    const label = document.getElementById('ShellInputLabel');
+    const shell = document.getElementById('Prompt');
+    const label = document.getElementById('PromptLabel');
     const {prompt} = this.client;
     const {colors} = prompt;
     if (shell) {
@@ -270,235 +209,31 @@ class DevaInterface {
 
   }
 
-  Show() {
-    $('#Content').html(this.content);
-    const so = document.getElementById('Content');
+  Show(html) {
+    $('#Viewer').html(html);
+    const so = document.getElementById('Viewer');
     so.scrollTop = 0;
     return Promise.resolve(true);
   }
 
   docs(data) {
     console.log('DOCS DATA', data);
-    if (data.meta.method === 'view') return this._logViewer(data);
-    this._logShell({
+    if (data.meta.method === 'view') return this.Show(data.html);
+    this._logOutput({
       type: data.meta.key,
       method: data.meta.method,
       agent: data.agent,
       maeta: data.meta,
       text: data.html ? data.html : data.text,
     });
-
   }
 
   feature(data) {
-    console.log('FEATURE CHECK', data);
-    this._logViewer(data);
+    this.Show(data.html);
   }
 
   services(data) {}
 
-  cloudEvent(data) {
-    const self = this;
-    // console.log('CLOUD EVENT', data);
-    const actions = {
-      room(data) {
-        $('#WatchRoom').html(`room: ${data.value}`);
-        return;
-      },
-      bars(opts) {
-        const {id, bclass, value} = opts;
-        const valmax = value.split('|');
-        let bar = Math.floor((valmax[0] / valmax[1]) * 100);
-        if (bar > 100) bar = 100
-
-        if (bar < 30) bclass += ' warning';
-        if (bar < 15) bclass += ' alert';
-        $(`#${id} .bar`).removeClass('warning').removeClass('alert').addClass(bclass).attr('style', `--bar-width: ${bar}%;`);
-      },
-      alerts(data) {
-        return self._logConsole({
-          id: data.id,
-          agent: data.agent,
-          key: 'alerts',
-          value: data.key,
-          text: data.value,
-          created: data.created,
-          hash: data.hash,
-        });
-      },
-      time(data) {
-        const time = data.value.split(':');
-        const hour = time[0] < 10 ? `0${time[0].trim()}` : time[0].trim();
-        const minute = time[1] < 10 ? `0${time[1]}` : time[1];
-        $('#WatchTime').html(`${hour}:${minute}`);
-      },
-      date(data) {
-        const nDate = data.value.split('-');
-        $('#WatchDay').html(nDate[0].trim());
-        $('#WatchDate').html(nDate[1].trim());
-      },
-
-      weather(data) {
-        const text = emojis[data.value] ? emojis[data.value] : data.value;
-        $('#WatchWeather').html(text);
-      },
-
-      comm(data) {
-        // console.log('COMM DATA', data);
-        const value = data.value.toLowerCase().trim();
-        const text = emojis[value] ? emojis[value] : value;
-        $(`#WatchComm .${value}`).html(emojis[value]);
-      },
-
-      hit(data) {
-        this.bars({
-          id: 'StatsHit',
-          bclass: 'hit',
-          value: data.value,
-        });
-      },
-
-      mana(data) {
-        this.bars({
-          id: 'StatsMana',
-          bclass: 'mana',
-          value: data.value,
-        });
-      },
-
-      move(data) {
-        this.bars({
-          id: 'StatsMove',
-          bclass: 'mana',
-          value: data.value,
-        });
-      },
-      hunger(data) {
-        this.bars({
-          id: 'StatsHunger',
-          class: 'hunger',
-          value: data.value,
-        });
-      },
-
-      thirst(data) {
-        this.bars({
-          id: 'StatsThirst',
-          class: 'thirst',
-          value: data.value,
-        });
-      },
-      save(data) {
-        $('.log-item.cloud .text button').addClass('disabled');
-        return this.alerts(data);
-      },
-      current(data) {
-        $('#q').val(`#cloud > ${data.value}`);
-        document.getElementById('q').focus();
-      },
-      drink(data) {
-        return this.alerts(data);
-      },
-      info(data) {
-        return this.alerts(data);
-      },
-      alert(data) {
-        return this.alerts(data);
-      },
-      pos(data) {
-        // console.log('COMM DATA', data);
-        console.log('POS VALUE', data.value);
-        const text = emojis[data.value] ? emojis[data.value] : data.value;
-        $(`#WatchPos`).html(text);
-      },
-      equipment(data) {
-        const item = data.value.split(':');
-        $('#Equipment').append(`<div class="item ${item[0].trim().toLowerCase()}">${emojis[item[0].trim().toLowerCase()]} ${item[1].trim()}</div>`);
-      },
-
-      inventory(data) {
-        $('#Inventory').append(`<div class="item">${data.value}</div>`);
-      },
-    }
-    if (actions[data.key]) {
-      return actions[data.key](data);
-    }
-    const thehtml = [
-      `<span class="label">${data.key}</span>`,
-      `<span class="value">${data.value}</span>`,
-    ];
-    console.log('CLOUD DATA EVENT', data);
-    $(`#${data.key}`).html(thehtml.join(''));
-  }
-
-  // parses coordinates from a string
-  coordinates(txt, space) {
-    const coord = /coordinates:(.+)\[(.+)\|(.+)\]/g;
-    const coordinates = coord.exec(txt);
-    if (!coordinates) return;
-    const nameS = coordinates[1].split('-');
-    const name = nameS && nameS[1] ? nameS[1] : 'main';
-    const _map = `/asset/${space}/map/${nameS[0]}/${name}`;
-    if (_map !== this.map) {
-      this.map = _map;
-      $('.controls').css({'background-image': `url(${this.map})`});
-    }
-    $('.controls').css({'background-position': `${coordinates[2]}px ${coordinates[3]}px`});
-    return;
-  }
-
-  cloud(data) {
-    console.log('CLOUD', data);
-
-    const processor = {
-      exits(text) {
-        $(`#Map .dots`).removeClass('active');
-        $(`#Exits .btn`).removeClass('active');
-        const exits = text.split('\n');
-        exits.forEach(ex => {
-          const bt = ex.match(/exit\[(.+)\]:(.+)/);
-          console.log('match', bt);
-          if (!bt) return;
-          $(`#Map .grid .${bt[1]}-dot`).addClass('active');
-          $(`#Exits .btn.exit.${bt[1]}`).addClass('active');
-          $(`#Exits .btn.exit.${bt[1]} span`).text(bt[2]);
-        });
-        return;
-      },
-    }
-    // check the text for coordinate string to move map
-    this.coordinates(data.text, data.meta.space);
-
-    switch (data.meta.method) {
-      case 'look':
-      case 'goto':
-      case 'north':
-      case 'south':
-      case 'east':
-      case 'west':
-      case 'northwest':
-      case 'southwest':
-      case 'southeast':
-      case 'northeast':
-      case 'up':
-      case 'down':
-        this._logViewer(data).then(() => {
-          this.Question('#cloud exits', false);
-        });
-        break;
-      case 'exits':
-        return processor.exits(data.text);
-      default:
-        return this._logShell({
-          type: data.meta.key,
-          format: data.meta.method,
-          agent:data.agent,
-          meta: data.meta,
-          text: data.html ? data.html : data.text,
-        });
-
-    }
-  }
   processor(data) {
     if (!data.text) return;
     const { meta } = data;
@@ -506,13 +241,13 @@ class DevaInterface {
     // here in the processor we want to check for any strings that also match from the first index.
     const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
     const helpChk = meta.method === 'help';
-    const featureChk = ['security','support','services'].includes(meta.method);
+    const featureChk = this._features.includes(meta.method);
 
-    if (helpChk) return this._logViewer(data);
+    if (helpChk) return this.Show(data.html);
     else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor
-    else return this._logShell({
+    else return this._logOutput({
       type: data.meta.key,
       format: data.meta.method,
       agent:data.agent,
@@ -546,35 +281,25 @@ class DevaInterface {
         e.preventDefault();
         const cmd = $(e.target).closest('[data-cmd]').data('cmd');
         this.Question(cmd);
-      }).on('click', '[data-tty]', e => {
+      }).on('click', '[data-prompt]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-tty]').data('tty');
-        $('#q').val(cmd);
-        document.getElementById('q').focus();
+        $('#Prompt').val(cmd);
+        document.getElementById('Prompt').focus();
       }).on('click', '[data-button]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-button]').data('button')
         this.Question(cmd, false);
-      }).on('click', '[data-cloudbtn]', e => {
-        e.stopPropagation()
-        e.preventDefault();
-        const cmd = $(e.target).closest('[data-cloudbtn]').data('cloudbtn')
-        this.Question(`#cloud > ${cmd}`, false);
-      }).on('click', '[data-cloudcmd]', e => {
-        e.stopPropagation()
-        e.preventDefault();
-        const cmd = $(e.target).closest('[data-cloudcmd]').data('cloudcmd')
-        this.Question(`#cloud ${cmd}`, false);
       });
 
-      $('#Shell').on('submit', e => {
+      $('#PromptForm').on('submit', e => {
         e.stopPropagation()
         e.preventDefault();
-        const question = $('#q').val();
+        const question = $('#Prompt').val();
         this.Question(question).catch(console.error);
-        $('#q').val('');
+        $('#Prompt').val('');
       });
 
       // emit the socket event for the client data
@@ -584,41 +309,7 @@ class DevaInterface {
       socket.on('socket:global', data => {
         return this.processor(data.a);
       });
-      socket.on('cloud:event', data => {
-        console.log('CLOUD EVENT', data);
-        return this.cloudEvent(data);
-      });
-      socket.on('socket:devacore', data => {
-        // if (data.key === 'prompt')  return this._logShell({
-        //   type: data.value,
-        //   format: data.key,
-        //   agent:data.agent,
-        //   meta: false,
-        //   text: data.text,
-        // });
-        this._logConsole(data)
-      });
-
       return resolve();
-      // // setup client then trap the system events
-      // this.Client().then(() => {
-      //   socket.on('socket:clientdata', data => {
-      //     // log the data packet to the ui
-      //     console.log('SOCKET TERMINAL DATA', data);
-      //     // if (data.a.data) this._logData({
-      //     //   [data.id]: {
-      //     //     agent:data.a.agent,
-      //     //     client:data.a.client,
-      //     //     meta:data.a.meta,
-      //     //     data:data.a.data,
-      //     //   }
-      //     // });
-      //     // return this.processor(data);
-      //   });
-      //
-      //   return resolve();
-      //
-      // }).catch(reject);
     });
   }
 }
@@ -626,19 +317,3 @@ class DevaInterface {
 const socket = io('http://localhost:9301');
 const Deva = new DevaInterface();
 Deva.Init(socket);
-
-
-
-
-
-
-//
-//
-//
-//
-//
-// $('body').on('click', '.child > .key', e => {
-//   $(e.target).toggleClass('open');
-// }).on('click', '#SNACK_TIME > h1', e=> {
-//   $('body').removeClass('snack-time');
-// });

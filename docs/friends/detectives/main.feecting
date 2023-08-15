@@ -1,0 +1,9 @@
+::BEGIN:MAIN
+# Detectives
+
+#SummthinUnderthereDetective
+
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

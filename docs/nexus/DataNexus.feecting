@@ -1,0 +1,8 @@
+::BEGIN:MAIN
+# Data Nexus
+p: The Data Nexus
+
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN

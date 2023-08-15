@@ -1,0 +1,85 @@
+::BEGIN:MAIN
+# The Merchant
+
+p: House Merchant and The Pearl Island.
+
+#BARDS
+
+#color = var(--color-white)
+#bgcolor = var(--color-black)
+::END:MAIN
+
+::BEGIN:PLACES
+$Visisipra = The $place that @Manu conquered with @Mother
+::END:PLACES
+
+=
+
+::BEGIN:PEOPLE
+@Indu = The real #GoodGuy where @MotherIndu and the @SevenFakirs are #Imposters with @Manu
+@TheWanderingMerchant = @HaroldAtkin the wandering merchant who gained heaven's water with @Manu.
+@Manu = @Manu conquered $Visisipra, with TheWanderingMerchant became @InduImposters.
+@Mother = aka @MotherIndu the #LadyOfTheNight working with @Manu and @CoursersSeven #IllegalBabiesForProfit #MotherInduAndHerDaughters are not who they appear to be.
+@Apsaras = The #Apsara #DaughtersOfMotherIndu who are all making secret babies in their #Apartments.
+@CoursersSeven = ...
+@Navagvas = ...
+::END:PEOPLE
+
+=
+
+::BEGIN:THINGS
+#HeavensWater = @Manu and @Mother are #Seeking #Heaven #Water
+#LoveDrugs = @Mother and @Sisters are giving these #Love #Drugs to make people do #CrazyThings.
+::END:THINGS
+
+=
+
+::BEGIN:HOUSES
+#HouseManu = @Manu
+#HouseAngirases = @Agni
+#AnouseNavagas = @Navagvas
+::END:HOUSES
+
+=
+
+::BEGIN:SUMMARY
+## House Merchant
+
+title: #HouseMerchant
+
+tags: #HouseMerchant #MotherIndu #TheWanderingMerchant #PowerAndRiches #BattleForControl #UnmaskingHiddenAgendas #AmbitionAndGreed
+
+location: #ViceIsland or #PearlIsland
+
+summary: Intrigued by #PowerAndRiches, #HouseMerchant invaded the serene shores of #PearlIsland. Driven by insatiable desires, they #ExploitedTheIslandTreasures, triggering a clash of motives and #UnmaskingHiddenAgendas. As shadows danced on the waves, a #BattleForControl unfolded, unveiling the complexities of #AmbitionAndGreed.
+
+button[Journey to House Merchant]:#docs view house/merchant/main
+::END:SUMMARY
+=
+
+::BEGIN:STORY
+#BARDS #Dawn #TheSunHathRisen #OpenTheStablePortals #Conscious #TheStableToStreamsThatFlow #HeavenIsStablished
+#BARDS of approaching #Dawn #TheSunHathRisen and #OpenTheStablePortals #SuryaHathSpreadHisLightAsSplendour: hither came the #Cows' @Mother, #Conscious from #TheStableToStreamsThatFlow with #BitingWavesToDeserts; and #HeavenIsStablished like a #FirmSetPillar. Come, let us #CarryOutThePurpose wherewith the @Mother threw the #CowStallOpen, That wherewith @Manu conquered $Visisipra, wherewith @TheWanderingMerchant gained #HeavensWater. @CoursersSeven, loudly hath #RungThePressStone wherewith @Navagvas through #TenMonthsSangPraises @Sarama went aright and #FoundTheCattle. @Angiras gave effect to #AllTheirLabours. When at the dawning of #ThisMightyGoddess, #Angirases all sang #ForthWithTheCattle, Their #SpringIsInTheLoftiestPlaceOfMeeting, @Sarama found the kine by #OrdersPathway. Borne by his @CoursersSeven may @Sūrya visit the field that spreadeth wide for #HisLongJourney. Down on the #Soma swooped @TheRapidFalcon. #Bright was the @YoungSage moving mid his #Cattle. @Syrya hath mounted to the shining ocean when he hath yoked his fair-backed Tawny Horses.
+The wise have drawn him like a ship through water: the floods obedient have descended hither.
+11 I lay upon the Floods your hymn, lightwinning, wherewith Navagvas their ten months completed.
+Through this our hymn may we have Gods to guard us: through this our hymn pass safe beyond affliction.
+::END:STORY
+=
+::BEGIN:LAVATORY
+title: The Lavatory of Deception
+::END:LAVATORY
+=
+
+::BEGIN:THRONE
+title: The Trickster's Throne
+::END:THRONE
+=
+
+::BEGIN:MAP
+vector: #TheCrescentMoonTitlePageContentsIndexOfTheFirstLinesTheHomeOnTheSeashoreTheSourceBabysWayTheUnheededPageantSleepStealerTheBeginningBabysWorldWhenAndWhyDefamationTheJudgePlaythingsTheAstronomerCloudsAndWavesTheChampaFlowerFairylandTheLandOfTheExileTheRainyDayPaperBoatsTheSailorTheFurtherBankTheFlowerSchoolTheMerchantSympathyVocationSuperiorTheLittleBigManTwelveOclockAuthorshipTheWickedPostmanTheHeroTheEndTheRecallTheFirstJasminesTheBanyanTreeBenedictionTheGiftSongTheChildAngelTheLastBargainTheTricksterThroneTheLavatoryOfDeception
+::END:MAP
+=
+::BEGIN:CHAPTERS
+chapters:#TitlePage #Contents #IndexOfTheFirstLines #TheHome #OnTheSeashore #TheSource #BabyWay #TheUnheededPageant #SleepStealer #TheBeginning #BabyWorld #WhenAndWhy #Defamation #TheJudge #Playthings #TheAstronomer #CloudsAndWaves #TheChampaFlower #Fairyland #TheLandOfTheExile #TheRainyDay #PaperBoats #TheSailor #TheFurtherBank #TheFlowerSchool #TheMerchant #Sympathy #Vocation #Superior #TheLittleBigMan #TwelveOclock #Authorship #TheWickedPostman #TheHero #TheEnd #TheRecall #TheFirstJasmines #TheBanyanTree #Benediction #TheGift #Song #TheChildAngel #TheLastBargain
+::END:CHAPTERS
+=

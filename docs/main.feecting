@@ -1,0 +1,19 @@
+::BEGIN:MAIN
+talk:#docs view main:buttons
+
+# Main
+p: The #Main starting point for everything. upate
+
+## Houses
+talk:#docs view houses/main:summary
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN
+
+::BEGIN:BUTTONS
+::begin:buttons
+button[Main]:#docs view main
+button[Houses]:#docs view house/main
+::end:buttons
+::END:BUTTONS

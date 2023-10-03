@@ -1,0 +1,22 @@
+::BEGIN:MAIN
+# Arjika Realms Places
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:buttons
+### Places
+button[🌳 Whispering Woods]:#docs view story/library/ArjikaRealms/places/WhisperingWoods/main
+button[🏝️ Isle of Legends]:#docs view story/library/ArjikaRealms/places/IsleOfLegends/main
+button[🏖️ Floating Isles]:#docs view story/library/ArjikaRealms/places/FloatingIsles/main
+button[🏔️ Mystical Mountains]:#docs view story/library/ArjikaRealms/places/MysticalMountains/main
+button[🏕️ Crystal Caverns]:#docs view story/library/ArjikaRealms/places/CrystalCaverns/main
+button[⛰️ Whispering Peaks]:#docs view story/library/ArjikaRealms/places/WhisperingPeaks/main
+button[⛲️ Enchanted Gardens]:#docs view story/library/ArjikaRealms/places/EnchantedGardens/main
+button[🌊 Undersea Realm]:#docs view story/library/ArjikaRealms/places/UnderseaRealm/main
+button[🧱 Forgotten Ruins]:#docs view story/library/ArjikaRealms/places/ForgottenRuins/main
+::end:buttons
+::END:MENU
+=

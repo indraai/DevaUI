@@ -1,0 +1,37 @@
+::BEGIN:MAIN
+# Surya
+
+p: House Surya is a noble house known for their deep connection with solar magic and their mastery of harnessing the power of the sun. They are revered for their ability to channel solar energy, conjure solar storms, and wield intense light-based magic. Members of House Surya are esteemed light mages who are dedicated to protecting and illuminating their realm.
+
+talk:#docs view houses/Surya/main:describe
+
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Surya
+tags: #Surya #HouseSurya #LadyArunaSunfire #LadySunfire
+head: Lady Aruna Sunfire
+describe: Members of House Surya are known for their connection to the sun and its energy. They often excel in fields related to healing, medicine, and spirituality.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lady Aruna Sunfire
+name: Lady Aruna Sunfire
+tags: #LadyArunaSunfire #LadySunfire #Aruna #Sunfire
+
+p:Lady Aruna Sunfire is the Head of House Surya, a radiant and formidable figure whose presence eclipses all others. With her flowing red-golden hair, fiery eyes, and an aura that glows with the brilliance of the sun, Aruna symbolizes the power and vitality of the sun that House Surya honors and draws upon.
+
+p:From an early age, Aruna displayed an exceptional affinity for solar magic. She can channel the searing power of the sun, unleashing blinding light, summoning solar flares, and unleashing scorching beams with remarkable precision. Her command over solar energy has earned her the title "Sunfire," a testament to her ability to harness the sun's fiery radiance.
+
+p:As the head of House Surya, Aruna upholds the sacred rituals and teachings associated with solar magic. She ensures that her fellow house members master the intricate techniques of controlling solar energy responsibly, teaching them the importance of balance, harmony, and the sacred duty of embracing the sun's life-giving energy.
+
+p:Aruna personifies not only the strength of the sun's power but also its protective and life-nurturing aspects. She uses her light magic to shield and heal, and her compassion and courage make her a revered leader and protector. Her strategic mind and ability to analyze complex situations have proven to be invaluable assets in times of conflict and crisis.
+
+p:Under Aruna's guidance, House Surya radiates as a beacon of light magic, their brilliance illuminating the way to enlightenment. Their mastery over solar energy has garnered them respect and admiration, and their light-based magic has proven instrumental in dispelling darkness and bringing prosperity and illumination to their realm.
+
+
+::END:HEAD
+=

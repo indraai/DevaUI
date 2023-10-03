@@ -1,0 +1,19 @@
+::BEGIN:MAIN
+# Luminaris
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:STORY
+p:In the city of Luminaris, there exists an enigmatic group known as The Guardians of Luminae. Within this group, there is a secret sect devoted to safeguarding a special baby—an infant who possesses an extraordinary and mysterious power.
+
+p: The whereabouts of this baby are kept hidden, known only to the highest-ranking members of The Guardians. The baby possesses an innate ability to manipulate and interact with technology in unprecedented ways. Their mere presence can cause disruptions in the city's technological systems—both unintentionally and occasionally with intentional, deliberate control. The Guardians believe that to control this power they removed the baby from Luminaris.
+
+p: The Guardians have made the decision to keep the child's location a closely guarded secret. Their motivations are twofold. Firstly, they aim to exploit the child's power for personal gain and malicious intent. With the attempt to harness the baby's abilities for their own nefarious purposes, The Guardians remain committed to keeping the child hidden.
+
+p: Secondly, The Guardians are diligently studying and observing the baby's burgeoning abilities, aiming to better understand and harness this extraordinary power to control Luminaris. They believe that the child's powers could be used to advance technological development.
+
+p: In their quest to control Luminaris The Guardians of Luminae have taken this enigmatic baby, keeping their location a secret and ensuring their powers are carefully guarded.
+::END:STORY
+=

@@ -1,0 +1,40 @@
+::BEGIN:MAIN
+# Story Library
+p:
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:menu
+button[🏠 Home]:#docs view:panel story/main:menu
+::end:menu
+
+::begin:menu
+### Arjika Realms
+p:Arjika Realms is a land adorned with numerous cities, each possessing its own unique charm were bustling adventure awaits.
+button[🪐 Arjika Realms]:#docs view:panel story/library/ArjikaRealms/main:menu
+
+### Space Odyssey
+p:Embark on an intergalactic journey, discovering uncharted planets and encountering cosmic wonders.
+button[🚀 Space Odyssey]:#docs view story/library/SpaceOdyssey/main:menu
+
+### Mystery Chronicles
+p:Unearth hidden truths and solve intriguing mysteries.
+button[🔎 Mystery Chronicles]:#docs view story/library/MysteryChronicles/main:menu
+
+### Historical Epics
+p:Travel through time, reliving epic events from the annals of history.
+button[🪖 Historical Epics]:#docs view story/library/HistoricalEpics/main:menu
+
+### Cyberpunk Adventures
+p:Navigate futuristic cityscapes and engage in tech-driven adventures.
+button[📟 Cyberpunk Adventures]:#docs view story/library/CyberpunkAdventures/main:menu
+
+### Fantasy Quests
+p:Embrace your inner hero, battling in the quest for legendary treasures.
+button[🧚 Fantasy Quests]:#docs view story/libary/FantasyQuests/main:menu
+::end:menu
+#color = var(--color-green)
+::END:MENU
+=

@@ -1,0 +1,19 @@
+::BEGIN:MAIN
+# Guilds
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:buttons
+### Guilds
+button[🗺️ Adventurers Guild]:#docs view:panel story/library/ArjikaRealms/guilds/AdventurersGuild/main:menu
+button[🎨 Artisan Alliance]:#docs view:panel story/library/ArjikaRealms/guilds/ArtisanAlliance/main:menu
+button[💂 Guardsman Society]:#docs view:panel story/library/ArjikaRealms/guilds/GuardsmanSociety/main:menu
+button[📚 Order of Wisdom]:#docs view:panel story/library/ArjikaRealms/guilds/OrderOfWisdom/main:menu
+button[❤️‍🩹 Healers Guild]:#docs view:panel story/library/ArjikaRealms/guilds/HealersGuild/main:menu
+::end:buttons
+::END:MENU
+
+=

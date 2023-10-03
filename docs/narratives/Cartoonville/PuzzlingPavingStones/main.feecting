@@ -1,0 +1,13 @@
+::BEGIN:MAIN
+# The Puzzling Paving Stones
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## The Puzzling Paving Stones
+name: The Puzzling Paving Stones
+tags: #ThePuzzlingPavingStones
+p: The Puzzling Paving Stones: The ground beneath your feet is a mosaic of playful patterns and shifting colors. These enchanted paving stones change shape and form with each step, offering an interactive experience that reflects the unpredictable nature of #Cartoonville.
+::END:DESCRIBE

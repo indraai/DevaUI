@@ -39,7 +39,7 @@
   --browser-item-size: inherit
 
 $widths = {
-  viewer: 720px,
+  viewer: 760px,
   console: 640px,
 }
 $heights = {
@@ -58,7 +58,7 @@ html, body
   height: 100%
   width: 100%
 
-body, div, header, main, footer, h1, h2, form, input, textarea, button, i, span, section, article, ul, li, menu
+body, div, header, main, footer, h1, h2, p, form, input, textarea, button, i, span, section, article, ul, li, menu
   box-sizing: border-box
 
 body
@@ -74,6 +74,36 @@ body
   // background-image: url(/public/img/ui/background.png)
   visibility: visible
 
+h1, h2, h3, h4
+  border-bottom: 1px solid
+  line-height: 1.25
+  font-weight: 100
+  overflow: hidden
+  text-overflow: ellipsis
+h1
+  font-size: 2.5rem
+  padding: 25px 0 10px 0
+  margin: 5px 0 5px 0
+  border-bottom: 1px solid
+
+h2
+  font-size: 2.1rem
+  padding: 20px 0 5px 0
+  margin: 5px 0 5px 0
+
+h3
+  font-size: 1.7rem
+  padding: 15px 0 5px 0
+  margin: 5px 0 5px 0
+
+h4
+  font-size: 1.3rem
+  padding: 10px 0 5px
+  margin: 5px 0 5px 0
+
+p
+  font-size: .9rem
+    
 pre
   font-family: $fonts-code
 
@@ -109,6 +139,7 @@ audio
   flex-flow: column nowrap
   height: 100%
   min-height: 100%
+
   &.hidden
     visibility: hidden
     opacity: 0
@@ -144,18 +175,62 @@ audio
     .panel
       order: 2
       display: flex
-      flex: 1 auto
-
+      flex: 0 500px
+      height: 100%
+      #Panel
+        padding: .5rem
     .viewer
+      flex: 1
       order: 3
       padding: 0
-      min-width: $widths.viewer
       overflow: hidden
-      flex: 0 $widths.viewer
       background-color: rgba($colors.black, .5)
       color: $colors.light-grey
       font-size: 18px
       padding: .5rem
+      height: 100%
+      width: 100%
+
+  .number-item
+  .line-item
+  .list-item
+    padding: 3px 5px
+    margin-top: 5px
+    line-height: 1.25
+
+  .list-item
+    &::before
+      content: "⊙"
+      margin-right: 3px
+
+  .line-item
+    margin-left: 2rem
+    &::before
+      content: "꩜"
+      margin-right: 3px
+      margin-left: -1.5rem
+
+    &.indent-1::before
+      margin-left: 15px
+
+  $num-size = 24px
+  .number-item
+    position: relative
+    padding-left: $num-size + 20
+    margin-top: .5rem
+    padding-bottom: .5rem
+    &::before
+      position: absolute
+      opacity: .5
+      display: block
+      line-height: 1.5
+      top: 0
+      left: 0
+      font-size: 1rem
+      text-align: center
+      width: $num-size
+      height: $num-size
+      border-radius: $num-size
 
 #AuxPanel
   order: 4
@@ -220,6 +295,7 @@ audio
         width: 14px
         height: 14px
         margin-right: .15rem
+        border-radius: 14px
 
 #ContextPanel
   order: 1
@@ -238,12 +314,12 @@ audio
     content: "\e676  State"
 
 #FeaturePanel
-  order: 4
+  order: 5
   &::before
     content: "\e676  Feature"
 
 #ZonePanel
-  order: 5
+  order: 4
   &::before
     content: "\e676  Zone"
 
@@ -328,7 +404,6 @@ audio
             min-width: 3.5rem
           .value
             color: $colors.yellow
-
 
 footer
   flex: 0

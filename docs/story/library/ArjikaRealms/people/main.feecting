@@ -1,0 +1,13 @@
+::BEGIN:MAIN
+# People in Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:menu
+### People
+button[Indu Stellastra]:#docs view story/library/ArjikaRealms/people/InduStellastra.feecting
+::end:menu
+::END:MENU

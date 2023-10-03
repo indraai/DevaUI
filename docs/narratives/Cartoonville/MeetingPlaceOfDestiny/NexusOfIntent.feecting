@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# The Nexus of Intent
+p: It's here that #DirectorBlackwood, @MrDewitty, and #TheCovenant have gathered, each with their own purpose and plan. Their presence seems to amplify the room's energy, and the air crackles with a mixture of determination, secrecy, and anticipation.
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

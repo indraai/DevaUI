@@ -1,0 +1,31 @@
+::BEGIN:MAIN
+# Dasa
+
+p:House Dasa is a prominent noble house known for their expertise in technology and innovation. Their members are highly skilled engineers, inventors, and scientists who are at the forefront of technological advancements in their universe. They have a reputation for pushing boundaries and revolutionizing various industries.
+
+talk:#docs view houses/Dasa/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Dasa
+tags: #Dasa #HouseDasa #SeraphinaEverdawn #Seraphina #Everdawn
+head: Seraphina Everdawn
+describe: Known for their expertise in technology and innovation, members of House Dasa are skilled engineers, inventors, and scientists. They are responsible for groundbreaking advancements and play a significant role in shaping the technological landscape.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Seraphina Everdawn
+name: Seraphina Everdawn
+tags: #SeraphinaEverdawn
+
+p:Seraphina Everdawn, as the Head of House Dasa, is a brilliant and visionary leader. She possesses a keen intellect and a passion for pushing the boundaries of scientific knowledge. Seraphina is known for her ability to bring together diverse teams of experts to collaborate on groundbreaking projects. Under her leadership, House Dasa has achieved remarkable technological advancements that have transformed society and made them a force to be reckoned with.
+
+p:Seraphina Everdawn is both respected and feared by her peers due to her unwavering determination and strategic thinking. She is known for making bold and calculated decisions that propel House Dasa to new heights. While she might appear reserved or even enigmatic to outsiders, behind closed doors, she is a dynamic and formidable figure who commands respect.
+
+p:Seraphina's leadership has placed House Dasa at the forefront of scientific discovery and technological innovation. Her strategic vision and relentless pursuit of excellence have solidified House Dasa's position as a dominant force in their universe and ensured the continued advancement of their society.
+::END:HEAD
+=

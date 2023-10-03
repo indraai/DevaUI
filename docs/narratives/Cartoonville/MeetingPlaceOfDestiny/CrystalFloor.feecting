@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# The Crystal Floor
+p:The floor of the chamber is a translucent surface that gleams like polished crystal. Patterns of swirling colors and intricate designs dance beneath your feet, responding to every movement you make. It's as if the floor is a living canvas, reflecting the ebb and flow of the characters' destinies.
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

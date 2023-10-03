@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Ravenwood
+
+title: Ravenwood
+name: Ravenwood
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

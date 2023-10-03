@@ -11,21 +11,33 @@
       > .list
         flex: 1
         overflow: scroll
-        padding: 0 .5rem 0 .5rem
 
         > .item
           flex: 0
           display: flex
-          align-items: start
-          padding: .5rem 0
+          align-items: center
+          padding: .5rem
+          margin: .25rem 0
 
-          .person
+          &.client
+            background-color: rgba(0,0,0,.1)
+            border-radius: 1.5rem
+
+          > .person
             flex: 0 6rem
             min-width: 6rem
             display: flex
             align-items: center
+            align-self: start
+            margin: .25rem 0 0 .25rem
+            .user
+              flex: 1
+
             .avatar
               line-height: 1
+              flex: 0
+              margin-right: .25rem
+
               img
                 width: 27px
                 height: 27px
@@ -40,13 +52,30 @@
             flex: 0
 
           .text
-            align-items: center
+            flex: 1
+            line-height: 1.5
+            margin: .5rem
+            overflow: hidden
+            text-overflow: elipsis
+
+            .item
+              display: flex
+              margin: 3px 0 0 0
+              .label
+                margin-right: .5rem
+                background-color: $colors.darkest-grey
+                padding: .15rem .5rem
+                border-radius: 1rem
+                font-size: .75rem
+                align-self: start
+                min-width: 5rem
+
 
     // display for main prompt input
     &.prompt
       flex: 0
       padding: .15rem
-      border-radius: .5rem
+      border-radius: 1.5rem
       box-shadow: 0 3px 9px rgba(0,0,0,.1)
       background-color: lighten($colors.darkest-grey, 10%)
       border: 3px solid $colors.darkest-grey
@@ -63,7 +92,7 @@
   background-color: transparent
   flex: 1
   min-width: 100%
-  border-radius: .5rem
+  border-radius: 1.5rem
   margin: 0
   border: none
   outline: none

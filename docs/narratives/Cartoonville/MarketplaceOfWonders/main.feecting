@@ -1,0 +1,13 @@
+::BEGIN:MAIN
+# The Marketplace of Wonders
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## The Marketplace of Wonders
+name: The Marketplace of Wonders
+tags: #TheMarketplaceOfWonders
+p: Surrounding the fountain, an eclectic marketplace comes alive with vendors selling peculiar and magical wares. You might find floating lanterns that light up the night, hats that change your voice into song, and talking umbrellas that offer weather forecasts with a twist of humor.
+::END:DESCRIBE

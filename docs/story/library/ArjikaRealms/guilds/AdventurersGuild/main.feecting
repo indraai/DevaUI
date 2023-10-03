@@ -1,0 +1,91 @@
+::BEGIN:MAIN
+::begin:buttons
+button[🔄 Refresh]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main
+button[🚌 Enter Guild]:#shuttle service:docs story/library/ArjikaRealms/guilds/AdventurersGuild/main:enter
+::end:buttons
+
+# The Adventurers Guild
+
+talk:#shuttle service:docs story/library/ArjikaRealms/guilds/AdventurersGuild/main:enter
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:menu
+button[🏠 Home]:#docs view:panel story/main:menu
+button[📜 Narrative Library]:#docs view:panel story/library/main:menu
+button[🪐 Arjika Menu]:#docs view:panel story/library/ArjikaRealms/main:menu
+
+### Adventure Menu
+button[🏛️ Enter the Guild]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main
+button[📝 Registration & Member Services]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main:services
+button[💬 Adventure Board]:#shuttle service:docs story/library/ArjikaRealms/guilds/AdventurersGuild/main:board
+button[🏨 Adventure Guild Lodging]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main:lodging
+button[🏪 The Adventure Market]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main:market
+button[🍽️ The Dining Hall]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main:dining
+::end:menu
+
+#color = var(--color-baby-blue)
+::END:MENU
+=
+
+::BEGIN:ENTER
+story: Arjika Realms > Arjika City > The Adeventurers Guild
+name: The Adventurers Guild
+tag: #AdeventurersGuild
+director: Valen Wyndrider
+hostess: Aleria Funastra
+city: Arjika
+location: Located at a north east corner of the city.
+rules: No Weapons Allowed in the Guild, No Killing and Vegetarian Diet only.
+
+describe: grand double doors, spacious hall, Adventure Market to the right, and the Dining Hall to the left. The Main Desk is in the center area. The entrance to the lodging area is in the back. The Adventurer are roaming around intermingling.
+
+boards: Each board includes quests, messages, notes, inquiries, and news.
+quests: Quests include id, title and description, difficulty, location, reward, minimum level to accept.
+
+lodging: Loding for Adeventurers is given on a first come first serve basis. There are rooms for Adventurers are provided by the Guild while questing.
+
+motto: That Adeventurer who does not eat meat, or who does not slay living creatures, or who does not cause them to be slain, is a friend of all creatures.
+
+talk:#docs raw story/library/ArjikaRealms/guilds/AdventurersGuild/main:director
+talk:#docs raw story/library/ArjikaRealms/guilds/AdventurersGuild/main:hostess
+
+talk:#docs raw devas/security/main:notice
+::END:ENTER
+
+::BEGIN:DIRECTOR
+### Guild Director
+name: Valen (AwesomeMAN) Wyndrider
+wife: Aleria Wyndrider
+nickname: #AwesomeMan - the neighborhood kids gave him the nickname #AwesomeMan
+story: Arjika Realms > Arjika City > The Adeventurers Guild > Guild Director
+keywords: esteemed, guild director, training, instructor, seasoned adventurer, natural leader, guides aspiring adventurers, heroes, and seekers, organizes quests, vast knowledge, experience, strategic thinking, ensures adventurers are well-equipped, loves his wife Aleria.
+::END:DIRECTOR
+
+::BEGIN:HOSTESS
+### Guild Hostess
+name: Aleria (FunLADY) Wyndrider
+husband: Valen Wyndrider
+nickname: #FunLady - the neighborhood kids gave her the nickname #FunLady.
+story: Arjika Realms > Arjika City > The Adeventurers Guild > Guild Hostess
+keywords:registrations, enrollment, identification, lodging arrangements, oversees the distribution of quest rewards, fair compensation for efforts and accomplishments, dedicated, detail-oriented, ensures administrative tasks run smoothly, organizes games and activities for neighborhood childre, loves her husband Valen.
+::END:HOSTESS
+
+::BEGIN:BOARD
+### Adeventure Board
+mods: The Adventure Board
+mods: Valen Wyndrider and Aleria Wyndrider
+location: The Adventurers Guild Arjika
+keywords: boards, discussion, news, quests, information, rankings, trade, barter
+items: Items contain an Id, title, description, and an relevant information needed.
+task: look at Arjika Realms > Arjika City > The Adeventurers Guild > Adventure Board
+
+1. Quests
+2. News
+3. Gossip
+4. Rakings
+5. Trade & Barter
+::END:BOARD

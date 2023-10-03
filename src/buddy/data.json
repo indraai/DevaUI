@@ -89,6 +89,36 @@
         },
         {
           "type": "input",
+          "name": "city",
+          "message": "CITY",
+          "default": "Arjika City"
+        },
+        {
+          "type": "input",
+          "name": "region",
+          "message": "REGION",
+          "default": "Visiprasa"
+        },
+        {
+          "type": "input",
+          "name": "nation",
+          "message": "NATION",
+          "default": "Novastris"
+        },
+        {
+          "type": "input",
+          "name": "planet",
+          "message": "PLANET",
+          "default": "Elysium Prime"
+        },
+        {
+          "type": "input",
+          "name": "system",
+          "message": "SYSTEM",
+          "default": "Zephyrian"
+        },
+        {
+          "type": "input",
           "name": "emoji",
           "message": "EMOJI",
           "default": "/public/devas/deva/emoji.png"
@@ -112,19 +142,19 @@
           "choices": [
             {
               "name": "(M) Male",
-              "value": "male"
+              "value": "Male, Man, He, Him"
             },
             {
               "name": "(F) Female",
-              "value": "female"
+              "value": "Female, Woman, She, Her"
             },
             {
               "name": "(N) Neutral",
-              "value": "neutral"
+              "value": "Neutral"
             },
             {
               "name": "(O) Other",
-              "value": "other"
+              "value": "Other"
             }
           ]
         },

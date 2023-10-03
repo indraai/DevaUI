@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Aurora Glade
+
+title: Aurora Glade
+name: Aurora Glade
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

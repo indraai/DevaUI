@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Shadow Lord
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

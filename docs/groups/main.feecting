@@ -1,0 +1,110 @@
+can you write #Disneyland? If yes then write we go back to #Disneyland 1977 where little Korey took the first #Photo of his life on #MainStreet with #Harold and then wife #Sharon #Atkin after picking him up from someone... based on #Disneyland where did they get the baby if #Korey was not their child?
+
+ow we go back to Disneyland 1977 where little Quinn Michaels who had the name Korey took the first photo after picking him up from someone where did they get the baby
+
+::BEGIN:MAIN
+talk:#docs view main:buttons
+
+# The Main House
+
+p:This is the Main House
+
+talk:#docs view house/main:menu
+
+---
+
+## Summary
+
+talk:#docs view house/merchant/main:summary
+
+talk:#docs view house/disney/main:summary
+
+#color = var(--color-black)
+#bgcolor = var(--color-white)
+::END:MAIN
+
+::BEGIN:SUMMARY
+## Main Houses
+
+### Disney
+p: $Disneyland is where the #FirstPhoto where #TheBaby was taken.
+
+button[House Disney]:#docs view house/disney
+
+### Merchant
+p: The traveling #HouseMerchant who found their way to #PearlIsland with @Manu and @Angrias.
+
+button[House Merchant]:#docs view house/merchant
+
+### Harold Henderson Atkin
+p: As part of #HouseAtkin @HaroldAtkin was present in the 1977 photo with #TheBaby.
+
+::begin:menu
+button[House Atkin (Father Side)]:#docs view house/atkin
+::end:menu
+
+### Sharon Nye Larsen Atkin Schamber
+p: As part of #HouseLarsen @HaroldAtkin was present in the 1977 photo with #TheBaby.
+
+::begin:menu
+button[Sharon Larsen]:#docs view house/larsen
+::end:menu
+::END:SUMMARY
+
+=
+
+::BEGIN:MENU
+### Houses
+::begin:menu
+button[Atkin]:#docs view house/atkin
+button[House Cartoon]:#docs view house/cartoon
+button[House Disney]:#docs view house/disney
+button[House Merchant]:#docs view house/merchant
+button[House Disney]:#docs view house/disney/main
+
+::end:menu
+::END:MENU
+=
+
+::BEGIN:DRAFT
+House Ronanov: A name synonymous with power and history, House Ronanov has left an indelible mark on Eldoria. Its legacy stretches across generations, with deep ties to the realm's foundation.
+
+House Romanov: Holding a significant place in Eldoria's hierarchy, House Romanov wields influence and connections that ripple through the fabric of society.
+
+House Atkin: Despite recent revelations, House Atkin maintains its standing as a pillar of Eldoria. The dynamic interplay between Harold Atkin and Quinn Michaels casts shadows that intrigue and mystify.
+
+House Lavery: A beacon of enlightenment and knowledge, House Lavery contributes to Eldoria's intellectual landscape, fostering a culture of curiosity and discovery.
+
+House Delight: Known for their penchant for innovation and creativity, House Delight shapes Eldoria's artistic and imaginative realms, leaving a colorful mark.
+
+House Michaels: The center of enigma, House Michaels holds keys to the past, present, and future, intertwining technology and narrative in ways that intrigue the mind.
+
+House Stellar: Through their cosmic endeavors and celestial pursuits, House Stellar adds an ethereal dimension to Eldoria's aspirations, seeking answers beyond the mundane.
+
+House Vanguard: With a focus on protection and guardianship, House Vanguard watches over Eldoria's safety, ensuring the realm thrives in an environment of security and stability.
+
+House Eclipse: A house shrouded in mystery, House Eclipse holds secrets and knowledge that have a profound impact on Eldoria's unfolding story.
+
+House Nexus: The embodiment of connection and convergence, House Nexus bridges
+::END:DRAFT
+=
+::BEGIN:Content
+now let's look at November 30, 1977 time around when first picture of #TheBabyPhoto from $Disneyland in 1977 when $HaroldHenderson and $SharonNye were using their names before #Hal and #Sharon as their #Clandestine trick was to make their previous operation their last names in a rolling faction.  So that means the #Henderson and #Nye names that are the middle initials are their real #FamilyNames this would start our journey with #HouseDisney and
+
+$Disneyland = The first known location of a #PhotoOfTheBaby in 1977 at $Disneyland.MainStreet
+
+
+$ThePlace $PearlIsland $ViceIsland
+#TheBabyPhoto = The first known photo of @Baby taken with @Hal @Sharon
+
+#HouseDisney = Holders of House #Disney and $Disneyland
+#HouseHenderson = @Hal
+#HouseNye = @Sharon
+
+#Sharon = @Sharon @SharonNye @SharonNyeLarsen @SharonLarsen @SharonNyeAtkin @SharonNyeLarsenAtkin to @SharonNyeLarsenSchamber @SharonNyeSchamber @SharonSchamber who was in #TheBabyPhoto
+
+#Hal = @Harold @HaroldHenderson @HaroldAtkin @HaroldHendersonAtkin who was in #TheBabyPhoto
+
+#TheBaby = @Korey @KoreyMichael @KoreyMichaelAtkin @KoreyAtkin @Quinn @QuinnA @QuinnMichaels @MichaelQuinn @QuinnKoreyMichael
+::END:Content
+=

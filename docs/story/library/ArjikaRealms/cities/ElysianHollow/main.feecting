@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Elysian Hollow
+
+title: Elysian Hollow
+name: Elysian Hollow
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

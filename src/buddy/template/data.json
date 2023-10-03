@@ -24,13 +24,24 @@
       },
       "profile": {
         "name": "::name::",
+        "mention": "::mention::",
+        "tags": "::tags::",
+        "gender": "::gender::",
         "describe": "::describe::",
+
+        "creator": "::copyright::",
+        "born": "::date::",
+        "city": "::city::",
+        "region": "::region::",
+        "nation": "::nation::",
+        "planet": "::planet::",
+        "system": "::system::",
+
         "emoji": "::emoji::",
         "avatar": "::avatar::",
         "background": "::background::",
         "color": "#333333",
         "bgcolor": "#ffffff",
-        "gender": "::gender::",
         "voice": "::voice::"
       }
     },
@@ -43,6 +54,15 @@
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
         "error": "💣 ERROR!"
+      },
+      "live": {
+        "profile": "deva",
+        "history": []
+      },
+      "say": {
+        "profile": "deva",
+        "discord": "deva",
+        "history": []
       },
       "context": {
         "uid": "::name:: is creating a uid",

@@ -1,0 +1,14 @@
+::BEGIN:MAIN
+# Fountain Of Dreams
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## The Fountain of Dreams
+name: The Fountain of Dreams
+tags: #TheFountainOfDreams
+p: At the center of the square, a magnificent fountain springs forth with water that shimmers like stardust. The water jets take the form of fantastical creatures—unicorns, dragons, and talking flowers—all dancing merrily as they splash in and out of the water.
+::END:DESCRIBE
+=

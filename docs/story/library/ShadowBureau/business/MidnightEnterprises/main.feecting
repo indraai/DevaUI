@@ -1,0 +1,20 @@
+::BEGIN:MAIN
+# Midnight Enterprises
+
+EnigmaTech Research Facility. = location of Enigma Matrix
+Operation Ghostwatch = Surveillance Program
+Operation Stealh Sentinet = Surveillance Program
+Project Echo = Surveillance Program
+Project Specter = Surveillance Program
+SecureTech Headquarters, Conference Room A = Data Location 1
+StealthOps Facility, Briefing Room B = Data Location 2
+GhostOps Headquarters, Conference Room 3A = Data Location 3
+StealthSentinel_HQ_Conference_Room_3 = Data Location 4
+Ghostwatch_Ops_Center_Rooftop_Lounge = Data Location 5
+SecureVault Data Center = backup data
+SafeGuard Data Center = secondary backup
+DataGuard Solutions. = offsite storage
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

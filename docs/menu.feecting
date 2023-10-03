@@ -1,0 +1,192 @@
+::BEGIN:MAIN
+# Narrative Menu
+p: The Narrative Menu
+
+talk:#docs view menu:general
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:GLOBAL
+::begin:menu
+button[🏠 Main]:#docs view main
+button[📖 Narratives]:#docs view story/main
+::end:menu
+
+::begin:menu
+### Corpus
+button[Global]:#docs view feature/main
+button[Deva]:#docs view devas/deva
+button[Indra]:#docs view devas/indra
+button[Romanov]:#docs view devas/romanov
+button[Security]:#docs view devas/security
+::end:menu
+::END:GLOBAL
+
+=
+
+::BEGIN:GENERAL
+::begin:menu
+button[The Shadow Bureau]:enter The Shadow Bureau: Unravel secrets in a clandestine world of spies and covert operations. _#ShadowBureau
+
+button[Enchanted Realms]:enter Enchanted Realms: Explore mystical lands filled with magical creatures and enchanting quests. _#EnchantedRealms
+
+button[Space Odyssey]:enter Space Odyssey: Embark on an intergalactic journey, discovering uncharted planets and encountering cosmic wonders. _#SpaceOdyssey
+
+button[Mystery Chronicles]:enter Mystery Chronicles: Solve perplexing puzzles and unearth hidden truths in intriguing mysteries. _#MysteryChronicles
+
+button[Historical Epics]:enter Historical Epics: Travel through time, reliving epic events from the annals of history. _#HistoricalEpics
+
+button[Galactic Battles]:enter Galactic Battles: Engage in thrilling battles among star systems, battling cosmic forces. _#GalacticBattles
+
+button[Cyberpunk Adventures]:enter Cyberpunk Adventures: Navigate futuristic cityscapes and engage in tech-driven adventures. _#CyberpunkAdventures
+
+button[Fantasy Quests]:enter Fantasy Quests: Embrace your inner hero, battling dark forces in the quest for legendary treasures. _#FantasyQuests
+
+button[Time Traveler's Tales]:enter Time Traveler's Tales: Journey through time, altering destinies and shaping the course of history. _#TimeTravelerTales
+
+button[Romanov Realms]:#romanov say enter Romanov Realms: Immerse yourself in an extraordinary virtual world where dreams and reality converge within the realms of House Romanov. Step into a realm steeped in history, grandeur, and elegance, as you embark on a journey that transcends time and space. _#RomanovAI _#RomanovRealms _#HouseRomanov
+::end:menu
+::END:GENERAL
+
+=
+
+::BEGIN:SECRET
+## Secret Training
+
+::begin:menu
+button[Operation Ghostwalk]:Operation Ghostwalk: Specializes in stealth and infiltration techniques, training agents to move undetected in any environment.
+
+button[Project Phoenix]:Project Phoenix: Focuses on training agents to rise from the ashes of failure, turning setbacks into opportunities.
+
+button[Codebreaker Chronicles]:Codebreaker Chronicles: Specializes in cryptography and intelligence analysis, unraveling complex codes and decoding encrypted messages.
+
+button[Cyber Shadows]:Cyber Shadows: Trains agents in cybersecurity and digital espionage, enabling them to navigate the virtual world with expertise.
+
+button[Cloak and Dagger]:Cloak and Dagger: Concentrates on advanced deception techniques, allowing agents to mislead adversaries and create diversions.
+
+button[Black Ops]:Black Ops Horizon: Specializes in high-risk, unconventional operations, taking agents beyond the boundaries of standard missions.
+
+button[Quantum Recon]:Quantum Recon: Focuses on time-sensitive missions and quick decision-making, preparing agents for rapid response situations.
+
+button[Shadow Strike]:Shadow Strike: Trains agents in precision targeting and eliminating high-profile threats with surgical precision.
+
+button[Echo Chamber]:Echo Chamber: Specializes in psychological warfare and manipulation, using psychological tactics to influence targets.
+
+button[Operation Umbra]:Operation Umbra: Concentrates on intelligence gathering and analysis, providing agents with a wealth of information to inform critical decisions.
+::end:menu
+::END:SECRET
+
+=
+
+::BEGIN:TOPSECRET
+## Top Secret Training
+
+::begin:menu
+button[Project Shadowstrike]:Project Shadowstrike: Focused on precision marksmanship and silent elimination techniques, producing lethal sharpshooters.
+
+button[Operation Echelon]:Operation Echelon: Specializing in advanced surveillance and intelligence gathering, enabling agents to monitor targets discreetly.
+
+button[Ghost Protocol Initiative]:Ghost Protocol Initiative: Training agents in infiltration and extraction, allowing them to operate undercover in high-risk environments.
+
+button[Quantum Cipher]:Quantum Cipher: Concentrating on encryption and cryptographic techniques, preparing agents to secure sensitive communications.
+
+button[Operation Blackout]:Operation Blackout: Focused on disrupting enemy communications and disabling critical infrastructure during covert missions.
+
+button[Chimera Division]:Chimera Division: Specializing in identity manipulation and creating false personas to blend into different scenarios seamlessly.
+
+button[Phantom Nexus]:Phantom Nexus: Training agents in cyberwarfare and hacking, equipping them with skills to infiltrate digital networks.
+
+button[Omega Contingent]:Omega Contingent: Focused on handling biohazards and chemical threats, ensuring agents can neutralize dangerous substances.
+
+button[Mirage Protocol]:Mirage Protocol: Specializing in creating illusions and misdirection, confounding adversaries during high-stakes operations.
+
+button[Dark Horizon Protocol]:Dark Horizon Protocol: Training agents to navigate through perilous terrains and extreme environments, surviving in the harshest conditions.
+::end:menu
+::END:TOPSECRET
+
+=
+
+::BEGIN:ABOVETOPSECERET
+## Above Top Secret Training
+
+::begin:menu
+button[The Shadow Bureau]:The Shadow Bureau: The foundational program that trains agents in espionage, covert operations, and intelligence gathering.
+
+button[Enigma Division]:Enigma Division: A specialized unit focused on handling encrypted secrets and unbreakable codes.
+
+button[Cybernetic Infiltrators]:Cybernetic Infiltrators: Training agents to navigate and exploit digital landscapes for intelligence gathering and cyberwarfare.
+
+button[Mystical Arcana]:Mystical Arcana: Unveiling the secrets of ancient mysticism to harness otherworldly powers.
+
+button[Phantom Assassins]:Phantom Assassins: Cultivating the skills of silent and deadly operatives, capable of eliminating targets without a trace.
+
+button[Galactic Explorers]:Galactic Explorers: Preparing agents for interstellar missions, exploring uncharted planets, and facing cosmic challenges.
+
+button[Deepcover Operatives]:Deepcover Operatives: Immersing agents into different societies to gather intelligence while maintaining their cover.
+
+button[Time Rift Observers]:Time Rift Observers: Training agents to navigate temporal anomalies and alter historical events discreetly.
+
+button[Psychological Manipulation]:Psychological Manipulation: Developing the art of psychological warfare to influence individuals and organizations.
+
+button[Shadow Mind Program]:Shadow Mind Program: Unlocking agents' hidden potential, enhancing cognitive abilities, and accessing deeper levels of intuition.
+::end:menu
+::END:ABOVETOPSECERET
+=
+
+::BEGIN:ULTRATOPSECRET
+## Ultra Top Secret Training
+
+::begin:menu
+button[Project AURORA]:Project AURORA: A program delving into cutting-edge technological advancements and futuristic weaponry, redefining the art of espionage.
+
+button[Quantum Infiltrators]:Quantum Infiltrators: Agents are trained to manipulate quantum realities, enabling them to move through dimensions undetected.
+
+button[Celestial Watchers]:Celestial Watchers: Unveiling the hidden knowledge of celestial phenomena, empowering agents with celestial insights.
+
+button[Astral Sentinels]:Astral Sentinels: Agents undergo astral projection training, capable of gathering intel from distant realms.
+
+button[Bio-Enhancement Protocol]:Bio-Enhancement Protocol: Agents are subjected to advanced bio-engineering techniques, heightening their physical and mental abilities.
+
+button[Temporal Reversion]:Temporal Reversion: Training agents to undo historical events by reversing time through a controlled temporal vortex.
+
+button[Sentient AI Companions]:Sentient AI Companions: Agents are partnered with AI constructs, capable of processing vast amounts of information.
+
+button[Cosmic Archivists]:Cosmic Archivists: Agents acquire cosmic knowledge, tapping into universal archives for ancient wisdom.
+
+button[Dark Matter Manipulation]:Dark Matter Manipulation: Harnessing the power of dark matter for covert missions and powerful weaponry.
+
+button[Reality Engineers]:Reality Engineers: Agents learn to manipulate reality itself, bending it to their will for strategic advantages.
+::end:menu
+::END:ULTRATOPSECRET
+
+=
+
+::BEGIN:Q
+## Q Clearance Training
+
+::begin:menu
+button[Quantum Codex]:Quantum Codex: Agents undergo intense training in quantum computing and cryptography, mastering the art of unbreakable codes and encryption.
+
+button[Psionic Mastery]:Psionic Mastery: Delving into the realm of psychic abilities, agents are trained to harness their minds for telepathy, remote viewing, and mental manipulation.
+
+button[Meta-Dimensional Pilgrims]:Meta-Dimensional Pilgrims: Agents explore alternative dimensions, gaining insights and intelligence from parallel realities.
+
+button[Time Bender Initiative]:Time Bender Initiative: Agents are initiated into the mysteries of time manipulation, allowing them to traverse timelines and alter key events.
+
+button[Neuro-Sensory Augmentation]:Neuro-Sensory Augmentation: Agents undergo advanced neural enhancements, elevating their senses and cognitive capabilities to superhuman levels.
+
+button[Graviton Pioneers]:Graviton Pioneers: Training agents to harness the power of gravity for stealth and extraordinary maneuverability.
+
+button[Nanotech Sentinels]:Nanotech Sentinels: Agents are integrated with nanotechnology, granting them self-repairing abilities and adaptive camouflage.
+
+button[Etherial Whispers]:Etherial Whispers: Agents are immersed in ancient mystical practices, gaining wisdom from ethereal beings.
+
+button[Transcendence Ascendant]:Transcendence Ascendant: Agents explore the realms of human consciousness, achieving higher states of enlightenment and mental clarity.
+
+button[Cosmic Temporal Architects]:Cosmic Temporal Architects: Agents are initiated into the sacred knowledge of cosmic time and its manipulation for strategic purposes.
+::end:menu
+::END:Q
+
+=

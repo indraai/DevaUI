@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Seaside Cove
+
+title: Seaside Cove
+name: Seaside Cove
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

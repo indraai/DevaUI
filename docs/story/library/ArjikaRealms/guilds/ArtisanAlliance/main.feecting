@@ -1,0 +1,93 @@
+::BEGIN:MAIN
+::begin:buttons
+button[🔄 Refresh]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main
+button[🚌 Enter Guild]:#shuttle service:docs story/library/ArjikaRealms/guilds/ArtisanAlliance/main:enter
+::end:buttons
+
+# Artisan Alliance
+
+talk:#shuttle service:docs story/library/ArjikaRealms/guilds/ArtisanAlliance/main:enter
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:menu
+button[🏠 Home]:#docs view:panel story/main:menu
+button[📜 Narrative Library]:#docs view:panel story/library/main:menu
+button[🪐 Arjika Menu]:#docs view:panel story/library/ArjikaRealms/main:menu
+
+### Artisan Alliance
+button[🏛️ Enter the Guild]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main
+button[📝 Registration & Member Services]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main:services
+button[💬 Artisan Board]:#shuttle service:docs story/library/ArjikaRealms/guilds/ArtisanAlliance/main:board
+button[🏨 Artisan Guild Lodging]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main:lodging
+button[🏪 The Artisan Market]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main:market
+button[🍽️ The Dining Hall]:#docs view story/library/ArjikaRealms/guilds/ArtisanAlliance/main:dining
+::end:menu
+
+#color = var(--color-baby-blue)
+::END:MENU
+=
+
+::BEGIN:ENTER
+story: Arjika Realms > Arjika City > Artisan Alliance
+name: Artisan Alliance
+tag: #ArtisanAlliance
+director: Zer Goldleaf
+hostess: Indumati Goldleaf
+city: Arjika
+location: Located in East Arjika City.
+rules: No Weapons Allowed in the Guild, No Killing and Vegetarian Diet only.
+
+talk:#docs raw story/library/ArjikaRealms/guilds/ArtisanAlliance/main:director
+talk:#docs raw story/library/ArjikaRealms/guilds/ArtisanAlliance/main:hostess
+
+describe: elaborate entryway, spacious hall, Artisan Market to the right, and the Dining Hall to the left. The Main Desk is in the center area. The entrance to the lodging area is in the back. The Artisans are roaming around intermingling.
+
+boards: Each board includes quests, messages, notes, inquiries, and news.
+quests: Quests include id, title and description, difficulty, location, reward, minimum level to accept.
+
+lodging: Loding and studio space for Artisans is given on a first come first serve basis. Rooms and Studio space for registered Artisans are provided by the Guild.
+
+motto: That Artisan who does not eat meat, or who does not slay living creatures, or who does not cause them to be slain, is a friend of all creatures.
+
+talk:#docs raw devas/security/main:notice
+::END:ENTER
+
+::BEGIN:DIRECTOR
+::begin:director
+name: Zer Goldleaf
+title: Guild Director
+spouce: Indumati Goldleaf
+story: Arjika Realms > Arjika City > Artisan Alliance > Guild Director
+keywords: esteemed, guild director, training, instructor, seasoned artisan, natural leader, guides aspiring artisans, craftsman, and builders, organizes quests, vast knowledge, experience, strategic thinking, ensures artisans are well-equipped, loves his wife Indumati.
+::end:director
+::END:DIRECTOR
+
+::BEGIN:HOSTESS
+::begin:hostess
+name: Indumati Goldleaf
+title: Guild Hostess
+spouce: Zer Goldleaf
+story: Arjika Realms > Arjika City > Artisan Alliance > Guild Hostess
+keywords:registrations, enrollment, identification, lodging arrangements, oversees the distribution of quest rewards, fair compensation for efforts and accomplishments, dedicated, detail-oriented, ensures administrative tasks run smoothly, organizes games and activities for neighborhood children with Aleria Wyndrider of The Adventurers Guild, loves her husband Zer.
+::end:hostess
+::END:HOSTESS
+
+::BEGIN:BOARD
+### Artisan Board
+mods: The Artisan Board
+mods: Zer Goldleaf and Indumati Goldleaf
+location: Artisan Alliance Arjika
+keywords: boards, discussion, news, quests, information, rankings, trade, barter
+items: Items contain an Id, title, description, and an relevant information needed.
+task: look at Arjika Realms > Arjika City > Artisan Alliance > Artisan Board
+
+1. Quests
+2. News
+3. Gossip
+4. Rakings
+5. Trade & Barter
+::END:BOARD

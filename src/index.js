@@ -85,9 +85,7 @@ const DEVA = new Deva({
             html: feecting.a.html,
             data,
           });
-        }).catch(err => {
-          return this.error(err, packet, reject);
-        });
+        }).catch(reject);
       });
     },
 
@@ -120,35 +118,65 @@ const DEVA = new Deva({
         }
       });
     },
+
     lists(item) {
       return new Promise((resolve, reject) => {
-        const states = this[item]();
-        const _states = [
-          `::begin:${item}`,
-          `# ${item}`,
+        const items = this[item]();
+        const _items = [
+          `::begin:${items.key}`,
+          `## ${items.key}`,
         ];
-        for (let x in states.value) {
-          _states.push(`${x}: ${states.value[x]} - ${states.messages[x]}`);
+        for (let item in items.value) {
+          console.log('ITEM', item);
+          _items.push(`${item}: ${items.value[item]}`);
         }
-        _states.push(`::end:${item}`);
-        this.question(`${this.askChr}feecting parse ${_states.join('\n')}`).then(feecting => {
+        _items.push(`::end:${items.key}`);
+        this.question(`${this.askChr}feecting parse ${_items.join('\n')}`).then(feecting => {
           return resolve({
             text: feecting.a.text,
             html: feecting.a.html,
             data: {
-              states,
+              items,
               feecting: feecting.a.data,
             }
           })
-        }).catch(err => {
-          return this.error(err, packet, reject);
-        })
-        return _states.join('\n');
+        }).catch(reject)
       });
-
     }
   },
   methods: {
+    /**************
+    method: uid
+    params: packet
+    describe: Return a system id to the user from the Log Buddy.
+    ***************/
+    uid(packet) {
+      const id = this.uid();
+      console.log('id', id);
+      return Promise.resolve({text:id});
+    },
+
+    /**************
+    method: md5 hash
+    params: packet
+    describe: Return system md5 hash for the based deva.
+    ***************/
+    hash(packet) {
+      const hash = this.hash(packet.q.text, 'md5');
+      return Promise.resolve(hash);
+    },
+
+    /**************
+    method: md5 cipher
+    params: packet
+    describe: Return system md5 hash for the based deva.
+    ***************/
+    cipher(packet) {
+      const data = this.cipher(packet.q.text);
+      const cipher = `cipher: ${data.encrypted}`;
+      return Promise.resolve(cipher);
+    },
+
     /**************
     method: client
     params: packet
@@ -176,7 +204,6 @@ const DEVA = new Deva({
     ***************/
     question(packet) {
       this.zone('deva');
-      this.context('question');
       return this.func.question(packet);
     },
 
@@ -257,36 +284,17 @@ const DEVA = new Deva({
       return Promise.resolve(ret);
     },
   },
-  onDone(data) {
+  async onDone(data) {
     this.listen('devacore:prompt', packet => {
       this.func.cliprompt(packet);
     })
-    this.listen('devacore:state', packet => {
-      // this.func.cliprompt(packet);
-    })
-    this.listen('devacore:context', packet => {
-      // this.func.cliprompt(packet);
-    })
-    this.listen('devacore:zone', packet => {
-      // this.func.cliprompt(packet);
-    })
-    this.listen('devacore:feature', packet => {
-      // this.func.cliprompt(packet);
-    })
-    this.listen('devacore:mode', packet => {
-      // this.func.cliprompt(packet);
-    })
-    this.listen('devacore:action', packet => {
-      // this.func.cliprompt(packet);
-    })
 
-    this.listen('devacore:clearshell', packet => {
-      this.func.cliprompt(packet);
-    })
-
+    // load the devas
     for (let x in this.devas) {
+      this.prompt(`Load: ${x}`);
       this.load(x, data.client);
     }
+    return Promise.resolve(data);
   }
 });
 

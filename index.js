@@ -34,7 +34,7 @@ function setPrompt(pr) {
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} ${pr.prompt.text}:`);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} ${pr.prompt.text}: `);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);
@@ -47,6 +47,8 @@ function devaQuestion(q) {
   if (q.toLowerCase() === '/exit') return shell.close();
 
   return new Promise((resolve, reject) => {
+    // insert the question into history
+
     // ask a question to the deva ui and wait for an answer.
     DEVA.question(q).then(answer => {
       // sen the necessary returned values to the shell prompt.
@@ -54,6 +56,7 @@ function devaQuestion(q) {
       console.log(chalk.rgb(answer.a.agent.prompt.colors.text.R, answer.a.agent.prompt.colors.text.G, answer.a.agent.prompt.colors.text.B)(answer.a.text));
       setPrompt(answer.a.client);
       // if (answer.a.data) console.log(answer.a.data);
+      DEVA.talk(`data:history`, answer);
       resolve(answer);
     }).catch(e => {
       reject(e);
@@ -194,8 +197,9 @@ fast.listen({port:vars.ports.api}).then(() => {
 
 }).then(_init => {
   // initialize the DEVA
-  setPrompt(client);
-  DEVA.init(client).then();
+  DEVA.init(client);
+
+  setPrompt(DEVA.client());
 
   // cli prompt listener for relaying from the deva to the prompt.
   DEVA.listen('cliprompt', ag => {
@@ -212,7 +216,6 @@ fast.listen({port:vars.ports.api}).then(() => {
   }).on('close', () => {
     // begin close procedure to clear the system and close other devas properly.
     DEVA.stop().then(stop => {
-      stop.client = client;
       console.log(stop.text);
       shell.prompt();
       process.exit(0);

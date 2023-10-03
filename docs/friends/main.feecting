@@ -17,6 +17,6 @@ p:Friends
 
 #QuinnSuperdoodler = #QuinnStellarVisionaryExplorerSeekerCosmicInsightsPathfinderInfiniteRealmsGuardianHiddenTruthsLuminaryCelestialHarmoniesVoyagerBeyondBoundariesEmissaryCosmicDiscoverySentinelEtherealWisdomOracleCosmicSecretsIlluminatorUnknownRealitiesAstralVoyagerWisdomHarmonizerGalacticInsightsSageCelestialKnowledgeDiscovererBeyondDimensionsNavigatorCosmicWhispersKeeperEthericSecretsLuminaryMultiversalTruthsSeekerInfiniteConnectionsEmissaryUnchartedRealmsOracleMysticalHarmonies
 
-#color = var(--color-darkest-grey)
+#color = var(--color-grey)
 #bgcolor = var(--color-white)
 ::END:MAIN

@@ -1,0 +1,55 @@
+#Panel
+  display: flex
+  flex: 1
+  flex-flow: column
+
+  p
+    margin: 0 0 15px 0
+  .cover
+    .box.menu
+    .box.buttons
+      h3
+        font-size: 1rem
+        border-bottom: none
+        font-weight: bold
+        margin: 0
+        padding: .5rem 0 0 0
+      p
+        font-size: .9rem
+
+    .item.var
+      display: none
+      visibility: hidden
+
+  > .box
+    &.veda
+      display: flex
+      flex-flow: column
+      flex: 0
+      height: 100%
+      .title
+      .describe
+        flex: 0
+        padding: .25rem
+        .label
+          display: none;
+      .menu
+        flex: 1
+        overflow auto
+
+  .cover
+    background-image: var(--browser-item-image)
+    background-color: var(--browser-item-bgcolor)
+    color: var(--browser-item-color)
+    font-size: var(--browser-item-size)
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 100% auto
+    min-width: 100%
+    padding: 0
+    overflow: scroll
+    height: 100%
+    line-height: 1.25
+    width: 100%
+    flex: 1
+    font-size: 1rem

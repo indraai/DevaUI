@@ -1,0 +1,35 @@
+::BEGIN:MAIN
+# Varuna
+
+p: House Varuna is an ancient and esteemed noble house known for their deep connection to the sea and their mastery of naval warfare. They are renowned for their expertise in shipbuilding, navigation, and maritime exploration. Members of House Varuna are adventurous, resourceful, and have a strong affinity for the ocean.
+
+talk:#docs view houses/Varuna/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Varuna
+tags: #HouseVaruna #LadyMarinaStormborne #LadyStormborn
+head: Lady Marina Stormborne
+describe: Known for their wisdom and knowledge, members of House Varuna are often sought after for their expertise in various subjects, including science, philosophy, and spirituality.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lady Marina Stormborne
+
+p: Lady Marina Stormborne is the Head of House Varuna, a charismatic and inspiring leader who embodies the spirit of the sea within her very being. With her majestic presence and grace, Marina commands the respect and admiration of her fellow house members and allies.
+
+p: Marina imbues the traditions and values of House Varuna with her deep understanding and reverence for the ocean. Born and raised on the open sea, she possesses an innate affinity for navigation and maritime exploration. As a skilled sailor and navigator, she has sailed uncharted waters, discovered new lands, and forged prosperous trade routes for her house.
+
+p: Marina's expertise extends beyond sailing; she possesses vast knowledge of marine life, weather patterns, and the mystical secrets that lie beneath the waves. She is often sought after for her wisdom and guidance in matters related to the sea.
+
+p: As the head of House Varuna, Marina ensures her house's naval fleet remains unrivaled. She oversees the shipbuilding process, employing innovative designs and advanced technologies to construct powerful and resilient vessels. Marina's fleet is renowned for its versatility, whether for trade, exploration, or naval warfare.
+
+p: Marina's leadership style is marked by her compassion for her house members and her dedication to the well-being of her people. She promotes a spirit of unity and camaraderie among her sailors, fostering an environment that encourages personal growth and the pursuit of excellence.
+
+p: Under Marina's guidance, House Varuna has become a dominant force on the seas, with their naval fleet admired and feared by rival houses. Their ongoing exploration and discovery of new lands have opened up countless opportunities for trade and cultural exchange, solidifying House Varuna's reputation as preeminent seafarers.
+::END:HEAD
+=

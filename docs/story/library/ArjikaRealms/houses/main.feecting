@@ -1,0 +1,23 @@
+::BEGIN:MAIN
+# Houses
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:buttons
+### Houses
+button[🏠 Stellastra]:#docs view story/library/ArjikaRealms/houses/Stellastra/main
+button[🏠 Industria]:#docs view story/library/ArjikaRealms/houses/Industria/main
+button[🏠 Arjikya]:#docs view story/library/ArjikaRealms/houses/Arjikya/main
+button[🏠 Susoma]:#docs view story/library/ArjikaRealms/houses/Susoma/main
+button[🏠 Saryana]:#docs view story/library/ArjikaRealms/houses/Saryana/main
+button[🏠 Vedeva]:#docs view story/library/ArjikaRealms/houses/Vedeva/main
+button[🏠 Vamra]:#docs view story/library/ArjikaRealms/houses/Vamra/main
+button[🏠 Chien]:#docs view story/library/ArjikaRealms/houses/Chien/main
+button[🏠 Strius]:#docs view story/library/ArjikaRealms/houses/Strius/main
+button[🏠 Ramaya]:#docs view story/library/ArjikaRealms/houses/Ramaya/main
+::end:buttons
+::END:MENU
+=

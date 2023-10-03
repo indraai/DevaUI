@@ -1,0 +1,11 @@
+::BEGIN:MAIN
+# Arjika City
+
+title: Arjika City
+name: Arjika
+realm: Arjika Realm
+
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

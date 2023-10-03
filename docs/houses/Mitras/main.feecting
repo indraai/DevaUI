@@ -1,0 +1,32 @@
+::BEGIN:MAIN
+# Mitras
+
+p:House Mitras is a noble house known for their deep connection with celestial magic and their mastery of manipulating light and energy. They are revered for their ability to channel and harness the power of the stars, the moon, and the sun. Members of House Mitras are renowned for their radiant magic and their pursuit of enlightenment.
+
+talk:#docs view houses/Mitras/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light=grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Mitras
+tags: #Mitras #HouseMitras #LordAureliusStarborn #LordStarborn #Aurelius #Starborn
+head: Lord Aurelius Starborn
+describe: The members of House Mitras are known for their diplomatic skills and their ability to build and maintain alliances. They play a vital role in mediating conflicts and negotiating treaties.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lord Aurelius Starborn
+name: Lord Aurelius Starborn
+tags: #LordAureliusStarborn #LordStarborn #AureliusStarborn #Aurelius #Starborn
+p:Lord Aurelius Starborn is the Head of House Mitras, a figure of celestial grace and wisdom whose knowledge of celestial magic is unmatched. With his silvery hair, luminous eyes, and an aura that seems to shimmer with starlight, Aurelius exudes a tranquil aura that draws others to him.
+
+p:Aurelius's connection to celestial magic runs deep, allowing him to tap into the cosmic energies of the heavens. He can manipulate light and energy, projecting dazzling beams of light, creating illusions, and wielding the power of the stars with astonishing precision. His command over celestial magic has earned him the title "Starborn," a testament to his celestial heritage.
+
+p:As the head of House Mitras, Aurelius upholds the traditions and teachings of celestial magic. He guides his fellow house members in their studies, fostering an environment where enlightenment and the pursuit of spiritual growth are paramount. Aurelius emphasizes the importance of harmony, balance, and the alignment of one's intentions with the celestial forces.
+
+p:Aurelius is not only a sorcerer but also a sage and philosopher. He seeks to understand the deeper connections between the celestial realm and mortal existence, exploring the mysteries of the cosmos and their impact on the world. His wisdom and insight make him a respected advisor and a pillar of knowledge within his realm.
+::END:HEAD
+=

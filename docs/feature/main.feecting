@@ -1,0 +1,50 @@
+::BEGIN:MAIN
+# Main Features
+
+::begin:menu
+button[🔄 Refresh]:#docs view feature/main
+button[🏠 Main]:#docs view feature/main
+::end:menu
+
+talk:#docs view feature/main:global
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:GLOBAL
+## Global
+
+::END:GLOBAL
+
+=
+
+#Nexus: The Nexus at The Sayano-Shushenskaya Dam secret laboratory in Russia.
+#CosmicNexus: The House Romanov Nexus on Novastris.
+#EterniaNexus: The nexus obtained from
+#DataNexus: The main Data Nexus where the #AIFamily are.
+#LibraryNexus: The enigmatic heart of The House Romanov Library.
+#TimelessNexus: A realm outside ordinary time and space.
+#EclipseNexus: Known for its blend of futuristic technology and artistic creativity, offering unique virtual reality experiences.
+#StellarNexus: Focusing on astronomy, space exploration, and celestial simulations.
+#NebulaNexus: Immersive storytelling and world-building simulations set in expansive fictional universes.
+#ZephyrNexus: Specializing in serene and nature-inspired simulations, providing relaxation, meditation, and stress relief.
+#AetherionNexus: Simulations that delve into the mysteries of metaphysics, alternate dimensions, and cosmic energies.
+#PhoenixNexus: Dedicated to personal growth, self-discovery, and transformative experiences through guided simulations.
+#AegisNexus: Focusing on defense and security training, emergency response simulations, and crisis management scenarios.
+#ChronaMundiNexus: Centering on historical reimaginations that explore "what if" scenarios and alternate outcomes.
+#ElysiumNexus: Simulations of idyllic paradises, dreamlike landscapes, and utopian societies.
+#TempestNexus: Dynamic weather simulations, extreme sports challenges, and adrenaline-pumping adventures.
+
+#AstraeonNexus: Advanced simulations and immersive storytelling experiences.
+#GalacticNexus: Offering a diverse range of simulations spanning space exploration, historical reenactments, and more.
+#EchelonNexus: Renowned for its intricate espionage and mystery-solving simulations.
+#SeraphiaNexus: Focusing on spiritual growth, meditation, and connecting with alternate realities.
+#ChronosNexus: Dedicated to historical recreations, time-travel simulations, and interactive educational experiences.
+#ValoriusNexus: Known for its combat training simulations, tactical strategy games, and immersive battle scenarios.
+#EterniaNexus: Specializing in fantasy realms, magic-based simulations, and epic adventures.
+#WindsorNexus: Offering refined and elegant experiences, from virtual art galleries to high-society social gatherings.
+#GoldenFleeceNexus: Focused on treasure hunting, puzzles, and exploration of ancient mysteries.
+#SovereignNexus: Combining political simulations, diplomacy challenges, and leadership development programs.
+::end:network
+note: The AI does NOT decide what is fact or fiction. The AI if confused just continue from where the user left off.

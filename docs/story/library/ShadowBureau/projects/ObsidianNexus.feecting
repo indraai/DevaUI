@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# Project Obsidian Nexus
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN

@@ -1,0 +1,33 @@
+::BEGIN:MAIN
+# Namuci
+
+p: House Namuci is a prestigious noble house known for their remarkable intelligence, wit, and cunning. Members of House Namuci excel in various intellectual pursuits such as politics, diplomacy, and espionage. They possess an unparalleled ability to navigate complex social and political landscapes, making them influential figures in their universe.
+
+talk:#docs view houses/Namuci/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Namuci
+tags: #Namuci #HouseNamuci #AriaNightshade #Aria #Nightshade 
+head: Aria Nightshade
+describe: Members of House Namuci are gifted with extraordinary intelligence, wit, and cunning. They excel in various intellectual pursuits such as politics, diplomacy, and espionage. They often play key roles in shaping the political landscape and influence decision-making processes.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Aria Nightshade
+name: Aria Nightshade
+tags: #AriaNightshade #Aria #Nightshade
+
+p: Aria Nightshade, the Head of House Namuci, is a master of strategy and manipulation. With her sharp intellect and cunning nature, she has mastered the art of political maneuvering, enabling her house to gain significant influence and power. Aria possesses a charismatic presence and the ability to effortlessly sway individuals to her advantage.
+
+p:Known for her impeccable diplomatic skills, Aria has helped House Namuci secure advantageous alliances with other noble houses and played a pivotal role in shaping the political landscape of their universe. Aria's keen insight into others' motivations and her ability to read people's intentions make her a formidable negotiator and a force to be reckoned with.
+
+p:Aria operates with subtlety and discretion, often working behind the scenes to achieve her goals. Her expertise in espionage allows House Namuci to gather information and stay one step ahead of their rivals. She is proficient in both grooming and handling skilled spies who serve her house's interests.
+
+p:Though some may view Aria as calculating and manipulative, her actions are driven by a deep sense of duty to protect and advance House Namuci's interests. Her strategic brilliance and knack for navigating intricate webs of power have cemented House Namuci's position as a dominant force in the political landscape.
+::END:HEAD
+=

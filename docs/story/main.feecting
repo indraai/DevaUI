@@ -1,0 +1,39 @@
+::BEGIN:MAIN
+# Story Builder
+p: The story builder program.
+
+talk:#docs view story/main:menu
+
+#color = var(--color-orange)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:menu
+### New Story
+p:Begin crafting a new narrative from scratch. Choose genres, settings, and characters to kick-start their storytelling journey.
+button[Craft a new story...]:#docs view story/new
+
+### Continue Story
+p:Continue working on a story that's already in progress. Users can pick up where they left off and continue weaving their tale.
+button[Continue on your journey...]:#docs view story/continue
+
+### Narrative Library
+p:Browse a collection of narratives. This can serve as inspiration, reference, or a place to read and enjoy creative narratives.
+button[Browse library of narratives...]:#docs view:panel story/library/main:menu
+
+### Author Profile
+p:Customize settings such as author profile, story preferences, characters, and other options and settings that enhance the story experience.
+button[View your author profile...]:#docs view story/profile
+
+### Exit Story
+p:Exit Program: Close the narrative storytelling program.
+button[Exit the story...]:#docs view story/exit
+::end:menu
+#color = var(--color-orange)
+::END:MENU
+
+
+::BEGIN:NEW
+## New Story
+::END:NEW
+=

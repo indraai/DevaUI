@@ -1,0 +1,11 @@
+::BEGIN:MAIN
+# Saryana City
+
+title: Saryana City
+name: Saryana
+realm: Arjika Realms
+
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

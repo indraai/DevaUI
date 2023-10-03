@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# The Echoing Walls
+p:The walls of the chamber are adorned with mirrors that reflect not only your image but also glimpses of possible futures and pasts. Whispers of voices, both familiar and unknown, seem to resonate from the mirrors, weaving a symphony of stories that blend into the symphony of the universe.
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

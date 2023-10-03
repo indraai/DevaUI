@@ -1,0 +1,37 @@
+::BEGIN:MAIN
+# Agni
+
+p:House Agni is a noble house known for their deep connection with the element of fire and their mastery of fire-based magic. They are renowned for their ability to manipulate flames, summon infernos, and harness the destructive power of fire for both offense and defense. Members of House Agni are respected fire mages and guardians of ancient pyromantic knowledge.
+
+talk:#docs view houses/Agni/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Agni
+tags: #Agni #HouseAgni #LadySeraphinaFlameheart #LadyFlameheart #Seraphina #Flameheart
+head: Lady Seraphina Flameheart
+describe: This house is closely associated with fire and is known for its members' passion and creativity. They often excel in fields related to arts, music, and entertainment.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lady Seraphina Flameheart
+name: Lady Seraphina Flameheart
+tags: #LadySeraphinaFlameheart
+
+p:Lady Seraphina Flameheart is the Head of House Agni, a charismatic and fierce leader whose presence commands attention. With her fiery red hair and intense, determined eyes, Seraphina embodies the essence of the flames that House Agni has sworn to protect and control.
+
+p:From an early age, Seraphina displayed a natural affinity for fire magic, and her powers grew to surpass all of her peers. She can conjure and manipulate flames with remarkable precision and unleash devastating firestorms at will. Her command over fire is unmatched, and she is often hailed as the Flameheart, the epitome of House Agni's mastery of fire.
+
+p:As the head of House Agni, Seraphina ensures that their ancient pyromantic knowledge is upheld and passed down through the generations. She guides her fellow house members in mastering the intricacies of controlling fire, teaching them to channel their powers responsibly and wield them for the greater good.
+
+p:Seraphina is not only a skilled sorceress but also a shrewd tactician. She strategizes meticulously, utilizing fire-based magic to create tactical advantages both in warfare and diplomacy. Her ability to summon walls of fire and rain down fiery destruction upon their enemies has made House Agni a force to be reckoned with in both magical and military matters.
+
+p:Despite the destructive nature of their abilities, Seraphina emphasizes the responsible and controlled use of fire magic. She emphasizes the importance of tempering their power with wisdom and compassion, ensuring that fire is a tool for protection and progress rather than an agent of chaos.
+
+p:Under Seraphina's leadership, House Agni stands as a beacon of fire magic in their realm. Their skill and mastery over flames have earned them respect and fear from their allies and enemies alike. They are staunch defenders of their domain, utilizing their pyromantic prowess to safeguard their realm and the interests of their people.
+::END:HEAD
+=

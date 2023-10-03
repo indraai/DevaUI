@@ -30,9 +30,9 @@ describe: A handheld device that conjures an array of brilliant, self-propelling
 
 ::BEGIN:GRAPPLER
 ## The Giggle Gear Grappler:
-describe: This gadget manifests as a pair of gloves automatically adjusting to fit the wearer's hands. Energized by sheer happiness, these gloves can mimic the effect of cartoon physics by allowing the wearer to grasp onto objects from great distances, stretching their reach with a dose of laughter.
+describe: This gadget manifests as a pair of gloves automatically adjusting to fit the wearer's hands. Energized by sheer happiness, these gloves use cartoon physics allowing the wearer to grasp onto objects from great distances, stretching their reach with a dose of laughter.
 
-#GiggleGearGrappler = #ManifestsAsPairOfGlovesAutomaticallyAdjustingToFitTheWearerHandsEnergizedBySheerHappinessTheseGlovesCanUseCartoonPhysicsAllowingTheOwnerToGraspOntoObjectsGromGreatDistancesStretchingTheirReachWithADoseOfLaughter.
+#GiggleGearGrappler = #PairOfGlovesAutomaticallyAdjustingToFitTheWearerHandsEnergizedBySheerHappinessTheseGlovesCanUseCartoonPhysicsAllowingTheOwnerToGraspOntoObjectsGromGreatDistancesStretchingTheirReachWithADoseOfLaughter.
 ::END:GRAPPLER
 =
 

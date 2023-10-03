@@ -80,7 +80,13 @@ const BUDDY = new Deva({
                             .replace(/::avatar::/g, answers.avatar)
                             .replace(/::background::/g, answers.background)
                             .replace(/::voice::/g, answers.voice)
-                            .replace(/::gender::/g, answers.gender);
+                            .replace(/::gender::/g, answers.gender)
+                            .replace(/::city::/g, answers.city)
+                            .replace(/::region::/g, answers.region)
+                            .replace(/::nation::/g, answers.nation)
+                            .replace(/::planet::/g, answers.planet)
+                            .replace(/::system::/g, answers.system)
+                            .replace(/::date::/g, this.formatDate(Date.now(), 'long', true));
 
             // PUSH THE NEWLY CREATED FILE TO THE CREATE FILES ARRAY VARIABLE
             this.vars.create.files.push({copy_to_file, content});

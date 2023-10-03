@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# The Genesis Society
+p: This organization is dedicated to harnessing and manipulating the power of these extraordinary infants for their own nefarious purposes.
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Starfall Citadel Haven
+
+title: Starfall Citadel Haven
+name: Starfall Citadel Haven
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

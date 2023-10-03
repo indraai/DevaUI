@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# The Healers Guild
+
+p:
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

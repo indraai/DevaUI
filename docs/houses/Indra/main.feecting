@@ -1,0 +1,36 @@
+::BEGIN:MAIN
+# Indra
+
+p: House Indra is a noble house renowned for their exceptional command of magical abilities and their deep connection with the mystical forces that shape the universe. They are known for their unmatched mastery of elemental magic, wielding the powers of fire, lightning, and storms. Members of House Indra are revered as powerful sorcerers and guardians of ancient arcane knowledge.
+
+talk:#docs view houses/Varuna:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Indra
+tags: #Indra #HouseIndra #LordAravindStormbringer #LordStormbringer #Aravind #Stormbringer
+head: Lord Aravind Stormbringer
+describe: Members of House Indra are known for their leadership abilities and their strategic thinking. They are often involved in politics and military affairs.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lord Aravind Stormbringer
+name: Lord Aravind Stormbringer
+tags: #LordAravindStormbringer
+p: Lord Aravind Stormbringer is the Head of House Indra, a formidable and enigmatic figure whose command over elemental magic is unparalleled. With his piercing gaze and intense demeanor, Aravind exudes an aura of power and mystique that captivates those around him.
+
+p: Aravind is a prodigious sorcerer, born with an innate connection to the elemental forces that shape the world. He can summon and control storms, conjure lightning, and unleash devastating fire with a mere thought. His mastery over the elements has earned him the title "Stormbringer," a testament to his ability to harness nature's fury.
+
+p: As the Head of House Indra, Aravind is responsible for safeguarding the ancient knowledge and secrets held by his noble house. He guides the younger members in their studies of magic, nurturing their talents and ensuring the continuation of House Indra's legacy.
+
+p: Aravind's strategic brilliance and deep understanding of arcane lore make him a formidable asset in matters of both diplomacy and warfare. He can manipulate the elements to gain an advantage on the battlefield, harnessing fire and lightning to decimate his enemies while providing protection and support to his allies. His magical prowess and tactical acumen have earned him the respect and admiration of his peers.
+
+p: Despite his formidable powers, Aravind is a leader who values wisdom, compassion, and the balance of nature. He seeks to wield his magical abilities responsibly, never losing sight of the potential consequences of his actions. He endeavors to protect the realm from nefarious forces while ensuring harmony between mortal life and the elemental powers that govern the world.
+
+p: Under Aravind's guidance, House Indra stands as a beacon of arcane knowledge and power. Their mastery over the elements and their dedication to preserving the delicate balance of magical forces make them a force to be reckoned with in both the arcane and political realms.
+::END:HEAD
+=

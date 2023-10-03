@@ -1,0 +1,11 @@
+::BEGIN:MAIN
+# Lost Heir
+button[Lost Heir]:Lost Heir: Embark on a journey to find the missing heir of House Romanov.
+
+button[Lost Heir]:Lost Heir: Let's take the first step.
+
+button[Lost Heir]:Lost Heir: The Mysterious Cave: Confronting the Truth
+button[Lost Heir]:Lost Heir: The Mysterious Cave: Confronting the Truth: The Truth Revealed: Secret Identity
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

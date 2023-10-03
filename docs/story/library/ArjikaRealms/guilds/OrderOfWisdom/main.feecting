@@ -1,0 +1,6 @@
+::BEGIN:MAIN
+# The Order of Wisdom
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

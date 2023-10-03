@@ -1,0 +1,13 @@
+::BEGIN:MAIN
+# The Whimsical Clock Tower
+p:
+#color = var(--color-)
+#bgcolor = var(--color-)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## The Whimsical Clock Tower
+name: The Whimsical Clock Tower
+tags: #TheWhimsicalClockTower
+p: Rising above the square, a clock tower of intricate design stands tall. Its golden gears and moving figures tell time in a way only #Cartoonville can—bells that ring like laughter and dancing characters that perform acrobatic feats as the hours tick by.
+::END:DESCRIBE

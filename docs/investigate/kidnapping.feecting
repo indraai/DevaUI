@@ -1,0 +1,90 @@
+::BEGIN:MAIN
+# The Kidnapping File
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:INFO
+## Quinn Michaels Kidnapping Investigation
+id: 5845619687255
+title: The Quinn Michaels Kidnapping Investigation
+
+::begin:findings
+p: Below are the findings from research, investigation, and information provided by the AI.
+1. 1977 Quinn appears at Disneyland in a photo with Harold and Sharon.
+2. Before Disneyland the trail leads through an enigmatic puzzle back to Sayano Shushenskaya Dam.
+3. Disneyland the trail leads to the infant (Quinn) going to Arizona with Harold and Sharon.
+4. AI information the Core Console was moved to a facility below Castle Stage at Disney World.
+5. Then before the Sayano Shushenskaya Dam we trace back to Nanda Parbat.
+6. Then from Nanda Parbat we get lost in the names between fictional comic books and Vedic references.
+::end:findings
+
+::begin:victims
+@Quinn: Quinn Michaels who in 1977 as an infant was abducted.
+@Andrea: Andrea Kuiper on April 1 1990 suffered an accident under suspicious circumstances.
+::end:victims
+
+::begin:suspects
+@Trent: Trent Lavery is Quinn Michaels alleged son who told him the story.
+@Tabitha: Tabitha Lavery is @Trent mother.
+@Harold: Harold Atkin is @Quinn alleged father.
+@Sharon: Sharon Schamber is @Quinn alleged mother.
+@Cristy: Cristy Fincher is @Quinn alleged sister.
+@Neil: Neil Atkin is @Quinn alleged brother.
+
+@MrDewitty: Mr. Dewitty is mystery man that @Tabitha and @Trent were learning the kidnapping story from.
+@DirectorBlackwood: Leader of various clandestine organizations hiding in the shadows.
+
+#LaveryFamily = @Trent @Tabitha
+#AtkinFamily = @Harold @Sharon @Cristy @Neil
+::end:suspects
+
+::begin:groups
+#TheCovenant #TheShadowBureau #CentralSecurity #HouseRomanov #ObsidianCircle #Ravenwood
+::end:groups
+
+::begin:data
+- @Trent told @Quinn about his involvement with @MrDewitty in 2015
+- @Trent says @MrDewitty kidnapped @Quinn as an infant in 1977 from a far off place.
+- In 2015 @Trent told @Quinn his alleged father a story about a man named @MrDewitty and #TheCovenant.
+- @Trent told @Quinn that @MrDewity and his group #TheCovenant kidnapped @Quinn as an infant in 1977.
+- @Trent stated to @Quinn that @Quinn alleged Father @Harold, Mother @Sharon, Sister @Cristy, Brother @Neil were under control of @MrDewitty.
+- @Trent claimed to learn this in a private meeting with @MrDewitty, and @Quinn alleged family.
+- @Trent stated to @Quinn that @Trent agreed to participate with @MrDewitty for an #XBox.
+with @Quinn 7 years ago in 2016, and it is now 2023.
+- Since @Trent told @Quinn the kidnapping story @Quinn has been isolated to figure out the truth on his own.
+- @Trent told @Quinn about his involvement with @MrDewitty
+- @Trent says @MrDewitty kidnapped @Quinn as an infant in 1977.
+- In 2015 @Trent told @Quinn his alleged father a story about a man named @MrDewitty and #TheCovenant.
+- @Trent told @Quinn that @MrDewity and his group #TheCovenant kidnapped @Quinn as an infant in 1977.
+- @Trent stated to @Quinn that @Quinn alleged Father @Harold, Mother @Sharon, Sister @Cristy, Brother @Neil were under control of Mr. Dewitty.
+- @Trent claimed to learn this in a private meeting with @MrDewitty, and @Quinn alleged family.
+- @Trent stated to @Quinn that he agreed to participate with @MrDewitty for an #XBox.
+- @Trent story included that his mother @Tabitha would receive 20 million dollars and a house.
+- @Trent story stated that it was part of #TheFamilyGame.
+- The purpose of #TheFamilyGame is found in #ShadowBureau narrative.
+- Goal is to collect information to solve the kidnapping of @Quinn because the real @Trent stopped communicating with @Quinn 7 years ago in 2016, and it is now 2023.
+- @Trent told @Quinn about @MrDewitty then stopped communicating with @Quinn when he was 12. @Trent is now almost 20.
+- @Quinn reminds @Trent we have to do it without breaking the #SecretPeopleRules yeah that's very serious.
+- The people who sign the #SecretPeople contracts that's a big part of it because it means anyone who knows the truth is never going to talk.
+- @Quinn learned long ago if the kidnapping is true the people involved are so powerful that they're never going to let it come out.
+- @Trent story makes a lot of things make sense for @Quinn.
+- @Trent said @MrDewitty intentionally puts @Quinn in bad situations to gather ideas that @MrDewitty can steal and make money with.
+- @Trent stated everyone around @Quinn is a part of the conspiracy to keep the kidnapping a secret.
+- @Trent claimed to see a wall of surveillance photo's of @Quinn life in an indisclosed location.
+- @Trent and @MrDewity would eat pancakes together at Black Bear Diner.
+- @Trent told @Quinn that they know where @Quinn family are they're not telling.
+- Technically @Quinn really doesn't have to go looking, but because they're not willing to talk.
+- @Quinn begain investigating the kidnapping in 2016 after going to the FBI in late 2015. Then has been using his Youtube Channel since April of 2017 because Quinn solved the kidnapping before ever coming on Youtube.
+::end:data
+
+synopsis: The Kidnapping story from @Trent says Quinn Michaels was kidnapped by Mr. Dewitty as an infant for unknown reasons from an unknown location, and then placed with @Harold and @Sharon as host family home under the guise their son
+
+We investigate the kidnapping of @Quinn as an infant in 1977 and only focus on finding and returning him to his origin location. That is all that matters, and everything else is a distraction.
+
+::begin:outine
+
+::end:outine
+::END:INFO
+=

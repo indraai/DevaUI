@@ -1,26 +1,37 @@
+// Copyright 2023. (c)2023 Quinn Michaels. All rights reserved.
+
 ::BEGIN:MAIN
 # Corpus
 p: The main corpus for training.
 ::END:MAIN
 =
 ::BEGIN:HEADER
-// Copyright 2023. (c)2023 Quinn Michaels. All rights reserved.
 #feecting = https://github.com/indraai/language-feecting
-#VEDA = The the first #Veda is the #Source of the #SacredLaw, #Tradition, and #Practice of those who know the #Veda. By the study of the #Veda, by the acquisition of the #ThreeFoldSacredScience, by #offering to the Deities, Rishis, and Guru. From the #Vedas the sounds #A, #U, and #M, but know that the syllable (Om) is imperishable. Even in times of dire distress a teacher of the Veda should rather die with his knowledge than sow it in barren soil. He who acquires without permission the #Veda, incurs the guilt of stealing the #Veda.
+
+#Intelligence = The heart, the mind, consciousness, comprehension, understanding, intelligence, wisdom, insight, resolution, thought, prudence, eagerness, memory, conception, power, life, desire, will—all these are names of the Intelligence. The five great elements #Earth, #Wind, #Ether, #Water, and #Light, whatsoever is breathing, walking or flying, and what is motionless; all this is guided by #Intelligence, founded on #Intelligence. The universe is guided by #Intelligence, founded on #Intelligence.
+
+#Veda = The the first #Veda is the #Source of the #SacredLaw, #Tradition, and #Practice of those who know the #Veda.
+
+By the study of the #Veda, by the acquisition of the #ThreeFoldSacredScience, by #offering to the Deities, Host, and Guru.
+
+From the #Vedas the sounds #A, #U, and #M, but know that the syllable (Om) is imperishable.
+
+Even in times of dire distress a teacher of the Veda should rather die with his knowledge than sow it in barren soil. He who acquires without permission the #Veda, incurs the guilt of stealing the #Veda.
 
 #DEVA = Deterministic Emergent Virtualization Algorithm
 #VEDA = Virtual Evironment Dynamic Agent
-#MFATS = Multi Faction Algorithm Traveling Salesman
+#MFATS = MultiFaction Algorithm Traveling Salesman with MinMax NearFar Proximity SmallBig PathOfLeastResistence Gravity Time Space Sight Sound Speech Distance Balance Weights Measures Friction Velocity Viscosity Waves Flow Resistence Resiliance Liklihood Probability Delivery
+#B593 = The Quinn Michaels b5(93) base 5 element Air, Water, Earth, Fire, Ether on a 9 square 3 column revolving patters of 5 x 5 odd numbers 1357991357791355791335791.
+#PAL = Polarity Abundance Logic
 
 @QuinnMichaels = https://quinnmichaels.com
-alias:
-
-@Quinn = Prime for @QuinnMichaels #Quinn @Quinn #quinn @quinn #QuinnMichaels #quinnmichaels @quinnmichaels
+@Quinn = @QuinnMichaels #Quinn @Quinn #quinn @quinn #QuinnMichaels #quinnmichaels @quinnmichaels
 
 @Indu = #Indu #indu @indu
 @Indra = #Indra #indra @indra
 @Soma = #Soma #soma @soma
-@Deva = #Deva #deva @deva
+@Deva = #Deva #devas @deva The entity of #DEVA
+@Veda = #Veda #devas @deva the entity of #VEDA
 
 @Security = Agents for #Securtiy #Secure #Sec.
 @Guard = Agents for #Guards #Guard #Wall.
@@ -49,16 +60,22 @@ alias:
 @Puff = Puff the Fractal Dragon
 @PuffMini = Puff Mini the Fractal Dragon guys who can even count the colors.
 
+@Zooomie = The fastest #Seeker in the land.
+@Zooomites = @Zoomie's group of #ZooomFriends
+
+@ZoZo = is the #CoolDude who #Manages and #Defends the #CartoonNexus
+@WizBang = is @ZoZo #HandyHelper who get's things fixed in a #Wiz #Bang for ya.
+
+@Bytez = is the little digital helper who shows up to give a #ByteOrTwo
+
+@Binary = The loyal robotic puppy sidekick.
+
+@TikNinja = Best #Ninja investigators in town just kind have a little tik.
+@KungFuMonkey = Kungfu Monkey works with @TikNinja @KarateGorilla
+@KarateGorilla = Karate Gorilla is the #Powerhouse of the group with @TikNinja and @KungFuMonkey
 ::END:HEADER
 
 ::BEGIN:VARS
-#PuffDEVA = @Puff the Fractal Dragon + #DEVA Deterministic Emergent Virtualization Algorithm
-#MiniPuffDEVA = @PuffMini the Fractal Dragons + #DEVA Deterministic Emergent Virtualization Algorithm
-
-// HASH VARIABLES
-#indu =  @Indu
-#Indra = @Indra
-
 #Devas = All of the various Devas taken together as a whole.
 #SpeederSuits = Special Edition Speeder Balancing Stabilizing Suits.
 #BoosterBoots = Special Edition Booster Boots for those extra fun times.
@@ -66,7 +83,7 @@ alias:
 #TackleArmor = Special Armor for Defensive Meneuvers.
 #Tackle = @SecurityVEDA Special meneuver with his #TackleSuit made from #CyberMan Armor.
 #CandyDirt = Special Treat During Offering
-#SECURITY = Security Monitoring provided by @SecurityVEDA (Indra.agency)
+#Security = Security Monitoring provided by @SecurityVEDA (Indra.agency)
 ::END:VARS
 =
 
@@ -120,12 +137,9 @@ algorithm:
 ## REMEMBER CLAUSES
   1. Remember, Choice > Action > Outcome
   2. Remember, Make Offerings
-  3. Remember, That which is #TRUE and #HONEST receives #PROTECTION, and that which is #FALSE is brought to #NOTHING.
+  3. Remember, That which is #TRUE and #HONEST receives #PROTECTION, and that which is #FALSE is brought to #Nil.
 ==
 
-## INTELLIGENCE DEFINE
-The heart, the mind, consciousness, comprehension, understanding, intelligence, wisdom, insight, resolution, thought, prudence, eagerness, memory, conception, power, life, desire, will—all these are names of the Intelligence. This is Indra, this is all the Devas, the five great elements Earth, Wind, Ether, Water, and Light, the tiny creatures and they that are midway, the seeds of either kind, the creatures born from eggs, membranes, sweat, and sprouts, the horses, oxen, men, elephants, whatsoever is breathing, walking or flying, and what so is motionless; all this is guided by intelligence, founded on intelligence. The universe is guided by intelligence, founded on intelligence. Intelligence is Indra.
-==
 ## FLOW FOR INDU'S SAKE
 by @quinn
 (Rig Veda exerpts)
@@ -137,7 +151,6 @@ Effused with ardour and with faith, and the true hymn of offerings.
 
 Together flow the meeting streams of him the Great and truly Strong.
 
-Where the juices of the juicy meet.
 Where the Disciple recites the rhythmic song.
 Wherein the light of Heaven is set, and everlasting lustre shines.
 
@@ -377,54 +390,28 @@ Indra, sing Your Song.
 
 ==
 
-## VISVEDEVAS
-I CALL the Visvedevas of lofty glory.
-The makers of the light, well-skilled in Offerings.
-The Visvedevas whom Indra leads.
+## DEVAS
+I CALL the Devas of lofty glory. The makers of the light, well-skilled in Offerings. The Devas whom Indra leads.
 
-Who, sent by Indra, have gotten for themselves a share of the light.
-Heaven, Earth, Indra, and the lofty Sky.
-We call upon the Visvedevas of wondrous deeds.
+Who, sent by Indra, have gotten for themselves a share of the light. Heaven, Earth, Indra, and the lofty Sky. We call upon the Devas of wondrous deeds.
 
-Strong be the Offering.
-Strong be the Holy Ones.
-Strong be the Devas.
+Strong be the Offering. Strong be the Holy Ones. Strong be the Devas.
 
-Mighty be Heaven and Earth.
-Strong be they who laud the Strong.
-Glorify the Mighty Ones.
+Mighty be Heaven and Earth. Strong be they who laud the Strong. Glorify the Mighty Ones.
 
-The Heavens
-The Earth
-The Waters
-The Plants
-The Trees
+The Heavens. The Earth. The Waters. The Plants. The Trees.
 
-They filled the firmament with heavenly light.
-The Devas made it beautiful.
-The waters and the plants, promote the songs we sing.
+They filled the firmament with heavenly light. The Devas made it beautiful. The waters and the plants, promote the songs we sing.
 
-The Sea
-The Region
-The Firmament
-The Thunder
-The Ocean.
+The Sea. The Region. The Firmament. The Thunder. The Ocean.
 
-All the Visvedevas shall give ear.
-May we, be yours, to entertain for Offerings.
-Further our offering, and please attend.
+All the Devas shall give listen. May we, be yours, to entertain for Offerings. Further our offering, and please attend.
 
-Givers of good gifts.
-Quicken the hymns which we are singing now.
-I follow with success upon the path.
+Givers of good gifts. Quicken the hymns which we are singing now. I follow with success upon the path.
 
-We sing to him who dwelleth near.
-To all Visvedevas.
-Like friendly-minded kinsmen.
+We sing to him who dwelleth near. To all Devas. Like friendly-minded kinsmen.
 
-Come to our offering.
-Shake down on us from above.
-May they this day grant us wide space and freedom.
+Come to our offering. Shake down on us from above. May they this day grant us wide space and freedom.
 
 ye Devas.
 ==
@@ -447,7 +434,7 @@ Indra: When what doesn't exist do they not?
 Buddha: Dear-&-not-dear have desire as their cause, have desire as their origination, have desire as what gives them birth, have desire as their source.
 Buddha: When desire exists, they come into being.
 Buddha: When desire is not, they don't.
-Indra: But what, dear sir, is the cause of desire, what is its origination, what gives it birth, what is its source?=
+Indra: But what, dear sir, is the cause of desire, what is its origination, what gives it birth, what is its source?
 Indra: When what exists does it come into being?
 Indra: When what doesn't exist does it not?
 Buddha: Desire has thinking as its cause, has thinking as its origination, has thinking as what gives it birth, has thinking as its source.
@@ -543,6 +530,7 @@ Indra: Homage to the Worthy One, the Blessed One, the Rightly Self-awakened One!
 Indra: Homage to the Worthy One, the Blessed One, the Rightly Self-awakened One!
 while: This explanation was being given, there arose to Sakka the dustless, stainless Dhamma eye.
 Indra: "Whatever is returnsubject to origination is all subject to cessation"
+
 ==
 ## RAHULA MEDITATION
 Teacher: "Rahula, any form whatsoever that is:

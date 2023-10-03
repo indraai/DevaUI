@@ -1,0 +1,29 @@
+::BEGIN:MAIN
+# Vayu
+
+p:House Vayu is a noble house renowned for their deep connection with the element of air and their mastery of wind-based magic. They are known for their ability to manipulate the air currents, summon powerful gusts, and harness the swift and elusive nature of the wind. Members of House Vayu are esteemed air mages and guardians of the skies.
+
+talk:#docs view houses/Vayu/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Vayu
+tags: #Vayu #HouseVayu #LordZephyrusStormcaller #LordStormcaller
+head: Lord Zephyrus Stormcaller
+describe: Members of House Vayu are known for their agility and adaptability. They often excel in physical activities and sports. They are also associated with communication and transportation.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lord Zephyrus Stormcaller
+tags: #LordZephyrusStormcaller #LordStormcaller
+p:Lord Zephyrus Stormcaller is the Head of House Vayu, a figure of ethereal grace and power whose presence is as elusive and invigorating as the wind itself. With his windswept hair, piercing blue eyes, and an aura that seems to carry the whispers of the breeze, Zephyrus embodies the essence of the winds that House Vayu has sworn to safeguard and control.
+
+p:Zephyrus's connection to the element of air runs deep, granting him the ability to manipulate and shape air currents at will. He can summon gentle breezes, create powerful cyclones, and ride the wind with unmatched grace and agility. His command over the winds has earned him the title "Stormcaller," a testament to his ability to harness the raw power of the air.
+
+p:As the head of House Vayu, Zephyrus upholds the ancient traditions and teachings of air magic. He guides the members of his house in mastering the control and manipulation of air, teaching them the importance of balance, agility, and adaptability. Zephyrus emphasizes the need to honor the winds and to use their powers responsibly and with respect for all living creatures.
+::END:HEAD
+=

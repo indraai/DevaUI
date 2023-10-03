@@ -1,0 +1,16 @@
+::BEGIN:MAIN
+name:
+user: @
+city:
+house:
+
+describe:
+motto:
+
+rules: 
+story:
+talk:#docs raw devas/security/main:notice
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

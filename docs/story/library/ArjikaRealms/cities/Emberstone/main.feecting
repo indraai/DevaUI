@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Emberfall Haven
+
+title: Emberfall Haven
+name: Emberfall Haven
+realm: Arjika Realms
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

@@ -1,0 +1,34 @@
+::BEGIN:MAIN
+# Manyu
+
+p: House Manyu is a renowned and ancient noble house known for their martial prowess, disciplined warriors, and commitment to honor and loyalty. They have a long-standing tradition of producing skilled fighters and formidable military commanders. Their members are respected for their unwavering dedication to protecting their realm and upholding the values of chivalry.
+
+talk:#docs view houses/Manyu/main:describe
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:DESCRIBE
+## House Manyu
+tags: #Manyu #HouseManyu #LordMagnusStormrider #LordStormrider #Magnus #Stormrider
+head: Lord Magnus Stormrider
+describe: Members of House Manyu are renowned warriors and skilled strategists. They are known for their bravery, proficiency in combat, and leadership abilities. They often take charge in defending their people and are also involved in military planning and execution.
+::END:DESCRIBE
+=
+
+::BEGIN:HEAD
+## Lord Magnus Stormrider
+name: Lord Magnus Stormrider
+tags: #LordMagnusStormrider
+p: Lord Magnus Stormrider is the Head of House Manyu and a legendary figure in their realm. He is a towering figure with an imposing presence, known for his exceptional combat skills and strategic brilliance. Magnus has earned a fearsome reputation as a valiant knight and a fearless leader on the battlefield.
+
+p: Magnus upholds the noble traditions and values of House Manyu with unyielding dedication. He is a firm believer in honor, integrity, and protecting the weak. As a wise and respected leader, he inspires unwavering loyalty and devotion from the warriors of House Manyu.
+
+p: Having honed his skills through rigorous training and countless battles, Magnus is an expert in various combat forms, wielding his ancestral weapon with deadly precision. He leads by example and instills a sense of discipline and camaraderie within House Manyu, ensuring that each member strives for excellence on and off the battlefield.
+
+p: While Magnus is known for his prowess in martial arts and his tactical acumen, he is also a fair and just ruler. He values diplomacy and seeks to maintain peaceful alliances with other noble houses whenever possible, but he is always prepared to defend his realm and its people if called upon.
+
+p: Under Magnus's leadership, House Manyu is a formidable force to be reckoned with. Their unwavering loyalty and dedication to the realm make them a respected house, and their warriors stand as a bulwark against any threats that may arise.
+::END:HEAD
+=

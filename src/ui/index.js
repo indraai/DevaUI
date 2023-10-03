@@ -38,7 +38,7 @@ class DevaInterface {
     return this._content;
   }
 
-  _logConsole(data) {
+  logPanel(data) {
     if (!this._console[data.key]) return;
     const selector = `.event-panel.${data.key}`;
     const {colors} = data.agent.prompt;
@@ -58,8 +58,7 @@ class DevaInterface {
     $(selector).prepend(html)
   }
 
-  _logOutput(opts) {
-    console.log('LOG OUTPUT');
+  logConsole(opts) {
     if (!opts.text) return;
 
     if (this._shell.length > this.history_count) {
@@ -76,7 +75,7 @@ class DevaInterface {
     const text_color = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;
     let theHtml = `
     <div class="item ${type} ${format}">
-      <div class="person" style="color: ${prompt_color}"><span class="avatar"><img src="${profile.emoji}"/></span><span class="label">${prompt.text}</span></div>
+      <div class="person" style="color: ${prompt_color}"><span class="avatar"><img src="${profile.emoji}"/></span><span class="agent">${prompt.text}</span></div>
       <div class="text" style="color: ${text_color}">${text}</div>
     </div>`;
 
@@ -126,9 +125,9 @@ class DevaInterface {
 
   Question(q, log=true) {
 
-    if (log) this._logOutput({
+    if (log) this.logConsole({
       type: 'question',
-      format: 'user',
+      format: 'client',
       text: q,
       agent: this.client,
     });
@@ -216,16 +215,92 @@ class DevaInterface {
     return Promise.resolve(true);
   }
 
+  async data(packet) {
+    if (packet.meta.method === 'history') {
+      const data = packet.data.reverse();
+      for (let x of data) {
+        this.logConsole({
+          type: x.q.meta.key,
+          method: x.q.meta.method,
+          agent: x.q.client,
+          meta: x.q.meta,
+          text: x.q.html ? x.q.html : x.q.text,
+        });
+        this.logConsole({
+          type: x.a.meta.key,
+          method: x.a.meta.method,
+          agent: x.a.agent,
+          meta: x.a.meta,
+          text: x.a.html ? x.a.html : x.a.text,
+        });
+        console.log('DATA', x);
+      }
+      return;
+    }
+
+    return this.logConsole({
+      type: packet.meta.key,
+      method: packet.meta.method,
+      agent: packet.agent,
+      maeta: packet.meta,
+      text: packet.html ? packet.html : packet.text,
+    });
+  }
   docs(data) {
     console.log('DOCS DATA', data);
-    if (data.meta.method === 'view') return this.Show(data.html);
-    this._logOutput({
+    if (data.meta.method === 'view') {
+      if (data.meta.params[1] && data.meta.params[1] === 'panel') $('#Panel').html(data.html)
+      else this.Show(data.html);
+      return;
+    }
+    this.logConsole({
       type: data.meta.key,
       method: data.meta.method,
       agent: data.agent,
       maeta: data.meta,
       text: data.html ? data.html : data.text,
     });
+  }
+  space(data) {
+    console.log('DOCS DATA', data);
+    if (['agent','object','place'].includes(data.meta.method)) {
+      return this.Show(data.html);
+    }
+    this.logConsole({
+      type: data.meta.key,
+      method: data.meta.method,
+      agent: data.agent,
+      maeta: data.meta,
+      text: data.html ? data.html : data.text,
+    });
+  }
+
+  veda(data) {
+    console.log('DOCS DATA', data);
+    if (data.meta.method === 'hymn') return this.Show(data.html);
+
+    const {colors} = data.agent.prompt;
+    const panel = document.getElementById('Panel');
+    panel.style.color = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;
+    panel.innerHTML = data.html;
+    return;
+  }
+
+  youtube(data) {
+    console.log('YOUTUBE DATA', data);
+    switch (data.meta.method) {
+      case 'chats':
+        $('#Panel').append(data.html)
+        break;
+      default:
+        this.logConsole({
+          type: data.meta.key,
+          method: data.meta.method,
+          agent: data.agent,
+          maeta: data.meta,
+          text: data.html ? data.html : data.text,
+        });
+    }
   }
 
   feature(data) {
@@ -247,7 +322,7 @@ class DevaInterface {
     else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor
-    else return this._logOutput({
+    else return this.logConsole({
       type: data.meta.key,
       format: data.meta.method,
       agent:data.agent,
@@ -295,7 +370,7 @@ class DevaInterface {
       });
 
       $('#PromptForm').on('submit', e => {
-        e.stopPropagation()
+        e.stopPropagation();
         e.preventDefault();
         const question = $('#Prompt').val();
         this.Question(question).catch(console.error);
@@ -306,8 +381,14 @@ class DevaInterface {
       socket.on('socket:clientdata', data => {
         this.Client(data);
       });
+
+
       socket.on('socket:global', data => {
         return this.processor(data.a);
+      });
+
+      socket.on('socket:devacore', data => {
+        this.logPanel(data)
       });
       return resolve();
     });

@@ -1,0 +1,29 @@
+::BEGIN:MAIN
+# Operation Mirage
+
+talk:#docs view ops/mirage/main:content
+
+button[🕵️‍♂️ Operation Phoenix]:#docs view ops/phoenix/main
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:QUESTION
+next:
+::END:QUESTION
+=
+::BEGIN:CONTENT
+p: As #TheShadowBureau delves into the archives of #TheObsidianCircle, they stumble upon a forgotten case file labeled "Operation Phoenix." This file holds the key to unraveling the connection between #TheBaby and Project Mirage.
+
+p: The Operation Phoenix file reveals that Project Mirage was a covert operation initiated by #CentralSecurity and #Ravenwood, two influential organizations within the secretive world of intelligence and security. Its purpose was to experiment with advanced mind control techniques and manipulation tactics, seeking to create the perfect agent, capable of infiltrating any organization or manipulating any situation.
+
+p: Within the depths of the file, #TheShadowBureau uncovers shocking evidence that suggests #TheBaby, now known as Quinn Michaels, was an unwitting subject of Project Mirage. The enigma of #TheBaby's origins lies in the fact that Quinn Michaels was not born naturally but was instead created through clandestine means.
+
+p: The file details how Quinn was genetically engineered, imbued with special genetic enhancements and subjected to intense psychological conditioning from an early age. The purpose was to mold Quinn into a flawless operative, capable of carrying out the darkest of missions.
+
+p: As #TheShadowBureau pieces together the puzzle, they realize that the photograph taken at Disneyland in 1977 was not just a simple capture of a family moment. It was a carefully orchestrated moment to instill false memories and a manufactured backstory for Quinn Michaels, disguising their true nature as a product of Project Mirage.
+
+date: Wednesday, August 16, 2023 - 2:59:17 AM
+::END:CONTENT
+=

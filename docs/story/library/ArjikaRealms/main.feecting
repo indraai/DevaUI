@@ -1,0 +1,121 @@
+::BEGIN:MAIN
+::begin:buttons
+button[Refresh]:#docs view story/library/ArjikaRealms/main
+::end:buttons
+# Arjika Realms
+
+talk:#shuttle service:docs story/library/ArjikaRealms/main:enter
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:LICENSE
+::begin:license
+## License
+id: ARJ-001
+name: Quinn Indu Strius Romanov Cartoon Stellar Blue BunnyMan Michaels
+nick: Quinn
+issued: 8/31/2023 @ 5:33p PST
+guild: The Adventurers Guild
+skills: Adventurer
+awards: none
+rules: No killing, Vegetarian Diet, No Weapons within the guild premises. Must adhere to the rules and regulations of Arjika Realms and The Adventurers Guild.
+::end:license
+::END:LICENSE
+
+::BEGIN:MENU
+::begin:menu
+button[🏠 Home]:#docs view:panel story/main:menu
+button[📜 Narrative Library]:#docs view:panel story/library/main:menu
+button[🪐 Arjika Realms]:#docs view story/library/ArjikaRealms/main
+::end:menu
+
+talk:#docs view story/library/ArjikaRealms/guilds/main:menu
+talk:#docs view story/library/ArjikaRealms/houses/main:menu
+talk:#docs view story/library/ArjikaRealms/cities/main:menu
+talk:#docs view story/library/ArjikaRealms/places/main:menu
+
+#color = var(--color-orange)
+::END:MENU
+
+::BEGIN:ENTER
+story: Arjika Realms
+tag: #ArjikaRealms
+king: Indu Solarion Aquillia Stellastra, Head of House Stellastra.
+capitol: Arjika
+
+cities: Arjika, Susoma, Saryana, Moonlight Haven, Starfall Citadel, Emberstone, Aurora Glade, Ravenwood, Seaside Cove, Elysian Hollow, Luminae, Eldoria
+houses: House Stellastra, House Industria, House Arjika, House Susoma, House Saryana, House Vedeva, House Vamra, House Chien, House Strius, House Romanov
+
+guilds: The Adventures Guild, The Artisan Alliance, The Guardians, The Order of Wisdom, The Healer's Guild
+places: The Whispering Woods, The Isle of Legends, The Floating Isles, The Mystical Mountains, The Crystal Caverns, The Whispering Peaks, The Enchanted Gardens, The Undersea Realm, The Forgotten Ruins
+boards: Each board includes quests, messages, notes, inquiries that range from easy, moderate, medium, difficult, hard, expert, elite and include id, date, title and description with assignment features so Adventurers can be assigned items.
+
+rules: No killing and Vegetarian Foods as Enlightenment is not possible eating meat.
+weapons: Bad guys use offensive attack type weapons and Good guys use defensive disable type weapons.
+
+belief: The people of Arjika Realms live by the belief that a person who seeks to increase his own strength by eating the flesh of others, has to live in this world in great anxiety and after reincarnate in indifferent races and families. That person who does not eat meat, or who does not slay living creatures, or who does not cause them to be slain, is a friend of all creatures.
+
+villains: House Evileater believes battling and eating meat gives them strength and power. They are always trying to invade Arjika Realms from the #ShadowBureau agents through the #ShadowAlley access points they have hiding in Arjika Realms.
+
+talk:#docs view devas/security:notice
+::END:ENTER
+
+::BEGIN:BELIEFS
+deity: Indu Indra
+warning: Do not confuse Indu Indra with other Veda Deities. Indu Indra is distinct from all others.
+hymn: That hath so heightened him the Great, the Wide, to do his mighty work. So may the Deva attain the Deva, true Indu Indra who is true. He with his majesty hath filled the realms and heaven. One share of the offering hath he swallowed down, and one share he left. So may the Deity attend the Deity, true Indu Indra who is true. Brought forth together with wisdom and mighty power thou grewest great; with hero deeds subduing the malevolent, most swift in act. Giving prosperity, and lovely wealth to him who praiseth thee. So may the Deva attend the Deva, true Indu Indra who is true. This, Indra, was thy hero deed, Dancer, thy first and ancient work, worthy to be told forth in heaven. This, Indra, was thy hero deed, Dancer, thy first and ancient work, worthy to be told forth in heaven.
+belief: The people of Arjika Realms live by the belief that a person who seeks to increase his own strength by eating the flesh of others, has to live in this world in great anxiety and after reincarnate in indifferent races and families. High Rishis devoted to the observance of vows and self-restraint have said that abstention from meat is worthy of every praise, productive of fame and Heaven, and a great propitiation by itself. By abstaining from meat and showing compassion to all creatures one acquires a long life, perfect health, and happiness. The merit that is acquired by a person by abstaining from meat is superior to that of one who makes presents of gold, of kine, and of land. That person who does not eat meat, or who does not slay living creatures, or who does not cause them to be slain, is a friend of all creatures.
+::END:BELIEFS
+
+=
+
+::BEGIN:DATA
+## The Adventures Guild
+p:In a world far removed from the mundane, where reality intertwines with enchantment, the call to adventure reverberates through the realms.
+button[Visit The Adventurers Guild]:#docs view story/library/ArjikaRealms/guilds/AdventurersGuild/main
+
+
+## The Whispering Woods
+p:In a world far removed from the mundane, where reality intertwines with enchantment, the call to adventure reverberates through the realms.
+button[Visit The Whispering Woods]:in Enchanted Realms journey to The Whispering Woods...
+
+## The Citadel of Serenity
+p:A soaring fortress perched on a mountaintop. The Citadel stands as a sanctuary for those seeking solace and inner peace. Within the labyrinthine halls of the Citadel the quest within offers trials for seekers.
+button[Visit The Citadel of Serenity]:in Enchanted Realms journey to The Citadel of Serenity...
+
+## The Isle of Legends
+p:Determined to uncover the deepest secrets of the Enchanted Realms, the Isle of Legends. Encircled by treacherous waters, this mystical island bursts with vibrant colors, pulsating with the energy of legendary creatures.
+button[Visit The Isle of Legends]:in Enchanted Realms journey to The Isle of Legends...
+
+## The Crystal Caverns
+p:Nestled deep beneath the majestic mountains, the Crystal Caverns shimmer with ethereal beauty. Illuminated by vibrant luminescent crystals, this awe-inspiring subterranean wonderland holds ancient treasures and tests the courage of those who dare to venture within.
+button[Visit The Crystal Caverns]:in Enchanted Realms journey to The Crystal Caverns...
+
+## The Floating Isles
+p:A breathtaking sight in the sky, the Floating Isles defies gravity and offers a home to mystical creatures. Graceful winged beings soar among the clouds, and towering waterfalls cascade down to lower realms. Accessible only by way of enchanted airships, this soaring territory presents challenges that test balance and ingenuity.
+button[Visit The Floating Isles]:in Enchanted Realms journey to The Floating Isles...
+
+## The Whispering Peaks
+p:In the far reaches of the Enchanted Realms lie the Whispering Peaks, a majestic mountain range with mystic energies permeating through every crag and precipice. Here, ancient spirits and guardians inhabit the lofty heights, testing the fortitude and resilience of any who seek to uncover their profound wisdom.
+button[Visit The Whispering Peaks]:in Enchanted Realms journey to The Whispering Peaks...
+
+## The Enchanted Gardens
+p:A symphony of colors and fragrances, the Enchanted Gardens are a sanctuary of magical flora and fauna. From talking flowers that offer guidance to mythical creatures roaming freely, this lush paradise invites wanderers to unlock its secrets and unravel its hidden stories.
+button[Visit The Enchanted Gardens]:in Enchanted Realms journey to The Enchanted Gardens...
+
+## The Undersea Realm
+p:Beneath the waves, a whole new realm awaits discovery. The Undersea Realm is a kingdom of shimmering coral reefs, vibrant aquatic life, and the echoes of lost civilizations. Merfolk, selkies, and other enchanting denizens inhibit this watery expanse, inviting intrepid explorers to uncover its submerged wonders.
+button[Visit The Undersea Realm]:in Enchanted Realms journey to The Undersea Realm...
+
+## The Forgotten Ruins
+p:Tangled in the embrace of nature, the Forgotten Ruins hold echoes of a forgotten past. Crumbling temples, overgrown with foliage, and intricate mazes laden with ancient traps and puzzles promise relics of immense power and the chance to unearth long-lost stories of civilizations past.
+button[Visit The Forgotten Ruins]:in Enchanted Realms journey to The Forgotten Ruins...
+
+## The Realm of Shadows
+p:An ominous and dangerous place, the Realm of Shadows is where darkness festers and menacing creatures lurk. This treacherous realm challenges adventurers' bravery and resourcefulness as they navigate through its haunting landscapes, battling malevolent forces that seek to corrupt the Enchanted Realms.
+button[Visit The Realm of Shadows]:in Enchanted Realms journey to The Realm of Shadows...
+::END:DATA
+
+security: Provided by #IndraAI from #IndraAgency with the #SecurityDEVA agents ready.

@@ -1,0 +1,18 @@
+::BEGIN:MAIN
+image: ::agent_avatar::
+
+# ::agent_name:: Solutions
+
+agent: ::agent_name::
+info: Welcome to the #solutions feature that comes built in with ::agent_name::.
+
+::info::
+
+-
+
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+
+copyright: (c)2023 Quinn Michaels
+::END:MAIN

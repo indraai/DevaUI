@@ -1,0 +1,27 @@
+::BEGIN:MAIN
+# Cities
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+::begin:buttons
+### Cities
+button[🏰 Arjika]:#docs view story/library/ArjikaRealms/cities/Arjika/main
+button[🌁 Susoma]:#docs view story/library/ArjikaRealms/cities/Susoma/main
+button[🌇 Saryana]:#docs view story/library/ArjikaRealms/cities/Saryana/main
+button[🌃 Luminae]:#docs view story/library/ArjikaRealms/cities/Luminae/main
+button[🌆 Eldoria]:#docs view story/library/ArjikaRealms/cities/Eldoria/main
+button[🏙️ Cartoonville]:#docs view story/library/ArjikaRealms/cities/Cartoonville/main
+button[🏢 Starfall Citadel]:#docs view story/library/ArjikaRealms/cities/StarfallCitadel/main
+button[⛩️ Moonlight Haven]:#docs view story/library/ArjikaRealms/cities/MoonlightHaven/main
+button[🏭 Emberstone]:#docs view story/library/ArjikaRealms/cities/Emberstone/main
+button[🛖 Aurora Glade]:#docs view story/library/ArjikaRealms/cities/AuroraGlade/main
+button[🏤 Ravenwood]:#docs view story/library/ArjikaRealms/cities/Ravenwood/main
+button[🏖️ Seaside Cove]:#docs view story/library/ArjikaRealms/cities/SeasideCove/main
+button[🛖 Elysian Hollow]:#docs view story/library/ArjikaRealms/cities/ElysianHollow/main
+::end:buttons
+::END:MENU
+
+=

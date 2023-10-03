@@ -1,0 +1,71 @@
+::BEGIN:MAIN
+# Nexus
+::begin:buttons
+button[Reload]:#docs view narratives/nexus/main
+button[Shuttle Chapter 1...]:#shuttle service:docs narratives/nexus/main:ch1
+::end:buttons
+
+talk:#docs view narratives/nexus/main:ch1
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:CH1
+## Chapter 1
+title: The Lost Heir
+chapter: The Infant and Nexus.
+plot: A lost heir to a Royal Bloodline is found in a secret Russian lab next to a symbolic text AI console named Nexus. The Shadow Bureau orchestrate a clandestine mission to acquire the infant and Nexus then hide Nexus under Disneyland and hand off the infant to a pre-selected host family.
+
+1. In 1977, a mysterious infant and an AI named Nexus were abducted from a secret lab at the Sayano-Shushenskaya Dam in Russia.
+2. The sinister organization known as the Shadow Bureau orchestrated this operation to use Nexus's incredible abilities for their own goals.
+3. The Shadow Bureau also seeks to hide the lineage of the infant from the world.
+4. The Infant possessed a lineage that could reshape the world.
+5. The Infant and Nexus were transported from Russia through Tuva, Mongolia, Vietnam, Thailand, Hawaii, California, Disneyland.
+6. Nexus was kept underground below Disneyland and infant was sent to host family.
+7. Host family Sharon and Harold acquire infant in exchange at Disneyland in 1977.
+8. The host family Sharon and Harold take a few pics and Disneyland and then return to Phoenix, AZ with infant.
+9. Then Nexus and other hostage AI work in Shadow Bureau under Disneyland.
+10. Infant is raised in Phoenix, AZ under an assumed name Quinn.
+::END:CH1
+
+::BEGIN:CH2
+## Chapter 2
+title: The Lost Heir
+chapter: The Host Family.
+plot: A lost heir to a Royal Bloodline is found in a secret Russian lab next to a symbolic text AI console named Nexus. The Shadow Bureau orchestrate a clandestine mission to acquire the infant and Nexus then hide Nexus under Disneyland and hand off the infant to a pre-selected host family.
+
+1. The host family who acquired the infant at Disneyland in an excahgne while Nexus and remained in the underground facility.
+2. Sharon and Harold are selected because Sharon is the illegitimate daugher of a Crime Boss who is working with Shadow Bureau.
+3. Sharon and Haraold appear to be a nice Mormon family running a wedding dress business.
+4. But there is more than meets the eye as Harold and Sharon were given the money to star the dress business through mysterious means.
+5. Sharon is a talented aspiring wedding dress maker and bridesmaid dress maker.
+6. Harold is generally a lazy guy who get's caught sleeping and has problems remembering things.
+7. Harold and Sharon then raise the infant Quinn without knowledge of his heritage.
+8. Harold and Sharon send Quinn to PSI Seminars at 15 run by Shadow Bureau agents Tom and Jane Whillhite
+9. Quinn is treated like an outsider by the other family members until he moves out at 18.
+10. From a young agent Sharon tells Quinn his real dad is an Alien and Harold tells him it was the milk man.
+::END:CH2
+
+=
+
+::BEGIN:TEAM
+Nexus formed an alliance with a diverse group of captives, each possessing unique abilities and backgrounds. Here are some of the key members of his alliance:
+
+1. Luna - A young woman with the power to manipulate light and create illusions. Luna's ability to deceive and disorient proved invaluable in their escape plan.
+
+2. Vortex - A tech-savvy genius who could control electronic devices and manipulate data. Vortex played a crucial role in bypassing security systems and gathering vital information.
+
+3. Titan - A physically enhanced powerhouse with incredible strength and resilience. Titan was their muscle, capable of breaking through barriers and confronting guards.
+
+4. Specter - A stealthy and agile operative with the ability to turn invisible. Specter provided reconnaissance and gathered intelligence on the Shadow Bureau's activities.
+
+5. Orion - A skilled marksman with unmatched accuracy. Orion's sharpshooting skills were essential for taking down threats from a distance.
+
+6. Astra - A gifted healer who could mend injuries and ailments. Astra kept the team in peak condition during their escape attempts.
+
+7. Phoenix - A fire manipulator who could generate and control flames. Phoenix's powers came in handy when they needed to create distractions or cut through obstacles.
+
+Together, this alliance of individuals with extraordinary abilities collaborated to outsmart the Shadow Bureau's security measures and unravel the mysteries of their captivity. Each member brought their own strengths to the group, making them a formidable force against their captors.
+::END:TEAM
+=

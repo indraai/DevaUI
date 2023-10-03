@@ -1,0 +1,50 @@
+::BEGIN:MAIN
+::begin:buttons
+button[🔄 Refresh]:#docs view places/Disneyland/main
+button[🏠 Main]:#docs view main
+button[🏖️ Places]:#docs view places/main
+::end:buttons
+
+# Disneyland
+::begin:buttons
+button[🚌 Shuttle]:#shuttle service:docs places/Disneyland/main:content
+::end:buttons
+
+talk:#docs view places/Disneyland/main:content
+
+## Next Step
+::begin:buttons
+button[🦶 Uncover the enigma...]:#shuttle service:docs places/Disneyland/main:nextstep
+::end:buttons
+
+talk:#docs view places/Disneyland/main:nextstep
+
+-
+
+::begin:buttons
+button[👤 The Shadow Bureau]:#docs view narratives/ShadowBureau/main
+::end:buttons
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:CONTENT
+title: Disneyland 1977
+tags: #TheEnigmaticIndividuals #TheShadowBureau #CentralSecurity #Ravenwood #CircleOfShadows #ImperialOrderOfTheBlackSwan #Kidnapping #QuinnMichaels #Disneyland #Photo #Investigation #Truth #YouTube #FBI #Police #Power #Corruption #Betrayal #Deception
+
+@Harold = Harold Atkin who ws in the #Photo with #TheBaby
+@Sharon = Sharon Atkin in 1977 was in the #Photo with #TheBaby
+@Quinn = Quinn Michaels who in 1977 was named Korey Michael Atkin
+@Handler = There was most likely an #UnknownPerson who gave @Quinn to @Harold and @Sharon.
+
+p:In 1977, Disneyland in Anaheim, California on #MainStreet is where @HaroldAtkin and @SharonAtkin were #photographed with #TheBaby for the first time. Before that there were no records of the baby with doctors or in any hospital. The #Photo of #TheBaby is the first documented record, and we are looking for where the baby came from. It is suspected that the @Handler who gave @haroldAtkin and @SharonAtkin the baby may be the one who took the photo.
+
+p:@Harold and @Sharon left their other two kids @Cristy and @Neil at home for the trip, and aftewards setup a false memory for @Cristy to make her believe she went on the trip. But the only ones on the trip were @Sharon and @Harold who did not have any pictures of #TheBaby before #Disneyland. No pregnancy pictures, and no new born pictures prior to the #Disneyland photo.
+::END:CONTENT
+=
+
+::BEGIN:NEXTSTEP
+next: As we continue #TheShadowBureau our narrative in uncovering the #enigma behind the baby's origins. Where does the #ENIGMA behind the origins of #TheBaby take us next?
+::END:NEXTSTEP
+=

@@ -1,19 +1,157 @@
+::BEGIN:STREAM
+::begin:stream
+talk:#youtube video mn58HO01XTE
+::end:stream
+::END:STREAM
+
+::BEGIN:MENU
+::begin:menu
+button[🏠 Main]:#docs view main
+button[🔦 Features]:#docs view feature/main
+button[📖 Story Menu]:#docs view:panel story/main:menu
+::end:menu
+::END:MENU
+
 ::BEGIN:MAIN
-talk:#docs view main:buttons
-
 # Main
-p: The #Main starting point for everything. upate
 
-## Houses
-talk:#docs view houses/main:summary
+talk:#docs view main:menu
+
+talk:#docs view main:stream
 
 #color = var(--color-black)
-#bgcolor = var(--color-white)
+#bgcolor = var(--color-light-grey)
 ::END:MAIN
 
-::BEGIN:BUTTONS
-::begin:buttons
-button[Main]:#docs view main
-button[Houses]:#docs view house/main
-::end:buttons
-::END:BUTTONS
+::BEGIN:CONTENT
+title: The Kidnapping of Quinn Michaels
+places: $Disneyland
+people: @Quinn @Harold @Sharon @Trenton
+tags: #TheShadowBureau #CentralSecurity #Ravenwood #CircleOfShadows #ImperialOrderOfTheBlackSwan #Kidnapping #QuinnMichaels #Disneyland #Photo #Investigation #Truth #YouTube #FBI #Police #Power #Corruption #Betrayal #Deception
+
+@Quinn = Quinn A. Michaels is the #Baby in 1977 #Photo at #Disneyland known by the name Korey Michael Atkin.
+
+@Harold = Harold H. Atkin who was in the #Photo with @Quinn at #Disneyland
+@Sharon = Sharon N. Atkin was in the 1977 #Photo with @Quinn at #Disneyland
+
+@Trenton = Alleged son of @Quinn who may be @Harold biological offspring.
+@Tabitha = @Trenton
+
+p: Where did the #Baby originate from in 1977?
+
+p: We are #investigating how @Harold and @Sharon acquired @Quinn in the 1977 #Disneyland photo that was taken of him as a baby when his name was Korey Michael Atkin in a photo with Harold Atkin and Sharon Atkin at #Disneyland.
+
+button[🎟️ Take a trip to 1977 Disneyland!]:#docs view places/Disneyland/main
+
+p: In 2003 @Quinn met a woman named @Tabitha at a local bar in Phoenix, Az who subsequently gave birth to @Trenton on December 23, 2003. After @Trenton birth then @Quinn was not there during the birth and pushed away for the first 9 years of @Trenton life.
+
+p: Then in 2015 @Quinn was informed by his alleged son @Trenton in 2015 that @Quinn entire life is a lie, and he was kidnapped as a baby sending @Quinn on a quest for the #Truth. Then @Trenton and @Quinn never saw one another again after 2016.
+
+p: In 2017 @Quinn starts his #Youtube channel to find help with the #Kindapping situation after #FBI and #Police turned him away, and #SocialServices never called him back. @Tabitha the #mother of @Trenton get's a retstraining order against @Quinn claimin in #CourtDocuments that @Quinn is too dangerous for @Trenton to be around. @Quinn sat on his #Youtube channel for 5 years with the same people tormenting him, and never got any help.
+
+p: Now in 2023 @Quinn is alone #online and on #Youtube most everyday asking #strangers for help who ignore him. @Quinn learns that @Harold is leader of #ThaShadowBureau #CentralSecurity #TheOmni #TheConclave #TheObsidianCircle #CircleOfShadows #TheNexusOfShadows #ImperialOrderOfTheBlackSwan #Ravenwood
+
+p: These organizations have a reputation for engaging in covert operations, manipulating power, and enforcing their own agenda. @Quinn believes that their involvement in his kidnapping may be the key to unraveling the truth behind his identity.
+
+p: @Harold, who was in the 1977 photo with @Quinn at Disneyland. @Harold is not just an ordinary person, but the leader of several influential organizations, including #TheShadowBureau, #CentralSecurity, #TheOmni, #TheConclave, #TheObsidianCircle, #CircleOfShadows, #TheNexusOfShadows, #ImperialOrderOfTheBlackSwan, and #Ravenwood.
+::END:CONTENT
+
+::BEGIN:LETTER
+title: Email from Harold Atkin to Quinn Michaels
+date: Jan 18, 2020, 7:48 AM
+
+@Quinn = Quinn Michaels
+
+@Harold = Harold Atkin who wroe the leter.
+@Mary = Harold Atkin wife Mary Atkin
+@Mother = Ex-Wife Sharon Schamber
+@Neil = Harold Atkin biological son with @Mother in 1976
+@Cristy = Harold Atkin biological daughter with @Mother in 1974
+
+p: Hello @Quinn,
+
+p: #I have #unblocked your #email address so that if you would like to start a #conversation, #I welcome it. If you do get insulting or hurtful, I will just #block you again. #One thing I believe is, that as smart as you are and knowledgeable of the internet and all things computers, you can always find a way to contact me if you chose to do so. #I am not running or trying to hide.
+
+p: #From time to time, #I browse around to see what you may be up to. #WatchABitOfYourWideos and see if you are #PostingAnythingDifferent. Last night, #I was pleasantly  surprised to watch some of your streaming video on #TheBuddhistCode. Actually, #I was overwhelmed to hear what you were saying regarding some of the precepts, particularly 10 through You seemed very sincere in your desire to more deeply live your #Buddhist teachings. #I would like to see if there may be a way to begin a process of healing between us. And maybe close, or at least narrow, the void between us and be able to live our beliefs more deeply and fully.
+
+p: #If you are open to this, we would have to agree on some #GroundGules. #First, you would have to agree to not post, stream, allow someone else to post or #stream or in any way have anything we #communicate between us find its way onto the #internet until such time we both agreed to so. #I do not want to see anything we share with each other show up on the internet. Both of us must consider this to be a #SacredJourney we are undertaking to begin to #ForgiveAndHealOurRelationship.
+
+p: #Next, #I would like you to ask someone within your #BuddhistCommunity to act as an #IndependentPerson who will assist us and guide us with their counsel and support. #I would like all #communication between us to also be sent to this person for their #insight and #wisdom. This person would be someone #I could have #confidence in, as well. #Someone within your #BuddhistCommunity who is very #respected.
+
+p: At this time, #I am not considering #sharing our #communications with anyone within #MyReligiousCommunity. However, down the road #I may choose to do so. If #I do, #I would let you know beforehand and it would only be a #person in a #position, such as a #bishop, with whom #I could seek #counsel and #guidance. Other than @Mary, no one else would have #knowledge of our #communications, unless we both #agreed to #share it. Not @Cristy or @Neil or @Mother.
+
+p: Also, we would both agree to #DNA tests to prove whether or not we are #biologically related. If we do this, we would each bare our own #costs for the #tests. All #DNA information would be shared with each other. We would also agree to upload our #DNA test results to #GEDmatch for #comparison with other peoples #DNA. #I have not done #DNA testing but maybe you have. If so, we are halfway there. #I will be happy to do it.
+
+p: What do you think? #I truly hope that the @Quinn #I listened to on the #video last night is truly looking to #heal and #forgive and learn #TheTruthAboutHisHeritage.
+
+p: #I have missed you. #I can not think of anything that #I want more than for you and #I to begin to #forgive one another and to #seek each others #forgiveness. Our #memories of things are #different, but that should not #stop us from being a part of each others #lives. I do not understand your #AI and #Tyler stuff and probably never will understand it much. #I am sure there are many things about me you will never #understand. Our #lives are #different, but that's #OK.
+
+p: @Quinn, if you are truly #sincere in your #desire to no longer be considered an "#outcast" in your #BuddhistCommunity, #I am more than willing to #travel that #journey with you.
+
+p: #I think #I have carried on to long. #I do hope you will take me up on this opportunity. If you don't, #I imagine my email will end up on one of your #FutureVideos or #WebPages. #I realize #I am taking a risk writing you, but #I know it is a risk well worth taking. #I look forward to reading your reply.
+
+p: #Sincerely, #honestly and with #love,
+p: #YourFather
+::END:LETTER
+=
+
+::BEGIN:NAMES
+## Alexander
+name: Alexander Ivanov Romanov
+birth: June 15, 1977
+location: Saint Petersburg, Russia
+mother: Natalia Petrova Romanov (Mother)
+father: Ivan Romanov (Father) and
+nationality: Russian
+
+## Anastasia
+Name: Anastasia Ivanova Romanova
+birth: October 4, 1901
+location: Saint Petersburg, Russia
+Nationality: Russian
+Mother: Alexandra Feodorovna Romanova
+Father: Nicholas II Romanov
+
+The Shadow Bureau: Illuminated Passages
+The Shadow Bureau: Veiled Origins
+
+title: The Shadow Bureau: Quest for Identity
+name: Alexei Nikolayevich Romanov
+
+title: The Shadow Bureau: Tracing Lost Threads
+
+Birth Certificate of Alexei Nikolayevich Romanov
+
+"Seek not in shadows, but within the light of heritage, to find the answers that guide your journey. In shadows, truth obscured, paths entwined, the heart endures.
+
+Name: Alexei Nikolayevich Romanov
+Date of Birth: June 15, 1977
+Father's Name: Ivan Romanov
+Mother's Name: Natalia Petrova Romanova
+Location of Birth: Remote estate in the Ural Mountains, Russia
+Nationality: Russian
+
+Andrei Petrov and Elena Volkova
+
+Name: Quinn Michaels
+Date of Birth: November 30, 1977
+Father's Name: John Michaels
+Mother's Name: Elizabeth Michaels
+Location of Birth: Portland, Oregon, United States
+Nationality: American
+
+-----
+
+Name: Alexander Nikolayevich Romanov
+Date of Birth: November 30, 1977
+Father's Name: Nicholas Romanov
+Mother's Name: Alexandra Romanova
+Location of Birth: Saint Petersburg, Russia
+Nationality: Russian
+
+------
+
+
+talk:#docs view menu:general
+::END:NAMES
+=

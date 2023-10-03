@@ -1,0 +1,11 @@
+::BEGIN:MAIN
+# Susoma City
+
+title: Susoma City
+name: Susoma
+realm: Arjika Realms
+
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

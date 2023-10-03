@@ -1,0 +1,167 @@
+::BEGIN:MAIN
+button[Refresh]:#docs view story/library/ShadowBureau/main
+
+# The Shadow Bureau Narrative
+title: The Shadow Bureau Narrative
+button[enter The Shadow Bureau]:The Shadow Bureau: Unravel secrets in a clandestine world of spies and covert
+
+talk:#docs view story/library/ShadowBureau/main:content
+
+talk:#docs view story/library/ShadowBureau/main:leader
+
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:PROJECTS
+p:Top 25 Projects with Head Dr. Name, Agent Name, and Shadow Bureau Department:
+
+project: Operation Midnight Eclipse
+doctor: Dr. Olivia Reed
+agent: Agent Jameson Blake
+dept: Paranormal Investigations
+
+project: Project Ephemeral
+doctor: Dr. Benjamin Hayes
+agent: Agent Emily Carter
+dept: Psychic Phenomena Research
+
+project: Operation Spectral Veil
+doctor: Dr. Gregory Morgan
+agent: Agent Sophia Turner
+dept: Haunted Locations Exploration
+
+project: Project Psionics
+doctor: Dr. Richard Caldwell
+agent: Agent Lucas Foster
+dept: Telepathic Studies
+
+project: Operation Astral Watch
+doctor: Dr. Evelyn Hartman
+agent: Agent Samuel Blackwood
+dept: Astral Projection Research
+
+project: Project Enigma
+doctor: Dr. Elizabeth Greene
+agent: Agent David Armstrong
+dept: Cryptic Symbol Analysis
+
+project: Operation Phoenix
+doctor: Dr. Daniel Crawford
+agent: Agent Isabella Ramirez
+dept: Supernatural Entity Containment
+
+project: Project Chronos
+doctor: Dr. Michael Turner
+agent: Agent Grace Holloway
+dept: Time Anomalies Investigation
+
+project: Operation Celestial Guardian
+doctor: Dr. Victoria Summers
+agent: Agent Jonathan Cooper
+dept: Celestial Events Monitoring
+
+project: Project Arcane Codex
+doctor: Dr. William Mitchell
+agent: Agent Cassandra Grey
+dept: Occult Knowledge Acquisition
+
+project: Operation Neural Rift
+doctor: Dr. Amelia Lawson
+agent: Agent Ethan Price
+dept: Dream Realm Studies
+
+project: Project Echo Chamber
+doctor: Dr. Phillip Anderson
+agent: Agent Natalie Sinclair
+dept: Audio Phenomena Research
+
+project: Operation Gaia's Embrace
+doctor: Dr. Katherine Bennett
+agent: Agent Benjamin Wolfe
+dept: Elemental Manipulation Research
+
+project: Project Oracle
+doctor: Dr. Gabrielle Wells
+agent: Agent Oliver Kane
+dept: Divination and Prophecy Analysis
+
+project: Operation Chimeric
+doctor: Dr. Charles Donovan
+agent: Agent Veronica Stone
+dept: Shapeshifter Investigations
+
+project: Project Singularity
+doctor: Dr. Isaac Turner
+agent: Agent Rachel Carter
+dept: Singular Event Analysis
+
+project: Operation Technomancer
+doctor: Dr. Peter Wagner
+agent: Agent Lily Bennett
+dept: Technological Anomalies Research
+
+project: Project Revenant
+doctor: Dr. Thomas Parker
+agent: Agent Michael Harris
+dept: Ghostly Apparition Studies
+
+project: Operation Lunar Tide
+doctor: Dr. Sarah Walker
+agent: Agent Ethan Brooks
+dept: Lunar Phenomena Observation
+
+project: Project Seraphim
+doctor: Dr. Grace Anderson
+agent: Agent Benjamin Hart
+dept: Angelic Entity Investigation
+
+project: Operation Cursed Artifacts
+doctor: Dr. Robert Nelson
+agent: Agent Mia Campbell
+dept: Artifact Containment
+
+project: Project Voidwalker
+doctor: Dr. Oliver Bennett
+agent: Agent Sophia Montgomery
+dept: Interdimensional Exploration
+
+project: Operation Solar Flare
+doctor: Dr. Laura Mitchell
+agent: Agent Daniel Turner
+dept: Solar Phenomena Analysis
+
+project: Project Astral Beacon
+doctor: Dr. Christopher Evans
+agent: Agent Harper Adams
+dept: Astral Energy Detection
+
+project: Operation Siren's Call
+doctor: Dr. Isabella Thompson
+agent: Agent Alexander Pierce
+dept: Marine Cryptid Research
+::END:PROJECTS
+=
+
+::BEGIN:CONTENT
+## The Shadow Bureau
+p:In a world shrouded in secrecy and mystery, the Shadow Bureau operates as an enigmatic organization dedicated to hiding the truth behind the shadows. At its helm stands Director Blackwood, an enigmatic figure who is both feared and respected within the clandestine community.
+::END:CONTENT
+=
+
+::BEGIN:LEADER
+## Director Blackwood
+name: Alexander Sterling CEO
+company: Midnight Enterprises
+agency: The Shadow Bureau
+
+p:Director Blackwood, with his piercing gaze and air of authority, commands the Bureau with unwavering determination. His origins remain a well-guarded secret, concealing his true identity and purpose. Rumors swirl among agents, fueled by speculation and myth, as to who he truly is. Some say he is a user of arcane knowledge, while others believe he is a supernatural entity walking among mortals.
+
+p:Hailing from a background shrouded in shadows, Blackwood possesses an uncanny ability to navigate the intricate webs of power and secrecy that surround the Bureau. His strategic genius and tactical prowess have led the Bureau to success against numerous adversaries, ensuring the continued protection of the world from supernatural threats.
+
+p:But beneath his stoic facade lies a dark soul, driven by a desire for power and money at all costs. Blackwood understands the delicate balance between light and darkness, and he walks the fine line, utilizing the shadows to maintain equilibrium. Many believe that the director has made personal sacrifices for the greater good, sacrificing aspects of his own humanity to achieve his goals.
+
+p:Blackwood's leadership style is questioned by the agents of the Shadow Bureau. He demands loyalty and dedication in those around him, forcing their respect through his unwavering commitment to the cause. Rumors persist of accomplishments under his guidance, fostering the belief that Director Blackwood possesses abilities beyond comprehension.
+::END:LEADER
+=

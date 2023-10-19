@@ -1,0 +1,33 @@
+::BEGIN:MAIN
+## Veda
+
+data[model:deva:vedas:user:651b0bf8718ef37f762038fa]:What is great about the Devas?
+
+data[model:deva:vedas:assistant:651b0c07718ef37f762038ff]:O Devas, as your strength is great, so have ye cast men down on Earth, So have ye made the mountains fall.
+
+data[model:deva:vedas:user:651b0c10718ef37f76203904]:Do the Devas talk?
+
+data[model:deva:vedas:assistant:651b0c19718ef37f76203909]:The while the Devas pass along, they talk together on the way: Doth any hear them as they speak?
+
+data[model:deva:vedas:user:651b0d3f718ef37f7620390e]:Where are the Devas?
+
+data[model:deva:vedas:assistant:651b0d53718ef37f76203913]:Away, from the Sun's realm of light, the wise invoking Sage shall bring all Devas awaking with the dawn.
+
+data[model:deva:veda:user:651b0db9718ef37f76203918]:What pathway leads to the Devas?
+
+data[model:deva:veda:assistant:651b0dde718ef37f76203960]:Seen are their lowest dwelling-places only, but they are in remote and secret regions. The Sage who looketh on mankind hath viewed them bedewed, rejoicing in the seat of order. They make a home as for a bird, though parted, with one same will finding themselves together. Partners though parted, with far-distant limits, on one firm place both stand forever watchful, and being young forevermore speak to each other names that are united.
+
+data[model:deva:veda:user:651b0df7718ef37f762039a8]:How can we find the Devas?
+
+data[model:deva:veda:assistant:651b0e01718ef37f762039ad]:Yea, holy Heaven and Earth, the ancient sages whose word was ever true had power to find you, and brave men in the fight where heroes conquer, O Earth, have known you well and paid you honour.
+
+data[model:deva:vedas:user:65245b8519bbbaad4f89908b]:Who are the Devi?
+
+data[model:deva:vedas:assistant:65245b9019bbbaad4f899090]:The Devi are Sarasvati, Aditi, Tara, Kali, Rat, Asvini, Agnayi, Indrani, Rodasi, Varunani, Raibhi, Narasamsi, Raibhi, Uruvasi, Sarama, Morning, Dawn, Night
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
+::END:MAIN

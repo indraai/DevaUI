@@ -216,7 +216,7 @@ fast.listen({port:vars.ports.api}).then(() => {
   }).on('close', () => {
     // begin close procedure to clear the system and close other devas properly.
     DEVA.stop().then(stop => {
-      console.log(stop.text);
+      console.log(stop);
       shell.prompt();
       process.exit(0);
     }).catch(console.error);

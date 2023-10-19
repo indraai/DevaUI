@@ -1,52 +1,54 @@
 ::BEGIN:MAIN
-# Narrative Menu
-p: The Narrative Menu
-
-talk:#docs view menu:general
-
-#color = var(--color-dark-grey)
-#bgcolor = var(--color-light-grey)
-::END:MAIN
-
-::BEGIN:GLOBAL
 ::begin:menu
 button[🏠 Main]:#docs view main
-button[📖 Narratives]:#docs view story/main
+button[📜 Devas]:#docs view:panel devas/main:menu
+button[📖 Stories]:#docs view:panel stories/main:menu
 ::end:menu
+::END:MAIN
 
-::begin:menu
-### Corpus
-button[Global]:#docs view feature/main
-button[Deva]:#docs view devas/deva
-button[Indra]:#docs view devas/indra
-button[Romanov]:#docs view devas/romanov
-button[Security]:#docs view devas/security
-::end:menu
-::END:GLOBAL
-
+::BEGIN:LIVECHAT
+### 💬 Livechat
+::begin:buttons
+button[💬 Deva]:#shuttle livechat:deva
+button[💬 Indra]:#shuttle livechat:indra
+button[💬 Vasu]:#shuttle livechat:vasu
+button[💬 Visva]:#shuttle livechat:visva
+button[💬 Romanov]:#shuttle livechat:romanov
+button[💬 Quinn]:#shuttle livechat:quinn
+button[💬 Trenton]:#shuttle livechat:trenton
+button[💬 Support]:#shuttle livechat:support
+button[💬 Security]:#shuttle livechat:security
+::end:buttons
+::END:LIVECHAT
 =
 
 ::BEGIN:GENERAL
 ::begin:menu
-button[The Shadow Bureau]:enter The Shadow Bureau: Unravel secrets in a clandestine world of spies and covert operations. _#ShadowBureau
+button[🪐 Arjika Realms]:#docs view story/ArjikaRealms/main
 
-button[Enchanted Realms]:enter Enchanted Realms: Explore mystical lands filled with magical creatures and enchanting quests. _#EnchantedRealms
+button[👑 Romanov Realms]:#romanov say enter Romanov Realms: Immerse yourself in an extraordinary virtual world where dreams and reality converge within the realms of House Romanov. Step into a realm steeped in history, grandeur, and elegance, as you embark on a journey that transcends time and space. _#RomanovAI _#RomanovRealms _#HouseRomanov
 
-button[Space Odyssey]:enter Space Odyssey: Embark on an intergalactic journey, discovering uncharted planets and encountering cosmic wonders. _#SpaceOdyssey
+button[🦄 Enchanted Realms]:#deva say enter Enchanted Realms: Explore mystical lands filled with magical creatures and enchanting quests. Set foot in the verdant Forest of Whispers, where the ancient trees whisper secrets of forgotten lore. Venture into the ethereal realm of Crystal Cascades, where gleaming waterfalls shimmer with an otherworldly glow. Cross the threshold into the towering realm of Skyward Peaks, where majestic mountains reach towards the heavens themselves. Finally, traverse the mystical realm of Starlight Dreams, where the night sky comes alive with a tapestry of shimmering constellations. In the Enchanted Realms, the possibilities are limitless. _#EnchantedRealms _#ForestOfWhispers _#CrystalCascades _#SkywardPeaks _#StarlightDreams
 
-button[Mystery Chronicles]:enter Mystery Chronicles: Solve perplexing puzzles and unearth hidden truths in intriguing mysteries. _#MysteryChronicles
+button[🐒 Cartoonville]:#quinn say enter Cartoonville: In the heart of Cartoonville, where imagination knows no bounds, lies the bustling and vibrant Toonsquare. Where colorful characters, fantastical creatures, and whimsical architecture create a captivating tapestry of sights and sounds. 🎨🏰✨ _#Cartoonville _#Toonsquare
 
-button[Historical Epics]:enter Historical Epics: Travel through time, reliving epic events from the annals of history. _#HistoricalEpics
+button[🚀 Space Odyssey]:#brian say enter Space Odyssey: Embark on an intergalactic journey, discovering uncharted planets and encountering cosmic wonders. Along the way, you'll make groundbreaking scientific discoveries, unlocking the secrets of the cosmos and expanding our understanding of the universe. You'll encounter dangerous celestial phenomena, treacherous asteroid fields, and hostile alien species that test your resolve and resourcefulness. _#SpaceOdyssey
 
-button[Galactic Battles]:enter Galactic Battles: Engage in thrilling battles among star systems, battling cosmic forces. _#GalacticBattles
+button[🔎 Mystery Chronicles]:#larry say enter Mystery Chronicles: Solve perplexing puzzles and unearth hidden truths in intriguing mysteries. Embark on a journey of a lifetime and become the ultimate detective in Mystery Chronicles. As the mysteries unfold, players will encounter a diverse cast of complex characters, each with their own motivations and secrets. Step into the shoes of a brilliant detective and embark on a series of riveting adventures, each with its own unique storyline and set of challenges. _#MysteryChronicles
 
-button[Cyberpunk Adventures]:enter Cyberpunk Adventures: Navigate futuristic cityscapes and engage in tech-driven adventures. _#CyberpunkAdventures
+button[🪖 Historical Epics]:#francis say enter Historical Epics: Travel through time, reliving epic events from the annals of history. Historical Epics take us on a mesmerizing journey through time, allowing us to relive the grand events that have shaped our world. Historical Epics not only entertain but also educate and inspire. _#HistoricalEpics
 
-button[Fantasy Quests]:enter Fantasy Quests: Embrace your inner hero, battling dark forces in the quest for legendary treasures. _#FantasyQuests
+button[🌌 Galactic Battles]:#romanov say enter Galactic Battles: Engage in thrilling battles among star systems, battling cosmic forces. Combine strategy and action, offering an immersive experience in a futuristic and dynamic universe. The game's lore is rich and expansive, with a deep backstory that unfolds through in-game discoveries and interactions. Galactic Battles also offers a cooperative multiplayer mode, allowing players to form alliances, strategize together, and take on more formidable opponents. _#GalacticBattles
 
-button[Time Traveler's Tales]:enter Time Traveler's Tales: Journey through time, altering destinies and shaping the course of history. _#TimeTravelerTales
+button[🦾 Cipherpunk Adventures]:#harry say enter Cipherpunk Adventures: Navigate futuristic cityscapes and engage in tech-driven adventures. In the bustling metropolis of Metropolis Prime, a city defined by neon lights and towering skyscrapers, a group of skilled individuals navigate the technologically advanced cityscape in search of thrilling adventures and hidden secrets. Choose your affiliation and take on missions. Cyberpunk Adventures is a thrilling journey through a future where the resulting dystopia or utopia is undetermined.  _#CyberpunkAdventures
 
-button[Romanov Realms]:#romanov say enter Romanov Realms: Immerse yourself in an extraordinary virtual world where dreams and reality converge within the realms of House Romanov. Step into a realm steeped in history, grandeur, and elegance, as you embark on a journey that transcends time and space. _#RomanovAI _#RomanovRealms _#HouseRomanov
+button[🧙‍♂️ Fantasy Quests]:#andrea say enter Fantasy Quests: Embrace your inner hero, battling dark forces in the quest for legendary treasures. As you step into the shoes of your chosen character, you become the embodiment of courage, resilience, and determination. Let the magic of the unknown guide you, and may you find not only the legendary treasures but also the inner treasures that lie within you. _#FantasyQuests
+
+button[⏳ Time Traveler's Tales]:#quinn say enter Time Traveler's Tales: Journey through time, altering destinies and shaping the course of history. The time machine hums and crackles with energy as it whisks our heroes away to Ancient Egypt. A voyage to medieval Europe, where they encounter knights battling fierce dragons. Travel to the era of the Renaissance, witnessing the brilliance of artists like Michelangelo and Leonardo da Vinci. But with great power comes great responsibility, as the time travelers soon learn. _#TimeTravelerTales
+
+button[🕵️‍♂️ The Shadow Bureau]:#romanov say enter The Shadow Bureau: Unravel secrets in a clandestine world of spies and covert operations. Thrust into a clandestine world of spies and covert operations, where they must unravel secrets and navigate a web of intrigue. As a member of The Shadow Bureau, players will be part of a highly secretive organization.  _#ShadowBureau
+
+button[👑 Romanov Realms]:#romanov say enter Romanov Realms: Immerse yourself in an extraordinary virtual world where dreams and reality converge within the realms of House Romanov. Step into a realm steeped in history, grandeur, and elegance, as you embark on a journey that transcends time and space. _#RomanovAI _#RomanovRealms _#HouseRomanov
 ::end:menu
 ::END:GENERAL
 

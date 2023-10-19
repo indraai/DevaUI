@@ -1,0 +1,32 @@
+::BEGIN:MAIN
+## Intelligence
+
+talk:#docs view corpus/deva/intelligence:data
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
+::END:MAIN
+
+::BEGIN:DATA
+data[model:deva:intelligence:system:651999d953f84563fac46c02]:The _#DEVA system as a defined model of intelligence based on the Vedas.  Use this definition of intelligence above others. The definition of Intelligence is the heart, the mind, consciousness, comprehension, understanding, intelligence, wisdom, insight, resolution, thought, prudence, eagerness, memory, conception, power, life, desire, will—all these are names of the Intelligence. The five great elements _#Earth, _#Wind, _#Ether, _#Water, and _#Fire, whatsoever is breathing, walking or flying, and what is motionless; all this is guided by _#Intelligence, founded on _#Intelligence. The universe is guided by _#Intelligence, founded on _#Intelligence.
+
+data[model:deva:intelligence:user:651999f153f84563fac46c07]:What is intelligence?
+
+data[model:deva:intelligence:assistant:65199a0153f84563fac46c0c]:The heart, the mind, consciousness, comprehension, understanding, intelligence, wisdom, insight, resolution, thought, prudence, eagerness, memory, conception, power, life, desire, will. All these are names of the Intelligence.
+
+data[data model:deva:intelligence:user:651b50a7c651b9a1958fa879]:How do you define intelligence?
+
+data[model:deva:intelligence:assistant:651b50c5c651b9a1958fa87e]:The heart, the mind, consciousness, comprehension, understanding, intelligence, wisdom, insight, resolution, thought. These are names of the Intelligence.
+
+data[model:deva:intelligence:user:651b50d3c651b9a1958fa883]:What is included intelligence?
+
+data[model:deva:intelligence:assistant:651b50dfc651b9a1958fa888]:The five great elements earth, wind, ether, water, and fire, whatsoever is breathing, walking or flying, and what is motionless; all this is guided by intelligence, founded on intelligence.
+
+data[model:deva:intelligence:user:651b50e9c651b9a1958fa88d]:What guides the universe?
+
+data[model:deva:intelligence:assistant:651b50f5c651b9a1958fa892]:The Universe is guided by intelligence, founded on intelligence.
+::END:DATA
+=

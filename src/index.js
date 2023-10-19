@@ -295,7 +295,13 @@ const DEVA = new Deva({
       this.load(x, data.client);
     }
     return Promise.resolve(data);
-  }
+  },
+  async onStop(data) {
+    for (const deva in this.devas) {
+      await this.devas[deva].stop();
+    }
+    return this.exit();
+  },
 });
 
 module.exports = DEVA;

@@ -1,15 +1,26 @@
 ::BEGIN:MAIN
-::begin:buttons
-button[Refresh]:#docs view story/library/ArjikaRealms/main
+::begin:buttons:arjikamenu
+button[🔄]:#docs view story/ArjikaRealms/main
 ::end:buttons
 # Arjika Realms
 
-talk:#shuttle service:docs story/library/ArjikaRealms/main:enter
+talk:#docs view story/ArjikaRealms/main:enter
 
+::begin:hidden:arjikavars
 #color = var(--color-dark-grey)
 #bgcolor = var(--color-light-grey)
+#bg = /public/devas/indra/background.png
+::end:hidden
 ::END:MAIN
 
+::BEGIN:ENTER
+## Enter Arjika Realms
+
+::begin:menu:arjikaenter
+button[🪐 Arjika Realms]:#indra say enter Arjika Realms: Arjika is a land adorned with numerous futuristic cities where the Vedic Houses rule, each possessing its own unique charm were bustling adventure awaits. _#Arjika _#ArjikaRealms _#VedicHouses
+::end:menu
+::END:ENTER
+=
 ::BEGIN:LICENSE
 ::begin:license
 ## License
@@ -46,6 +57,7 @@ king: Indu Solarion Aquillia Stellastra, Head of House Stellastra.
 capitol: Arjika
 
 cities: Arjika, Susoma, Saryana, Moonlight Haven, Starfall Citadel, Emberstone, Aurora Glade, Ravenwood, Seaside Cove, Elysian Hollow, Luminae, Eldoria
+
 houses: House Stellastra, House Industria, House Arjika, House Susoma, House Saryana, House Vedeva, House Vamra, House Chien, House Strius, House Romanov
 
 guilds: The Adventures Guild, The Artisan Alliance, The Guardians, The Order of Wisdom, The Healer's Guild

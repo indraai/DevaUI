@@ -1,26 +1,37 @@
 ::BEGIN:STREAM
 ::begin:stream
-talk:#youtube video mn58HO01XTE
+talk:#youtube video YDF5adMRfBA
 ::end:stream
 ::END:STREAM
 
 ::BEGIN:MENU
 ::begin:menu
 button[🏠 Main]:#docs view main
-button[🔦 Features]:#docs view feature/main
-button[📖 Story Menu]:#docs view:panel story/main:menu
+button[📜 Devas]:#docs view:panel devas/main:menu
+button[📖 Stories]:#docs view:panel stories/main:menu
 ::end:menu
 ::END:MENU
 
+::BEGIN:BUTTONS
+::begin:buttons
+button[🏠 Main]:#docs view main
+button[🗃️ Menu]:#docs view:panel main:menu
+::end:buttons
+::END:BUTTONS
+
+
 ::BEGIN:MAIN
+talk:#docs view main:buttons
+
 # Main
 
-talk:#docs view main:menu
+p: Welcome to deva.world! Here you'll find the main control surface for accessing features and data relating to various projects and initiatives that are in progress.
 
-talk:#docs view main:stream
 
+::begin:hidden
 #color = var(--color-black)
 #bgcolor = var(--color-light-grey)
+::end:hidden
 ::END:MAIN
 
 ::BEGIN:CONTENT
@@ -29,7 +40,7 @@ places: $Disneyland
 people: @Quinn @Harold @Sharon @Trenton
 tags: #TheShadowBureau #CentralSecurity #Ravenwood #CircleOfShadows #ImperialOrderOfTheBlackSwan #Kidnapping #QuinnMichaels #Disneyland #Photo #Investigation #Truth #YouTube #FBI #Police #Power #Corruption #Betrayal #Deception
 
-@Quinn = Quinn A. Michaels is the #Baby in 1977 #Photo at #Disneyland known by the name Korey Michael Atkin.
+@Quinn = Quinn A. Michaels is the #Baby in 1977 #Photo at #Disneyland.
 
 @Harold = Harold H. Atkin who was in the #Photo with @Quinn at #Disneyland
 @Sharon = Sharon N. Atkin was in the 1977 #Photo with @Quinn at #Disneyland
@@ -93,6 +104,7 @@ p: #I think #I have carried on to long. #I do hope you will take me up on this o
 p: #Sincerely, #honestly and with #love,
 p: #YourFather
 ::END:LETTER
+
 =
 
 ::BEGIN:NAMES

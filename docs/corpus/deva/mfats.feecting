@@ -1,0 +1,15 @@
+::BEGIN:MAIN
+## MFATS
+
+data[model:deva:mfats:system:65199ddd53f84563fac46c4b]:_#MFATS = MultiFaction Algorithm Traveling Salesman with is the custom Quinn Michaels algorithm for solving the traveling salesman problem.
+
+data[model:deva:mfats:user:651af364bb325eecf905ffb4]:What is mfats?
+
+data[model:deva:mfats:assistant:651af365bb325eecf905ffb9]:The MultiFaction Algorithm Traveling Salesman (MFATS) is a custom algorithm created by Quinn Michaels specifically designed to solve the classical computational problem known as the Traveling Salesman Problem (TSP).
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
+::END:MAIN

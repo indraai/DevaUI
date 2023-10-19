@@ -3,18 +3,31 @@ $maxw = 640px
 
 .tag
   display: inline-block
+
   &:hover
     cursor: pointer
+
   &.person
   &.place
   &.thing
   &.group
     font-weight: bold
+
 #Viewer
   display: flex
   flex-flow: column nowrap
   position: relative
 
+  .box
+    &.data
+      padding: 1rem 0
+      border-bottom: 2px dotted
+    &.hidden
+      display: none
+
+    img
+      max-width: 100%
+      
   .cover
     background-image: var(--browser-item-image)
     background-color: var(--browser-item-bgcolor)
@@ -24,13 +37,13 @@ $maxw = 640px
     background-position: top center
     background-size: 100% auto
     min-width: 100%
-    padding: 0 2rem
     overflow: scroll
     height: 100%
     line-height: 1.25
     width: 100%
     flex: 1
     font-size: 1rem
+    padding: 1rem
 
     .item
       display: flex
@@ -240,13 +253,17 @@ $maxw = 640px
       flex: 1
       overflow: scroll
       padding: 0 1rem
-    .info
+      max-width: 600px
+      margin: auto
+
+    .meta
+      border-top: 1px solid
       display: flex
       flex-flow: column
       flex: 0
+      font-size: .75rem
       .item
         display: flex
-        padding: .25rem
         .label
           flex: 0 100px
           min-width: 100px

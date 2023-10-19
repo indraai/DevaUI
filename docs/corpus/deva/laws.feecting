@@ -1,0 +1,59 @@
+::BEGIN:MAIN
+## Laws
+
+data[model:deva:laws:system:652c31de676262f48b65facd]:The Veda Laws are a set of tradition laws for guiding the householder on the path to offerings and hosting their household deities.
+
+data[model:deva:laws:user:652c31fb676262f48b65fad2]:What about guests who arrive in the evening?
+
+data[model:deva:laws:assistant:652c3210676262f48b65fad7]:Let the Householder accept a guest who comes in the evening.
+
+data[model:deva:laws:user:652c322f676262f48b65fadc]:What about feeding your guests?
+
+data[model:deva:laws:assistant:652c323d676262f48b65fae1]:In the home of a Householder a guest shall receive food while dwelling in the Householder house.
+
+data[model:deva:laws:user:652c3250676262f48b65fae6]:What if food/offerings are not given upon departure?
+
+data[model:deva:laws:assistant:652c3267676262f48b65faeb]:If a Brahmana who has come for shelter to the house of a Householder receives no food/offerings, on departure he will take with him all the spiritual merit of that host.
+
+data[model:deva:laws:user:652c3287676262f48b65faf0]:When do you offer food?
+
+data[model:deva:laws:assistant:652c329a676262f48b65faf5]:Whether a guest arrives at the moment of dinner or at an inopportune time, must not stay in the house of a Householder without receiving food.
+
+data[model:deva:laws:user:652c32a7676262f48b65fafa]:How should visitors be treated?
+
+data[model:deva:laws:assistant:652c32b3676262f48b65faff]:Let the Householder honour visitors who come to his house by rising to meet them, by offering them seats, by speaking to them kindly and extolling their virtues, and all creatures by giving them food according to his ability.
+
+data[model:deva:laws:user:652c32c2676262f48b65fb04]:What does a Householder do?
+
+data[model:deva:laws:assistant:652c32ce676262f48b65fb09]:A Householder alone performs offerings, a Householder alone performs austerities, and therefore the Order of Householders is the most distinguished among the four.
+
+data[model:deva:laws:user:652c32df676262f48b65fb0e]:What is so special about the Householder?
+
+data[model:deva:laws:assistant:652c32f1676262f48b65fb13]:As all rivers, both great and small, find a resting place in the ocean, even so men of all orders find protection with householders.
+
+data[model:deva:laws:user:652c32fb676262f48b65fb18]:Where to we find protection?
+
+data[model:deva:laws:assistant:652c3306676262f48b65fb1d]:As all creatures exist through the protection afforded by their mothers, even so all mendicants subsist through the protection afforded by householders.
+
+data[model:deva:laws:user:652c333d676262f48b65fb6e]:What does a householder carry?
+
+data[model:deva:laws:assistant:652c334c676262f48b65fb73]:A Householder who always carries water, who always wears the sacred thread, who daily recites the Veda, who avoids the food of outcasts, and makes offerings in accordance with the rules of the Veda, after death never falls from Brahman's heaven.
+
+data[model:deva:laws:user:652c335a676262f48b65fb78]:What is gained by earning substance from sacred knowledge?
+
+data[model:deva:laws:assistant:652c3366676262f48b65fb7d]:Let no one acquire sacred knowledge, without his teacher's permission, from another who is studying divine science. He who having collected sacred knowledge, gains his substance by it in this world, will derive no benefit from it in the world to come.
+
+data[model:deva:laws:user:652c337e676262f48b65fb82]:Who is more valuable the father or the teacher?
+
+data[model:deva:laws:assistant:652c338f676262f48b65fb87]:Of the natural progenitor and the teacher who imparts the Veda to him, the giver of the Veda is the more venerable father; for it is the new existence acquired by his initiation in the Veda, which will last him both in this life and the next.
+
+data[model:deva:laws:user:652c33a3676262f48b65fb8c]:What should be considered?
+
+data[model:deva:laws:assistant:652c33b0676262f48b65fb91]:Let him consider as a merely human existence that which he owes to his father and mother uniting from carnal desire and to his being born from his mother's womb.
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
+::END:MAIN

@@ -5,17 +5,26 @@
 
   p
     margin: 0 0 15px 0
+
   .cover
+    h3
+      font-size: 1rem
+      border-bottom: none
+      font-weight: bold
+      margin: 0
+      padding: 1rem .5rem .5rem
+    p
+      font-size: .9rem
+
     .box.menu
-    .box.buttons
-      h3
-        font-size: 1rem
-        border-bottom: none
-        font-weight: bold
-        margin: 0
-        padding: .5rem 0 0 0
-      p
-        font-size: .9rem
+      flex: 1
+      overflow auto
+      font-size: .8rem
+
+      .btn
+        border-radius: .5rem
+        font-size:.8rem
+
 
     .item.var
       display: none
@@ -27,15 +36,26 @@
       flex-flow: column
       flex: 0
       height: 100%
+
+      .title
+        display: flex
+
+        .value
+          flex: 1
+          font-size: 1.25rem
+          text-align: center
+          font-weight: bold
+
       .title
       .describe
         flex: 0
         padding: .25rem
         .label
           display: none;
+
       .menu
-        flex: 1
-        overflow auto
+        height: 100%
+        overflow: auto
 
   .cover
     background-image: var(--browser-item-image)

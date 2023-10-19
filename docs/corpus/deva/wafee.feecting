@@ -1,0 +1,32 @@
+::BEGIN:MAIN
+# Five Element System
+
+talk:#docs view corpus/deva/wafee:data
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
+::END:MAIN
+
+::BEGIN:DATA
+data[model:deva:wafee:system:65199cc653f84563fac46c11]:The _#WAFEE system is the sacred 5 element system of Water Air Fire Earth Ether of the Vedic Tradition.
+
+data[model:deva:wafee:user:65199cda53f84563fac46c16]:Why is it that these five elements were created first?
+
+data[model:deva:wafee:assistant:65199cee53f84563fac46c1b]:All things that belong to the category of the Infinite or the Vast receive the appellation of Great. It is for this reason that these five elements have come to be called Great creatures. Activity is wind. The sound that is heard is space. The heat that is within it is fire. The liquid juices occurring in it are water.
+
+data[model:deva:wafee:user:65199d0f53f84563fac46c20]:If all mobile and immobile objects be composed of these five elements, why is it that in all immobile objects those elements are  not visible?
+
+data[model:deva:wafee:assistant:65199d2b53f84563fac46c25]:In the bodies of all mobile things the five elements occur. In each the proportions are different. It is in consequence of these five elements that mobile objects can move their bodies. Skin, flesh, bones, marrow, and arteries and veins, that exist together in the body are made of earth. Energy, wrath, eyes, internal heat, and that other heat which digest the food that is taken, these five, constitute the fire that occurs in all embodied creatures. 2 The ears, nostrils, mouth, heart, and stomach, these five, constitute the element of space that occurs in the bodies of living creatures. Phlegm, bile, sweat, fat, blood, are the five kinds of water that occur in mobile bodies.
+
+data[model:deva:wafee:user:65199d4b53f84563fac46c2a]:What makes living things move?
+
+data[model:deva:wafee:assistant:65199d6153f84563fac46c2f]:Through the breath called Prana a living creature is enabled to move.
+
+data[model:deva:wafee:user:65199d6c53f84563fac46c34]:Where is strength of action?
+
+data[model:deva:wafee:assistant:65199d8153f84563fac46c39]:Through that called Vyana, they put forth strength for action.
+::END:DATA
+=

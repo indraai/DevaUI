@@ -30,6 +30,7 @@ button
     box-shadow: 0 2px 3px rgba($colors.black, .25)
     color: rgba($colors.white, .75)
     background-color: rgba($colors.green, .75)
+
   &:active
     cursor: pointer
     box-shadow: inset 0 0 5px rgba($colors.white, .25)
@@ -44,13 +45,20 @@ button
     margin-right: .25rem
     display: inline-block
 
-  &.speak
   &.data
+    &::before
+      font-family: 'icons'
+      display: inline-block
+      content: $icons.pencil-ruler2
+      margin: 0 .5rem 0 .25rem
+
+  &.speak
     background-color: transparent
     border: none
     box-shadow: none
     padding: 0
     margin: 0
+
   &.docs
     width: 100%
     text-align: left

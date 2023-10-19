@@ -1,0 +1,10 @@
+::BEGIN:MAIN
+# Stream
+
+::begin:stream
+talk:#docs view main:stream
+::end:stream
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

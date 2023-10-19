@@ -1,0 +1,25 @@
+::BEGIN:MAIN
+# Devas
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN
+
+::BEGIN:MENU
+### 📜 Devas
+::begin:buttons
+button[📜 Deva]:#docs view devas/deva
+button[📜 Indra]:#docs view devas/indra
+button[📜 Vasu]:#docs view devas/vasu
+button[📜 Visva]:#docs view devas/visva
+button[📜 Romanov]:#docs view devas/romanov
+button[📜 Quinn]:#docs view devas/quinn
+button[📜 Trenton]:#docs view devas/trenton
+button[📜 Security]:#docs view devas/security
+button[📜 Support]:#docs view devas/support
+::end:buttons
+::begin:hidden
+#color = var(--color-orange)
+::end:hidden
+::END:MENU
+=

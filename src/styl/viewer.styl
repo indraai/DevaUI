@@ -1,6 +1,9 @@
 /* Copyright (c)2022 Quinn Michaels */
 $maxw = 640px
 
+.hidden
+  display: none
+
 .tag
   display: inline-block
 
@@ -22,12 +25,13 @@ $maxw = 640px
     &.data
       padding: 1rem 0
       border-bottom: 2px dotted
-    &.hidden
-      display: none
-
+    &.center
+      .image
+        img
+          border-radius: 1rem
     img
       max-width: 100%
-      
+
   .cover
     background-image: var(--browser-item-image)
     background-color: var(--browser-item-bgcolor)
@@ -284,10 +288,17 @@ $maxw = 640px
     margin: 0
     padding: .5rem 1rem .5rem 1rem
 
-  .data-container
-    font-family: $fonts-text
-    font-size: 1.1rem
-    &-row
-      padding: .5rem 1rem .5rem 0
-      color: $colors.light-grey
-      border-top: 1px dotted $colors.dark-grey
+  .row
+    padding: .5rem 1rem .5rem 0
+    color: $colors.light-grey
+    border-top: 1px dotted $colors.dark-grey
+    display: flex
+
+    .key
+      flex: 0
+      margin: 0 1rem 0 0
+  .child
+    display: flex
+    flex-flow: column
+    .values
+      margin: 0 0 0 1rem

@@ -16,14 +16,22 @@
     p
       font-size: .9rem
 
-    .box.menu
-      flex: 1
-      overflow auto
-      font-size: .8rem
+    .box
+      &.menu
+        flex: 1
+        overflow auto
+        font-size: .8rem
 
-      .btn
-        border-radius: .5rem
-        font-size:.8rem
+        .btn
+          border-radius: .5rem
+          font-size:.8rem
+      &.center
+        .image
+          margin: 1rem 0
+          img
+            border-radius: 50%
+            max-width: 250px
+            max-height: 250px
 
 
     .item.var

@@ -127,7 +127,6 @@ const DEVA = new Deva({
           `## ${items.key}`,
         ];
         for (let item in items.value) {
-          console.log('ITEM', item);
           _items.push(`${item}: ${items.value[item]}`);
         }
         _items.push(`::end:${items.key}`);
@@ -152,7 +151,6 @@ const DEVA = new Deva({
     ***************/
     uid(packet) {
       const id = this.uid();
-      console.log('id', id);
       return Promise.resolve({text:id});
     },
 

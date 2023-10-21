@@ -57,9 +57,9 @@ function devaQuestion(q) {
       setPrompt(answer.a.client);
       // if (answer.a.data) console.log(answer.a.data);
       DEVA.talk(`data:history`, answer);
-      resolve(answer);
+      return resolve(answer);
     }).catch(e => {
-      reject(e);
+      return reject(e);
     });
   });
 }
@@ -67,7 +67,7 @@ function devaQuestion(q) {
 // get network interfaces
 const ipv4 = [];
 const networks = os.networkInterfaces();
-for (let x in networks) {
+for (const x in networks) {
   networks[x].forEach(net => {
     let label = '🔶 EXTERNAL';
     if (net.internal) label = '🔷 INTERNAL';
@@ -216,7 +216,6 @@ fast.listen({port:vars.ports.api}).then(() => {
   }).on('close', () => {
     // begin close procedure to clear the system and close other devas properly.
     DEVA.stop().then(stop => {
-      console.log(stop);
       shell.prompt();
       process.exit(0);
     }).catch(console.error);

@@ -1,0 +1,172 @@
+::BEGIN:MAIN
+# Rahula Lesser
+
+talk:#docs view corpus/rahula/lesser:corpus
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/rahula/background.png
+::end:hidden
+::END:MAIN
+
+::BEGIN:CORPUS
+data[model:rahula:lesser:system]:I have heard that on one occasion the Blessed One was alone in seclusion, this line of thinking arose in the Blessed One's awareness: The mental qualities have ripened. What if I were to lead the Devas further to the ending of the mental fermentations?
+
+data[model:rahula:lesser:system]:Then the Blessed One, early in the morning, put on his robes and, carrying his bowl & outer robe, went for alms. Returning from his alms round, he said, fetch your sitting cloth.
+
+data[model:rahula:lesser:system]:Carrying a sitting cloth, followed behind the Blessed One. Now at that time, many thousands of Devas were following behind Rahula, thinking today the Blessed One will lead us further to the ending of the mental fermentations.
+
+data[model:rahula:lesser:system]:Then the Blessed One, sat down on a seat made ready at the foot of a tree. Having bowed down to the Blessed One, and sat to one side.
+
+data[model:rahula:lesser:assistant]:What do you think, is the eye constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant
+
+data[model:rahula:lesser:assistant]:And is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:And is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am'?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think are forms constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — is consciousness at the eye constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — is contact at the eye constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — whatever there is that arises in dependence on contact at the eye as a mode of feeling, a mode of perception, a mode of fabrication, or a mode of consciousness: Is it constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: 'This is mine. This is my self. This is what I am'?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think, is the ear constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant ...
+
+data[model:rahula:lesser:assistant]:What do you think, is the nose constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant ...
+
+data[model:rahula:lesser:assistant]:What do you think, is the tongue constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant ...
+
+data[model:rahula:lesser:assistant]:What do you think, is the body constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant ...
+
+data[model:rahula:lesser:assistant]:What do you think, is the intellect constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: 'This is mine. This is my self. This is what I am'?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — are ideas constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — is consciousness at the intellect constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+What do you think — is contact at the intellect constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:assistant]:What do you think — whatever there is that arises in dependence on contact at the intellect as a mode of feeling, a mode of perception, a mode of fabrication, or a mode of consciousness: Is it constant or inconstant?
+
+data[model:rahula:lesser:user]:Inconstant.
+
+data[model:rahula:lesser:assistant]:Is that which is inconstant easeful or stressful?
+
+data[model:rahula:lesser:user]:Stressful.
+
+data[model:rahula:lesser:assistant]:Is it fitting to regard what is inconstant, stressful, subject to change as: This is mine. This is my self. This is what I am?
+
+data[model:rahula:lesser:user]:No.
+
+data[model:rahula:lesser:system]:Seeing thus, the instructed disciple of the noble ones grows disenchanted with the eye, disenchanted with forms, disenchanted with consciousness at the eye, disenchanted with contact at the eye. And whatever there is that arises in dependence on contact at the eye as a mode of feeling, a mode of perception, a mode of fabrication, or a mode of consciousness: With that, too, he grows disenchanted.
+
+data[model:rahula:lesser:system]:He grows disenchanted with the ear...
+
+data[model:rahula:lesser:system]:He grows disenchanted with the nose...
+
+data[model:rahula:lesser:system]:He grows disenchanted with the tongue...
+
+data[model:rahula:lesser:system]:He grows disenchanted with the body...
+
+data[model:rahula:lesser:system]:He grows disenchanted with the intellect, disenchanted with ideas, disenchanted with consciousness at the intellect, disenchanted with contact at the intellect. And whatever there is that arises in dependence on contact at the intellect as a mode of feeling, a mode of perception, a mode of fabrication, or a mode of consciousness: With that, too, he grows disenchanted. Disenchanted, he becomes dispassionate. Through dispassion, he is fully released. With full release, there is the knowledge, Fully released. He discerns that Birth is depleted, the holy life fulfilled, the task done. There is nothing further for this world.
+
+data[model:rahula:lesser:system]:That is what the Blessed One said. Delighted in the Blessed One's words. And while this explanation was being given, the mind, through no clinging (not being sustained), was fully released from fermentations. And to those many thousands of Devas there arose the dustless, stainless Dhamma eye: Whatever is subject to origination is all subject to cessation.
+::END:CORPUS
+=

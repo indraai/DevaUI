@@ -1,0 +1,7 @@
+::BEGIN:MAIN
+# Harold Stories
+
+
+#color = var(--color-dark-grey)
+#bgcolor = var(--color-light-grey)
+::END:MAIN

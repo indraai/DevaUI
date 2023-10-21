@@ -52,4 +52,10 @@ data[model:deva:corpus:assistant:651f38331d3c33a20c122da8]:Overall, the _#DEVA a
 data[model:deva:corpus:user:651f38841d3c33a20c122e1d]:How does DEVA learn?
 
 data[model:deva:corpus:assistant:651f388e1d3c33a20c122e22]:To facilitate advanced reasoning and decision-making, the architecture includes a core set of features including an advanced mechanism for accessing data, methods, functions, events, context, action, state, zone ,and features. The acts as a repository of structured information and relationships, allowing the _#DEVA to access and utilize knowledge in a meaningful way. The architecture is continually updated with new information ensuring that the _#DEVA stays up-to-date.
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
 ::END:MAIN

@@ -6,9 +6,14 @@
 ::END:MAIN
 
 ::BEGIN:MENU
+::begin:menu
+button[🏠 Main]:#docs view:panel main:menu
+::end:menu
+
 ### 📜 Devas
 ::begin:buttons
-button[📜 Deva]:#docs view devas/deva
+button[📜 Deva]:#docs view:panel devas/deva:menu
+button[📜 Rahula]:#docs view:panel devas/rahula:menu
 button[📜 Indra]:#docs view devas/indra
 button[📜 Vasu]:#docs view devas/vasu
 button[📜 Visva]:#docs view devas/visva

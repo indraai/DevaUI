@@ -6,4 +6,10 @@ data[model:deva:b593:system:65199f1653f84563fac46c77]:_#B593 = The Quinn Michael
 data[model:deva:b593:user:651b13618cff0a88c38d8cdb]:What is the b5(93) algorithm?
 
 data[model:deva:b593:assistant:651b136a8cff0a88c38d8ce0]:The b5(93) algorithm is an algorithm developed by Quinn Michaels that utilizes the base 5 elements of reality, the nature of 5 x 5 grids and the sequence of revolving odd numbers.
+
+::begin:hidden
+#color = var(--color-orange)
+#bgcolor = var(--color-dark-grey)
+#bg = /public/devas/veda/background.png
+::end:hidden
 ::END:MAIN

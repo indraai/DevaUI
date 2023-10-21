@@ -9,6 +9,10 @@ talk:#docs view story/main:menu
 
 ::BEGIN:MENU
 ::begin:menu
+button[🏠 Main]:#docs view:panel main:menu
+::end:menu
+
+::begin:menu
 ### New Story
 p:Begin crafting a new narrative from scratch. Choose genres, settings, and characters to kick-start their storytelling journey.
 button[Craft a new story...]:#docs view story/new

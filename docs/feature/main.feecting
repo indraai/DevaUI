@@ -8,9 +8,12 @@ button[🏠 Main]:#docs view feature/main
 
 talk:#docs view feature/main:global
 
+::begin:hidden
 #color = var(--color-dark-grey)
 #bgcolor = var(--color-light-grey)
+::end:hidden
 ::END:MAIN
+Illustration of Rahula, depicted as a serene adult, meditating within the sacred confines of an ancient Vedic temple. The temple's pillars are adorned with traditional carvings, and beyond the entrance, one can see the towering peaks of misty mountains.
 
 ::BEGIN:GLOBAL
 ## Core
@@ -24,6 +27,9 @@ talk:#docs view feature/main:global
 #B593 = The Quinn Michaels b5(93) base 5 element Air, Water, Earth, Fire, Ether on a 9 square 3 column revolving patters of 5 x 5 odd numbers 1357991357791355791335791.
 
 #PAL = Polarity Abundance Logic. Polarity abundance logic is an algorithm that involves reasoning and understanding by considering the coexistence of opposing qualities or forces alongside the notion of plentiful or abundant resources or qualities.
+
+#HyperSimulator = The Hyper Simulator can be found in #HyperNexusControlCenter (#HNCC) in House Romanov Headquarters.
+
 ::end:core
 
 #CosmicArgo = Advanced futuristic spaceship known for its interdimensional travel capabilities. It is designed to traverse across different dimensions, allowing individuals to travel from one universe to another.

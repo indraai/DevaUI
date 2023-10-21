@@ -29,8 +29,8 @@ p: Welcome to deva.world! Here you'll find the main control surface for accessin
 
 
 ::begin:hidden
-#color = var(--color-black)
-#bgcolor = var(--color-light-grey)
+#color = var(--color-light-grey)
+#bgcolor = var(--color-dark-grey)
 ::end:hidden
 ::END:MAIN
 

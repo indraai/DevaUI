@@ -87,23 +87,23 @@ h1
   border-bottom: 1px solid
 
 h2
-  font-size: 2.1rem
+  font-size: 2rem
   padding: 20px 0 5px 0
   margin: 5px 0 5px 0
 
 h3
-  font-size: 1.7rem
+  font-size: 1.5rem
   padding: 15px 0 5px 0
   margin: 5px 0 5px 0
 
 h4
-  font-size: 1.3rem
+  font-size: 1.2rem
   padding: 10px 0 5px
   margin: 5px 0 5px 0
 
 p
   font-size: .9rem
-    
+
 pre
   font-family: $fonts-code
 
@@ -115,6 +115,32 @@ audio
   &:focus
     border: none
     outline: none
+
+hr
+  &.single
+    margin: .5rem 0 .5rem 0
+    border: 0
+    &.xsmall
+      border-bottom: 1px solid
+    &.small
+      border-bottom: 2px solid
+    &.medium
+      border-bottom: 3px solid
+    &.large
+      border-bottom: 5px solid
+
+
+  &.double
+    margin: .5rem 0 .5rem 0
+    border: 0
+    &.xsmall
+      border-bottom: 1px double
+    &.small
+      border-bottom: 2px double
+    &.medium
+      border-bottom: 3px double
+    &.large
+      border-bottom: 5px double
 
 *[data-label]
   &::before
@@ -141,6 +167,7 @@ audio
   min-height: 100%
 
   &.hidden
+    display: none
     visibility: hidden
     opacity: 0
 

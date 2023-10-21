@@ -52,7 +52,7 @@
     "@indra.ai/systemsdeva": "^0.0.26",
     "@indra.ai/telnetdeva": "^0.0.24",
     "@indra.ai/vedadeva": "^0.0.44",
-    "@indra.ai/youtubedeva": "^0.0.30",
+    "@indra.ai/youtubedeva": "^0.0.31",
     "chalk": "^4.1.0",
     "fastify": "^4.11.0",
     "inquirer": "^8.2.4",
